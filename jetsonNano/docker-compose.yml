@@ -1,0 +1,9 @@
+version: "3"
+services:
+    ros:
+      container_name: ros-compose
+      image: c32d0a981977
+      environment:
+        - ROS_DOMAIN_ID=1
+      network_mode: host
+
