@@ -7,8 +7,8 @@ RUN apt-get install -y openssh-server net-tools nano vim apt-utils \
   python3-rosdep
 
 WORKDIR /root/
-COPY .bashrc /root/.bashrc
-COPY ./ros2_ws ./ros2_ws
+COPY jetsonNano/.bashrc /root/.bashrc
+COPY jetsonNano/ros2_ws ./ros2_ws
 
 WORKDIR /root/ros2_ws
 RUN rosdep update
