@@ -16,4 +16,6 @@ RUN rosdep install --from-paths src --ignore-src -y
 
 COPY ./entrypoint.sh ./entrypoint.sh
 RUN ["chmod", "+x", "./entrypoint.sh"]
+RUN . /opt/ros/humble/setup.sh && colcon build
+
 ENTRYPOINT  ./entrypoint.sh
