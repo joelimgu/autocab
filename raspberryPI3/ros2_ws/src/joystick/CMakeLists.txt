@@ -32,15 +32,20 @@ add_executable(joystick_to_cmd src/joystick_to_cmd_node.cpp)
 ament_target_dependencies(joystick_to_cmd rclcpp interfaces sensor_msgs)
 
 install(TARGETS
-joystick_to_cmd
-  DESTINATION lib/${PROJECT_NAME}
+        joystick_to_cmd
+        DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_python_install_package(${PROJECT_NAME})
 
 install(PROGRAMS
-  joystick/joystick_ros2.py
-  DESTINATION lib/${PROJECT_NAME}
+        joystick/joystick_ros2.py
+        DESTINATION lib/${PROJECT_NAME}
+)
+
+install(PROGRAMS
+        joystick/inputs.py
+        DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)
