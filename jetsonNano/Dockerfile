@@ -7,11 +7,12 @@ RUN apt-get install -y openssh-server net-tools nano vim apt-utils \
   python3-rosdep
 
 WORKDIR /root/
-COPY jetsonNano/.bashrc /root/.bashrc
-COPY jetsonNano/ros2_ws ./ros2_ws
+COPY .bashrc /root/.bashrc
 
-WORKDIR /root/ros2_ws
-RUN rosdep update
-RUN rosdep install --from-paths src --ignore-src -y
+# COPY ros2_ws ./ros2_ws
 
-RUN . /opt/ros/humble/setup.sh && colcon build
+# WORKDIR /root/ros2_ws
+# RUN rosdep update
+# RUN rosdep install --from-paths src --ignore-src -y
+
+# RUN . /opt/ros/humble/setup.sh && colcon build
