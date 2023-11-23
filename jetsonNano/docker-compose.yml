@@ -2,8 +2,12 @@ version: "3"
 services:
     ros:
       container_name: ros-compose
-      image: 222d709a1c10
+      image: joelimgu/geicar:dev
       environment:
         - ROS_DOMAIN_ID=1
       network_mode: host
+      volumes:
+        - ...:/root/ros_sw/
+      devices:
+        - USB ...
 
