@@ -17,8 +17,6 @@
 using namespace std;
 using placeholders::_1;
 
-
-
 class car_control : public rclcpp::Node {
 
 public:
@@ -133,7 +131,7 @@ private:
                 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
 
-                steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+                //steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
 
             //Autonomous Mode
@@ -142,11 +140,20 @@ private:
             }
         }
 
+        //Ajouter l'asservissement 
 
+        speedCmd();
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
+
+        steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+        //Send order to motors
         motorsOrder.steering_pwm = steeringPwmCmd;
+
+
+       
+       
 
         publisher_can_->publish(motorsOrder);
     }
