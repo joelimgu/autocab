@@ -1,5 +1,6 @@
 from launch.actions import DeclareLaunchArgument, GroupAction, SetEnvironmentVariable
 
+
 from nav2_common.launch import RewrittenYaml
 import launch
 from launch.substitutions import Command, LaunchConfiguration
