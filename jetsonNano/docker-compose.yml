@@ -2,12 +2,12 @@ version: "3"
 services:
     ros:
       container_name: ros-compose
-      image: joelimgu/geicar:dev
+      image: joelimgu/geicar:dev.0.0.1
       environment:
         - ROS_DOMAIN_ID=1
       network_mode: host
       volumes:
-        - ./ros2_ws:/root/ros_sw/
+        - ./ros2_container:/root/ros_sw/
       devices:
         - /dev/ttyUSB0:/dev/ttyUSB0
         - /dev/video0:/dev/video0
