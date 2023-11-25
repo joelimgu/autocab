@@ -12,6 +12,7 @@
 
 #include "../include/car_control/steeringCmd.h"
 #include "../include/car_control/propulsionCmd.h"
+#include "../include/car_control/autoPropulsionCmd.h"
 #include "../include/car_control/car_control_node.h"
 
 using namespace std;
@@ -118,16 +119,20 @@ private:
 
         auto motorsOrder = interfaces::msg::MotorsOrder();
 
-        if (!start){    //Car stopped
+        if (!start)
+        {    //Car stopped
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = STOP;
             steeringPwmCmd = STOP;
 
 
-        }else{ //Car started
+        }
+        else
+        { //Car started
 
             //Manual Mode
-            if (mode==0){
+            if (mode==0)
+            {
                 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
 
@@ -135,13 +140,32 @@ private:
 
 
             //Autonomous Mode
-            } else if (mode==1){
-                //...
+            }
+            else if (mode==1)
+            {
+                /* Assumptions made, such as both Wheels' speeds are the same at all times */
+                /* Calculation of the closed loop error */
+                current_pwm_error = pwmError(20.0,motorsFeedback.left_rear_speed,MAX_RPM);
+                /* Calculation of the corrected error, parameters such as the PI gains are adjustable */
+                piCorrector(1,1,0.001,leftRearPwmCmd,rightRearPwmCmd,past_pwm_error,current_pwm_error);
+                /* Calculation of the final total PWM command */
+                leftRearPwmCmd = leftRearPwmCmd + 50;
+                rightRearPwmCmd = rightRearPwmCmd + 50;
+                if (leftRearPwmCmd > 100)
+                {
+                    /* Capping the PWM command to 100 */
+                    leftRearPwmCmd = 100;
+                    rightRearPwmCmd = 100;
+                }
+                else if (leftRearPwmCmd < 0)
+                {
+                    /* Limiting the PWM command to 0 */
+                    leftRearPwmCmd = 0;
+                    rightRearPwmCmd = 0;
+                }  
             }
         }
 
-        //Ajouter l'asservissement 
-        
         speedCmd();
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
@@ -191,8 +215,8 @@ private:
     *
     * This function is called when a message is published on the "/steering_calibration" topic
     */
-    void steeringCalibrationCallback (const interfaces::msg::SteeringCalibration & calibrationMsg){
-
+    void steeringCalibrationCallback (const interfaces::msg::SteeringCalibration & calibrationMsg)
+    {
         if (calibrationMsg.in_progress == true && calibrationMsg.user_need == false){
         RCLCPP_INFO(this->get_logger(), "Steering Calibration in progress, please wait ....");
 
@@ -211,10 +235,9 @@ private:
             mode = 0;    //Switch to manual mode
             start = false;  //Stop car
         }
-    
     }
     
-    // ---- Private variables ----
+    /* ---- Private variables ---- */ 
 
     //General variables
     bool start;
@@ -223,6 +246,10 @@ private:
     
     //Motors feedback variables
     float currentAngle;
+
+    /* Automatic control mode variables */
+    float past_pwm_error = 0;
+    float current_pwm_error = 0;
 
     //Manual Mode variables (with joystick control)
     bool reverse;
