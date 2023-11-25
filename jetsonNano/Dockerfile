@@ -4,7 +4,7 @@ RUN apt-get install -y openssh-server net-tools nano vim apt-utils ufw iputils-p
 RUN add-apt-repository universe
 RUN apt-get update
 RUN apt-get install -y \
- ros-rolling-ros-base \
+  ros-rolling-ros-base \
   ros-dev-tools \
   ros-humble-navigation2 \
   ros-humble-nav2-bringup \
