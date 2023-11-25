@@ -7,7 +7,7 @@ services:
         - ROS_DOMAIN_ID=1
       network_mode: host
       volumes:
-        - ./ros2_container:/root/ros_sw/
+        - ./ros_sw:/root/ros_sw/
       devices:
         - /dev/ttyUSB0:/dev/ttyUSB0
         - /dev/video0:/dev/video0
