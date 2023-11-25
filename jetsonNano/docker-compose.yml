@@ -11,4 +11,5 @@ services:
       devices:
         - /dev/ttyUSB0:/dev/ttyUSB0
         - /dev/video0:/dev/video0
+      entrypoint: "sleep inf"
 
