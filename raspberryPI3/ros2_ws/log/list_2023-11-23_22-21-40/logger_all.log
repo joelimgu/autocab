@@ -1,0 +1,184 @@
+[2.259s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws']
+[2.260s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fdf1fa01f30>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7fdf1fa02050>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7fdf1fa02050>>)
+[2.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.362s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws'
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extensions ['ignore', 'ignore_ament_install']
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'ignore'
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'ignore_ament_install'
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extensions ['colcon_pkg']
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'colcon_pkg'
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extensions ['colcon_meta']
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'colcon_meta'
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extensions ['ros']
+[2.362s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'ros'
+[2.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extensions ['cmake', 'python']
+[2.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'cmake'
+[2.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'python'
+[2.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extensions ['python_setup_py']
+[2.382s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws) by extension 'python_setup_py'
+[2.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[2.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/log) by extension 'ignore'
+[2.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/log) ignored
+[2.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[2.383s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'ignore'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'ignore_ament_install'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extensions ['colcon_pkg']
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'colcon_pkg'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extensions ['colcon_meta']
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'colcon_meta'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extensions ['ros']
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'ros'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extensions ['cmake', 'python']
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'cmake'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'python'
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extensions ['python_setup_py']
+[2.384s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src) by extension 'python_setup_py'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extensions ['ignore', 'ignore_ament_install']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extension 'ignore'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extension 'ignore_ament_install'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extensions ['colcon_pkg']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extension 'colcon_pkg'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extensions ['colcon_meta']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extension 'colcon_meta'
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extensions ['ros']
+[2.385s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj) by extension 'ros'
+[2.390s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/auto_traj' with type 'ros.ament_cmake' and name 'auto_traj'
+[2.390s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extensions ['ignore', 'ignore_ament_install']
+[2.390s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extension 'ignore'
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extension 'ignore_ament_install'
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extensions ['colcon_pkg']
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extension 'colcon_pkg'
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extensions ['colcon_meta']
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extension 'colcon_meta'
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extensions ['ros']
+[2.391s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can) by extension 'ros'
+[2.393s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can' with type 'ros.ament_cmake' and name 'can'
+[2.393s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extensions ['ignore', 'ignore_ament_install']
+[2.393s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extension 'ignore'
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extension 'ignore_ament_install'
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extensions ['colcon_pkg']
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extension 'colcon_pkg'
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extensions ['colcon_meta']
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extension 'colcon_meta'
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extensions ['ros']
+[2.394s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control) by extension 'ros'
+[2.396s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control' with type 'ros.ament_cmake' and name 'car_control'
+[2.396s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extensions ['ignore', 'ignore_ament_install']
+[2.396s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extension 'ignore'
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extension 'ignore_ament_install'
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extensions ['colcon_pkg']
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extension 'colcon_pkg'
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extensions ['colcon_meta']
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extension 'colcon_meta'
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extensions ['ros']
+[2.397s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs) by extension 'ros'
+[2.399s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/carla_msgs' with type 'ros.ament_cmake' and name 'carla_msgs'
+[2.399s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extensions ['ignore', 'ignore_ament_install']
+[2.399s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extension 'ignore'
+[2.399s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extension 'ignore_ament_install'
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extensions ['colcon_pkg']
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extension 'colcon_pkg'
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extensions ['colcon_meta']
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extension 'colcon_meta'
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extensions ['ros']
+[2.400s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start) by extension 'ros'
+[2.401s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/geicar_start' with type 'ros.ament_cmake' and name 'geicar_start'
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extensions ['ignore', 'ignore_ament_install']
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'ignore'
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'ignore_ament_install'
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extensions ['colcon_pkg']
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'colcon_pkg'
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extensions ['colcon_meta']
+[2.402s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'colcon_meta'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extensions ['ros']
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'ros'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extensions ['cmake', 'python']
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'cmake'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'python'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extensions ['python_setup_py']
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools) by extension 'python_setup_py'
+[2.403s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extensions ['ignore', 'ignore_ament_install']
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extension 'ignore'
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extension 'ignore_ament_install'
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extensions ['colcon_pkg']
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extension 'colcon_pkg'
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extensions ['colcon_meta']
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extension 'colcon_meta'
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extensions ['ros']
+[2.404s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter) by extension 'ros'
+[2.405s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter' with type 'ros.ament_cmake' and name 'imu_complementary_filter'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extensions ['ignore', 'ignore_ament_install']
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extension 'ignore'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extension 'ignore_ament_install'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extensions ['colcon_pkg']
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extension 'colcon_pkg'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extensions ['colcon_meta']
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extension 'colcon_meta'
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extensions ['ros']
+[2.406s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick) by extension 'ros'
+[2.409s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick' with type 'ros.ament_cmake' and name 'imu_filter_madgwick'
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extensions ['ignore', 'ignore_ament_install']
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extension 'ignore'
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extension 'ignore_ament_install'
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extensions ['colcon_pkg']
+[2.409s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extension 'colcon_pkg'
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extensions ['colcon_meta']
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extension 'colcon_meta'
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extensions ['ros']
+[2.410s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools) by extension 'ros'
+[2.411s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools' with type 'ros.ament_cmake' and name 'imu_tools'
+[2.411s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extensions ['ignore', 'ignore_ament_install']
+[2.411s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extension 'ignore'
+[2.411s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extension 'ignore_ament_install'
+[2.411s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extensions ['colcon_pkg']
+[2.412s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extension 'colcon_pkg'
+[2.412s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extensions ['colcon_meta']
+[2.412s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extension 'colcon_meta'
+[2.412s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extensions ['ros']
+[2.412s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin) by extension 'ros'
+[2.414s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin' with type 'ros.ament_cmake' and name 'rviz_imu_plugin'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extensions ['ignore', 'ignore_ament_install']
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extension 'ignore'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extension 'ignore_ament_install'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extensions ['colcon_pkg']
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extension 'colcon_pkg'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extensions ['colcon_meta']
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extension 'colcon_meta'
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extensions ['ros']
+[2.415s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces) by extension 'ros'
+[2.417s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces' with type 'ros.ament_cmake' and name 'interfaces'
+[2.417s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extensions ['ignore', 'ignore_ament_install']
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extension 'ignore'
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extension 'ignore_ament_install'
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extensions ['colcon_pkg']
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extension 'colcon_pkg'
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extensions ['colcon_meta']
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extension 'colcon_meta'
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extensions ['ros']
+[2.418s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick) by extension 'ros'
+[2.420s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/joystick' with type 'ros.ament_cmake' and name 'joystick'
+[2.420s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extensions ['ignore', 'ignore_ament_install']
+[2.420s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extension 'ignore'
+[2.420s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extension 'ignore_ament_install'
+[2.420s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extensions ['colcon_pkg']
+[2.421s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extension 'colcon_pkg'
+[2.421s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extensions ['colcon_meta']
+[2.421s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extension 'colcon_meta'
+[2.421s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extensions ['ros']
+[2.421s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation) by extension 'ros'
+[2.422s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/simulation' with type 'ros.ament_cmake' and name 'simulation'
+[2.422s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extensions ['ignore', 'ignore_ament_install']
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extension 'ignore'
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extension 'ignore_ament_install'
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extensions ['colcon_pkg']
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extension 'colcon_pkg'
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extensions ['colcon_meta']
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extension 'colcon_meta'
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extensions ['ros']
+[2.423s] Level 1:colcon.colcon_core.package_identification:_identify(/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check) by extension 'ros'
+[2.425s] DEBUG:colcon.colcon_core.package_identification:Package '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check' with type 'ros.ament_cmake' and name 'system_check'
+[2.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

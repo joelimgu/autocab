@@ -1,0 +1,4 @@
+#ifndef AUTO_PROPULSION_CMD_H
+#define AUTO_PROPULSION_CMD_H
+
+#endif
