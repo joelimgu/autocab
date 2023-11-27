@@ -98,5 +98,5 @@ fi
 #    . /etc/bash_completion
 #fi
 source /opt/ros/humble/setup.bash
-source /root/ros2_ws/install/local_setup.bash
+# source /root/ros2_ws/install/local_setup.bash
 export ROS_DOMAIN_ID=1
