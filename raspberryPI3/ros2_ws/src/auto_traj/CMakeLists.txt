@@ -21,4 +21,12 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+add_executable(straight_traj_exec src/straight_traj_node.cpp)
+ament_target_dependencies(straight_traj_exec rclcpp)
+
+install(TARGETS 
+  straight_traj_exec
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_package()
