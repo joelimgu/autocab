@@ -2,9 +2,11 @@
 #define AUTO_PROPULSION_CMD_H
 
 #include <stdint.h>
-#define MAX_RPM 100.0
-int piCorrector(float kp,float ki,float Te,uint8_t& leftRearPwmCmd,uint8_t& rightRearPwmCmd,float past_pwm_error,float current_pwm_error);
+/* RPM is contained within [0,68], for both reverse and forward operation */
+#define MAX_RPM 68.0
 
-uint8_t pwmError(float desiredRPM,float measuredRPM,float maxRPM);
+int piCorrector(float kp,float ki,float Te,float& smallLeftRearPwmCmd,float& smallRightRearPwmCmd,float& past_pwm_error,float& current_pwm_error);
+
+float pwmError(float desiredRPM,float measuredRPM,float maxRPM);
 
 #endif

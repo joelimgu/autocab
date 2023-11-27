@@ -1,0 +1,8 @@
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:152:17:[m[K [01;31m[Kerror: [m[K‘[01m[KsmallLeftRearPwdCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KsmallLeftRearPwmCmd[m[K’?
+  152 |                 [01;31m[KsmallLeftRearPwdCmd[m[K = leftRearPwmCmd - 50;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[KsmallLeftRearPwmCmd[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

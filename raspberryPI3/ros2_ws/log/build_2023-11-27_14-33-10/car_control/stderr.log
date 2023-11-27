@@ -1,0 +1,11 @@
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:138:65:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type ‘[01m[Kuint8_t&[m[K’ {aka ‘[01m[Kunsigned char&[m[K’} to a value of type ‘[01m[Kfloat[m[K’
+  138 |                 manualPropulsionCmd(requestedThrottle, reverse, [01;31m[KleftRearPwmCmd[m[K,rightRearPwmCmd);
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:14[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/propulsionCmd.h:13:75:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint* manualPropulsionCmd(float, bool, uint8_t&, uint8_t&)[m[K’
+   13 | int * manualPropulsionCmd(float requestedThrottle, bool reverse, [01;36m[Kuint8_t& leftRearPwmCmd[m[K, uint8_t& rightRearPwmCmd);
+      |                                                                  [01;36m[K~~~~~~~~~^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

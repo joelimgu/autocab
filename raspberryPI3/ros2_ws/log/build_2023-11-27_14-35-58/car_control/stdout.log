@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable car_control_node[0m

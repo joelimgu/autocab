@@ -104,6 +104,7 @@ private:
     */
     void motorsFeedbackCallback(const interfaces::msg::MotorsFeedback & motorsFeedback){
         currentAngle = motorsFeedback.steering_angle;
+        leftRearRPM = motorsFeedback.left_rear_speed;
     }
 
 
@@ -131,7 +132,7 @@ private:
         { //Car started
 
             //Manual Mode
-            if (mode==0)
+            if (mode==1)
             {
                 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
@@ -141,32 +142,26 @@ private:
 
             //Autonomous Mode
             }
-            else if (mode==1)
+            else if (mode==0)
             {
                 /* Assumptions made, such as both Wheels' speeds are the same at all times */
                 /* Calculation of the closed loop error */
-                current_pwm_error = pwmError(20.0,motorsFeedback.left_rear_speed,MAX_RPM);
+                current_pwm_error = pwmError(20.0,leftRearRPM,MAX_RPM);
                 /* Calculation of the corrected error, parameters such as the PI gains are adjustable */
-                piCorrector(1,1,0.001,leftRearPwmCmd,rightRearPwmCmd,past_pwm_error,current_pwm_error);
+                smallLeftRearPwmCmd = leftRearPwmCmd - 50;
+                smallRightRearPwmCmd = rightRearPwmCmd - 50;
+                piCorrector(0.4,1.0,0.001,smallLeftRearPwmCmd,smallRightRearPwmCmd,past_pwm_error,current_pwm_error);
                 /* Calculation of the final total PWM command */
-                leftRearPwmCmd = leftRearPwmCmd + 50;
-                rightRearPwmCmd = rightRearPwmCmd + 50;
+                leftRearPwmCmd = smallLeftRearPwmCmd + 50;
+                rightRearPwmCmd = smallRightRearPwmCmd + 50;
                 if (leftRearPwmCmd > 100)
                 {
                     /* Capping the PWM command to 100 */
                     leftRearPwmCmd = 100;
                     rightRearPwmCmd = 100;
-                }
-                else if (leftRearPwmCmd < 0)
-                {
-                    /* Limiting the PWM command to 0 */
-                    leftRearPwmCmd = 0;
-                    rightRearPwmCmd = 0;
-                }  
+                } 
             }
         }
-
-        speedCmd();
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
@@ -257,8 +252,11 @@ private:
     float requestedSteerAngle;
 
     //Control variables
-    uint8_t leftRearPwmCmd;
-    uint8_t rightRearPwmCmd;
+    float leftRearPwmCmd;
+    float rightRearPwmCmd;
+    float smallRightRearPwmCmd = 0.0;
+    float smallLeftRearPwmCmd = 0.0;
+    float leftRearRPM;
     uint8_t steeringPwmCmd;
 
     //Publishers
