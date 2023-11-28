@@ -1,3 +1,8 @@
+#include <stdint.h>
+#include <string.h>  
+
+using namespace std;
+
 #include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char **argv)
