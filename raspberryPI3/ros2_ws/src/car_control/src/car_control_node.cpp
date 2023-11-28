@@ -13,6 +13,7 @@
 #include "../include/car_control/steeringCmd.h"
 #include "../include/car_control/propulsionCmd.h"
 #include "../include/car_control/car_control_node.h"
+#include "../include/car_control/fromAtoB.h"
 
 using namespace std;
 using placeholders::_1;
@@ -44,6 +45,9 @@ public:
 
         subscription_steering_calibration_ = this->create_subscription<interfaces::msg::SteeringCalibration>(
         "steering_calibration", 10, std::bind(&car_control::steeringCalibrationCallback, this, _1));
+
+        subscription_gnss_data_ = this->create_subscription<interfaces::msg::Gnss>(
+        "gnss_data", 10, std::bind(&car_control::gnssDataCallback, this, _1));
 
 
         
@@ -137,7 +141,13 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-                //...
+                
+                straightLine(currentLatitude, currentLongitude, requestedThrottle, reverse);
+
+                manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+
+                steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+
             }
         }
 
@@ -146,6 +156,7 @@ private:
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
         motorsOrder.steering_pwm = steeringPwmCmd;
+
 
         publisher_can_->publish(motorsOrder);
     }
@@ -205,6 +216,16 @@ private:
         }
     
     }
+
+    /* Update currentLatitude and currentLongitude from gnss_data [callback function]  :
+    *
+    * This function is called when a message is published on the "/gnss_data" topic
+    * 
+    */
+    void gnssDataCallback(const interfaces::msg::Gnss & gnssData){
+        currentLatitude = gnssData.latitude;
+        currentLongitude = gnssData.longitude;
+    }
     
     // ---- Private variables ----
 
@@ -226,6 +247,10 @@ private:
     uint8_t rightRearPwmCmd;
     uint8_t steeringPwmCmd;
 
+    //gnss data variables
+    float currentLatitude;
+    float currentLongitude;
+
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
     rclcpp::Publisher<interfaces::msg::SteeringCalibration>::SharedPtr publisher_steeringCalibration_;
@@ -234,6 +259,7 @@ private:
     rclcpp::Subscription<interfaces::msg::JoystickOrder>::SharedPtr subscription_joystick_order_;
     rclcpp::Subscription<interfaces::msg::MotorsFeedback>::SharedPtr subscription_motors_feedback_;
     rclcpp::Subscription<interfaces::msg::SteeringCalibration>::SharedPtr subscription_steering_calibration_;
+    rclcpp::Subscription<interfaces::msg::Gnss>::SharedPtr subscription_gnss_data_;
 
     //Timer
     rclcpp::TimerBase::SharedPtr timer_;
