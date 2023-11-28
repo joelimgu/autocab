@@ -1,0 +1,54 @@
+[0.093s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.240s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.920s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[1.085s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.096s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.119s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.164s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.227s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.450s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.457s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.319s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.868s] -- Found interfaces: 0.0.0 (/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)
+[2.952s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.394s] -- Found std_srvs: 4.2.2 (/opt/ros/humble/share/std_srvs/cmake)
+[3.465s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.926s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.926s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include>
+[3.927s] -- Configured cppcheck exclude dirs and/or files: 
+[3.946s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.986s] -- Added test 'lint_cmake' to check CMake code style
+[4.005s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.154s] -- Added test 'uncrustify' to check C / C++ code style
+[4.154s] -- Configured uncrustify additional arguments: 
+[4.173s] -- Added test 'xmllint' to check XML markup files
+[4.181s] -- Configuring done
+[4.270s] -- Generating done
+[4.280s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control
+[4.411s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[4.518s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[4.520s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/corrector.cpp.o[0m
+[58.946s] [ 60%] [32m[1mLinking CXX executable car_control_node[0m
+[62.531s] [100%] Built target car_control_node
+[62.575s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[62.847s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control
+[62.879s] -- Install configuration: ""
+[62.881s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/lib/car_control/car_control_node
+[62.938s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/lib/car_control/car_control_node" to ""
+[62.939s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/package_run_dependencies/car_control
+[62.940s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/parent_prefix_path/car_control
+[62.942s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/ament_prefix_path.sh
+[62.942s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/ament_prefix_path.dsv
+[62.943s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/path.sh
+[62.944s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/path.dsv
+[62.945s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.bash
+[62.945s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.sh
+[62.946s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.zsh
+[62.946s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.dsv
+[62.947s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.dsv
+[62.949s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/packages/car_control
+[62.950s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[62.950s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/car_controlConfig.cmake
+[62.951s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/car_controlConfig-version.cmake
+[62.951s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.xml
+[62.958s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control

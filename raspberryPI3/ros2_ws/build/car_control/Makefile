@@ -210,30 +210,6 @@ car_control_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/build
 .PHONY : car_control_node/fast
 
-src/autoPropulsionCmd.o: src/autoPropulsionCmd.cpp.o
-.PHONY : src/autoPropulsionCmd.o
-
-# target to build an object file
-src/autoPropulsionCmd.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o
-.PHONY : src/autoPropulsionCmd.cpp.o
-
-src/autoPropulsionCmd.i: src/autoPropulsionCmd.cpp.i
-.PHONY : src/autoPropulsionCmd.i
-
-# target to preprocess a source file
-src/autoPropulsionCmd.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.i
-.PHONY : src/autoPropulsionCmd.cpp.i
-
-src/autoPropulsionCmd.s: src/autoPropulsionCmd.cpp.s
-.PHONY : src/autoPropulsionCmd.s
-
-# target to generate assembly for a file
-src/autoPropulsionCmd.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.s
-.PHONY : src/autoPropulsionCmd.cpp.s
-
 src/car_control_node.o: src/car_control_node.cpp.o
 .PHONY : src/car_control_node.o
 
@@ -257,6 +233,30 @@ src/car_control_node.s: src/car_control_node.cpp.s
 src/car_control_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/car_control_node.cpp.s
 .PHONY : src/car_control_node.cpp.s
+
+src/corrector.o: src/corrector.cpp.o
+.PHONY : src/corrector.o
+
+# target to build an object file
+src/corrector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/corrector.cpp.o
+.PHONY : src/corrector.cpp.o
+
+src/corrector.i: src/corrector.cpp.i
+.PHONY : src/corrector.i
+
+# target to preprocess a source file
+src/corrector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/corrector.cpp.i
+.PHONY : src/corrector.cpp.i
+
+src/corrector.s: src/corrector.cpp.s
+.PHONY : src/corrector.s
+
+# target to generate assembly for a file
+src/corrector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/corrector.cpp.s
+.PHONY : src/corrector.cpp.s
 
 src/propulsionCmd.o: src/propulsionCmd.cpp.o
 .PHONY : src/propulsionCmd.o
@@ -322,12 +322,12 @@ help:
 	@echo "... car_control_uninstall"
 	@echo "... uninstall"
 	@echo "... car_control_node"
-	@echo "... src/autoPropulsionCmd.o"
-	@echo "... src/autoPropulsionCmd.i"
-	@echo "... src/autoPropulsionCmd.s"
 	@echo "... src/car_control_node.o"
 	@echo "... src/car_control_node.i"
 	@echo "... src/car_control_node.s"
+	@echo "... src/corrector.o"
+	@echo "... src/corrector.i"
+	@echo "... src/corrector.s"
 	@echo "... src/propulsionCmd.o"
 	@echo "... src/propulsionCmd.i"
 	@echo "... src/propulsionCmd.s"

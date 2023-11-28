@@ -111,26 +111,26 @@ CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/propulsionCmd.cpp -o CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.s
 
-CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o: CMakeFiles/car_control_node.dir/flags.make
-CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o: /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/autoPropulsionCmd.cpp
-CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o: CMakeFiles/car_control_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o -MF CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o.d -o CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o -c /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/autoPropulsionCmd.cpp
+CMakeFiles/car_control_node.dir/src/corrector.cpp.o: CMakeFiles/car_control_node.dir/flags.make
+CMakeFiles/car_control_node.dir/src/corrector.cpp.o: /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp
+CMakeFiles/car_control_node.dir/src/corrector.cpp.o: CMakeFiles/car_control_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/car_control_node.dir/src/corrector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car_control_node.dir/src/corrector.cpp.o -MF CMakeFiles/car_control_node.dir/src/corrector.cpp.o.d -o CMakeFiles/car_control_node.dir/src/corrector.cpp.o -c /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp
 
-CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/autoPropulsionCmd.cpp > CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.i
+CMakeFiles/car_control_node.dir/src/corrector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car_control_node.dir/src/corrector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp > CMakeFiles/car_control_node.dir/src/corrector.cpp.i
 
-CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/autoPropulsionCmd.cpp -o CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.s
+CMakeFiles/car_control_node.dir/src/corrector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car_control_node.dir/src/corrector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp -o CMakeFiles/car_control_node.dir/src/corrector.cpp.s
 
 # Object files for target car_control_node
 car_control_node_OBJECTS = \
 "CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o" \
 "CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o" \
 "CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o" \
-"CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o"
+"CMakeFiles/car_control_node.dir/src/corrector.cpp.o"
 
 # External object files for target car_control_node
 car_control_node_EXTERNAL_OBJECTS =
@@ -138,7 +138,7 @@ car_control_node_EXTERNAL_OBJECTS =
 car_control_node: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o
-car_control_node: CMakeFiles/car_control_node.dir/src/autoPropulsionCmd.cpp.o
+car_control_node: CMakeFiles/car_control_node.dir/src/corrector.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/build.make
 car_control_node: /opt/ros/humble/lib/librclcpp.so
 car_control_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
