@@ -12,6 +12,7 @@ RUN apt-get install -y \
   python3-rosdep \
   git
 RUN apt-get install -y ros-humble-joint-state-publisher-gui ros-humble-xacro python3-pip
+RUN apt-get install -y ros-humble-joint-state-publisher
 
 RUN pip install catkin_pkg
 
