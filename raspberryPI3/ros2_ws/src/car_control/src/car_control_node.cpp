@@ -163,7 +163,8 @@ private:
                 RCLCPP_INFO(this->get_logger(), "you are IN");
                 */
 
-                ObstacleCmd(front_left, front_center, front_right, rear_left, rear_center, rear_right);
+                rightRearPwmCmd = ObstacleCmd(front_left, front_center, front_right, rear_left, rear_center, rear_right);
+                leftRearPwmCmd = rightRearPwmCmd;
                 
             }
         }
