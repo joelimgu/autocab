@@ -151,8 +151,9 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-                motorsOrder.left_rear_pwm = 100;
-                motorsOrder.right_rear_pwm = 100;
+                leftRearPwmCmd = 100;
+                rightRearPwmCmd = 100;
+                RCLCPP_INFO(this->get_logger(), "you are IN");
             }
         }
 
