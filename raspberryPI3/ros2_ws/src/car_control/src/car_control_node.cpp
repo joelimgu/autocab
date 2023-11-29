@@ -2,6 +2,7 @@
 #include <chrono>
 #include <functional>
 #include <memory>
+#include <math.h>
 
 #include "interfaces/msg/motors_order.hpp"
 #include "interfaces/msg/motors_feedback.hpp"
@@ -29,6 +30,9 @@ public:
         mode = 0;
         requestedThrottle = 0;
         requestedSteerAngle = 0;
+        currentLatitude = 0;
+        currentLongitude = 0;
+        currentDirectionVector = vector<float>(0,0);
     
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -142,7 +146,7 @@ private:
             //Autonomous Mode
             } else if (mode==1){
                 
-                straightLine(currentLatitude, currentLongitude, requestedThrottle, reverse);
+                straightLine(currentLatitude, currentLongitude, currentDirectionVector, requestedThrottle, reverse);
 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
 
@@ -223,6 +227,9 @@ private:
     * 
     */
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData){
+        if (currentLatitude != 0 && currentLongitude != 0 && (currentLatitude != gnssData.latitude || currentLongitude != gnssData.longitude)){
+            currentDirectionVector =  {gnssData.latitude - currentLatitude, gnssData.longitude - currentLongitude};
+        }
         currentLatitude = gnssData.latitude;
         currentLongitude = gnssData.longitude;
     }
@@ -250,6 +257,7 @@ private:
     //gnss data variables
     float currentLatitude;
     float currentLongitude;
+    vector<float> currentDirectionVector;
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
