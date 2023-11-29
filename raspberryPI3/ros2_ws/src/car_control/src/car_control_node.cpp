@@ -68,7 +68,13 @@ public:
     * 
     */
     void usDataCallback(const interfaces::msg::Ultrasonic & usData){
+        front_left = usData.front_left;
+        front_center = usData.front_center;
+        front_right = usData.front_right;
 
+        rear_left = usData.rear_left;
+        rear_center = usData.rear_center;
+        rear_right = usData.rear_right;
     }
 
     
@@ -151,9 +157,14 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
+                /*TEST
                 leftRearPwmCmd = 80;
                 rightRearPwmCmd = 80;
                 RCLCPP_INFO(this->get_logger(), "you are IN");
+                */
+
+                ObstacleCmd(front_left, front_center, front_right, rear_left, rear_center, rear_right);
+                
             }
         }
 
