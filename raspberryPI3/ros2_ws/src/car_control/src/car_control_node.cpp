@@ -68,11 +68,7 @@ public:
     * 
     */
     void usDataCallback(const interfaces::msg::Ultrasonic & usData){
-        if (currentLatitude != 0 && currentLongitude != 0 && (currentLatitude != gnssData.latitude || currentLongitude != gnssData.longitude)){
-            currentDirectionVector =  {gnssData.latitude - currentLatitude, gnssData.longitude - currentLongitude};
-        }
-        currentLatitude = gnssData.latitude;
-        currentLongitude = gnssData.longitude;
+
     }
 
     
