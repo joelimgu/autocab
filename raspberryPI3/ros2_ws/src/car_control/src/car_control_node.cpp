@@ -7,12 +7,14 @@
 #include "interfaces/msg/motors_feedback.hpp"
 #include "interfaces/msg/steering_calibration.hpp"
 #include "interfaces/msg/joystick_order.hpp"
+#include "interfaces/msg/ultrasonic.hpp"
 
 #include "std_srvs/srv/empty.hpp"
 
 #include "../include/car_control/steeringCmd.h"
 #include "../include/car_control/propulsionCmd.h"
 #include "../include/car_control/car_control_node.h"
+#include "../include/car_control/obstacle_detection.h"
 
 using namespace std;
 using placeholders::_1;
@@ -45,6 +47,9 @@ public:
         subscription_steering_calibration_ = this->create_subscription<interfaces::msg::SteeringCalibration>(
         "steering_calibration", 10, std::bind(&car_control::steeringCalibrationCallback, this, _1));
 
+        subscription_us_data = this->create_subscription<interfaces::msg::Ultrasonic>(
+        "us_data", 10, std::bind(&car_control::usDataCallback, this, _1));
+
 
         
 
@@ -55,6 +60,19 @@ public:
 
         
         RCLCPP_INFO(this->get_logger(), "car_control_node READY");
+    }
+
+    /* Update data from us_data [callback function]  :
+    *
+    * This function is called when a message is published on the "/us_data" topic
+    * 
+    */
+    void usDataCallback(const interfaces::msg::Ultrasonic & usData){
+        if (currentLatitude != 0 && currentLongitude != 0 && (currentLatitude != gnssData.latitude || currentLongitude != gnssData.longitude)){
+            currentDirectionVector =  {gnssData.latitude - currentLatitude, gnssData.longitude - currentLongitude};
+        }
+        currentLatitude = gnssData.latitude;
+        currentLongitude = gnssData.longitude;
     }
 
     
@@ -137,7 +155,8 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-                //...
+                motorsOrder.left_rear_pwm = 100;
+                motorsOrder.right_rear_pwm = 100;
             }
         }
 
@@ -226,6 +245,15 @@ private:
     uint8_t rightRearPwmCmd;
     uint8_t steeringPwmCmd;
 
+    //us data variables
+    int16_t front_left;
+    int16_t front_center;
+    int16_t front_right;
+
+    int16_t rear_left;
+    int16_t rear_center;
+    int16_t rear_right;
+
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
     rclcpp::Publisher<interfaces::msg::SteeringCalibration>::SharedPtr publisher_steeringCalibration_;
@@ -234,6 +262,7 @@ private:
     rclcpp::Subscription<interfaces::msg::JoystickOrder>::SharedPtr subscription_joystick_order_;
     rclcpp::Subscription<interfaces::msg::MotorsFeedback>::SharedPtr subscription_motors_feedback_;
     rclcpp::Subscription<interfaces::msg::SteeringCalibration>::SharedPtr subscription_steering_calibration_;
+    rclcpp::Subscription<interfaces::msg::Ultrasonic>::SharedPtr subscription_us_data;
 
     //Timer
     rclcpp::TimerBase::SharedPtr timer_;
