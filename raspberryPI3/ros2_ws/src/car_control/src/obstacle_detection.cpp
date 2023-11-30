@@ -20,8 +20,20 @@ int ObstacleCmd(int16_t front_left, int16_t front_center, int16_t front_right, i
 
     if (front_right <= 50) {
         return STOP;
+    }
+    
+    if (rear_left <= 50) {
+        return STOP;
+    }
+    
+    if (rear_center <= 50) {
+        return STOP;
+    }
+    
+    if (rear_right <= 50) {
+        return STOP;
     } else return MAX_PWM_RIGHT;
     
-        
+    
 }
 

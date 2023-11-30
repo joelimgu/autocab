@@ -1,0 +1,91 @@
+[0.048s] Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control -DCMAKE_INSTALL_PREFIX=/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control
+[0.093s] -- The C compiler identification is GNU 11.4.0
+[0.141s] -- The CXX compiler identification is GNU 11.4.0
+[0.148s] -- Detecting C compiler ABI info
+[0.206s] -- Detecting C compiler ABI info - done
+[0.213s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.214s] -- Detecting C compile features
+[0.214s] -- Detecting C compile features - done
+[0.217s] -- Detecting CXX compiler ABI info
+[0.286s] -- Detecting CXX compiler ABI info - done
+[0.293s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.293s] -- Detecting CXX compile features
+[0.293s] -- Detecting CXX compile features - done
+[0.295s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.439s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.510s] -- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+[0.546s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.550s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.557s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.569s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.587s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.651s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.653s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.736s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.758s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.798s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.805s] -- Looking for pthread.h
+[0.873s] -- Looking for pthread.h - found
+[0.873s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.945s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.946s] -- Found Threads: TRUE  
+[1.102s] -- Found interfaces: 0.0.0 (/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)
+[1.119s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.249s] -- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+[1.274s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.339s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.339s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/include>
+[1.339s] -- Configured cppcheck exclude dirs and/or files: 
+[1.340s] -- Added test 'lint_cmake' to check CMake code style
+[1.341s] -- Added test 'uncrustify' to check C / C++ code style
+[1.341s] -- Configured uncrustify additional arguments: 
+[1.342s] -- Added test 'xmllint' to check XML markup files
+[1.343s] -- Configuring done
+[1.353s] -- Generating done
+[1.354s] -- Build files have been written to: /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control
+[1.362s] Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control -DCMAKE_INSTALL_PREFIX=/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control
+[1.364s] Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control -- -j8 -l8
+[1.407s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o[0m
+[1.408s] [ 60%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o[0m
+[1.408s] [ 60%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[1.408s] [ 80%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o[0m
+[1.834s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:[m[K In function ‘[01m[Kint ObstacleCmd(int16_t, int16_t, int16_t, int16_t, int16_t, int16_t)[m[K’:
+[1.834s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:11:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfront_left[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.834s]    11 | int ObstacleCmd([01;35m[Kint16_t front_left[m[K, int16_t front_center, int16_t front_right, int16_t rear_left, int16_t rear_center, int16_t rear_right){
+[1.835s]       |                 [01;35m[K~~~~~~~~^~~~~~~~~~[m[K
+[1.835s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:11:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfront_right[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.835s]    11 | int ObstacleCmd(int16_t front_left, int16_t front_center, [01;35m[Kint16_t front_right[m[K, int16_t rear_left, int16_t rear_center, int16_t rear_right){
+[1.835s]       |                                                           [01;35m[K~~~~~~~~^~~~~~~~~~~[m[K
+[1.835s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:11:88:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krear_left[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.835s]    11 | int ObstacleCmd(int16_t front_left, int16_t front_center, int16_t front_right, [01;35m[Kint16_t rear_left[m[K, int16_t rear_center, int16_t rear_right){
+[1.835s]       |                                                                                [01;35m[K~~~~~~~~^~~~~~~~~[m[K
+[1.835s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:11:107:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krear_center[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.835s]    11 | int ObstacleCmd(int16_t front_left, int16_t front_center, int16_t front_right, int16_t rear_left, [01;35m[Kint16_t rear_center[m[K, int16_t rear_right){
+[1.835s]       |                                                                                                   [01;35m[K~~~~~~~~^~~~~~~~~~~[m[K
+[1.835s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:11:128:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krear_right[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.835s]    11 | int ObstacleCmd(int16_t front_left, int16_t front_center, int16_t front_right, int16_t rear_left, int16_t rear_center, [01;35m[Kint16_t rear_right[m[K){
+[1.835s]       |                                                                                                                        [01;35m[K~~~~~~~~^~~~~~~~~~[m[K
+[15.808s] [100%] [32m[1mLinking CXX executable car_control_node[0m
+[16.618s] [100%] Built target car_control_node
+[16.627s] Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control -- -j8 -l8
+[16.663s] Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control
+[16.670s] -- Install configuration: ""
+[16.670s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib/car_control/car_control_node
+[16.679s] -- Set runtime path of "/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib/car_control/car_control_node" to ""
+[16.679s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/package_run_dependencies/car_control
+[16.679s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/parent_prefix_path/car_control
+[16.679s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/ament_prefix_path.sh
+[16.679s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/ament_prefix_path.dsv
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/path.sh
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/path.dsv
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.bash
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.sh
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.zsh
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.dsv
+[16.680s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.dsv
+[16.681s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/packages/car_control
+[16.681s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[16.681s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/car_controlConfig.cmake
+[16.681s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/car_controlConfig-version.cmake
+[16.681s] -- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.xml
+[16.683s] Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control

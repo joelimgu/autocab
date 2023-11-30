@@ -1,0 +1,237 @@
+[0.000000] (-) TimerEvent: {}
+[0.000103] (-) JobUnselected: {'identifier': 'car_control'}
+[0.000128] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.000147] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.000164] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.000181] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.000537] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.000632] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.000671] (-) JobUnselected: {'identifier': 'joystick'}
+[0.000705] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.000736] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000782] (-) JobUnselected: {'identifier': 'system_check'}
+[0.000874] (can) JobQueued: {'identifier': 'can', 'dependencies': OrderedDict([('interfaces', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.000915] (can) JobStarted: {'identifier': 'can'}
+[0.050183] (can) JobProgress: {'identifier': 'can', 'progress': 'cmake'}
+[0.050634] (can) Command: {'cmd': ['/usr/bin/cmake', '/home/achraf/autocab/raspberryPI3/ros2_ws/src/can', '-DCMAKE_INSTALL_PREFIX=/home/achraf/autocab/raspberryPI3/ros2_ws/install/can'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble')]), 'shell': False}
+[0.098317] (can) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099403] (-) TimerEvent: {}
+[0.154463] (can) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.161174] (can) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199531] (-) TimerEvent: {}
+[0.225387] (can) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.232175] (can) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.232432] (can) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.232817] (can) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.235458] (can) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299620] (-) TimerEvent: {}
+[0.308392] (can) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.321220] (can) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.321657] (can) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.322359] (can) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.324954] (can) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399706] (-) TimerEvent: {}
+[0.479143] (can) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.499786] (-) TimerEvent: {}
+[0.559285] (can) StdoutLine: {'line': b'-- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.594912] (can) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.599093] (can) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.599845] (-) TimerEvent: {}
+[0.606370] (can) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.618673] (can) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.638213] (can) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.699964] (-) TimerEvent: {}
+[0.706557] (can) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.708710] (can) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.795867] (can) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.800050] (-) TimerEvent: {}
+[0.824438] (can) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.866652] (can) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.874500] (can) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.900137] (-) TimerEvent: {}
+[0.941574] (can) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.942061] (can) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.000252] (-) TimerEvent: {}
+[1.005697] (can) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.006708] (can) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.100369] (-) TimerEvent: {}
+[1.175372] (can) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.200458] (-) TimerEvent: {}
+[1.300715] (-) TimerEvent: {}
+[1.322343] (can) StdoutLine: {'line': b'-- Found interfaces: 0.0.0 (/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)\n'}
+[1.342465] (can) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.400802] (-) TimerEvent: {}
+[1.419695] (can) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.419869] (can) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/achraf/autocab/raspberryPI3/ros2_ws/src/can/include>\n'}
+[1.419941] (can) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.420583] (can) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.421646] (can) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.421730] (can) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.422095] (can) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.423123] (can) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.436256] (can) StdoutLine: {'line': b'-- Generating done\n'}
+[1.437597] (can) StdoutLine: {'line': b'-- Build files have been written to: /home/achraf/autocab/raspberryPI3/ros2_ws/build/can\n'}
+[1.446353] (can) CommandEnded: {'returncode': 0}
+[1.447090] (can) JobProgress: {'identifier': 'can', 'progress': 'build'}
+[1.447127] (can) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can', '--', '-j8', '-l8'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble')]), 'shell': False}
+[1.490094] (can) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/can_tx_node.dir/src/can_tx_node.cpp.o\x1b[0m\n'}
+[1.490300] (can) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/can_rx_node.dir/src/can_rx_node.cpp.o\x1b[0m\n'}
+[1.500924] (-) TimerEvent: {}
+[1.601192] (-) TimerEvent: {}
+[1.701464] (-) TimerEvent: {}
+[1.801734] (-) TimerEvent: {}
+[1.901989] (-) TimerEvent: {}
+[2.002250] (-) TimerEvent: {}
+[2.102507] (-) TimerEvent: {}
+[2.202763] (-) TimerEvent: {}
+[2.303027] (-) TimerEvent: {}
+[2.403280] (-) TimerEvent: {}
+[2.503540] (-) TimerEvent: {}
+[2.603814] (-) TimerEvent: {}
+[2.704071] (-) TimerEvent: {}
+[2.804341] (-) TimerEvent: {}
+[2.904750] (-) TimerEvent: {}
+[3.005003] (-) TimerEvent: {}
+[3.105308] (-) TimerEvent: {}
+[3.205603] (-) TimerEvent: {}
+[3.305875] (-) TimerEvent: {}
+[3.406141] (-) TimerEvent: {}
+[3.506412] (-) TimerEvent: {}
+[3.606695] (-) TimerEvent: {}
+[3.706964] (-) TimerEvent: {}
+[3.807240] (-) TimerEvent: {}
+[3.907513] (-) TimerEvent: {}
+[4.007796] (-) TimerEvent: {}
+[4.108074] (-) TimerEvent: {}
+[4.208352] (-) TimerEvent: {}
+[4.308619] (-) TimerEvent: {}
+[4.408885] (-) TimerEvent: {}
+[4.509151] (-) TimerEvent: {}
+[4.609427] (-) TimerEvent: {}
+[4.709707] (-) TimerEvent: {}
+[4.809982] (-) TimerEvent: {}
+[4.910260] (-) TimerEvent: {}
+[5.010536] (-) TimerEvent: {}
+[5.110806] (-) TimerEvent: {}
+[5.211139] (-) TimerEvent: {}
+[5.311429] (-) TimerEvent: {}
+[5.411798] (-) TimerEvent: {}
+[5.512080] (-) TimerEvent: {}
+[5.612348] (-) TimerEvent: {}
+[5.712634] (-) TimerEvent: {}
+[5.812920] (-) TimerEvent: {}
+[5.913192] (-) TimerEvent: {}
+[6.013452] (-) TimerEvent: {}
+[6.113747] (-) TimerEvent: {}
+[6.214013] (-) TimerEvent: {}
+[6.314275] (-) TimerEvent: {}
+[6.414543] (-) TimerEvent: {}
+[6.514818] (-) TimerEvent: {}
+[6.615085] (-) TimerEvent: {}
+[6.715352] (-) TimerEvent: {}
+[6.815633] (-) TimerEvent: {}
+[6.915890] (-) TimerEvent: {}
+[7.016141] (-) TimerEvent: {}
+[7.116419] (-) TimerEvent: {}
+[7.216726] (-) TimerEvent: {}
+[7.316991] (-) TimerEvent: {}
+[7.417253] (-) TimerEvent: {}
+[7.517526] (-) TimerEvent: {}
+[7.617828] (-) TimerEvent: {}
+[7.718176] (-) TimerEvent: {}
+[7.818439] (-) TimerEvent: {}
+[7.918721] (-) TimerEvent: {}
+[7.941662] (can) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable can_rx_node\x1b[0m\n'}
+[8.018850] (-) TimerEvent: {}
+[8.119122] (-) TimerEvent: {}
+[8.219398] (-) TimerEvent: {}
+[8.250308] (can) StdoutLine: {'line': b'[ 75%] Built target can_rx_node\n'}
+[8.319529] (-) TimerEvent: {}
+[8.419788] (-) TimerEvent: {}
+[8.520037] (-) TimerEvent: {}
+[8.620287] (-) TimerEvent: {}
+[8.720529] (-) TimerEvent: {}
+[8.820810] (-) TimerEvent: {}
+[8.921075] (-) TimerEvent: {}
+[9.021357] (-) TimerEvent: {}
+[9.121607] (-) TimerEvent: {}
+[9.221854] (-) TimerEvent: {}
+[9.322122] (-) TimerEvent: {}
+[9.422368] (-) TimerEvent: {}
+[9.522622] (-) TimerEvent: {}
+[9.622869] (-) TimerEvent: {}
+[9.723116] (-) TimerEvent: {}
+[9.823361] (-) TimerEvent: {}
+[9.923597] (-) TimerEvent: {}
+[10.023818] (-) TimerEvent: {}
+[10.124069] (-) TimerEvent: {}
+[10.224313] (-) TimerEvent: {}
+[10.324561] (-) TimerEvent: {}
+[10.424809] (-) TimerEvent: {}
+[10.525055] (-) TimerEvent: {}
+[10.625303] (-) TimerEvent: {}
+[10.725548] (-) TimerEvent: {}
+[10.825795] (-) TimerEvent: {}
+[10.926043] (-) TimerEvent: {}
+[11.026290] (-) TimerEvent: {}
+[11.126539] (-) TimerEvent: {}
+[11.226786] (-) TimerEvent: {}
+[11.327038] (-) TimerEvent: {}
+[11.427294] (-) TimerEvent: {}
+[11.527548] (-) TimerEvent: {}
+[11.627800] (-) TimerEvent: {}
+[11.728043] (-) TimerEvent: {}
+[11.828264] (-) TimerEvent: {}
+[11.928533] (-) TimerEvent: {}
+[12.028779] (-) TimerEvent: {}
+[12.129026] (-) TimerEvent: {}
+[12.229270] (-) TimerEvent: {}
+[12.329513] (-) TimerEvent: {}
+[12.429737] (-) TimerEvent: {}
+[12.529980] (-) TimerEvent: {}
+[12.630224] (-) TimerEvent: {}
+[12.730555] (-) TimerEvent: {}
+[12.831064] (-) TimerEvent: {}
+[12.931324] (-) TimerEvent: {}
+[13.031588] (-) TimerEvent: {}
+[13.131807] (-) TimerEvent: {}
+[13.232057] (-) TimerEvent: {}
+[13.332326] (-) TimerEvent: {}
+[13.432606] (-) TimerEvent: {}
+[13.532865] (-) TimerEvent: {}
+[13.633145] (-) TimerEvent: {}
+[13.651578] (can) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable can_tx_node\x1b[0m\n'}
+[13.733274] (-) TimerEvent: {}
+[13.833536] (-) TimerEvent: {}
+[13.933796] (-) TimerEvent: {}
+[14.034047] (-) TimerEvent: {}
+[14.134304] (-) TimerEvent: {}
+[14.226521] (can) StdoutLine: {'line': b'[100%] Built target can_tx_node\n'}
+[14.234409] (-) TimerEvent: {}
+[14.237225] (can) CommandEnded: {'returncode': 0}
+[14.262681] (can) JobProgress: {'identifier': 'can', 'progress': 'install'}
+[14.271234] (can) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble')]), 'shell': False}
+[14.279541] (can) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.279775] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_rx_node\n'}
+[14.282430] (can) StdoutLine: {'line': b'-- Set runtime path of "/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_rx_node" to ""\n'}
+[14.282727] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_tx_node\n'}
+[14.289295] (can) StdoutLine: {'line': b'-- Set runtime path of "/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_tx_node" to ""\n'}
+[14.289506] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/ament_index/resource_index/package_run_dependencies/can\n'}
+[14.289647] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/ament_index/resource_index/parent_prefix_path/can\n'}
+[14.289784] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/ament_prefix_path.sh\n'}
+[14.289901] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/ament_prefix_path.dsv\n'}
+[14.290031] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/path.sh\n'}
+[14.290160] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/path.dsv\n'}
+[14.290306] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.bash\n'}
+[14.290451] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.sh\n'}
+[14.290570] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.zsh\n'}
+[14.290692] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.dsv\n'}
+[14.290815] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.dsv\n'}
+[14.290937] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/ament_index/resource_index/packages/can\n'}
+[14.291094] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/cmake/canConfig.cmake\n'}
+[14.291221] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/cmake/canConfig-version.cmake\n'}
+[14.291335] (can) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.xml\n'}
+[14.293177] (can) CommandEnded: {'returncode': 0}
+[14.335054] (-) TimerEvent: {}
+[14.430252] (can) JobEnded: {'identifier': 'can', 'rc': 0}
+[14.430642] (-) EventReactorShutdown: {}
