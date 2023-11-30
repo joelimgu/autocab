@@ -32,7 +32,8 @@ public:
         requestedSteerAngle = 0;
         currentLatitude = 0;
         currentLongitude = 0;
-        currentDirectionVector = vector<float>(0,0);
+        currentDirection[0]=1;
+        currentDirection[1]=1;
     
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -146,7 +147,7 @@ private:
             //Autonomous Mode
             } else if (mode==1){
                 
-                straightLine(currentLatitude, currentLongitude, currentDirectionVector, requestedThrottle, reverse);
+                straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle);
 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
 
@@ -226,12 +227,15 @@ private:
     * This function is called when a message is published on the "/gnss_data" topic
     * 
     */
+
+   //Ajouter filtre de précision
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData){
         if (currentLatitude != 0 && currentLongitude != 0 && (currentLatitude != gnssData.latitude || currentLongitude != gnssData.longitude)){
-            currentDirectionVector =  {gnssData.latitude - currentLatitude, gnssData.longitude - currentLongitude};
+            currentDirection[0] =  gnssData.latitude - currentLatitude ; 
+            currentDirection[1] =  gnssData.longitude - currentLongitude};
+            currentLatitude = gnssData.latitude;
+            currentLongitude = gnssData.longitude;
         }
-        currentLatitude = gnssData.latitude;
-        currentLongitude = gnssData.longitude;
     }
     
     // ---- Private variables ----
@@ -257,7 +261,7 @@ private:
     //gnss data variables
     float currentLatitude;
     float currentLongitude;
-    vector<float> currentDirectionVector;
+    float currentDirection[2];
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
