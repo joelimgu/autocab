@@ -1,0 +1,6 @@
+[0.177s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j4 -l4
+[0.213s] [0mCMake Error: The current CMakeCache.txt directory /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick/CMakeCache.txt is different than the directory /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.288s] [0mCMake Error: The source directory "/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick" does not exist.
+[0.289s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.291s] gmake: *** [Makefile:418: cmake_check_build_system] Error 1
+[0.303s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j4 -l4

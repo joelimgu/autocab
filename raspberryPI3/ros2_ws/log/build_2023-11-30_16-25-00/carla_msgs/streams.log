@@ -1,0 +1,6 @@
+[0.150s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs -- -j4 -l4
+[0.187s] [0mCMake Error: The current CMakeCache.txt directory /home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs/CMakeCache.txt is different than the directory /home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.247s] [0mCMake Error: The source directory "/home/achraf/autocab/raspberryPI3/ros2_ws/src/carla_msgs" does not exist.
+[0.248s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.251s] gmake: *** [Makefile:747: cmake_check_build_system] Error 1
+[0.266s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs -- -j4 -l4
