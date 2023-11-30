@@ -165,7 +165,12 @@ private:
         }
 
         //Obstacle Detection in all modes
-        if (ObstacleCmd(front_left, front_center, front_right, rear_left, rear_center, rear_right) == STOP){
+        if (ObstacleCmdFront(front_left, front_center, front_right, rear_left) == STOP && reverse == false){
+            leftRearPwmCmd = STOP;
+            rightRearPwmCmd = leftRearPwmCmd;
+        }
+
+        if (ObstacleCmdRear(rear_left, rear_center, rear_right) == STOP && reverse == true){
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = leftRearPwmCmd;
         }
