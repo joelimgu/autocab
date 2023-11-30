@@ -1,0 +1,886 @@
+[0.880s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.880s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f83b5bb4d60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f83b6053790>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f83b6053790>>)
+[0.922s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.922s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.922s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.922s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.922s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.922s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.922s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/achraf/autocab/raspberryPI3/ros2_ws'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/can) by extension 'ros'
+[0.938s] DEBUG:colcon.colcon_core.package_identification:Package 'src/can' with type 'ros.ament_cmake' and name 'can'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extensions ['ignore', 'ignore_ament_install']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extension 'ignore'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extension 'ignore_ament_install'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extensions ['colcon_pkg']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extension 'colcon_pkg'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extensions ['colcon_meta']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extension 'colcon_meta'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extensions ['ros']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/car_control) by extension 'ros'
+[0.939s] DEBUG:colcon.colcon_core.package_identification:Package 'src/car_control' with type 'ros.ament_cmake' and name 'car_control'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extension 'ignore'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extension 'ignore_ament_install'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extensions ['colcon_pkg']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extension 'colcon_pkg'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extensions ['colcon_meta']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extension 'colcon_meta'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extensions ['ros']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(src/carla_msgs) by extension 'ros'
+[0.940s] DEBUG:colcon.colcon_core.package_identification:Package 'src/carla_msgs' with type 'ros.ament_cmake' and name 'carla_msgs'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extensions ['ignore', 'ignore_ament_install']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extension 'ignore'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extension 'ignore_ament_install'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extensions ['colcon_pkg']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extension 'colcon_pkg'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extensions ['colcon_meta']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extension 'colcon_meta'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extensions ['ros']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/geicar_start) by extension 'ros'
+[0.941s] DEBUG:colcon.colcon_core.package_identification:Package 'src/geicar_start' with type 'ros.ament_cmake' and name 'geicar_start'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'ignore'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'ignore_ament_install'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['colcon_pkg']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'colcon_pkg'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['colcon_meta']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'colcon_meta'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['ros']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'ros'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['cmake', 'python']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'cmake'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'python'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['python_setup_py']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'python_setup_py'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['ignore', 'ignore_ament_install']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'ignore'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'ignore_ament_install'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['colcon_pkg']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'colcon_pkg'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['colcon_meta']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'colcon_meta'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['ros']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'ros'
+[0.943s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/imu_complementary_filter' with type 'ros.ament_cmake' and name 'imu_complementary_filter'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['ignore', 'ignore_ament_install']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'ignore'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'ignore_ament_install'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['colcon_pkg']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'colcon_pkg'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['colcon_meta']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'colcon_meta'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['ros']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'ros'
+[0.944s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/imu_filter_madgwick' with type 'ros.ament_cmake' and name 'imu_filter_madgwick'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'ignore'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'ignore_ament_install'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['colcon_pkg']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'colcon_pkg'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['colcon_meta']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'colcon_meta'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['ros']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'ros'
+[0.945s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/imu_tools' with type 'ros.ament_cmake' and name 'imu_tools'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'ignore'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'ignore_ament_install'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['colcon_pkg']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'colcon_pkg'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['colcon_meta']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'colcon_meta'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['ros']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'ros'
+[0.947s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/rviz_imu_plugin' with type 'ros.ament_cmake' and name 'rviz_imu_plugin'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extension 'ignore'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extension 'ignore_ament_install'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extensions ['colcon_pkg']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extension 'colcon_pkg'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extensions ['colcon_meta']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extension 'colcon_meta'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extensions ['ros']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces) by extension 'ros'
+[0.948s] DEBUG:colcon.colcon_core.package_identification:Package 'src/interfaces' with type 'ros.ament_cmake' and name 'interfaces'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extensions ['ignore', 'ignore_ament_install']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extension 'ignore'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extension 'ignore_ament_install'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extensions ['colcon_pkg']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extension 'colcon_pkg'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extensions ['colcon_meta']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extension 'colcon_meta'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extensions ['ros']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick) by extension 'ros'
+[0.949s] DEBUG:colcon.colcon_core.package_identification:Package 'src/joystick' with type 'ros.ament_cmake' and name 'joystick'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'ignore'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'ignore_ament_install'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['colcon_pkg']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'colcon_pkg'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['colcon_meta']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'colcon_meta'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extensions ['ros']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation) by extension 'ros'
+[0.950s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulation' with type 'ros.ament_cmake' and name 'simulation'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extensions ['ignore', 'ignore_ament_install']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extension 'ignore'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extension 'ignore_ament_install'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extensions ['colcon_pkg']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extension 'colcon_pkg'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extensions ['colcon_meta']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extension 'colcon_meta'
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extensions ['ros']
+[0.950s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_check) by extension 'ros'
+[0.951s] DEBUG:colcon.colcon_core.package_identification:Package 'src/system_check' with type 'ros.ament_cmake' and name 'system_check'
+[0.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.951s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.034s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.061s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[1.062s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'cmake_target' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'carla_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.149s] DEBUG:colcon.colcon_core.verb:Building package 'carla_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/carla_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_args' from command line to 'None'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_target' from command line to 'None'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_clean_cache' from command line to 'False'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_clean_first' from command line to 'False'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_force_configure' from command line to 'False'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'ament_cmake_args' from command line to 'None'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'catkin_cmake_args' from command line to 'None'
+[1.162s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.162s] DEBUG:colcon.colcon_core.verb:Building package 'imu_complementary_filter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter', 'symlink_install': False, 'test_result_base': None}
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_args' from command line to 'None'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_target' from command line to 'None'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_clean_cache' from command line to 'False'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_clean_first' from command line to 'False'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_force_configure' from command line to 'False'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'ament_cmake_args' from command line to 'None'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'catkin_cmake_args' from command line to 'None'
+[1.175s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.175s] DEBUG:colcon.colcon_core.verb:Building package 'imu_filter_madgwick' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick', 'symlink_install': False, 'test_result_base': None}
+[1.188s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_args' from command line to 'None'
+[1.188s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target' from command line to 'None'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.189s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.189s] DEBUG:colcon.colcon_core.verb:Building package 'interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_args' from command line to 'None'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_target' from command line to 'None'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[1.202s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.202s] DEBUG:colcon.colcon_core.verb:Building package 'rviz_imu_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin', 'symlink_install': False, 'test_result_base': None}
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'cmake_target' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'cmake_clean_cache' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'cmake_clean_first' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'cmake_force_configure' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'ament_cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'catkin_cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'can' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.216s] DEBUG:colcon.colcon_core.verb:Building package 'can' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/can', 'symlink_install': False, 'test_result_base': None}
+[1.228s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'cmake_args' from command line to 'None'
+[1.228s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'cmake_target' from command line to 'None'
+[1.228s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.228s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'cmake_clean_cache' from command line to 'False'
+[1.229s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'cmake_clean_first' from command line to 'False'
+[1.229s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'cmake_force_configure' from command line to 'False'
+[1.229s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'ament_cmake_args' from command line to 'None'
+[1.229s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'catkin_cmake_args' from command line to 'None'
+[1.229s] Level 5:colcon.colcon_core.verb:set package 'car_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.229s] DEBUG:colcon.colcon_core.verb:Building package 'car_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control', 'symlink_install': False, 'test_result_base': None}
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_args' from command line to 'None'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_target' from command line to 'None'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_clean_first' from command line to 'False'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_force_configure' from command line to 'False'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'ament_cmake_args' from command line to 'None'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[1.242s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.242s] DEBUG:colcon.colcon_core.verb:Building package 'imu_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools', 'symlink_install': False, 'test_result_base': None}
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'cmake_args' from command line to 'None'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'cmake_target' from command line to 'None'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'cmake_clean_cache' from command line to 'False'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'cmake_clean_first' from command line to 'False'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'cmake_force_configure' from command line to 'False'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'ament_cmake_args' from command line to 'None'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'catkin_cmake_args' from command line to 'None'
+[1.255s] Level 5:colcon.colcon_core.verb:set package 'joystick' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.255s] DEBUG:colcon.colcon_core.verb:Building package 'joystick' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick', 'symlink_install': False, 'test_result_base': None}
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_args' from command line to 'None'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_target' from command line to 'None'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_clean_first' from command line to 'False'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_force_configure' from command line to 'False'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'ament_cmake_args' from command line to 'None'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[1.268s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.268s] DEBUG:colcon.colcon_core.verb:Building package 'simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/simulation', 'symlink_install': False, 'test_result_base': None}
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'cmake_args' from command line to 'None'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'cmake_target' from command line to 'None'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'cmake_clean_cache' from command line to 'False'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'cmake_clean_first' from command line to 'False'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'cmake_force_configure' from command line to 'False'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'ament_cmake_args' from command line to 'None'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'catkin_cmake_args' from command line to 'None'
+[1.281s] Level 5:colcon.colcon_core.verb:set package 'system_check' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.282s] DEBUG:colcon.colcon_core.verb:Building package 'system_check' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check', 'symlink_install': False, 'test_result_base': None}
+[1.294s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'cmake_args' from command line to 'None'
+[1.294s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'cmake_target' from command line to 'None'
+[1.294s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.295s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'cmake_clean_cache' from command line to 'False'
+[1.295s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'cmake_clean_first' from command line to 'False'
+[1.295s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'cmake_force_configure' from command line to 'False'
+[1.295s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'ament_cmake_args' from command line to 'None'
+[1.295s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'catkin_cmake_args' from command line to 'None'
+[1.295s] Level 5:colcon.colcon_core.verb:set package 'geicar_start' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.295s] DEBUG:colcon.colcon_core.verb:Building package 'geicar_start' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start', 'merge_install': False, 'path': '/home/achraf/autocab/raspberryPI3/ros2_ws/src/geicar_start', 'symlink_install': False, 'test_result_base': None}
+[1.307s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.321s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.321s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/interfaces' with build type 'ament_cmake'
+[1.321s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/interfaces'
+[1.336s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.337s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.337s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.366s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick' with build type 'ament_cmake'
+[1.366s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick'
+[1.380s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.380s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.419s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/carla_msgs' with build type 'ament_cmake'
+[1.419s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/carla_msgs'
+[1.434s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.434s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.464s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter' with build type 'ament_cmake'
+[1.464s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter'
+[1.478s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.478s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.508s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin' with build type 'ament_cmake'
+[1.508s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/rviz_imu_plugin'
+[1.523s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.524s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j8 -l8
+[1.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j8 -l8
+[1.568s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs -- -j8 -l8
+[1.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter -- -j8 -l8
+[1.579s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin -- -j8 -l8
+[1.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter -- -j8 -l8
+[1.808s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j8 -l8
+[1.852s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter
+[1.873s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_complementary_filter)
+[1.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter
+[1.908s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter' for CMake module files
+[1.910s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter' for CMake config files
+[1.910s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_complementary_filter', 'cmake_prefix_path')
+[1.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.ps1'
+[1.937s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.dsv'
+[1.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.sh'
+[1.939s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib'
+[1.939s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/bin'
+[1.939s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/pkgconfig/imu_complementary_filter.pc'
+[1.940s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/python3.10/site-packages'
+[1.940s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/bin'
+[1.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.ps1'
+[1.964s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.dsv'
+[1.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.sh'
+[1.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.bash'
+[1.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.zsh'
+[1.969s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/colcon-core/packages/imu_complementary_filter)
+[1.971s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin -- -j8 -l8
+[1.974s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick
+[1.993s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_filter_madgwick)
+[1.999s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick
+[2.017s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick' for CMake module files
+[2.018s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick' for CMake config files
+[2.018s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_filter_madgwick', 'cmake_prefix_path')
+[2.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/cmake_prefix_path.ps1'
+[2.033s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/cmake_prefix_path.dsv'
+[2.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/cmake_prefix_path.sh'
+[2.034s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib'
+[2.034s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_filter_madgwick', 'ld_library_path_lib')
+[2.050s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/ld_library_path_lib.ps1'
+[2.050s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/ld_library_path_lib.dsv'
+[2.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/ld_library_path_lib.sh'
+[2.051s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/bin'
+[2.051s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/pkgconfig/imu_filter_madgwick.pc'
+[2.051s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/python3.10/site-packages'
+[2.051s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/bin'
+[2.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.ps1'
+[2.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.dsv'
+[2.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.sh'
+[2.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.bash'
+[2.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.zsh'
+[2.067s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/colcon-core/packages/imu_filter_madgwick)
+[2.095s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_complementary_filter)
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter' for CMake module files
+[2.116s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter' for CMake config files
+[2.116s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_complementary_filter', 'cmake_prefix_path')
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.ps1'
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.dsv'
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.sh'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/bin'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/pkgconfig/imu_complementary_filter.pc'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/python3.10/site-packages'
+[2.135s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/bin'
+[2.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.ps1'
+[2.150s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.dsv'
+[2.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.sh'
+[2.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.bash'
+[2.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.zsh'
+[2.152s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/colcon-core/packages/imu_complementary_filter)
+[2.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin
+[2.178s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_filter_madgwick)
+[2.192s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick' for CMake module files
+[2.193s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick' for CMake config files
+[2.193s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_filter_madgwick', 'cmake_prefix_path')
+[2.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/cmake_prefix_path.ps1'
+[2.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/cmake_prefix_path.dsv'
+[2.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/cmake_prefix_path.sh'
+[2.208s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib'
+[2.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_filter_madgwick', 'ld_library_path_lib')
+[2.224s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/ld_library_path_lib.ps1'
+[2.225s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/ld_library_path_lib.dsv'
+[2.225s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/hook/ld_library_path_lib.sh'
+[2.226s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/bin'
+[2.226s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/pkgconfig/imu_filter_madgwick.pc'
+[2.226s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/python3.10/site-packages'
+[2.226s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/bin'
+[2.242s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.ps1'
+[2.243s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.dsv'
+[2.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.sh'
+[2.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.bash'
+[2.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.zsh'
+[2.244s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/colcon-core/packages/imu_filter_madgwick)
+[2.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j8 -l8
+[2.248s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs -- -j8 -l8
+[2.250s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_imu_plugin)
+[2.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin
+[2.274s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin' for CMake module files
+[2.275s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin' for CMake config files
+[2.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_imu_plugin', 'cmake_prefix_path')
+[2.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/cmake_prefix_path.ps1'
+[2.298s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/cmake_prefix_path.dsv'
+[2.298s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/cmake_prefix_path.sh'
+[2.299s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib'
+[2.299s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_imu_plugin', 'ld_library_path_lib')
+[2.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/ld_library_path_lib.ps1'
+[2.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/ld_library_path_lib.dsv'
+[2.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/ld_library_path_lib.sh'
+[2.320s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/bin'
+[2.320s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib/pkgconfig/rviz_imu_plugin.pc'
+[2.321s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib/python3.10/site-packages'
+[2.321s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/bin'
+[2.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.ps1'
+[2.340s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.dsv'
+[2.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.sh'
+[2.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.bash'
+[2.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.zsh'
+[2.342s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/colcon-core/packages/rviz_imu_plugin)
+[2.350s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs
+[2.415s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_imu_plugin)
+[2.436s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin' for CMake module files
+[2.436s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin' for CMake config files
+[2.437s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_imu_plugin', 'cmake_prefix_path')
+[2.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/cmake_prefix_path.ps1'
+[2.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/cmake_prefix_path.dsv'
+[2.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/cmake_prefix_path.sh'
+[2.453s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib'
+[2.453s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_imu_plugin', 'ld_library_path_lib')
+[2.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/ld_library_path_lib.ps1'
+[2.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/ld_library_path_lib.dsv'
+[2.469s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/hook/ld_library_path_lib.sh'
+[2.469s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/bin'
+[2.469s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib/pkgconfig/rviz_imu_plugin.pc'
+[2.470s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib/python3.10/site-packages'
+[2.470s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/bin'
+[2.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.ps1'
+[2.487s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.dsv'
+[2.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.sh'
+[2.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.bash'
+[2.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.zsh'
+[2.489s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/colcon-core/packages/rviz_imu_plugin)
+[2.489s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools' with build type 'ament_cmake'
+[2.489s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_tools'
+[2.508s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.508s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces
+[2.546s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carla_msgs)
+[2.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs
+[2.577s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs' for CMake module files
+[2.579s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs' for CMake config files
+[2.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('carla_msgs', 'cmake_prefix_path')
+[2.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/cmake_prefix_path.ps1'
+[2.618s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/cmake_prefix_path.dsv'
+[2.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/cmake_prefix_path.sh'
+[2.618s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib'
+[2.618s] Level 1:colcon.colcon_core.shell:create_environment_hook('carla_msgs', 'ld_library_path_lib')
+[2.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/ld_library_path_lib.ps1'
+[2.634s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/ld_library_path_lib.dsv'
+[2.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/ld_library_path_lib.sh'
+[2.634s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/bin'
+[2.634s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib/pkgconfig/carla_msgs.pc'
+[2.634s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib/python3.10/site-packages'
+[2.635s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/bin'
+[2.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.ps1'
+[2.650s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.dsv'
+[2.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.sh'
+[2.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.bash'
+[2.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.zsh'
+[2.652s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/colcon-core/packages/carla_msgs)
+[2.656s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[2.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools -- -j8 -l8
+[2.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/interfaces
+[2.676s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces' for CMake module files
+[2.677s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces' for CMake config files
+[2.678s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[2.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[2.695s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[2.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[2.696s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib'
+[2.696s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[2.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[2.717s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[2.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[2.717s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/bin'
+[2.717s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/pkgconfig/interfaces.pc'
+[2.717s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/python3.10/site-packages'
+[2.718s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/bin'
+[2.732s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.ps1'
+[2.732s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.dsv'
+[2.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.sh'
+[2.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.bash'
+[2.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.zsh'
+[2.734s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/colcon-core/packages/interfaces)
+[2.751s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carla_msgs)
+[2.767s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs' for CMake module files
+[2.768s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs' for CMake config files
+[2.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('carla_msgs', 'cmake_prefix_path')
+[2.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/cmake_prefix_path.ps1'
+[2.789s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/cmake_prefix_path.dsv'
+[2.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/cmake_prefix_path.sh'
+[2.790s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib'
+[2.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('carla_msgs', 'ld_library_path_lib')
+[2.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/ld_library_path_lib.ps1'
+[2.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/ld_library_path_lib.dsv'
+[2.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/hook/ld_library_path_lib.sh'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/bin'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib/pkgconfig/carla_msgs.pc'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib/python3.10/site-packages'
+[2.809s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/bin'
+[2.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.ps1'
+[2.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.dsv'
+[2.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.sh'
+[2.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.bash'
+[2.826s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/carla_msgs/package.zsh'
+[2.827s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/share/colcon-core/packages/carla_msgs)
+[2.829s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools -- -j8 -l8
+[2.851s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools
+[2.861s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_tools)
+[2.861s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_tools
+[2.875s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools' for CMake module files
+[2.876s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools' for CMake config files
+[2.876s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_tools', 'cmake_prefix_path')
+[2.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/hook/cmake_prefix_path.ps1'
+[2.890s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/hook/cmake_prefix_path.dsv'
+[2.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/hook/cmake_prefix_path.sh'
+[2.891s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/bin'
+[2.891s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/lib/pkgconfig/imu_tools.pc'
+[2.891s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/lib/python3.10/site-packages'
+[2.891s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/bin'
+[2.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.ps1'
+[2.906s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.dsv'
+[2.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.sh'
+[2.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.bash'
+[2.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.zsh'
+[2.908s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/colcon-core/packages/imu_tools)
+[2.927s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[2.941s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces' for CMake module files
+[2.942s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces' for CMake config files
+[2.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[2.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[2.958s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[2.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[2.959s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib'
+[2.959s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[2.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[2.973s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[2.973s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[2.973s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/bin'
+[2.973s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/pkgconfig/interfaces.pc'
+[2.974s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/python3.10/site-packages'
+[2.974s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/bin'
+[2.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.ps1'
+[2.988s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.dsv'
+[2.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.sh'
+[2.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.bash'
+[2.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.zsh'
+[2.989s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/share/colcon-core/packages/interfaces)
+[2.990s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/can' with build type 'ament_cmake'
+[2.990s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/can'
+[3.005s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.005s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.036s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control' with build type 'ament_cmake'
+[3.036s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control'
+[3.059s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.059s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.098s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check' with build type 'ament_cmake'
+[3.098s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check'
+[3.112s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.112s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.143s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick' with build type 'ament_cmake'
+[3.143s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick'
+[3.160s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.160s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.194s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/simulation' with build type 'ament_cmake'
+[3.195s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/simulation'
+[3.209s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.209s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.259s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_tools)
+[3.272s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools' for CMake module files
+[3.272s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools' for CMake config files
+[3.273s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_tools', 'cmake_prefix_path')
+[3.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/hook/cmake_prefix_path.ps1'
+[3.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/hook/cmake_prefix_path.dsv'
+[3.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/hook/cmake_prefix_path.sh'
+[3.287s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/bin'
+[3.287s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/lib/pkgconfig/imu_tools.pc'
+[3.287s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/lib/python3.10/site-packages'
+[3.287s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/bin'
+[3.301s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.ps1'
+[3.302s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.dsv'
+[3.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.sh'
+[3.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.bash'
+[3.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/imu_tools/package.zsh'
+[3.303s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_tools/share/colcon-core/packages/imu_tools)
+[3.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/can -- -j8 -l8
+[3.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control -- -j8 -l8
+[3.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check -- -j8 -l8
+[3.325s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick -- -j8 -l8
+[3.329s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation -- -j8 -l8
+[3.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/can -- -j8 -l8
+[3.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check -- -j8 -l8
+[3.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation -- -j8 -l8
+[3.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/can
+[3.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check
+[3.457s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can)
+[3.458s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/can' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/can
+[3.486s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can' for CMake module files
+[3.486s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can' for CMake config files
+[3.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('can', 'cmake_prefix_path')
+[3.511s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/hook/cmake_prefix_path.ps1'
+[3.512s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/hook/cmake_prefix_path.dsv'
+[3.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/hook/cmake_prefix_path.sh'
+[3.513s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib'
+[3.513s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/bin'
+[3.513s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/pkgconfig/can.pc'
+[3.513s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/python3.10/site-packages'
+[3.514s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/bin'
+[3.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.ps1'
+[3.538s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.dsv'
+[3.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.sh'
+[3.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.bash'
+[3.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.zsh'
+[3.540s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/colcon-core/packages/can)
+[3.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation
+[3.548s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(system_check)
+[3.549s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check
+[3.575s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check' for CMake module files
+[3.576s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check' for CMake config files
+[3.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('system_check', 'cmake_prefix_path')
+[3.590s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/hook/cmake_prefix_path.ps1'
+[3.591s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/hook/cmake_prefix_path.dsv'
+[3.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/hook/cmake_prefix_path.sh'
+[3.592s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/lib'
+[3.592s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/bin'
+[3.592s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/lib/pkgconfig/system_check.pc'
+[3.592s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/lib/python3.10/site-packages'
+[3.592s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/bin'
+[3.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.ps1'
+[3.607s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.dsv'
+[3.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.sh'
+[3.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.bash'
+[3.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.zsh'
+[3.609s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/colcon-core/packages/system_check)
+[3.634s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can)
+[3.653s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can' for CMake module files
+[3.653s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can' for CMake config files
+[3.654s] Level 1:colcon.colcon_core.shell:create_environment_hook('can', 'cmake_prefix_path')
+[3.667s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/hook/cmake_prefix_path.ps1'
+[3.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/hook/cmake_prefix_path.dsv'
+[3.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/hook/cmake_prefix_path.sh'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/bin'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/pkgconfig/can.pc'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/lib/python3.10/site-packages'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/bin'
+[3.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.ps1'
+[3.684s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.dsv'
+[3.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.sh'
+[3.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.bash'
+[3.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.zsh'
+[3.685s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/can/share/colcon-core/packages/can)
+[3.686s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation)
+[3.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/simulation
+[3.706s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation' for CMake module files
+[3.707s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation' for CMake config files
+[3.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'cmake_prefix_path')
+[3.735s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.ps1'
+[3.736s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.dsv'
+[3.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.sh'
+[3.737s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/lib'
+[3.737s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/bin'
+[3.737s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/lib/pkgconfig/simulation.pc'
+[3.737s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/lib/python3.10/site-packages'
+[3.737s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/bin'
+[3.754s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.ps1'
+[3.755s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.dsv'
+[3.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.sh'
+[3.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.bash'
+[3.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.zsh'
+[3.756s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/colcon-core/packages/simulation)
+[3.774s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(system_check)
+[3.789s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check' for CMake module files
+[3.789s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check' for CMake config files
+[3.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('system_check', 'cmake_prefix_path')
+[3.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/hook/cmake_prefix_path.ps1'
+[3.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/hook/cmake_prefix_path.dsv'
+[3.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/hook/cmake_prefix_path.sh'
+[3.806s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/lib'
+[3.806s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/bin'
+[3.806s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/lib/pkgconfig/system_check.pc'
+[3.806s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/lib/python3.10/site-packages'
+[3.807s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/bin'
+[3.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.ps1'
+[3.821s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.dsv'
+[3.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.sh'
+[3.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.bash'
+[3.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/system_check/package.zsh'
+[3.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check/share/colcon-core/packages/system_check)
+[3.838s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation)
+[3.855s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation' for CMake module files
+[3.855s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation' for CMake config files
+[3.855s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'cmake_prefix_path')
+[3.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.ps1'
+[3.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.dsv'
+[3.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/hook/cmake_prefix_path.sh'
+[3.870s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/lib'
+[3.870s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/bin'
+[3.870s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/lib/pkgconfig/simulation.pc'
+[3.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/lib/python3.10/site-packages'
+[3.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/bin'
+[3.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.ps1'
+[3.885s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.dsv'
+[3.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.sh'
+[3.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.bash'
+[3.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/simulation/package.zsh'
+[3.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/simulation/share/colcon-core/packages/simulation)
+[3.889s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick -- -j8 -l8
+[3.917s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick
+[3.966s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joystick)
+[3.966s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick
+[3.981s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick' for CMake module files
+[3.981s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick' for CMake config files
+[3.982s] Level 1:colcon.colcon_core.shell:create_environment_hook('joystick', 'cmake_prefix_path')
+[4.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/hook/cmake_prefix_path.ps1'
+[4.000s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/hook/cmake_prefix_path.dsv'
+[4.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/hook/cmake_prefix_path.sh'
+[4.001s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/lib'
+[4.001s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/bin'
+[4.001s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/lib/pkgconfig/joystick.pc'
+[4.001s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/lib/python3.10/site-packages'
+[4.002s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/bin'
+[4.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.ps1'
+[4.016s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.dsv'
+[4.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.sh'
+[4.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.bash'
+[4.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.zsh'
+[4.017s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/colcon-core/packages/joystick)
+[4.060s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joystick)
+[4.073s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick' for CMake module files
+[4.074s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick' for CMake config files
+[4.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('joystick', 'cmake_prefix_path')
+[4.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/hook/cmake_prefix_path.ps1'
+[4.088s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/hook/cmake_prefix_path.dsv'
+[4.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/hook/cmake_prefix_path.sh'
+[4.089s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/lib'
+[4.089s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/bin'
+[4.089s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/lib/pkgconfig/joystick.pc'
+[4.089s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/lib/python3.10/site-packages'
+[4.090s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/bin'
+[4.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.ps1'
+[4.106s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.dsv'
+[4.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.sh'
+[4.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.bash'
+[4.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.zsh'
+[4.107s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/joystick/share/colcon-core/packages/joystick)
+[19.688s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control -- -j8 -l8
+[19.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control
+[19.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(car_control)
+[19.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control
+[19.764s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control' for CMake module files
+[19.764s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control' for CMake config files
+[19.765s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_control', 'cmake_prefix_path')
+[19.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/hook/cmake_prefix_path.ps1'
+[19.779s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/hook/cmake_prefix_path.dsv'
+[19.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/hook/cmake_prefix_path.sh'
+[19.780s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib'
+[19.780s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/bin'
+[19.780s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib/pkgconfig/car_control.pc'
+[19.780s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib/python3.10/site-packages'
+[19.780s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/bin'
+[19.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.ps1'
+[19.796s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.dsv'
+[19.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.sh'
+[19.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.bash'
+[19.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.zsh'
+[19.798s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/colcon-core/packages/car_control)
+[19.841s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(car_control)
+[19.855s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control' for CMake module files
+[19.856s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control' for CMake config files
+[19.856s] Level 1:colcon.colcon_core.shell:create_environment_hook('car_control', 'cmake_prefix_path')
+[19.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/hook/cmake_prefix_path.ps1'
+[19.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/hook/cmake_prefix_path.dsv'
+[19.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/hook/cmake_prefix_path.sh'
+[19.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib'
+[19.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/bin'
+[19.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib/pkgconfig/car_control.pc'
+[19.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/lib/python3.10/site-packages'
+[19.871s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/bin'
+[19.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.ps1'
+[19.887s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.dsv'
+[19.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.sh'
+[19.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.bash'
+[19.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.zsh'
+[19.889s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control/share/colcon-core/packages/car_control)
+[19.889s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/geicar_start' with build type 'ament_cmake'
+[19.889s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/achraf/autocab/raspberryPI3/ros2_ws/src/geicar_start'
+[19.905s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.905s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.948s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start -- -j8 -l8
+[19.985s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start -- -j8 -l8
+[20.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start
+[20.017s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(geicar_start)
+[20.017s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start' returned '0': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check:/home/achraf/autocab/raspberryPI3/ros2_ws/install/car_control:/home/achraf/autocab/raspberryPI3/ros2_ws/install/can:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/achraf/autocab/raspberryPI3/ros2_ws/build/geicar_start
+[20.031s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start' for CMake module files
+[20.031s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start' for CMake config files
+[20.032s] Level 1:colcon.colcon_core.shell:create_environment_hook('geicar_start', 'cmake_prefix_path')
+[20.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/hook/cmake_prefix_path.ps1'
+[20.045s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/hook/cmake_prefix_path.dsv'
+[20.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/hook/cmake_prefix_path.sh'
+[20.046s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/bin'
+[20.046s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/lib/pkgconfig/geicar_start.pc'
+[20.046s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/lib/python3.10/site-packages'
+[20.046s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/bin'
+[20.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.ps1'
+[20.060s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.dsv'
+[20.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.sh'
+[20.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.bash'
+[20.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.zsh'
+[20.061s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/colcon-core/packages/geicar_start)
+[20.096s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(geicar_start)
+[20.116s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start' for CMake module files
+[20.116s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start' for CMake config files
+[20.117s] Level 1:colcon.colcon_core.shell:create_environment_hook('geicar_start', 'cmake_prefix_path')
+[20.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/hook/cmake_prefix_path.ps1'
+[20.132s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/hook/cmake_prefix_path.dsv'
+[20.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/hook/cmake_prefix_path.sh'
+[20.133s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/bin'
+[20.133s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/lib/pkgconfig/geicar_start.pc'
+[20.133s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/lib/python3.10/site-packages'
+[20.133s] Level 1:colcon.colcon_core.environment:checking '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/bin'
+[20.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.ps1'
+[20.149s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.dsv'
+[20.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.sh'
+[20.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.bash'
+[20.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/geicar_start/package.zsh'
+[20.150s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/achraf/autocab/raspberryPI3/ros2_ws/install/geicar_start/share/colcon-core/packages/geicar_start)
+[20.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[20.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[20.150s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[20.151s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[20.175s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[20.175s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[20.175s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[20.185s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[20.199s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/local_setup.ps1'
+[20.200s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/achraf/autocab/raspberryPI3/ros2_ws/install/_local_setup_util_ps1.py'
+[20.201s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/setup.ps1'
+[20.216s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/local_setup.sh'
+[20.216s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/achraf/autocab/raspberryPI3/ros2_ws/install/_local_setup_util_sh.py'
+[20.217s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/setup.sh'
+[20.231s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/local_setup.bash'
+[20.232s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/setup.bash'
+[20.246s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/local_setup.zsh'
+[20.247s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/achraf/autocab/raspberryPI3/ros2_ws/install/setup.zsh'
