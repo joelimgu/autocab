@@ -10,7 +10,7 @@
 
 int ObstacleCmdFront(int16_t front_left, int16_t front_center, int16_t front_right){
 
-    if (front_left <= 50 || ront_center <= 50 || front_right <= 50) {
+    if (front_left <= 50 || front_center <= 50 || front_right <= 50) {
         return STOP;
     }
 }
