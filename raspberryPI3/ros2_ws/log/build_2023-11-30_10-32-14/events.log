@@ -1,0 +1,329 @@
+[0.000000] (-) TimerEvent: {}
+[0.000148] (-) JobUnselected: {'identifier': 'can'}
+[0.000175] (-) JobUnselected: {'identifier': 'car_control'}
+[0.000201] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.000232] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.000310] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.000327] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.000365] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.000434] (-) JobUnselected: {'identifier': 'joystick'}
+[0.000450] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.000472] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000503] (-) JobUnselected: {'identifier': 'system_check'}
+[0.000571] (imu_filter_madgwick) JobQueued: {'identifier': 'imu_filter_madgwick', 'dependencies': OrderedDict()}
+[0.000589] (imu_filter_madgwick) JobStarted: {'identifier': 'imu_filter_madgwick'}
+[0.044401] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'cmake'}
+[0.044447] (imu_filter_madgwick) Command: {'cmd': ['/usr/bin/cmake', '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick', '-DCMAKE_INSTALL_PREFIX=/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.090784] (imu_filter_madgwick) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099486] (-) TimerEvent: {}
+[0.139507] (imu_filter_madgwick) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.145769] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199638] (-) TimerEvent: {}
+[0.203159] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.209759] (imu_filter_madgwick) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.209960] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.210318] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.212894] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.281119] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.287953] (imu_filter_madgwick) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.288208] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.288605] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.290305] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299703] (-) TimerEvent: {}
+[0.399929] (-) TimerEvent: {}
+[0.430978] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.500053] (-) TimerEvent: {}
+[0.500278] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.534937] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.538809] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.545733] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.557435] (imu_filter_madgwick) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.574195] (imu_filter_madgwick) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600149] (-) TimerEvent: {}
+[0.635874] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.637769] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.700277] (-) TimerEvent: {}
+[0.718856] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.741100] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.780831] (imu_filter_madgwick) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.788240] (imu_filter_madgwick) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.800398] (-) TimerEvent: {}
+[0.849651] (imu_filter_madgwick) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.850085] (imu_filter_madgwick) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.900519] (-) TimerEvent: {}
+[0.912149] (imu_filter_madgwick) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.913113] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.000640] (-) TimerEvent: {}
+[1.069835] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.7 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[1.100750] (-) TimerEvent: {}
+[1.140272] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.182972] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.196633] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.198029] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.198114] (imu_filter_madgwick) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.200850] (-) TimerEvent: {}
+[1.301071] (-) TimerEvent: {}
+[1.401314] (-) TimerEvent: {}
+[1.493192] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.501386] (-) TimerEvent: {}
+[1.579801] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.6 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.584630] (imu_filter_madgwick) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.601504] (-) TimerEvent: {}
+[1.645639] (imu_filter_madgwick) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.672785] (imu_filter_madgwick) StdoutLine: {'line': b'-- Generating done\n'}
+[1.674731] (imu_filter_madgwick) StdoutLine: {'line': b'-- Build files have been written to: /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick\n'}
+[1.684390] (imu_filter_madgwick) CommandEnded: {'returncode': 0}
+[1.684955] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'build'}
+[1.685665] (imu_filter_madgwick) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', '--', '-j8', '-l8'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.701607] (-) TimerEvent: {}
+[1.730378] (imu_filter_madgwick) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[1.730703] (imu_filter_madgwick) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/stateless_orientation.cpp.o\x1b[0m\n'}
+[1.730873] (imu_filter_madgwick) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/imu_filter.cpp.o\x1b[0m\n'}
+[1.733145] (imu_filter_madgwick) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[1.733425] (imu_filter_madgwick) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/imu_filter_ros.cpp.o\x1b[0m\n'}
+[1.801705] (-) TimerEvent: {}
+[1.901977] (-) TimerEvent: {}
+[2.002288] (-) TimerEvent: {}
+[2.102590] (-) TimerEvent: {}
+[2.202886] (-) TimerEvent: {}
+[2.286538] (imu_filter_madgwick) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[2.302995] (-) TimerEvent: {}
+[2.317287] (imu_filter_madgwick) StdoutLine: {'line': b'[ 42%] Built target gtest_main\n'}
+[2.403103] (-) TimerEvent: {}
+[2.503425] (-) TimerEvent: {}
+[2.603771] (-) TimerEvent: {}
+[2.704073] (-) TimerEvent: {}
+[2.804381] (-) TimerEvent: {}
+[2.904702] (-) TimerEvent: {}
+[3.004963] (-) TimerEvent: {}
+[3.105218] (-) TimerEvent: {}
+[3.205474] (-) TimerEvent: {}
+[3.305733] (-) TimerEvent: {}
+[3.405984] (-) TimerEvent: {}
+[3.506241] (-) TimerEvent: {}
+[3.606499] (-) TimerEvent: {}
+[3.706757] (-) TimerEvent: {}
+[3.807015] (-) TimerEvent: {}
+[3.907278] (-) TimerEvent: {}
+[4.007548] (-) TimerEvent: {}
+[4.107774] (-) TimerEvent: {}
+[4.208024] (-) TimerEvent: {}
+[4.308283] (-) TimerEvent: {}
+[4.310294] (imu_filter_madgwick) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[4.365174] (imu_filter_madgwick) StdoutLine: {'line': b'[ 50%] Built target gtest\n'}
+[4.408409] (-) TimerEvent: {}
+[4.508686] (-) TimerEvent: {}
+[4.608964] (-) TimerEvent: {}
+[4.709225] (-) TimerEvent: {}
+[4.809487] (-) TimerEvent: {}
+[4.909756] (-) TimerEvent: {}
+[5.010015] (-) TimerEvent: {}
+[5.110274] (-) TimerEvent: {}
+[5.210547] (-) TimerEvent: {}
+[5.310815] (-) TimerEvent: {}
+[5.411097] (-) TimerEvent: {}
+[5.511360] (-) TimerEvent: {}
+[5.611620] (-) TimerEvent: {}
+[5.711884] (-) TimerEvent: {}
+[5.812142] (-) TimerEvent: {}
+[5.912403] (-) TimerEvent: {}
+[6.012662] (-) TimerEvent: {}
+[6.112916] (-) TimerEvent: {}
+[6.213175] (-) TimerEvent: {}
+[6.313434] (-) TimerEvent: {}
+[6.413702] (-) TimerEvent: {}
+[6.513960] (-) TimerEvent: {}
+[6.614220] (-) TimerEvent: {}
+[6.714478] (-) TimerEvent: {}
+[6.814731] (-) TimerEvent: {}
+[6.914986] (-) TimerEvent: {}
+[7.015245] (-) TimerEvent: {}
+[7.115505] (-) TimerEvent: {}
+[7.215766] (-) TimerEvent: {}
+[7.316022] (-) TimerEvent: {}
+[7.416280] (-) TimerEvent: {}
+[7.516535] (-) TimerEvent: {}
+[7.616796] (-) TimerEvent: {}
+[7.717075] (-) TimerEvent: {}
+[7.817350] (-) TimerEvent: {}
+[7.917624] (-) TimerEvent: {}
+[8.017901] (-) TimerEvent: {}
+[8.118178] (-) TimerEvent: {}
+[8.218446] (-) TimerEvent: {}
+[8.318711] (-) TimerEvent: {}
+[8.418967] (-) TimerEvent: {}
+[8.519225] (-) TimerEvent: {}
+[8.619491] (-) TimerEvent: {}
+[8.719760] (-) TimerEvent: {}
+[8.820024] (-) TimerEvent: {}
+[8.920295] (-) TimerEvent: {}
+[9.020556] (-) TimerEvent: {}
+[9.120822] (-) TimerEvent: {}
+[9.221087] (-) TimerEvent: {}
+[9.321370] (-) TimerEvent: {}
+[9.421656] (-) TimerEvent: {}
+[9.521924] (-) TimerEvent: {}
+[9.622181] (-) TimerEvent: {}
+[9.722439] (-) TimerEvent: {}
+[9.822693] (-) TimerEvent: {}
+[9.922943] (-) TimerEvent: {}
+[10.023197] (-) TimerEvent: {}
+[10.123452] (-) TimerEvent: {}
+[10.223710] (-) TimerEvent: {}
+[10.323963] (-) TimerEvent: {}
+[10.424214] (-) TimerEvent: {}
+[10.524465] (-) TimerEvent: {}
+[10.624719] (-) TimerEvent: {}
+[10.724967] (-) TimerEvent: {}
+[10.825218] (-) TimerEvent: {}
+[10.925467] (-) TimerEvent: {}
+[11.025713] (-) TimerEvent: {}
+[11.125963] (-) TimerEvent: {}
+[11.226219] (-) TimerEvent: {}
+[11.326469] (-) TimerEvent: {}
+[11.426719] (-) TimerEvent: {}
+[11.526967] (-) TimerEvent: {}
+[11.627217] (-) TimerEvent: {}
+[11.727466] (-) TimerEvent: {}
+[11.827686] (-) TimerEvent: {}
+[11.927937] (-) TimerEvent: {}
+[12.028186] (-) TimerEvent: {}
+[12.128439] (-) TimerEvent: {}
+[12.228691] (-) TimerEvent: {}
+[12.328939] (-) TimerEvent: {}
+[12.429192] (-) TimerEvent: {}
+[12.529441] (-) TimerEvent: {}
+[12.629689] (-) TimerEvent: {}
+[12.729941] (-) TimerEvent: {}
+[12.830207] (-) TimerEvent: {}
+[12.930455] (-) TimerEvent: {}
+[13.030706] (-) TimerEvent: {}
+[13.130957] (-) TimerEvent: {}
+[13.231207] (-) TimerEvent: {}
+[13.331456] (-) TimerEvent: {}
+[13.431716] (-) TimerEvent: {}
+[13.531964] (-) TimerEvent: {}
+[13.632215] (-) TimerEvent: {}
+[13.732465] (-) TimerEvent: {}
+[13.832715] (-) TimerEvent: {}
+[13.932965] (-) TimerEvent: {}
+[14.033216] (-) TimerEvent: {}
+[14.133468] (-) TimerEvent: {}
+[14.233716] (-) TimerEvent: {}
+[14.333967] (-) TimerEvent: {}
+[14.434217] (-) TimerEvent: {}
+[14.534477] (-) TimerEvent: {}
+[14.634728] (-) TimerEvent: {}
+[14.734982] (-) TimerEvent: {}
+[14.835235] (-) TimerEvent: {}
+[14.935484] (-) TimerEvent: {}
+[15.035741] (-) TimerEvent: {}
+[15.135996] (-) TimerEvent: {}
+[15.236243] (-) TimerEvent: {}
+[15.336503] (-) TimerEvent: {}
+[15.436756] (-) TimerEvent: {}
+[15.537013] (-) TimerEvent: {}
+[15.637276] (-) TimerEvent: {}
+[15.737540] (-) TimerEvent: {}
+[15.837801] (-) TimerEvent: {}
+[15.938077] (-) TimerEvent: {}
+[16.038353] (-) TimerEvent: {}
+[16.138636] (-) TimerEvent: {}
+[16.238904] (-) TimerEvent: {}
+[16.338518] (imu_filter_madgwick) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libimu_filter_madgwick.so\x1b[0m\n'}
+[16.339000] (-) TimerEvent: {}
+[16.439229] (-) TimerEvent: {}
+[16.539494] (-) TimerEvent: {}
+[16.639752] (-) TimerEvent: {}
+[16.740024] (-) TimerEvent: {}
+[16.840283] (-) TimerEvent: {}
+[16.940538] (-) TimerEvent: {}
+[17.040808] (-) TimerEvent: {}
+[17.141075] (-) TimerEvent: {}
+[17.205619] (imu_filter_madgwick) StdoutLine: {'line': b'[ 57%] Built target imu_filter_madgwick\n'}
+[17.224149] (imu_filter_madgwick) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object test/CMakeFiles/madgwick_test.dir/madgwick_test.cpp.o\x1b[0m\n'}
+[17.224357] (imu_filter_madgwick) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object test/CMakeFiles/stateless_orientation_test.dir/stateless_orientation_test.cpp.o\x1b[0m\n'}
+[17.224426] (imu_filter_madgwick) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick_node.dir/src/imu_filter_node.cpp.o\x1b[0m\n'}
+[17.241189] (-) TimerEvent: {}
+[17.341442] (-) TimerEvent: {}
+[17.441694] (-) TimerEvent: {}
+[17.541948] (-) TimerEvent: {}
+[17.642208] (-) TimerEvent: {}
+[17.742471] (-) TimerEvent: {}
+[17.842734] (-) TimerEvent: {}
+[17.943000] (-) TimerEvent: {}
+[18.043261] (-) TimerEvent: {}
+[18.143531] (-) TimerEvent: {}
+[18.243787] (-) TimerEvent: {}
+[18.344048] (-) TimerEvent: {}
+[18.444298] (-) TimerEvent: {}
+[18.541844] (imu_filter_madgwick) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable madgwick_test\x1b[0m\n'}
+[18.544412] (-) TimerEvent: {}
+[18.611391] (imu_filter_madgwick) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable stateless_orientation_test\x1b[0m\n'}
+[18.644536] (-) TimerEvent: {}
+[18.744924] (-) TimerEvent: {}
+[18.845359] (-) TimerEvent: {}
+[18.945772] (-) TimerEvent: {}
+[19.046198] (-) TimerEvent: {}
+[19.146600] (-) TimerEvent: {}
+[19.174298] (imu_filter_madgwick) StdoutLine: {'line': b'[ 92%] Built target madgwick_test\n'}
+[19.242545] (imu_filter_madgwick) StdoutLine: {'line': b'[ 92%] Built target stateless_orientation_test\n'}
+[19.246712] (-) TimerEvent: {}
+[19.346953] (-) TimerEvent: {}
+[19.447212] (-) TimerEvent: {}
+[19.547474] (-) TimerEvent: {}
+[19.647837] (-) TimerEvent: {}
+[19.748099] (-) TimerEvent: {}
+[19.848365] (-) TimerEvent: {}
+[19.948631] (-) TimerEvent: {}
+[19.957647] (imu_filter_madgwick) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable imu_filter_madgwick_node\x1b[0m\n'}
+[20.048763] (-) TimerEvent: {}
+[20.149047] (-) TimerEvent: {}
+[20.249318] (-) TimerEvent: {}
+[20.269199] (imu_filter_madgwick) StdoutLine: {'line': b'[100%] Built target imu_filter_madgwick_node\n'}
+[20.278821] (imu_filter_madgwick) CommandEnded: {'returncode': 0}
+[20.310133] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'install'}
+[20.318065] (imu_filter_madgwick) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[20.324163] (imu_filter_madgwick) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.324363] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so\n'}
+[20.338367] (imu_filter_madgwick) StdoutLine: {'line': b'-- Set runtime path of "/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so" to ""\n'}
+[20.338538] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include\n'}
+[20.338732] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick\n'}
+[20.338861] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_ros.h\n'}
+[20.338933] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/stateless_orientation.h\n'}
+[20.339017] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/visibility_control.h\n'}
+[20.339098] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h\n'}
+[20.339153] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/world_frame.h\n'}
+[20.339222] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/base_node.hpp\n'}
+[20.339276] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/imu_filter_madgwick/imu_filter_madgwick_node\n'}
+[20.339773] (imu_filter_madgwick) StdoutLine: {'line': b'-- Set runtime path of "/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/imu_filter_madgwick/imu_filter_madgwick_node" to ""\n'}
+[20.339894] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch\n'}
+[20.340028] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter_component.launch.py\n'}
+[20.340303] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter.launch.py\n'}
+[20.340370] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/config\n'}
+[20.340472] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/config/imu_filter.yaml\n'}
+[20.340530] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.sh\n'}
+[20.340632] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.dsv\n'}
+[20.340813] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/package_run_dependencies/imu_filter_madgwick\n'}
+[20.341072] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/parent_prefix_path/imu_filter_madgwick\n'}
+[20.341285] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.sh\n'}
+[20.341371] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.dsv\n'}
+[20.341459] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.sh\n'}
+[20.341543] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.dsv\n'}
+[20.341618] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.bash\n'}
+[20.341718] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.sh\n'}
+[20.341851] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.zsh\n'}
+[20.342071] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.dsv\n'}
+[20.342239] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.dsv\n'}
+[20.342386] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/packages/imu_filter_madgwick\n'}
+[20.342554] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/rclcpp_components/imu_filter_madgwick\n'}
+[20.342759] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[20.342977] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.343130] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig.cmake\n'}
+[20.343208] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig-version.cmake\n'}
+[20.343289] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.xml\n'}
+[20.345164] (imu_filter_madgwick) CommandEnded: {'returncode': 0}
+[20.349535] (-) TimerEvent: {}
+[20.449828] (-) TimerEvent: {}
+[20.505116] (imu_filter_madgwick) JobEnded: {'identifier': 'imu_filter_madgwick', 'rc': 0}
+[20.505755] (-) EventReactorShutdown: {}

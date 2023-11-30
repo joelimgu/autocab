@@ -1,0 +1,267 @@
+[0.000000] (-) TimerEvent: {}
+[0.000132] (-) JobUnselected: {'identifier': 'can'}
+[0.000156] (-) JobUnselected: {'identifier': 'car_control'}
+[0.000179] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.000204] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.000232] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.000249] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.000335] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.000351] (-) JobUnselected: {'identifier': 'joystick'}
+[0.000374] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.000404] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000425] (-) JobUnselected: {'identifier': 'system_check'}
+[0.000495] (imu_complementary_filter) JobQueued: {'identifier': 'imu_complementary_filter', 'dependencies': OrderedDict()}
+[0.000514] (imu_complementary_filter) JobStarted: {'identifier': 'imu_complementary_filter'}
+[0.042997] (imu_complementary_filter) JobProgress: {'identifier': 'imu_complementary_filter', 'progress': 'cmake'}
+[0.043379] (imu_complementary_filter) Command: {'cmd': ['/usr/bin/cmake', '/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter', '-DCMAKE_INSTALL_PREFIX=/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.090148] (imu_complementary_filter) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099410] (-) TimerEvent: {}
+[0.138657] (imu_complementary_filter) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.144860] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199543] (-) TimerEvent: {}
+[0.202220] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.208821] (imu_complementary_filter) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.209042] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.209426] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.211957] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.279289] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.286075] (imu_complementary_filter) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.286332] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.286729] (imu_complementary_filter) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.288438] (imu_complementary_filter) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299642] (-) TimerEvent: {}
+[0.399858] (-) TimerEvent: {}
+[0.429855] (imu_complementary_filter) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.498433] (imu_complementary_filter) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.499958] (-) TimerEvent: {}
+[0.528682] (imu_complementary_filter) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.532498] (imu_complementary_filter) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.539697] (imu_complementary_filter) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.551517] (imu_complementary_filter) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.568473] (imu_complementary_filter) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600062] (-) TimerEvent: {}
+[0.683775] (imu_complementary_filter) StdoutLine: {'line': b'-- Found message_filters: 4.3.3 (/opt/ros/humble/share/message_filters/cmake)\n'}
+[0.700168] (-) TimerEvent: {}
+[0.739236] (imu_complementary_filter) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.741180] (imu_complementary_filter) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.800294] (-) TimerEvent: {}
+[0.822810] (imu_complementary_filter) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.844936] (imu_complementary_filter) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.884423] (imu_complementary_filter) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.891783] (imu_complementary_filter) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.900405] (-) TimerEvent: {}
+[0.953197] (imu_complementary_filter) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.953456] (imu_complementary_filter) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.000531] (-) TimerEvent: {}
+[1.015339] (imu_complementary_filter) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.016306] (imu_complementary_filter) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.100650] (-) TimerEvent: {}
+[1.150567] (imu_complementary_filter) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.200751] (-) TimerEvent: {}
+[1.235204] (imu_complementary_filter) StdoutLine: {'line': b'-- Found tf2: 0.25.5 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.247408] (imu_complementary_filter) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.5 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.300874] (-) TimerEvent: {}
+[1.401111] (-) TimerEvent: {}
+[1.501360] (-) TimerEvent: {}
+[1.601572] (-) TimerEvent: {}
+[1.634536] (imu_complementary_filter) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.648183] (imu_complementary_filter) StdoutLine: {'line': b'-- Generating done\n'}
+[1.649685] (imu_complementary_filter) StdoutLine: {'line': b'-- Build files have been written to: /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter\n'}
+[1.659201] (imu_complementary_filter) CommandEnded: {'returncode': 0}
+[1.659485] (imu_complementary_filter) JobProgress: {'identifier': 'imu_complementary_filter', 'progress': 'build'}
+[1.659508] (imu_complementary_filter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', '--', '-j8', '-l8'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.701522] (imu_complementary_filter) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o\x1b[0m\n'}
+[1.701652] (-) TimerEvent: {}
+[1.701750] (imu_complementary_filter) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter.cpp.o\x1b[0m\n'}
+[1.801782] (-) TimerEvent: {}
+[1.902055] (-) TimerEvent: {}
+[2.002306] (-) TimerEvent: {}
+[2.102594] (-) TimerEvent: {}
+[2.202845] (-) TimerEvent: {}
+[2.303097] (-) TimerEvent: {}
+[2.403349] (-) TimerEvent: {}
+[2.503613] (-) TimerEvent: {}
+[2.603867] (-) TimerEvent: {}
+[2.704123] (-) TimerEvent: {}
+[2.804378] (-) TimerEvent: {}
+[2.904635] (-) TimerEvent: {}
+[3.004890] (-) TimerEvent: {}
+[3.105145] (-) TimerEvent: {}
+[3.205382] (-) TimerEvent: {}
+[3.305636] (-) TimerEvent: {}
+[3.405898] (-) TimerEvent: {}
+[3.506153] (-) TimerEvent: {}
+[3.606408] (-) TimerEvent: {}
+[3.706667] (-) TimerEvent: {}
+[3.806917] (-) TimerEvent: {}
+[3.907169] (-) TimerEvent: {}
+[4.007421] (-) TimerEvent: {}
+[4.107677] (-) TimerEvent: {}
+[4.207933] (-) TimerEvent: {}
+[4.308247] (-) TimerEvent: {}
+[4.408504] (-) TimerEvent: {}
+[4.508760] (-) TimerEvent: {}
+[4.609011] (-) TimerEvent: {}
+[4.709271] (-) TimerEvent: {}
+[4.809491] (-) TimerEvent: {}
+[4.909758] (-) TimerEvent: {}
+[5.010025] (-) TimerEvent: {}
+[5.110283] (-) TimerEvent: {}
+[5.210542] (-) TimerEvent: {}
+[5.310798] (-) TimerEvent: {}
+[5.411051] (-) TimerEvent: {}
+[5.511309] (-) TimerEvent: {}
+[5.611565] (-) TimerEvent: {}
+[5.711821] (-) TimerEvent: {}
+[5.812073] (-) TimerEvent: {}
+[5.912327] (-) TimerEvent: {}
+[6.012582] (-) TimerEvent: {}
+[6.112834] (-) TimerEvent: {}
+[6.213100] (-) TimerEvent: {}
+[6.313313] (-) TimerEvent: {}
+[6.413563] (-) TimerEvent: {}
+[6.513814] (-) TimerEvent: {}
+[6.614068] (-) TimerEvent: {}
+[6.714322] (-) TimerEvent: {}
+[6.814574] (-) TimerEvent: {}
+[6.914826] (-) TimerEvent: {}
+[7.015083] (-) TimerEvent: {}
+[7.115339] (-) TimerEvent: {}
+[7.215604] (-) TimerEvent: {}
+[7.315875] (-) TimerEvent: {}
+[7.416144] (-) TimerEvent: {}
+[7.516410] (-) TimerEvent: {}
+[7.616682] (-) TimerEvent: {}
+[7.716941] (-) TimerEvent: {}
+[7.817219] (-) TimerEvent: {}
+[7.917455] (-) TimerEvent: {}
+[8.017709] (-) TimerEvent: {}
+[8.117980] (-) TimerEvent: {}
+[8.218242] (-) TimerEvent: {}
+[8.318487] (-) TimerEvent: {}
+[8.418736] (-) TimerEvent: {}
+[8.518981] (-) TimerEvent: {}
+[8.619227] (-) TimerEvent: {}
+[8.719474] (-) TimerEvent: {}
+[8.819720] (-) TimerEvent: {}
+[8.919966] (-) TimerEvent: {}
+[9.020212] (-) TimerEvent: {}
+[9.120457] (-) TimerEvent: {}
+[9.220701] (-) TimerEvent: {}
+[9.320948] (-) TimerEvent: {}
+[9.421160] (-) TimerEvent: {}
+[9.521423] (-) TimerEvent: {}
+[9.621673] (-) TimerEvent: {}
+[9.721920] (-) TimerEvent: {}
+[9.822165] (-) TimerEvent: {}
+[9.922412] (-) TimerEvent: {}
+[10.022661] (-) TimerEvent: {}
+[10.122907] (-) TimerEvent: {}
+[10.223155] (-) TimerEvent: {}
+[10.323402] (-) TimerEvent: {}
+[10.423648] (-) TimerEvent: {}
+[10.523896] (-) TimerEvent: {}
+[10.624142] (-) TimerEvent: {}
+[10.724391] (-) TimerEvent: {}
+[10.824637] (-) TimerEvent: {}
+[10.924883] (-) TimerEvent: {}
+[11.025135] (-) TimerEvent: {}
+[11.125310] (-) TimerEvent: {}
+[11.225547] (-) TimerEvent: {}
+[11.325808] (-) TimerEvent: {}
+[11.426055] (-) TimerEvent: {}
+[11.526302] (-) TimerEvent: {}
+[11.626545] (-) TimerEvent: {}
+[11.726791] (-) TimerEvent: {}
+[11.827036] (-) TimerEvent: {}
+[11.927283] (-) TimerEvent: {}
+[12.027528] (-) TimerEvent: {}
+[12.127786] (-) TimerEvent: {}
+[12.228034] (-) TimerEvent: {}
+[12.328281] (-) TimerEvent: {}
+[12.428530] (-) TimerEvent: {}
+[12.528776] (-) TimerEvent: {}
+[12.629024] (-) TimerEvent: {}
+[12.729275] (-) TimerEvent: {}
+[12.829486] (-) TimerEvent: {}
+[12.929734] (-) TimerEvent: {}
+[13.029992] (-) TimerEvent: {}
+[13.130246] (-) TimerEvent: {}
+[13.230505] (-) TimerEvent: {}
+[13.330760] (-) TimerEvent: {}
+[13.431033] (-) TimerEvent: {}
+[13.531318] (-) TimerEvent: {}
+[13.631578] (-) TimerEvent: {}
+[13.731853] (-) TimerEvent: {}
+[13.747615] (imu_complementary_filter) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX static library libcomplementary_filter.a\x1b[0m\n'}
+[13.831981] (-) TimerEvent: {}
+[13.932248] (-) TimerEvent: {}
+[14.002136] (imu_complementary_filter) StdoutLine: {'line': b'[ 60%] Built target complementary_filter\n'}
+[14.019596] (imu_complementary_filter) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/complementary_filter_node.dir/src/complementary_filter_node.cpp.o\x1b[0m\n'}
+[14.032362] (-) TimerEvent: {}
+[14.132600] (-) TimerEvent: {}
+[14.232851] (-) TimerEvent: {}
+[14.333110] (-) TimerEvent: {}
+[14.433426] (-) TimerEvent: {}
+[14.533683] (-) TimerEvent: {}
+[14.633945] (-) TimerEvent: {}
+[14.734208] (-) TimerEvent: {}
+[14.834466] (-) TimerEvent: {}
+[14.934727] (-) TimerEvent: {}
+[15.034988] (-) TimerEvent: {}
+[15.135259] (-) TimerEvent: {}
+[15.235520] (-) TimerEvent: {}
+[15.335780] (-) TimerEvent: {}
+[15.436042] (-) TimerEvent: {}
+[15.536302] (-) TimerEvent: {}
+[15.636567] (-) TimerEvent: {}
+[15.736838] (-) TimerEvent: {}
+[15.837100] (-) TimerEvent: {}
+[15.937373] (-) TimerEvent: {}
+[16.037632] (-) TimerEvent: {}
+[16.137887] (-) TimerEvent: {}
+[16.238143] (-) TimerEvent: {}
+[16.338398] (-) TimerEvent: {}
+[16.438652] (-) TimerEvent: {}
+[16.489040] (imu_complementary_filter) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable complementary_filter_node\x1b[0m\n'}
+[16.538780] (-) TimerEvent: {}
+[16.639042] (-) TimerEvent: {}
+[16.739312] (-) TimerEvent: {}
+[16.839575] (-) TimerEvent: {}
+[16.939831] (-) TimerEvent: {}
+[17.040088] (-) TimerEvent: {}
+[17.113960] (imu_complementary_filter) StdoutLine: {'line': b'[100%] Built target complementary_filter_node\n'}
+[17.123300] (imu_complementary_filter) CommandEnded: {'returncode': 0}
+[17.140196] (-) TimerEvent: {}
+[17.149692] (imu_complementary_filter) JobProgress: {'identifier': 'imu_complementary_filter', 'progress': 'install'}
+[17.157211] (imu_complementary_filter) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'], 'cwd': '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'achraf'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/achraf'), ('OLDPWD', '/home/achraf/autocab/raspberryPI3'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1155'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'achraf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'achraf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/achraf-Nitro-AN515-54:@/tmp/.ICE-unix/1124,unix/achraf-Nitro-AN515-54:/tmp/.ICE-unix/1124'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6ffd406c_b10a_4fda_b7be_6bb788957b68'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ATAF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.139'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[17.163491] (imu_complementary_filter) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.163671] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/libcomplementary_filter.a\n'}
+[17.181409] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/complementary_filter_node\n'}
+[17.187606] (imu_complementary_filter) StdoutLine: {'line': b'-- Set runtime path of "/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/complementary_filter_node" to ""\n'}
+[17.187922] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter\n'}
+[17.188038] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter/complementary_filter_ros.h\n'}
+[17.188135] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter/complementary_filter.h\n'}
+[17.188283] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/launch\n'}
+[17.188391] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/launch/complementary_filter.launch.py\n'}
+[17.188450] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/package_run_dependencies/imu_complementary_filter\n'}
+[17.188567] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/parent_prefix_path/imu_complementary_filter\n'}
+[17.188679] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/ament_prefix_path.sh\n'}
+[17.188850] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/ament_prefix_path.dsv\n'}
+[17.189035] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/path.sh\n'}
+[17.189154] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/path.dsv\n'}
+[17.189280] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.bash\n'}
+[17.189484] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.sh\n'}
+[17.189679] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.zsh\n'}
+[17.189922] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.dsv\n'}
+[17.189994] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.dsv\n'}
+[17.190154] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/packages/imu_complementary_filter\n'}
+[17.190278] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[17.190375] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[17.190531] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/imu_complementary_filterConfig.cmake\n'}
+[17.190676] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/imu_complementary_filterConfig-version.cmake\n'}
+[17.190762] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.xml\n'}
+[17.192567] (imu_complementary_filter) CommandEnded: {'returncode': 0}
+[17.240314] (-) TimerEvent: {}
+[17.318325] (imu_complementary_filter) JobEnded: {'identifier': 'imu_complementary_filter', 'rc': 0}
+[17.318941] (-) EventReactorShutdown: {}
