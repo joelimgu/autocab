@@ -12,27 +12,16 @@ int ObstacleCmd(int16_t front_left, int16_t front_center, int16_t front_right, i
 
     if (front_left <= 50) {
         return 50;
-    } else return 100;
+    }
     
     if (front_center <= 50) {
         return 50;
-    } else return 100;
+    } 
 
     if (front_right <= 50) {
         return 50;
     } else return 100;
     
-    if (rear_left <= 50) {
-        return 50;
-    } else return 100;
-
-    if (rear_center <= 50) {
-        return 50;
-    } else return 100;
-
-    if (rear_right <= 50) {
-        return 50;
-    } else return 100;
         
 }
 
