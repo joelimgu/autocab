@@ -1,0 +1,4 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter/CMakeCache.txt is different than the directory /home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0mCMake Error: The source directory "/home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.[0m
+gmake: *** [Makefile:335: cmake_check_build_system] Error 1
