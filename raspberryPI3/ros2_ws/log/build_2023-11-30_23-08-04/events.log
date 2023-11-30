@@ -1,0 +1,558 @@
+[0.000000] (-) TimerEvent: {}
+[0.000182] (-) JobUnselected: {'identifier': 'can'}
+[0.000280] (-) JobUnselected: {'identifier': 'car_control'}
+[0.000303] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.000324] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.000350] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.000388] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.000422] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.000484] (-) JobUnselected: {'identifier': 'joystick'}
+[0.000502] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.000567] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000583] (-) JobUnselected: {'identifier': 'system_check'}
+[0.000604] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.000631] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.096343] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.096604] (interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/interfaces', '-DCMAKE_INSTALL_PREFIX=/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces'], 'cwd': '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lilultime'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/lilultime'), ('OLDPWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('SYSTEMD_EXEC_PID', '2473'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install:/home/lilultime/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'lilultime'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XILINX_VIVADO', '/tools/Xilinx/Vivado/2022.2'), ('USERNAME', 'lilultime'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/tools/Xilinx/Vitis_HLS/2022.2/bin:/tools/Xilinx/Model_Composer/2022.2/bin:/tools/Xilinx/DocNav:/tools/Xilinx/Vivado/2022.2/bin:/opt/ros/humble/bin:/home/lilultime/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lilultime/GNU_ARM_Toolchain/gcc-arm-none-eabi-10.3-2021.10/bin'), ('SESSION_MANAGER', 'local/lilultime-Lenovo-Y520-15IKBN:@/tmp/.ICE-unix/2189,unix/lilultime-Lenovo-Y520-15IKBN:/tmp/.ICE-unix/2189'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/925f4111_3505_42c6_b536_46579ef3de82'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.91'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XILINX_HLS', '/tools/Xilinx/Vitis_HLS/2022.2'), ('AMENT_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_robot_controller:/home/lilultime/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lilultime/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_cpp_pkg:/home/lilultime/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[0.099304] (-) TimerEvent: {}
+[0.199562] (-) TimerEvent: {}
+[0.246207] (interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.299696] (-) TimerEvent: {}
+[0.344971] (interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.358201] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399826] (-) TimerEvent: {}
+[0.416503] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.428251] (interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.428745] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.429411] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.433290] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.499166] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.499927] (-) TimerEvent: {}
+[0.511024] (interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.511445] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.512033] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.518503] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600043] (-) TimerEvent: {}
+[0.700307] (-) TimerEvent: {}
+[0.800557] (-) TimerEvent: {}
+[0.868847] (interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.900655] (-) TimerEvent: {}
+[0.972979] (interfaces) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.000761] (-) TimerEvent: {}
+[1.039977] (interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.047648] (interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.060900] (interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.082646] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.100859] (-) TimerEvent: {}
+[1.111932] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.200985] (-) TimerEvent: {}
+[1.210732] (interfaces) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.214900] (interfaces) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.301105] (-) TimerEvent: {}
+[1.329168] (interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.361499] (interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.401224] (-) TimerEvent: {}
+[1.415450] (interfaces) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.430480] (interfaces) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.493177] (interfaces) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.494525] (interfaces) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.501317] (-) TimerEvent: {}
+[1.601565] (-) TimerEvent: {}
+[1.701846] (-) TimerEvent: {}
+[1.702119] (interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.801987] (-) TimerEvent: {}
+[1.902243] (-) TimerEvent: {}
+[1.929266] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.002364] (-) TimerEvent: {}
+[2.086771] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.102456] (-) TimerEvent: {}
+[2.144528] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.167706] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.170137] (interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.197568] (interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.197836] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.197962] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.198024] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.202552] (-) TimerEvent: {}
+[2.217947] (interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.255199] (interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.284799] (interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.286776] (interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.290197] (interfaces) StdoutLine: {'line': b'-- Configuring done (2.2s)\n'}
+[2.302659] (-) TimerEvent: {}
+[2.339511] (interfaces) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.343417] (interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces\n'}
+[2.359171] (interfaces) CommandEnded: {'returncode': 0}
+[2.359887] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[2.361095] (interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces', '--', '-j8', '-l8'], 'cwd': '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lilultime'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/lilultime'), ('OLDPWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('SYSTEMD_EXEC_PID', '2473'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install:/home/lilultime/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'lilultime'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XILINX_VIVADO', '/tools/Xilinx/Vivado/2022.2'), ('USERNAME', 'lilultime'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/tools/Xilinx/Vitis_HLS/2022.2/bin:/tools/Xilinx/Model_Composer/2022.2/bin:/tools/Xilinx/DocNav:/tools/Xilinx/Vivado/2022.2/bin:/opt/ros/humble/bin:/home/lilultime/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lilultime/GNU_ARM_Toolchain/gcc-arm-none-eabi-10.3-2021.10/bin'), ('SESSION_MANAGER', 'local/lilultime-Lenovo-Y520-15IKBN:@/tmp/.ICE-unix/2189,unix/lilultime-Lenovo-Y520-15IKBN:/tmp/.ICE-unix/2189'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/925f4111_3505_42c6_b536_46579ef3de82'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.91'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XILINX_HLS', '/tools/Xilinx/Vitis_HLS/2022.2'), ('AMENT_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_robot_controller:/home/lilultime/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lilultime/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_cpp_pkg:/home/lilultime/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[2.402839] (-) TimerEvent: {}
+[2.404773] (interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.410076] (interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.412397] (interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_interfaces\n'}
+[2.502937] (-) TimerEvent: {}
+[2.603195] (-) TimerEvent: {}
+[2.703449] (-) TimerEvent: {}
+[2.719135] (interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[2.719818] (interfaces) StdoutLine: {'line': b'creating interfaces.egg-info\n'}
+[2.720128] (interfaces) StdoutLine: {'line': b'writing interfaces.egg-info/PKG-INFO\n'}
+[2.720391] (interfaces) StdoutLine: {'line': b'writing dependency_links to interfaces.egg-info/dependency_links.txt\n'}
+[2.720648] (interfaces) StdoutLine: {'line': b'writing top-level names to interfaces.egg-info/top_level.txt\n'}
+[2.721107] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[2.724704] (interfaces) StdoutLine: {'line': b"reading manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[2.725275] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[2.748451] (interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_interfaces_egg\n'}
+[2.803566] (-) TimerEvent: {}
+[2.903832] (-) TimerEvent: {}
+[3.004090] (-) TimerEvent: {}
+[3.104361] (-) TimerEvent: {}
+[3.204613] (-) TimerEvent: {}
+[3.304873] (-) TimerEvent: {}
+[3.405152] (-) TimerEvent: {}
+[3.484018] (interfaces) StdoutLine: {'line': b'[  2%] Built target interfaces__cpp\n'}
+[3.488941] (interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.489296] (interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.489392] (interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.505290] (-) TimerEvent: {}
+[3.555748] (interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/motors_order__functions.c.o\x1b[0m\n'}
+[3.556108] (interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/motors_feedback__functions.c.o\x1b[0m\n'}
+[3.556300] (interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/joystick_order__functions.c.o\x1b[0m\n'}
+[3.556531] (interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/general_data__functions.c.o\x1b[0m\n'}
+[3.557370] (interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/steering_calibration__functions.c.o\x1b[0m\n'}
+[3.605394] (-) TimerEvent: {}
+[3.626162] (interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/gnss__functions.c.o\x1b[0m\n'}
+[3.626470] (interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ultrasonic__functions.c.o\x1b[0m\n'}
+[3.627267] (interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/system_check__functions.c.o\x1b[0m\n'}
+[3.695576] (interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_generator_c.so\x1b[0m\n'}
+[3.705507] (-) TimerEvent: {}
+[3.723054] (interfaces) StdoutLine: {'line': b'[ 16%] Built target interfaces__rosidl_generator_c\n'}
+[3.728173] (interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.729425] (interfaces) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.729672] (interfaces) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.805622] (-) TimerEvent: {}
+[3.905927] (-) TimerEvent: {}
+[4.006201] (-) TimerEvent: {}
+[4.106484] (-) TimerEvent: {}
+[4.206749] (-) TimerEvent: {}
+[4.307013] (-) TimerEvent: {}
+[4.407297] (-) TimerEvent: {}
+[4.507570] (-) TimerEvent: {}
+[4.607840] (-) TimerEvent: {}
+[4.666582] (interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/joystick_order__type_support.cpp.o\x1b[0m\n'}
+[4.666800] (interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/motors_order__type_support.cpp.o\x1b[0m\n'}
+[4.666972] (interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/motors_feedback__type_support.cpp.o\x1b[0m\n'}
+[4.707936] (-) TimerEvent: {}
+[4.808221] (-) TimerEvent: {}
+[4.908519] (-) TimerEvent: {}
+[4.970994] (interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/joystick_order__type_support_c.cpp.o\x1b[0m\n'}
+[5.008618] (-) TimerEvent: {}
+[5.108939] (-) TimerEvent: {}
+[5.129981] (interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/joystick_order__type_support.cpp.o\x1b[0m\n'}
+[5.209046] (-) TimerEvent: {}
+[5.309361] (-) TimerEvent: {}
+[5.366055] (interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/motors_order__type_support.cpp.o\x1b[0m\n'}
+[5.366382] (interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/general_data__type_support.cpp.o\x1b[0m\n'}
+[5.377027] (interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/joystick_order__type_support.cpp.o\x1b[0m\n'}
+[5.379980] (interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/motors_order__type_support_c.cpp.o\x1b[0m\n'}
+[5.409475] (-) TimerEvent: {}
+[5.469218] (interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/joystick_order__type_support.cpp.o\x1b[0m\n'}
+[5.507466] (interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/motors_order__type_support.cpp.o\x1b[0m\n'}
+[5.509575] (-) TimerEvent: {}
+[5.545871] (interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/motors_feedback__type_support.cpp.o\x1b[0m\n'}
+[5.552740] (interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/motors_order__type_support.cpp.o\x1b[0m\n'}
+[5.565693] (interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/motors_feedback__type_support.cpp.o\x1b[0m\n'}
+[5.585398] (interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/general_data__type_support.cpp.o\x1b[0m\n'}
+[5.609705] (-) TimerEvent: {}
+[5.625162] (interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/steering_calibration__type_support.cpp.o\x1b[0m\n'}
+[5.667766] (interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/ultrasonic__type_support.cpp.o\x1b[0m\n'}
+[5.709643] (interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/gnss__type_support.cpp.o\x1b[0m\n'}
+[5.709928] (-) TimerEvent: {}
+[5.716302] (interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/joystick_order__type_support.c.o\x1b[0m\n'}
+[5.749460] (interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/system_check__type_support.cpp.o\x1b[0m\n'}
+[5.762574] (interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/motors_order__type_support.c.o\x1b[0m\n'}
+[5.790765] (interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.807832] (interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/motors_feedback__type_support.c.o\x1b[0m\n'}
+[5.810064] (-) TimerEvent: {}
+[5.825497] (interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/general_data__type_support.cpp.o\x1b[0m\n'}
+[5.846097] (interfaces) StdoutLine: {'line': b'[ 47%] Built target interfaces__rosidl_typesupport_c\n'}
+[5.853246] (interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/general_data__type_support.c.o\x1b[0m\n'}
+[5.853550] (interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/steering_calibration__type_support.cpp.o\x1b[0m\n'}
+[5.897387] (interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/steering_calibration__type_support.c.o\x1b[0m\n'}
+[5.910176] (-) TimerEvent: {}
+[5.942192] (interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/ultrasonic__type_support.c.o\x1b[0m\n'}
+[5.986491] (interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/motors_feedback__type_support_c.cpp.o\x1b[0m\n'}
+[5.988354] (interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/gnss__type_support.c.o\x1b[0m\n'}
+[6.010304] (-) TimerEvent: {}
+[6.035038] (interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/system_check__type_support.c.o\x1b[0m\n'}
+[6.041129] (interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/ultrasonic__type_support.cpp.o\x1b[0m\n'}
+[6.048959] (interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/steering_calibration__type_support.cpp.o\x1b[0m\n'}
+[6.058780] (interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/motors_feedback__type_support.cpp.o\x1b[0m\n'}
+[6.105429] (interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[6.110414] (-) TimerEvent: {}
+[6.136813] (interfaces) StdoutLine: {'line': b'[ 59%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[6.142074] (interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/general_data__type_support.cpp.o\x1b[0m\n'}
+[6.208852] (interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/steering_calibration__type_support.cpp.o\x1b[0m\n'}
+[6.210530] (-) TimerEvent: {}
+[6.277262] (interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/gnss__type_support.cpp.o\x1b[0m\n'}
+[6.297951] (interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/msg/system_check__type_support.cpp.o\x1b[0m\n'}
+[6.310635] (-) TimerEvent: {}
+[6.410972] (-) TimerEvent: {}
+[6.493339] (interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/ultrasonic__type_support.cpp.o\x1b[0m\n'}
+[6.511096] (-) TimerEvent: {}
+[6.588025] (interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/general_data__type_support_c.cpp.o\x1b[0m\n'}
+[6.611211] (-) TimerEvent: {}
+[6.711783] (-) TimerEvent: {}
+[6.724020] (interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/gnss__type_support.cpp.o\x1b[0m\n'}
+[6.733092] (interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/system_check__type_support.cpp.o\x1b[0m\n'}
+[6.743063] (interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/ultrasonic__type_support.cpp.o\x1b[0m\n'}
+[6.753661] (interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[6.796334] (interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/gnss__type_support.cpp.o\x1b[0m\n'}
+[6.811920] (-) TimerEvent: {}
+[6.815075] (interfaces) StdoutLine: {'line': b'[ 72%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[6.820029] (interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/system_check__type_support.cpp.o\x1b[0m\n'}
+[6.875222] (interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/steering_calibration__type_support_c.cpp.o\x1b[0m\n'}
+[6.912042] (-) TimerEvent: {}
+[7.012432] (-) TimerEvent: {}
+[7.112814] (-) TimerEvent: {}
+[7.145534] (interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/ultrasonic__type_support_c.cpp.o\x1b[0m\n'}
+[7.184174] (interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/gnss__type_support_c.cpp.o\x1b[0m\n'}
+[7.212931] (-) TimerEvent: {}
+[7.313405] (-) TimerEvent: {}
+[7.386701] (interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/system_check__type_support_c.cpp.o\x1b[0m\n'}
+[7.413568] (-) TimerEvent: {}
+[7.436998] (interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[7.513702] (-) TimerEvent: {}
+[7.526749] (interfaces) StdoutLine: {'line': b'[ 79%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[7.532468] (interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[7.613828] (-) TimerEvent: {}
+[7.619873] (interfaces) StdoutLine: {'line': b'[ 80%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[7.713985] (-) TimerEvent: {}
+[7.785948] (interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[7.814085] (-) TimerEvent: {}
+[7.850838] (interfaces) StdoutLine: {'line': b'[ 81%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[7.859625] (interfaces) StdoutLine: {'line': b'[ 81%] Built target interfaces\n'}
+[7.868392] (interfaces) StdoutLine: {'line': b'[ 82%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[7.914184] (-) TimerEvent: {}
+[8.014460] (-) TimerEvent: {}
+[8.114739] (-) TimerEvent: {}
+[8.215012] (-) TimerEvent: {}
+[8.315293] (-) TimerEvent: {}
+[8.415566] (-) TimerEvent: {}
+[8.515840] (-) TimerEvent: {}
+[8.616112] (-) TimerEvent: {}
+[8.716384] (-) TimerEvent: {}
+[8.816653] (-) TimerEvent: {}
+[8.916939] (-) TimerEvent: {}
+[9.017238] (-) TimerEvent: {}
+[9.117521] (-) TimerEvent: {}
+[9.217833] (-) TimerEvent: {}
+[9.318132] (-) TimerEvent: {}
+[9.418397] (-) TimerEvent: {}
+[9.518667] (-) TimerEvent: {}
+[9.618933] (-) TimerEvent: {}
+[9.674882] (interfaces) StdoutLine: {'line': b'[ 82%] Built target interfaces__py\n'}
+[9.684786] (interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_joystick_order_s.c.o\x1b[0m\n'}
+[9.685147] (interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_motors_order_s.c.o\x1b[0m\n'}
+[9.685407] (interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_motors_feedback_s.c.o\x1b[0m\n'}
+[9.685629] (interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_general_data_s.c.o\x1b[0m\n'}
+[9.685839] (interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_steering_calibration_s.c.o\x1b[0m\n'}
+[9.686228] (interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_ultrasonic_s.c.o\x1b[0m\n'}
+[9.686648] (interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_gnss_s.c.o\x1b[0m\n'}
+[9.687309] (interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/msg/_system_check_s.c.o\x1b[0m\n'}
+[9.719034] (-) TimerEvent: {}
+[9.819339] (-) TimerEvent: {}
+[9.881779] (interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/libinterfaces__rosidl_generator_py.so\x1b[0m\n'}
+[9.909681] (interfaces) StdoutLine: {'line': b'[ 93%] Built target interfaces__rosidl_generator_py\n'}
+[9.919405] (interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[9.919728] (-) TimerEvent: {}
+[9.919926] (interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[9.920107] (interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[10.019864] (-) TimerEvent: {}
+[10.029090] (interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.030108] (interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.035955] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[10.052896] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_c__pyext\n'}
+[10.053715] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[10.061181] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[10.070975] (interfaces) CommandEnded: {'returncode': 0}
+[10.119977] (-) TimerEvent: {}
+[10.220239] (-) TimerEvent: {}
+[10.271125] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[10.300797] (interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces'], 'cwd': '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lilultime'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/lilultime'), ('OLDPWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('SYSTEMD_EXEC_PID', '2473'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install:/home/lilultime/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'lilultime'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XILINX_VIVADO', '/tools/Xilinx/Vivado/2022.2'), ('USERNAME', 'lilultime'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/tools/Xilinx/Vitis_HLS/2022.2/bin:/tools/Xilinx/Model_Composer/2022.2/bin:/tools/Xilinx/DocNav:/tools/Xilinx/Vivado/2022.2/bin:/opt/ros/humble/bin:/home/lilultime/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lilultime/GNU_ARM_Toolchain/gcc-arm-none-eabi-10.3-2021.10/bin'), ('SESSION_MANAGER', 'local/lilultime-Lenovo-Y520-15IKBN:@/tmp/.ICE-unix/2189,unix/lilultime-Lenovo-Y520-15IKBN:/tmp/.ICE-unix/2189'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/925f4111_3505_42c6_b536_46579ef3de82'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.91'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XILINX_HLS', '/tools/Xilinx/Vitis_HLS/2022.2'), ('AMENT_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_robot_controller:/home/lilultime/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lilultime/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_cpp_pkg:/home/lilultime/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[10.320356] (-) TimerEvent: {}
+[10.326541] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.326825] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[10.327093] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.327335] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.327455] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/steering_calibration.h\n'}
+[10.327553] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/joystick_order.h\n'}
+[10.327650] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_feedback.h\n'}
+[10.327813] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/ultrasonic.h\n'}
+[10.327965] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.328104] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/general_data.h\n'}
+[10.328226] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.328346] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__functions.c\n'}
+[10.328467] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__struct.h\n'}
+[10.328587] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__struct.h\n'}
+[10.328706] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__functions.h\n'}
+[10.328836] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__struct.h\n'}
+[10.328975] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__type_support.h\n'}
+[10.329114] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__type_support.h\n'}
+[10.329235] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__struct.h\n'}
+[10.329387] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__struct.h\n'}
+[10.329507] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__functions.h\n'}
+[10.329626] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__type_support.h\n'}
+[10.329756] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__functions.c\n'}
+[10.329926] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__type_support.h\n'}
+[10.330043] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__functions.c\n'}
+[10.330140] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__functions.h\n'}
+[10.330250] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__functions.h\n'}
+[10.330340] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__functions.c\n'}
+[10.330403] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__functions.h\n'}
+[10.330521] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__type_support.h\n'}
+[10.330636] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__functions.h\n'}
+[10.330709] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__functions.h\n'}
+[10.330806] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__functions.c\n'}
+[10.330902] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__struct.h\n'}
+[10.330987] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__functions.c\n'}
+[10.331109] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__struct.h\n'}
+[10.331243] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__struct.h\n'}
+[10.331360] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__type_support.h\n'}
+[10.331480] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__functions.c\n'}
+[10.331597] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__type_support.h\n'}
+[10.331715] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__type_support.h\n'}
+[10.331833] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__functions.h\n'}
+[10.331951] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__functions.c\n'}
+[10.332070] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_order.h\n'}
+[10.332187] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/gnss.h\n'}
+[10.332288] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/system_check.h\n'}
+[10.332405] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/library_path.sh\n'}
+[10.332521] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/library_path.dsv\n'}
+[10.332646] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_c.so\n'}
+[10.333062] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""\n'}
+[10.333198] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.333316] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.333449] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.333573] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.333692] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_fastrtps_c.h\n'}
+[10.333811] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_fastrtps_c.h\n'}
+[10.333953] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_fastrtps_c.h\n'}
+[10.334022] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_fastrtps_c.h\n'}
+[10.334094] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_fastrtps_c.h\n'}
+[10.334192] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_fastrtps_c.h\n'}
+[10.334310] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_fastrtps_c.h\n'}
+[10.334414] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_fastrtps_c.h\n'}
+[10.334476] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[10.334823] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.334939] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.335059] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.335149] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_feedback.hpp\n'}
+[10.335237] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/ultrasonic.hpp\n'}
+[10.335326] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/steering_calibration.hpp\n'}
+[10.335428] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/general_data.hpp\n'}
+[10.335549] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/joystick_order.hpp\n'}
+[10.335668] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/system_check.hpp\n'}
+[10.335810] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/gnss.hpp\n'}
+[10.335932] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.336052] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__traits.hpp\n'}
+[10.336173] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__traits.hpp\n'}
+[10.336282] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__traits.hpp\n'}
+[10.336416] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__struct.hpp\n'}
+[10.336572] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__struct.hpp\n'}
+[10.336692] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__traits.hpp\n'}
+[10.336814] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__struct.hpp\n'}
+[10.336932] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__traits.hpp\n'}
+[10.337036] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__builder.hpp\n'}
+[10.337173] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__traits.hpp\n'}
+[10.337278] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__builder.hpp\n'}
+[10.337429] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__builder.hpp\n'}
+[10.337549] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__builder.hpp\n'}
+[10.337669] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__struct.hpp\n'}
+[10.337789] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__struct.hpp\n'}
+[10.337944] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__struct.hpp\n'}
+[10.338015] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__builder.hpp\n'}
+[10.338125] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__builder.hpp\n'}
+[10.338208] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__builder.hpp\n'}
+[10.338269] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__builder.hpp\n'}
+[10.338354] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__struct.hpp\n'}
+[10.338426] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__struct.hpp\n'}
+[10.338549] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__traits.hpp\n'}
+[10.338680] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__traits.hpp\n'}
+[10.338823] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_order.hpp\n'}
+[10.338959] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.339079] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.339198] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.339303] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.339453] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/dds_fastrtps\n'}
+[10.339578] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.339707] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.339842] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.339943] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.340047] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.340175] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.340275] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.340375] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.340516] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.340650] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.340786] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.340905] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.341004] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.341071] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.341153] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__type_support.c\n'}
+[10.341272] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_introspection_c.h\n'}
+[10.341394] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__type_support.c\n'}
+[10.341514] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_introspection_c.h\n'}
+[10.341635] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_introspection_c.h\n'}
+[10.341753] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__type_support.c\n'}
+[10.341895] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__type_support.c\n'}
+[10.342005] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_introspection_c.h\n'}
+[10.342076] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__type_support.c\n'}
+[10.342156] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__type_support.c\n'}
+[10.342244] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_introspection_c.h\n'}
+[10.342312] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__type_support.c\n'}
+[10.342399] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__type_support.c\n'}
+[10.342515] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_introspection_c.h\n'}
+[10.342633] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_introspection_c.h\n'}
+[10.342736] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_introspection_c.h\n'}
+[10.342865] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[10.343160] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.343280] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[10.343612] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""\n'}
+[10.343758] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.343878] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.343997] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.344100] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__type_support.cpp\n'}
+[10.344237] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.344342] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.344491] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.344612] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.344747] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__type_support.cpp\n'}
+[10.344875] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__type_support.cpp\n'}
+[10.344994] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__type_support.cpp\n'}
+[10.345113] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__type_support.cpp\n'}
+[10.345231] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.345376] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__type_support.cpp\n'}
+[10.345520] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.345637] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.345800] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__type_support.cpp\n'}
+[10.345959] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.346061] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__type_support.cpp\n'}
+[10.346160] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[10.346337] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.346442] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[10.346817] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[10.347011] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/pythonpath.sh\n'}
+[10.347135] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/pythonpath.dsv\n'}
+[10.347268] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info\n'}
+[10.347415] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[10.347594] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[10.347762] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[10.347882] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[10.347998] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces\n'}
+[10.348116] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.348240] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.348439] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.348631] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.348769] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[10.348963] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/libinterfaces__rosidl_generator_py.so\n'}
+[10.349136] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg\n'}
+[10.349260] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_order.py\n'}
+[10.349374] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_feedback_s.c\n'}
+[10.349496] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_gnss_s.c\n'}
+[10.349619] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_ultrasonic_s.c\n'}
+[10.349741] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_general_data.py\n'}
+[10.349894] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_ultrasonic.py\n'}
+[10.350107] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_joystick_order_s.c\n'}
+[10.350275] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_feedback.py\n'}
+[10.350443] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_gnss.py\n'}
+[10.350610] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_order_s.c\n'}
+[10.350778] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_steering_calibration.py\n'}
+[10.350933] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_system_check_s.c\n'}
+[10.351069] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_steering_calibration_s.c\n'}
+[10.351207] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_general_data_s.c\n'}
+[10.351345] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_system_check.py\n'}
+[10.351489] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py\n'}
+[10.351645] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_joystick_order.py\n'}
+[10.351810] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py\n'}
+[10.351944] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.393441] (interfaces) StdoutLine: {'line': b"Listing '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces'...\n"}
+[10.393633] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py'...\n"}
+[10.393742] (interfaces) StdoutLine: {'line': b"Listing '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg'...\n"}
+[10.393841] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py'...\n"}
+[10.393978] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_general_data.py'...\n"}
+[10.394057] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_gnss.py'...\n"}
+[10.394117] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_joystick_order.py'...\n"}
+[10.394175] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_feedback.py'...\n"}
+[10.394232] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_order.py'...\n"}
+[10.394289] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_steering_calibration.py'...\n"}
+[10.394345] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_system_check.py'...\n"}
+[10.394402] (interfaces) StdoutLine: {'line': b"Compiling '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_ultrasonic.py'...\n"}
+[10.398065] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.398562] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[10.398870] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.399337] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[10.399647] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.400108] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[10.400345] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_py.so\n'}
+[10.400811] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""\n'}
+[10.400993] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/JoystickOrder.idl\n'}
+[10.401248] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsOrder.idl\n'}
+[10.401423] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsFeedback.idl\n'}
+[10.401592] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/GeneralData.idl\n'}
+[10.401773] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SteeringCalibration.idl\n'}
+[10.401975] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Ultrasonic.idl\n'}
+[10.402127] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Gnss.idl\n'}
+[10.402261] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SystemCheck.idl\n'}
+[10.402414] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/JoystickOrder.msg\n'}
+[10.402545] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsOrder.msg\n'}
+[10.402708] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsFeedback.msg\n'}
+[10.402886] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/GeneralData.msg\n'}
+[10.403046] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SteeringCalibration.msg\n'}
+[10.403205] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Ultrasonic.msg\n'}
+[10.403336] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Gnss.msg\n'}
+[10.403486] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SystemCheck.msg\n'}
+[10.403635] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[10.403781] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[10.403931] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/ament_prefix_path.sh\n'}
+[10.404101] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[10.404268] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/path.sh\n'}
+[10.404428] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/path.dsv\n'}
+[10.404588] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.bash\n'}
+[10.404731] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.sh\n'}
+[10.404878] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.zsh\n'}
+[10.405021] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.dsv\n'}
+[10.405171] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.dsv\n'}
+[10.405303] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/packages/interfaces\n'}
+[10.405430] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake\n'}
+[10.405621] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[10.405768] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[10.405947] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[10.406113] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake\n'}
+[10.406265] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[10.406409] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[10.406590] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[10.406741] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[10.406897] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[10.407035] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[10.407175] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[10.407311] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[10.407446] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[10.407587] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[10.407771] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake\n'}
+[10.407909] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[10.408047] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[10.408190] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[10.408328] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.408475] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.408598] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[10.408732] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[10.408867] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[10.409001] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[10.409134] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[10.409265] (interfaces) StdoutLine: {'line': b'-- Installing: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.xml\n'}
+[10.415015] (interfaces) CommandEnded: {'returncode': 0}
+[10.420547] (-) TimerEvent: {}
+[10.520902] (-) TimerEvent: {}
+[10.621196] (-) TimerEvent: {}
+[10.721658] (-) TimerEvent: {}
+[10.794361] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[10.795250] (-) EventReactorShutdown: {}

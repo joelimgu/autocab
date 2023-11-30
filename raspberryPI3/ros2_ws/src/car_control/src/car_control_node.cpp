@@ -8,6 +8,7 @@
 #include "interfaces/msg/motors_feedback.hpp"
 #include "interfaces/msg/steering_calibration.hpp"
 #include "interfaces/msg/joystick_order.hpp"
+#include "interfaces/msg/gnss.hpp"
 
 #include "std_srvs/srv/empty.hpp"
 
@@ -219,7 +220,6 @@ private:
             mode = 0;    //Switch to manual mode
             start = false;  //Stop car
         }
-    
     }
 
     /* Update currentLatitude and currentLongitude from gnss_data [callback function]  :
@@ -229,10 +229,11 @@ private:
     */
 
    //Ajouter filtre de précision
-    void gnssDataCallback(const interfaces::msg::Gnss & gnssData){
+    void gnssDataCallback(const interfaces::msg::Gnss & gnssData)
+    {
         if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
             currentDirection[0] =  gnssData.latitude - currentLatitude ; 
-            currentDirection[1] =  gnssData.longitude - currentLongitude};
+            currentDirection[1] =  gnssData.longitude - currentLongitude;
             currentLatitude = gnssData.latitude;
             currentLongitude = gnssData.longitude;
         }

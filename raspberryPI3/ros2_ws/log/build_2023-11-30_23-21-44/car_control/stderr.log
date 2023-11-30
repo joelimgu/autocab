@@ -1,0 +1,321 @@
+In file included from [01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:14:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[KaVector[m[K’
+   14 | int * straightLine(float aLatitude, float aLongitude, float[2] [01;31m[KaVector[m[K, float& requestedThrottle, bool& reverse, float& requestedAngle);
+      |                                                                [01;31m[K^~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:[m[K In function ‘[01m[Kint* straightLine(float, float, float**, float&, bool&, float&)[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:17:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kpow[m[K’ was not declared in this scope
+   17 |     float distance = sqrt([01;31m[Kpow[m[K((bLatitude - aLatitude), 2) + pow((bLongitude - aLongitude), 2));
+      |                           [01;31m[K^~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:17:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ksqrt[m[K’ was not declared in this scope
+   17 |     float distance = [01;31m[Ksqrt[m[K(pow((bLatitude - aLatitude), 2) + pow((bLongitude - aLongitude), 2));
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:39:47:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kfloat*[m[K’ and ‘[01m[Kfloat[m[K’ to binary ‘[01m[Koperator*[m[K’
+   39 |         float angle = degrees(acos(([32m[KaVector[0][m[K[01;31m[K*[m[K[34m[KbVector[0][m[K + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
+      |                                     [32m[K~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~[m[K
+      |                                              [32m[K|[m[K          [34m[K|[m[K
+      |                                              [32m[Kfloat*[m[K     [34m[Kfloat[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:39:71:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kfloat*[m[K’ and ‘[01m[Kfloat[m[K’ to binary ‘[01m[Koperator*[m[K’
+   39 |         float angle = degrees(acos((aVector[0]*bVector[0] + [32m[KaVector[1][m[K[01;31m[K*[m[K[34m[KbVector[1][m[K)/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
+      |                                                             [32m[K~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~[m[K
+      |                                                                      [32m[K|[m[K          [34m[K|[m[K
+      |                                                                      [32m[Kfloat*[m[K     [34m[Kfloat[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:39:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kacos[m[K’ was not declared in this scope
+   39 |         float angle = degrees([01;31m[Kacos[m[K((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
+      |                               [01;31m[K^~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:39:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kdegrees[m[K’ was not declared in this scope
+   39 |         float angle = [01;31m[Kdegrees[m[K(acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
+      |                       [01;31m[K^~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:42:27:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kfloat*[m[K’ and ‘[01m[Kfloat[m[K’ to binary ‘[01m[Koperator*[m[K’
+   42 |             if ([32m[KaVector[0][m[K[01;31m[K*[m[K[34m[KbVectorOrtho[0][m[K + aVector[1]*bVectorOrtho[1] > 0){
+      |                 [32m[K~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~~~~~[m[K
+      |                          [32m[K|[m[K               [34m[K|[m[K
+      |                          [32m[Kfloat*[m[K          [34m[Kfloat[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:42:56:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kfloat*[m[K’ and ‘[01m[Kfloat[m[K’ to binary ‘[01m[Koperator*[m[K’
+   42 |             if (aVector[0]*bVectorOrtho[0] + [32m[KaVector[1][m[K[01;31m[K*[m[K[34m[KbVectorOrtho[1][m[K > 0){
+      |                                              [32m[K~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~~~~~[m[K
+      |                                                       [32m[K|[m[K               [34m[K|[m[K
+      |                                                       [32m[Kfloat*[m[K          [34m[Kfloat[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:17[m[K:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:14:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[KaVector[m[K’
+   14 | aightLine(float aLatitude, float aLongitude, float[2] [01;31m[KaVector[m[K, float& requestedThrottle, bool& reverse, float& requestedAngle);
+      |                                                       [01;31m[K^~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:232:50:[m[K [01;31m[Kerror: [m[K‘[01m[KGnss[m[K’ in namespace ‘[01m[Kinterfaces::msg[m[K’ does not name a type
+  232 |     void gnssDataCallback(const interfaces::msg::[01;31m[KGnss[m[K & gnssData){
+      |                                                  [01;31m[K^~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:239:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  239 |     }
+      |      [01;31m[K^[m[K
+      |      [32m[K;[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:29:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+   29 |         [01;31m[Kstart[m[K = false;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:30:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+   30 |         [01;31m[Kmode[m[K = 0;
+      |         [01;31m[K^~~~[m[K
+      |         [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:31:9:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedThrottle[m[K’ was not declared in this scope
+   31 |         [01;31m[KrequestedThrottle[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedSteerAngle[m[K’ was not declared in this scope
+   32 |         [01;31m[KrequestedSteerAngle[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLatitude[m[K’ was not declared in this scope
+   33 |         [01;31m[KcurrentLatitude[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:34:9:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLongitude[m[K’ was not declared in this scope
+   34 |         [01;31m[KcurrentLongitude[m[K = 0;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:35:9:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentDirection[m[K’ was not declared in this scope
+   35 |         [01;31m[KcurrentDirection[m[K[0]=1;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:39:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_can_[m[K’ was not declared in this scope
+   39 |         [01;31m[Kpublisher_can_[m[K= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:41:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_steeringCalibration_[m[K’ was not declared in this scope; did you mean ‘[01m[KstartSteeringCalibration[m[K’?
+   41 |         [01;31m[Kpublisher_steeringCalibration_[m[K = this->create_publisher<interfaces::msg::SteeringCalibration>("steering_calibration", 10);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KstartSteeringCalibration[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:45:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_joystick_order_[m[K’ was not declared in this scope
+   45 |         [01;31m[Ksubscription_joystick_order_[m[K = this->create_subscription<interfaces::msg::JoystickOrder>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_motors_feedback_[m[K’ was not declared in this scope
+   48 |         [01;31m[Ksubscription_motors_feedback_[m[K = this->create_subscription<interfaces::msg::MotorsFeedback>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_steering_calibration_[m[K’ was not declared in this scope
+   51 |         [01;31m[Ksubscription_steering_calibration_[m[K = this->create_subscription<interfaces::msg::SteeringCalibration>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:54:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_gnss_data_[m[K’ was not declared in this scope
+   54 |         [01;31m[Ksubscription_gnss_data_[m[K = this->create_subscription<interfaces::msg::Gnss>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:54:78:[m[K [01;31m[Kerror: [m[K‘[01m[KGnss[m[K’ is not a member of ‘[01m[Kinterfaces::msg[m[K’
+   54 | on_gnss_data_ = this->create_subscription<interfaces::msg::[01;31m[KGnss[m[K>(
+      |                                                            [01;31m[K^~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:54:83:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcar_control::create_subscription<<expression error> >(const char [10], int, std::_Bind_helper<false, void (car_control::*)(const int&), car_control*, const std::_Placeholder<1>&>::type)[m[K’
+   54 | on_gnss_data_ = [01;31m[Kthis->create_subscription<interfaces::msg::Gnss>([m[K
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+
+   55 | [01;31m[K", 10, std::bind(&car_control::gnssDataCallback, this, _1))[m[K;
+      | [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K      
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+   92 | [01;36m[KNode[m[K::create_subscription(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:54:83:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   54 | on_gnss_data_ = [01;31m[Kthis->create_subscription<interfaces::msg::Gnss>([m[K
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+
+   55 | [01;31m[K", 10, std::bind(&car_control::gnssDataCallback, this, _1))[m[K;
+      | [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K      
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kserver_calibration_[m[K’ was not declared in this scope
+   60 |         [01;31m[Kserver_calibration_[m[K = this->create_service<std_srvs::srv::Empty>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   63 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(PERIOD_UPDATE_CMD, std::bind(&car_control::updateCmd, this));
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::joystickOrderCallback(const JoystickOrder&)[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:79:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+   79 |         if (joyOrder.start != [01;31m[Kstart[m[K){
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:89:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+   89 |         if (joyOrder.mode != [01;31m[Kmode[m[K && joyOrder.mode != -1){ //if mode change
+      |                              [01;31m[K^~~~[m[K
+      |                              [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:102:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  102 |         if ([01;31m[Kmode[m[K == 0 && start){  //if manual mode -> update requestedThrottle, requestedSteerAngle and reverse from joystick order
+      |             [01;31m[K^~~~[m[K
+      |             [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:102:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+  102 |         if (mode == 0 && [01;31m[Kstart[m[K){  //if manual mode -> update requestedThrottle, requestedSteerAngle and reverse from joystick order
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:103:13:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedThrottle[m[K’ was not declared in this scope
+  103 |             [01;31m[KrequestedThrottle[m[K = joyOrder.throttle;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:104:13:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedSteerAngle[m[K’ was not declared in this scope
+  104 |             [01;31m[KrequestedSteerAngle[m[K = joyOrder.steer;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:105:32:[m[K [01;31m[Kerror: [m[Koverloaded function with no contextual type information
+  105 |             reverse = joyOrder.[01;31m[Kreverse[m[K;
+      |                                [01;31m[K^~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::motorsFeedbackCallback(const MotorsFeedback&)[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:115:9:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentAngle[m[K’ was not declared in this scope
+  115 |         [01;31m[KcurrentAngle[m[K = motorsFeedback.steering_angle;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:131:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+  131 |         if (![01;31m[Kstart[m[K){    //Car stopped
+      |              [01;31m[K^~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:132:13:[m[K [01;31m[Kerror: [m[K‘[01m[KleftRearPwmCmd[m[K’ was not declared in this scope
+  132 |             [01;31m[KleftRearPwmCmd[m[K = STOP;
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:133:13:[m[K [01;31m[Kerror: [m[K‘[01m[KrightRearPwmCmd[m[K’ was not declared in this scope
+  133 |             [01;31m[KrightRearPwmCmd[m[K = STOP;
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:134:13:[m[K [01;31m[Kerror: [m[K‘[01m[KsteeringPwmCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KsteeringCmd[m[K’?
+  134 |             [01;31m[KsteeringPwmCmd[m[K = STOP;
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+      |             [32m[KsteeringCmd[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:140:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  140 |             if ([01;31m[Kmode[m[K==0){
+      |                 [01;31m[K^~~~[m[K
+      |                 [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:142:37:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedThrottle[m[K’ was not declared in this scope
+  142 |                 manualPropulsionCmd([01;31m[KrequestedThrottle[m[K, reverse, leftRearPwmCmd,rightRearPwmCmd);
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:142:65:[m[K [01;31m[Kerror: [m[K‘[01m[KleftRearPwmCmd[m[K’ was not declared in this scope
+  142 |       manualPropulsionCmd(requestedThrottle, reverse, [01;31m[KleftRearPwmCmd[m[K,rightRearPwmCmd);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:142:80:[m[K [01;31m[Kerror: [m[K‘[01m[KrightRearPwmCmd[m[K’ was not declared in this scope
+  142 | pulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,[01;31m[KrightRearPwmCmd[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:144:29:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedSteerAngle[m[K’ was not declared in this scope
+  144 |                 steeringCmd([01;31m[KrequestedSteerAngle[m[K,currentAngle, steeringPwmCmd);
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:144:49:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentAngle[m[K’ was not declared in this scope
+  144 |                 steeringCmd(requestedSteerAngle,[01;31m[KcurrentAngle[m[K, steeringPwmCmd);
+      |                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:144:63:[m[K [01;31m[Kerror: [m[K‘[01m[KsteeringPwmCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KsteeringCmd[m[K’?
+  144 |         steeringCmd(requestedSteerAngle,currentAngle, [01;31m[KsteeringPwmCmd[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                       [32m[KsteeringCmd[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:150:30:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLatitude[m[K’ was not declared in this scope
+  150 |                 straightLine([01;31m[KcurrentLatitude[m[K, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle);
+      |                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:150:47:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLongitude[m[K’ was not declared in this scope
+  150 |                 straightLine(currentLatitude, [01;31m[KcurrentLongitude[m[K, currentDirection, requestedThrottle, reverse, requestedSteerAngle);
+      |                                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:150:65:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentDirection[m[K’ was not declared in this scope
+  150 |       straightLine(currentLatitude, currentLongitude, [01;31m[KcurrentDirection[m[K, requestedThrottle, reverse, requestedSteerAngle);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:150:83:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedThrottle[m[K’ was not declared in this scope
+  150 | (currentLatitude, currentLongitude, currentDirection, [01;31m[KrequestedThrottle[m[K, reverse, requestedSteerAngle);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:150:111:[m[K [01;31m[Kerror: [m[K‘[01m[KrequestedSteerAngle[m[K’ was not declared in this scope
+  150 | gitude, currentDirection, requestedThrottle, reverse, [01;31m[KrequestedSteerAngle[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:152:65:[m[K [01;31m[Kerror: [m[K‘[01m[KleftRearPwmCmd[m[K’ was not declared in this scope
+  152 |       manualPropulsionCmd(requestedThrottle, reverse, [01;31m[KleftRearPwmCmd[m[K,rightRearPwmCmd);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:152:80:[m[K [01;31m[Kerror: [m[K‘[01m[KrightRearPwmCmd[m[K’ was not declared in this scope
+  152 | pulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,[01;31m[KrightRearPwmCmd[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:154:49:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentAngle[m[K’ was not declared in this scope
+  154 |                 steeringCmd(requestedSteerAngle,[01;31m[KcurrentAngle[m[K, steeringPwmCmd);
+      |                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:154:63:[m[K [01;31m[Kerror: [m[K‘[01m[KsteeringPwmCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KsteeringCmd[m[K’?
+  154 |         steeringCmd(requestedSteerAngle,currentAngle, [01;31m[KsteeringPwmCmd[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                                       [32m[KsteeringCmd[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:161:37:[m[K [01;31m[Kerror: [m[K‘[01m[KleftRearPwmCmd[m[K’ was not declared in this scope
+  161 |         motorsOrder.left_rear_pwm = [01;31m[KleftRearPwmCmd[m[K;
+      |                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:162:38:[m[K [01;31m[Kerror: [m[K‘[01m[KrightRearPwmCmd[m[K’ was not declared in this scope
+  162 |         motorsOrder.right_rear_pwm = [01;31m[KrightRearPwmCmd[m[K;
+      |                                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:163:36:[m[K [01;31m[Kerror: [m[K‘[01m[KsteeringPwmCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KsteeringCmd[m[K’?
+  163 |         motorsOrder.steering_pwm = [01;31m[KsteeringPwmCmd[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                    [32m[KsteeringCmd[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:166:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_can_[m[K’ was not declared in this scope
+  166 |         [01;31m[Kpublisher_can_[m[K->publish(motorsOrder);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::startSteeringCalibration()[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:180:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_steeringCalibration_[m[K’ was not declared in this scope; did you mean ‘[01m[KstartSteeringCalibration[m[K’?
+  180 |         [01;31m[Kpublisher_steeringCalibration_[m[K->publish(calibrationMsg);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KstartSteeringCalibration[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::steeringCalibration(std_srvs::srv::Empty_Request_<std::allocator<void> >::SharedPtr, std_srvs::srv::Empty_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:192:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  192 |         [01;31m[Kmode[m[K = 2;    //Switch to calibration mode
+      |         [01;31m[K^~~~[m[K
+      |         [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::steeringCalibrationCallback(const SteeringCalibration&)[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:213:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  213 |             [01;31m[Kmode[m[K = 0;    //Switch to manual mode
+      |             [01;31m[K^~~~[m[K
+      |             [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:214:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+  214 |             [01;31m[Kstart[m[K = false;  //Stop car
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:219:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+  219 |             [01;31m[Kmode[m[K = 0;    //Switch to manual mode
+      |             [01;31m[K^~~~[m[K
+      |             [32m[KNode[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:220:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+  220 |             [01;31m[Kstart[m[K = false;  //Stop car
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::gnssDataCallback(const int&)[m[K’:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:233:18:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLatitude[m[K’ was not declared in this scope
+  233 |         if ((abs([01;31m[KcurrentLatitude[m[K-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
+      |                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:233:43:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Klatitude[m[K’ in ‘[01m[KgnssData[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  233 |         if ((abs(currentLatitude-gnssData.[01;31m[Klatitude[m[K) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
+      |                                           [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:233:88:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLongitude[m[K’ was not declared in this scope
+  233 | gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs([01;31m[KcurrentLongitude[m[K-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:233:114:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Klongitude[m[K’ in ‘[01m[KgnssData[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  233 | UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.[01;31m[Klongitude[m[K) >= MIN_UPDATE_COORDINATES)){
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:234:13:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentDirection[m[K’ was not declared in this scope
+  234 |             [01;31m[KcurrentDirection[m[K[0] =  gnssData.latitude - currentLatitude ;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:234:45:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Klatitude[m[K’ in ‘[01m[KgnssData[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  234 |             currentDirection[0] =  gnssData.[01;31m[Klatitude[m[K - currentLatitude ;
+      |                                             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:45:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Klongitude[m[K’ in ‘[01m[KgnssData[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  235 |             currentDirection[1] =  gnssData.[01;31m[Klongitude[m[K - currentLongitude};
+      |                                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:236:13:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLatitude[m[K’ was not declared in this scope
+  236 |             [01;31m[KcurrentLatitude[m[K = gnssData.latitude;
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:236:40:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Klatitude[m[K’ in ‘[01m[KgnssData[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  236 |             currentLatitude = gnssData.[01;31m[Klatitude[m[K;
+      |                                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:237:13:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrentLongitude[m[K’ was not declared in this scope
+  237 |             [01;31m[KcurrentLongitude[m[K = gnssData.longitude;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:237:41:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Klongitude[m[K’ in ‘[01m[KgnssData[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  237 |             currentLongitude = gnssData.[01;31m[Klongitude[m[K;
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K At global scope:
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:274:43:[m[K [01;31m[Kerror: [m[K‘[01m[KGnss[m[K’ is not a member of ‘[01m[Kinterfaces::msg[m[K’
+  274 |     rclcpp::Subscription<interfaces::msg::[01;31m[KGnss[m[K>::SharedPtr subscription_gnss_data_;
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:274:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  274 |     rclcpp::Subscription<interfaces::msg::Gnss[01;31m[K>[m[K::SharedPtr subscription_gnss_data_;
+      |                                               [01;31m[K^[m[K
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:274:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:274:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:274:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:274:60:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Ksubscription_gnss_data_[m[K’
+  274 | clcpp::Subscription<interfaces::msg::Gnss>::SharedPtr [01;31m[Ksubscription_gnss_data_[m[K;
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:281:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  281 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

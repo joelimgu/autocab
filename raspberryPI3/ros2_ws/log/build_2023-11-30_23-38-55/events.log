@@ -1,0 +1,193 @@
+[0.000000] (-) TimerEvent: {}
+[0.000187] (-) JobUnselected: {'identifier': 'can'}
+[0.000275] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.000365] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.000384] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.000409] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.000447] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.000470] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.000540] (-) JobUnselected: {'identifier': 'joystick'}
+[0.000558] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.000622] (-) JobUnselected: {'identifier': 'simulation'}
+[0.000639] (-) JobUnselected: {'identifier': 'system_check'}
+[0.000664] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.000707] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.098018] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.098679] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.099554] (car_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control', '--', '-j8', '-l8'], 'cwd': '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lilultime'), ('LC_TIME', 'nb_NO.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/usr/lib/x86_64-linux-gnu/libstdc++.so.6:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/lilultime'), ('OLDPWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'nb_NO.UTF-8'), ('SYSTEMD_EXEC_PID', '2473'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install:/home/lilultime/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'lilultime'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XILINX_VIVADO', '/tools/Xilinx/Vivado/2022.2'), ('USERNAME', 'lilultime'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/tools/Xilinx/Vitis_HLS/2022.2/bin:/tools/Xilinx/Model_Composer/2022.2/bin:/tools/Xilinx/DocNav:/tools/Xilinx/Vivado/2022.2/bin:/opt/ros/humble/bin:/home/lilultime/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lilultime/GNU_ARM_Toolchain/gcc-arm-none-eabi-10.3-2021.10/bin'), ('SESSION_MANAGER', 'local/lilultime-Lenovo-Y520-15IKBN:@/tmp/.ICE-unix/2189,unix/lilultime-Lenovo-Y520-15IKBN:/tmp/.ICE-unix/2189'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'nb_NO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/925f4111_3505_42c6_b536_46579ef3de82'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'nb_NO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.91'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XILINX_HLS', '/tools/Xilinx/Vitis_HLS/2022.2'), ('AMENT_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_robot_controller:/home/lilultime/ros2_ws/install/my_cpp_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'nb_NO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'nb_NO.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'nb_NO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/lilultime/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'nb_NO.UTF-8'), ('LC_PAPER', 'nb_NO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/auto_traj:/home/lilultime/ros2_ws/install/my_cpp_pkg:/home/lilultime/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[0.102361] (-) TimerEvent: {}
+[0.167020] (car_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o\x1b[0m\n'}
+[0.167369] (car_control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o\x1b[0m\n'}
+[0.202491] (-) TimerEvent: {}
+[0.301297] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint* straightLine(float, float, float*, float&, bool&, float&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.301505] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:40:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdegrees\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[0.301578] (car_control) StderrLine: {'line': b'   40 |         float angle = \x1b[01;31m\x1b[Kdegrees\x1b[m\x1b[K(acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));\n'}
+[0.301641] (car_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[0.302580] (-) TimerEvent: {}
+[0.335594] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1\n'}
+[0.335825] (car_control) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[0.402712] (-) TimerEvent: {}
+[0.503023] (-) TimerEvent: {}
+[0.603317] (-) TimerEvent: {}
+[0.703603] (-) TimerEvent: {}
+[0.803894] (-) TimerEvent: {}
+[0.904179] (-) TimerEvent: {}
+[1.004468] (-) TimerEvent: {}
+[1.104753] (-) TimerEvent: {}
+[1.205047] (-) TimerEvent: {}
+[1.305339] (-) TimerEvent: {}
+[1.405637] (-) TimerEvent: {}
+[1.505942] (-) TimerEvent: {}
+[1.606235] (-) TimerEvent: {}
+[1.706524] (-) TimerEvent: {}
+[1.806811] (-) TimerEvent: {}
+[1.907109] (-) TimerEvent: {}
+[2.007400] (-) TimerEvent: {}
+[2.107686] (-) TimerEvent: {}
+[2.207989] (-) TimerEvent: {}
+[2.308245] (-) TimerEvent: {}
+[2.408535] (-) TimerEvent: {}
+[2.508827] (-) TimerEvent: {}
+[2.609115] (-) TimerEvent: {}
+[2.709402] (-) TimerEvent: {}
+[2.809698] (-) TimerEvent: {}
+[2.909985] (-) TimerEvent: {}
+[3.010276] (-) TimerEvent: {}
+[3.110564] (-) TimerEvent: {}
+[3.210856] (-) TimerEvent: {}
+[3.311151] (-) TimerEvent: {}
+[3.411434] (-) TimerEvent: {}
+[3.511716] (-) TimerEvent: {}
+[3.612022] (-) TimerEvent: {}
+[3.712343] (-) TimerEvent: {}
+[3.812624] (-) TimerEvent: {}
+[3.912944] (-) TimerEvent: {}
+[4.013233] (-) TimerEvent: {}
+[4.113552] (-) TimerEvent: {}
+[4.213834] (-) TimerEvent: {}
+[4.314120] (-) TimerEvent: {}
+[4.414407] (-) TimerEvent: {}
+[4.514692] (-) TimerEvent: {}
+[4.614978] (-) TimerEvent: {}
+[4.715266] (-) TimerEvent: {}
+[4.815552] (-) TimerEvent: {}
+[4.915841] (-) TimerEvent: {}
+[5.016124] (-) TimerEvent: {}
+[5.116407] (-) TimerEvent: {}
+[5.216671] (-) TimerEvent: {}
+[5.316955] (-) TimerEvent: {}
+[5.417212] (-) TimerEvent: {}
+[5.517542] (-) TimerEvent: {}
+[5.617842] (-) TimerEvent: {}
+[5.718163] (-) TimerEvent: {}
+[5.818453] (-) TimerEvent: {}
+[5.918749] (-) TimerEvent: {}
+[6.019050] (-) TimerEvent: {}
+[6.119334] (-) TimerEvent: {}
+[6.219621] (-) TimerEvent: {}
+[6.319905] (-) TimerEvent: {}
+[6.420186] (-) TimerEvent: {}
+[6.520474] (-) TimerEvent: {}
+[6.620765] (-) TimerEvent: {}
+[6.721057] (-) TimerEvent: {}
+[6.821356] (-) TimerEvent: {}
+[6.921734] (-) TimerEvent: {}
+[7.022021] (-) TimerEvent: {}
+[7.122303] (-) TimerEvent: {}
+[7.222619] (-) TimerEvent: {}
+[7.322917] (-) TimerEvent: {}
+[7.423215] (-) TimerEvent: {}
+[7.523515] (-) TimerEvent: {}
+[7.623840] (-) TimerEvent: {}
+[7.724162] (-) TimerEvent: {}
+[7.824479] (-) TimerEvent: {}
+[7.924776] (-) TimerEvent: {}
+[8.025090] (-) TimerEvent: {}
+[8.125403] (-) TimerEvent: {}
+[8.225761] (-) TimerEvent: {}
+[8.326082] (-) TimerEvent: {}
+[8.426383] (-) TimerEvent: {}
+[8.526720] (-) TimerEvent: {}
+[8.627062] (-) TimerEvent: {}
+[8.727351] (-) TimerEvent: {}
+[8.827634] (-) TimerEvent: {}
+[8.927936] (-) TimerEvent: {}
+[9.028270] (-) TimerEvent: {}
+[9.128549] (-) TimerEvent: {}
+[9.228830] (-) TimerEvent: {}
+[9.329114] (-) TimerEvent: {}
+[9.429412] (-) TimerEvent: {}
+[9.529732] (-) TimerEvent: {}
+[9.630012] (-) TimerEvent: {}
+[9.730295] (-) TimerEvent: {}
+[9.830575] (-) TimerEvent: {}
+[9.930841] (-) TimerEvent: {}
+[10.031119] (-) TimerEvent: {}
+[10.131400] (-) TimerEvent: {}
+[10.231695] (-) TimerEvent: {}
+[10.331976] (-) TimerEvent: {}
+[10.432253] (-) TimerEvent: {}
+[10.532531] (-) TimerEvent: {}
+[10.632812] (-) TimerEvent: {}
+[10.733097] (-) TimerEvent: {}
+[10.833375] (-) TimerEvent: {}
+[10.933664] (-) TimerEvent: {}
+[11.033943] (-) TimerEvent: {}
+[11.134222] (-) TimerEvent: {}
+[11.234500] (-) TimerEvent: {}
+[11.334778] (-) TimerEvent: {}
+[11.435058] (-) TimerEvent: {}
+[11.535338] (-) TimerEvent: {}
+[11.635622] (-) TimerEvent: {}
+[11.735922] (-) TimerEvent: {}
+[11.836204] (-) TimerEvent: {}
+[11.936483] (-) TimerEvent: {}
+[12.036761] (-) TimerEvent: {}
+[12.137037] (-) TimerEvent: {}
+[12.237315] (-) TimerEvent: {}
+[12.337650] (-) TimerEvent: {}
+[12.437938] (-) TimerEvent: {}
+[12.538235] (-) TimerEvent: {}
+[12.638533] (-) TimerEvent: {}
+[12.738832] (-) TimerEvent: {}
+[12.839126] (-) TimerEvent: {}
+[12.939419] (-) TimerEvent: {}
+[13.039730] (-) TimerEvent: {}
+[13.140008] (-) TimerEvent: {}
+[13.240307] (-) TimerEvent: {}
+[13.340587] (-) TimerEvent: {}
+[13.440884] (-) TimerEvent: {}
+[13.541182] (-) TimerEvent: {}
+[13.641517] (-) TimerEvent: {}
+[13.741816] (-) TimerEvent: {}
+[13.842115] (-) TimerEvent: {}
+[13.942394] (-) TimerEvent: {}
+[14.042676] (-) TimerEvent: {}
+[14.142976] (-) TimerEvent: {}
+[14.243255] (-) TimerEvent: {}
+[14.343539] (-) TimerEvent: {}
+[14.443820] (-) TimerEvent: {}
+[14.544099] (-) TimerEvent: {}
+[14.644383] (-) TimerEvent: {}
+[14.744662] (-) TimerEvent: {}
+[14.844942] (-) TimerEvent: {}
+[14.945226] (-) TimerEvent: {}
+[15.045538] (-) TimerEvent: {}
+[15.145884] (-) TimerEvent: {}
+[15.246199] (-) TimerEvent: {}
+[15.346506] (-) TimerEvent: {}
+[15.446827] (-) TimerEvent: {}
+[15.547149] (-) TimerEvent: {}
+[15.647472] (-) TimerEvent: {}
+[15.747797] (-) TimerEvent: {}
+[15.848126] (-) TimerEvent: {}
+[15.948423] (-) TimerEvent: {}
+[16.048724] (-) TimerEvent: {}
+[16.149046] (-) TimerEvent: {}
+[16.249392] (-) TimerEvent: {}
+[16.256702] (car_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2\n'}
+[16.256976] (car_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[16.262118] (car_control) CommandEnded: {'returncode': 2}
+[16.349592] (-) TimerEvent: {}
+[16.381199] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 2}
+[16.392094] (-) EventReactorShutdown: {}

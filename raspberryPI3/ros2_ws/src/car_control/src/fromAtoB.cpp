@@ -1,11 +1,12 @@
 #include "../include/car_control/fromAtoB.h"
+#include <math.h>
 
 /*
 Cette fonction nous sert de test pour déplacer la voiture d'un point A (le point actuel) à un point B (le point de destination)
 Pour l'instant, ce point B est fixé à la main dans le code 
 */
 
-int * straightLine(float aLatitude, float aLongitude, float[2] aVector, float& requestedThrottle, bool& reverse, float& requestedAngle){
+int * straightLine(float aLatitude, float aLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle){
 
     float bVector[2];
     float bVectorOrtho[2];
@@ -32,11 +33,11 @@ int * straightLine(float aLatitude, float aLongitude, float[2] aVector, float& r
 
         bVector[0] = bLatitude - aLatitude ;
         bVector[1] = bLongitude - aLongitude ;
-        bvectorOrtho[0] = -bVector[1];
-        bvectorOrtho[1] = bVector[0];
+        bVectorOrtho[0] = -bVector[1];
+        bVectorOrtho[1] = bVector[0];
 
 
-        float angle = degrees(acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
+        float angle = (180/M_PI) * (acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
         
         if (angle > MIN_ANGLE_FOR_MAX_STEERING){
             if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
