@@ -157,16 +157,17 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-                /*TEST
-                leftRearPwmCmd = 80;
-                rightRearPwmCmd = 80;
-                RCLCPP_INFO(this->get_logger(), "you are IN");
-                */
-
+                /*
                 rightRearPwmCmd = ObstacleCmd(front_left, front_center, front_right, rear_left, rear_center, rear_right);
                 leftRearPwmCmd = rightRearPwmCmd;
-                
+                */ 
             }
+        }
+
+        //Obstacle Detection in all modes
+        if (ObstacleCmd(front_left, front_center, front_right, rear_left, rear_center, rear_right) == STOP){
+            leftRearPwmCmd = STOP;
+            rightRearPwmCmd = leftRearPwmCmd;
         }
 
 
