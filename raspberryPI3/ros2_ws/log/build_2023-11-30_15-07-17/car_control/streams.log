@@ -1,0 +1,24 @@
+[0.194s] Invoking command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control -- -j8 -l8
+[0.252s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[0.300s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o[0m
+[0.300s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[0.956s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:[m[K In function ‘[01m[Kint ObstacleCmdFront(int16_t, int16_t, int16_t)[m[K’:
+[0.956s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:16:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[0.957s]    16 | [01;35m[K}[m[K
+[0.957s]       | [01;35m[K^[m[K
+[0.957s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:[m[K In function ‘[01m[Kint ObstacleCmdRear(int16_t, int16_t, int16_t)[m[K’:
+[0.957s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp:25:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[0.957s]    25 | [01;35m[K}[m[K
+[0.958s]       | [01;35m[K^[m[K
+[2.880s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[2.880s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:168:29:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kint ObstacleCmdFront(int16_t, int16_t, int16_t)[m[K’
+[2.880s]   168 |         if ([01;31m[KObstacleCmdFront(front_left, front_center, front_right, rear_left)[m[K == STOP && reverse == false){
+[2.880s]       |             [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.880s] In file included from [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:17[m[K:
+[2.880s] [01m[K/home/achraf/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/obstacle_detection.h:16:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.880s]    16 | int [01;36m[KObstacleCmdFront[m[K(int16_t front_left, int16_t front_center, int16_t front_right);
+[2.880s]       |     [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[8.130s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[8.131s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[8.131s] gmake: *** [Makefile:146: all] Error 2
+[8.134s] Invoked command in '/home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/achraf/autocab/raspberryPI3/ros2_ws/build/car_control -- -j8 -l8
