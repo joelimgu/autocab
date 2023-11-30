@@ -5,6 +5,8 @@
 #include <string.h>  
 
 #define STOP 50 //PWM value to stop motors
+#define MAX_PWM_LEFT 0 //PWM value to go forward
+#define MAX_PWM_RIGHT 100 //PWM value to go backward
 
 /*
 * Cette fonction permet de s'arreter lorsqu'un obstacle est détecter par
