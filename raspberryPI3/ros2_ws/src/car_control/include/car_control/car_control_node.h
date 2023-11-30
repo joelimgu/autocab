@@ -9,6 +9,8 @@
 
 #define STOP 50 //PWM value to stop motors
 
+#define MIN_UPDATE_COORDINATES 0.00001 //Minimum distance to update coordinates in [deg]
+
 
 
 #endif /*__ car_control_node_H */

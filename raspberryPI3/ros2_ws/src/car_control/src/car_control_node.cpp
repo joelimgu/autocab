@@ -230,7 +230,7 @@ private:
 
    //Ajouter filtre de précision
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData){
-        if (currentLatitude != 0 && currentLongitude != 0 && (currentLatitude != gnssData.latitude || currentLongitude != gnssData.longitude)){
+        if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
             currentDirection[0] =  gnssData.latitude - currentLatitude ; 
             currentDirection[1] =  gnssData.longitude - currentLongitude};
             currentLatitude = gnssData.latitude;
