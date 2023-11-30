@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <string.h>  
 
+#define STOP 50 //PWM value to stop motors
+
 /*
 * Cette fonction permet de s'arreter lorsqu'un obstacle est détecter par
 * les capteurs ultrasons (et revenir en arriere ?)
