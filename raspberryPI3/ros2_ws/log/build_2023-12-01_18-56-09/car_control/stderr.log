@@ -1,0 +1,6 @@
+/usr/bin/ld: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o: in function `car_control::updateCmd()':
+car_control_node.cpp:(.text._ZN11car_control9updateCmdEv[_ZN11car_control9updateCmdEv]+0x118): undefined reference to `straightLine(float, float, float*, float&, bool&, float&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:239: car_control_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

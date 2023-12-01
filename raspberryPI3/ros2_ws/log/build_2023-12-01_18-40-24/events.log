@@ -1,0 +1,109 @@
+[0.000000] (-) TimerEvent: {}
+[0.002737] (-) JobUnselected: {'identifier': 'can'}
+[0.003088] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.003252] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.003344] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.003423] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.003500] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.003575] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.003649] (-) JobUnselected: {'identifier': 'joystick'}
+[0.003735] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.003809] (-) JobUnselected: {'identifier': 'simulation'}
+[0.003882] (-) JobUnselected: {'identifier': 'system_check'}
+[0.003965] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.004105] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.083270] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.086008] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.088517] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '10.1.5.180 53654 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install:/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.1.5.180 53654 10.105.1.169 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.101501] (-) TimerEvent: {}
+[0.205262] (-) TimerEvent: {}
+[0.306092] (-) TimerEvent: {}
+[0.316298] (car_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target car_control_node\x1b[0m\n'}
+[0.406299] (-) TimerEvent: {}
+[0.417932] (car_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o\x1b[0m\n'}
+[0.506479] (-) TimerEvent: {}
+[0.607187] (-) TimerEvent: {}
+[0.707913] (-) TimerEvent: {}
+[0.808596] (-) TimerEvent: {}
+[0.909255] (-) TimerEvent: {}
+[1.010068] (-) TimerEvent: {}
+[1.110851] (-) TimerEvent: {}
+[1.211591] (-) TimerEvent: {}
+[1.282969] (car_control) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX executable car_control_node\x1b[0m\n'}
+[1.311769] (-) TimerEvent: {}
+[1.412653] (-) TimerEvent: {}
+[1.513495] (-) TimerEvent: {}
+[1.614323] (-) TimerEvent: {}
+[1.715189] (-) TimerEvent: {}
+[1.816120] (-) TimerEvent: {}
+[1.917323] (-) TimerEvent: {}
+[2.018154] (-) TimerEvent: {}
+[2.119142] (-) TimerEvent: {}
+[2.220539] (-) TimerEvent: {}
+[2.321813] (-) TimerEvent: {}
+[2.423110] (-) TimerEvent: {}
+[2.524295] (-) TimerEvent: {}
+[2.625285] (-) TimerEvent: {}
+[2.726593] (-) TimerEvent: {}
+[2.827842] (-) TimerEvent: {}
+[2.928723] (-) TimerEvent: {}
+[3.029593] (-) TimerEvent: {}
+[3.130933] (-) TimerEvent: {}
+[3.232113] (-) TimerEvent: {}
+[3.332965] (-) TimerEvent: {}
+[3.433753] (-) TimerEvent: {}
+[3.534563] (-) TimerEvent: {}
+[3.635254] (-) TimerEvent: {}
+[3.735964] (-) TimerEvent: {}
+[3.836984] (-) TimerEvent: {}
+[3.937616] (-) TimerEvent: {}
+[4.038291] (-) TimerEvent: {}
+[4.138934] (-) TimerEvent: {}
+[4.239575] (-) TimerEvent: {}
+[4.340195] (-) TimerEvent: {}
+[4.440846] (-) TimerEvent: {}
+[4.541471] (-) TimerEvent: {}
+[4.642104] (-) TimerEvent: {}
+[4.742756] (-) TimerEvent: {}
+[4.843523] (-) TimerEvent: {}
+[4.944517] (-) TimerEvent: {}
+[5.045271] (-) TimerEvent: {}
+[5.145903] (-) TimerEvent: {}
+[5.246526] (-) TimerEvent: {}
+[5.347192] (-) TimerEvent: {}
+[5.447990] (-) TimerEvent: {}
+[5.548762] (-) TimerEvent: {}
+[5.554710] (car_control) StdoutLine: {'line': b'[100%] Built target car_control_node\n'}
+[5.601330] (car_control) CommandEnded: {'returncode': 0}
+[5.648954] (-) TimerEvent: {}
+[5.749640] (-) TimerEvent: {}
+[5.846212] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'install'}
+[5.849783] (-) TimerEvent: {}
+[5.894298] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '10.1.5.180 53654 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install:/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.1.5.180 53654 10.105.1.169 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[5.931170] (car_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.932308] (car_control) StdoutLine: {'line': b'-- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/lib/car_control/car_control_node\n'}
+[5.949975] (-) TimerEvent: {}
+[6.004081] (car_control) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/lib/car_control/car_control_node" to ""\n'}
+[6.004763] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/package_run_dependencies/car_control\n'}
+[6.005288] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/parent_prefix_path/car_control\n'}
+[6.005699] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/ament_prefix_path.sh\n'}
+[6.006100] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/ament_prefix_path.dsv\n'}
+[6.006490] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/path.sh\n'}
+[6.006906] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/environment/path.dsv\n'}
+[6.007341] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.bash\n'}
+[6.007728] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.sh\n'}
+[6.008089] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.zsh\n'}
+[6.008402] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/local_setup.dsv\n'}
+[6.008763] (car_control) StdoutLine: {'line': b'-- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.dsv\n'}
+[6.009413] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/ament_index/resource_index/packages/car_control\n'}
+[6.009841] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.010204] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/car_controlConfig.cmake\n'}
+[6.010557] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/cmake/car_controlConfig-version.cmake\n'}
+[6.011000] (car_control) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/car_control/share/car_control/package.xml\n'}
+[6.015878] (car_control) CommandEnded: {'returncode': 0}
+[6.050544] (-) TimerEvent: {}
+[6.151190] (-) TimerEvent: {}
+[6.251924] (-) TimerEvent: {}
+[6.352969] (-) TimerEvent: {}
+[6.375421] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 0}
+[6.378103] (-) EventReactorShutdown: {}

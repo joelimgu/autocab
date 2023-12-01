@@ -147,9 +147,9 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-                
-                straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle);
 
+                straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+            
                 RCLCPP_INFO(this->get_logger(), "Valeur de requestedThrottle : %f", requestedThrottle);
                 RCLCPP_INFO(this->get_logger(), "Valeur de requestedAngle : %f", requestedSteerAngle);
 
@@ -231,7 +231,6 @@ private:
     * 
     */
 
-   //Ajouter filtre de précision
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData)
     {
         if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
