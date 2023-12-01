@@ -7,8 +7,6 @@
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -210,8 +208,8 @@ class JoystickOrder(metaclass=Metaclass_JoystickOrder):
             assert \
                 isinstance(value, float), \
                 "The 'throttle' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'throttle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'throttle' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._throttle = value
 
     @builtins.property
@@ -225,8 +223,8 @@ class JoystickOrder(metaclass=Metaclass_JoystickOrder):
             assert \
                 isinstance(value, float), \
                 "The 'steer' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'steer' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'steer' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._steer = value
 
     @builtins.property

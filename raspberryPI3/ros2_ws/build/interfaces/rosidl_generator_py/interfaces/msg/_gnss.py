@@ -7,8 +7,6 @@
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -195,7 +193,7 @@ class Gnss(metaclass=Metaclass_Gnss):
             assert \
                 isinstance(value, float), \
                 "The 'latitude' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
                 "The 'latitude' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._latitude = value
 
@@ -210,7 +208,7 @@ class Gnss(metaclass=Metaclass_Gnss):
             assert \
                 isinstance(value, float), \
                 "The 'longitude' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
                 "The 'longitude' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._longitude = value
 
@@ -225,7 +223,7 @@ class Gnss(metaclass=Metaclass_Gnss):
             assert \
                 isinstance(value, float), \
                 "The 'altitude' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
                 "The 'altitude' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._altitude = value
 
@@ -255,7 +253,7 @@ class Gnss(metaclass=Metaclass_Gnss):
             assert \
                 isinstance(value, float), \
                 "The 'hacc' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
                 "The 'hacc' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._hacc = value
 
@@ -270,6 +268,6 @@ class Gnss(metaclass=Metaclass_Gnss):
             assert \
                 isinstance(value, float), \
                 "The 'vacc' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
                 "The 'vacc' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._vacc = value

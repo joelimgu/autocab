@@ -7,8 +7,6 @@
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -212,8 +210,8 @@ class MotorsFeedback(metaclass=Metaclass_MotorsFeedback):
             assert \
                 isinstance(value, float), \
                 "The 'left_rear_speed' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'left_rear_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'left_rear_speed' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._left_rear_speed = value
 
     @builtins.property
@@ -227,8 +225,8 @@ class MotorsFeedback(metaclass=Metaclass_MotorsFeedback):
             assert \
                 isinstance(value, float), \
                 "The 'right_rear_speed' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'right_rear_speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'right_rear_speed' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._right_rear_speed = value
 
     @builtins.property
@@ -242,6 +240,6 @@ class MotorsFeedback(metaclass=Metaclass_MotorsFeedback):
             assert \
                 isinstance(value, float), \
                 "The 'steering_angle' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'steering_angle' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'steering_angle' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._steering_angle = value

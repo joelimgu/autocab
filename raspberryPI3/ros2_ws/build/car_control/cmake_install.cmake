@@ -1,8 +1,8 @@
-# Install script for directory: /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control
+# Install script for directory: /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/car_control")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -42,19 +42,19 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/car_control" TYPE EXECUTABLE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/car_control_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/car_control" TYPE EXECUTABLE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/car_control_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/car_control/car_control_node")
@@ -62,67 +62,67 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/car_control")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/car_control")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/car_control")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/car_control")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/environment" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/environment" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/environment" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/path.dsv")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/environment" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/path.dsv")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.bash")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.sh")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.zsh")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.dsv")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/package.dsv")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_environment_hooks/package.dsv")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_index/share/ament_index/resource_index/packages/car_control")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_index/share/ament_index/resource_index/packages/car_control")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/cmake" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/cmake" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control/cmake" TYPE FILE FILES
-    "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_core/car_controlConfig.cmake"
-    "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_core/car_controlConfig-version.cmake"
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_core/car_controlConfig.cmake"
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/ament_cmake_core/car_controlConfig-version.cmake"
     )
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_control" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -133,5 +133,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/car_control/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

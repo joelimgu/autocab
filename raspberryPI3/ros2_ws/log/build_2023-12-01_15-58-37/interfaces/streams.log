@@ -1,0 +1,5 @@
+[0.162s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4
+[0.213s] [0mCMake Error: The current CMakeCache.txt directory /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/CMakeCache.txt is different than the directory /home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/build/interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.238s] gmake: /usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake: No such file or directory
+[0.239s] gmake: *** [Makefile:2259: cmake_check_build_system] Error 127
+[0.256s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4
