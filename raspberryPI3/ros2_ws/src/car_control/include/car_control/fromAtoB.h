@@ -5,6 +5,7 @@
 #include <stdint.h>
 
 #define MIN_ANGLE_FOR_MAX_STEERING 20 //Minimum angle to set maximum steering in [deg]
+
 #define MIN_DISTANCE_FOR_MAX_THROTTLE 0.5 //Minimum distance to set maximum throttle in [m]
 
 /*

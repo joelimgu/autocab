@@ -236,7 +236,9 @@ private:
             currentDirection[1] =  gnssData.longitude - currentLongitude;
             currentLatitude = gnssData.latitude;
             currentLongitude = gnssData.longitude;
+            RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
         }
+        RCLCPP_INFO(this->get_logger(), "Data GPS stored, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
     }
     
     // ---- Private variables ----
