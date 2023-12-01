@@ -1,0 +1,70 @@
+[0.087s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/can': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/can -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/can
+[0.478s] -- The C compiler identification is GNU 11.4.0
+[1.174s] -- The CXX compiler identification is GNU 11.4.0
+[1.263s] -- Detecting C compiler ABI info
+[2.211s] -- Detecting C compiler ABI info - done
+[2.303s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.306s] -- Detecting C compile features
+[2.310s] -- Detecting C compile features - done
+[2.348s] -- Detecting CXX compiler ABI info
+[3.425s] -- Detecting CXX compiler ABI info - done
+[3.517s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.523s] -- Detecting CXX compile features
+[3.531s] -- Detecting CXX compile features - done
+[3.625s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.018s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[6.063s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[6.855s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.961s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[7.097s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[7.241s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.761s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.295s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[9.415s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[10.927s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[11.374s] -- Found FastRTPS: /opt/ros/humble/include  
+[12.559s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[14.631s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[16.356s] -- Found interfaces: 0.0.0 (/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)
+[16.756s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[18.246s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[18.247s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/pi/autocab/raspberryPI3/ros2_ws/src/can/include>
+[18.248s] -- Configured cppcheck exclude dirs and/or files: 
+[18.256s] -- Added test 'lint_cmake' to check CMake code style
+[18.268s] -- Added test 'uncrustify' to check C / C++ code style
+[18.269s] -- Configured uncrustify additional arguments: 
+[18.274s] -- Added test 'xmllint' to check XML markup files
+[18.287s] -- Configuring done
+[18.385s] -- Generating done
+[18.398s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/can
+[18.494s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/can' returned '0': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/can -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/can
+[18.497s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/can': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/can -- -j4 -l4
+[18.827s] [ 25%] [32mBuilding CXX object CMakeFiles/can_rx_node.dir/src/can_rx_node.cpp.o[0m
+[77.692s] [ 50%] [32m[1mLinking CXX executable can_rx_node[0m
+[81.155s] [ 50%] Built target can_rx_node
+[81.278s] [ 75%] [32mBuilding CXX object CMakeFiles/can_tx_node.dir/src/can_tx_node.cpp.o[0m
+[191.616s] [100%] [32m[1mLinking CXX executable can_tx_node[0m
+[198.131s] [100%] Built target can_tx_node
+[198.261s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/can' returned '0': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/can -- -j4 -l4
+[198.740s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/can': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/can
+[198.858s] -- Install configuration: ""
+[198.864s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_rx_node
+[198.927s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_rx_node" to ""
+[198.930s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_tx_node
+[199.090s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/can/lib/can/can_tx_node" to ""
+[199.094s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/ament_index/resource_index/package_run_dependencies/can
+[199.103s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/ament_index/resource_index/parent_prefix_path/can
+[199.110s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/ament_prefix_path.sh
+[199.116s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/ament_prefix_path.dsv
+[199.122s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/path.sh
+[199.127s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/environment/path.dsv
+[199.133s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.bash
+[199.139s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.sh
+[199.144s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.zsh
+[199.150s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/local_setup.dsv
+[199.155s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.dsv
+[199.161s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/ament_index/resource_index/packages/can
+[199.168s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/cmake/canConfig.cmake
+[199.173s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/cmake/canConfig-version.cmake
+[199.179s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/can/share/can/package.xml
+[199.208s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/can' returned '0': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/can
