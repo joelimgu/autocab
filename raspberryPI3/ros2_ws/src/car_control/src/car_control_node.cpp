@@ -332,7 +332,7 @@ private:
 
         if (reverseAsChanged){
             RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
-           // sleep(3);
+            sleep(3);
         
             /* //si ca marche pas :
             time_t t0 = time(NULL);
