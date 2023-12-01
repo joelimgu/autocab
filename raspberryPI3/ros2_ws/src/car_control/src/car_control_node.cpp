@@ -150,6 +150,9 @@ private:
                 
                 straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle);
 
+                RCLCPP_INFO(this->get_logger(), "Valeur de requestedThrottle : %f", requestedThrottle);
+                RCLCPP_INFO(this->get_logger(), "Valeur de requestedAngle : %f", requestedSteerAngle);
+
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
 
                 steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);

@@ -36,8 +36,6 @@ int * straightLine(float aLatitude, float aLongitude, float aVector[2], float& r
         bVectorOrtho[0] = -bVector[1];
         bVectorOrtho[1] = bVector[0];
 
-        RCLCPP_INFO(this->get_logger(), "bvector[%f,%f]", bVector[0], bVector[1]);
-
 
         float angle = (180/M_PI) * (acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
         
@@ -54,9 +52,6 @@ int * straightLine(float aLatitude, float aLongitude, float aVector[2], float& r
         reverse = false;
 
     }
-
-    RCLCPP_INFO(this->get_logger(), "Valeur de requestedThrottle : %f", requestedThrottle);
-    RCLCPP_INFO(this->get_logger(), "Valeur de requestedAngle : %f", requestedAngle);
 
     return 0;
 
