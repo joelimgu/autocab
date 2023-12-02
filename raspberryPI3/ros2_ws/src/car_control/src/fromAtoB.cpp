@@ -24,7 +24,7 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
         requestedThrottle = 1.0 * distance / MIN_DISTANCE_FOR_MAX_THROTTLE;
     }
 
-    if(requestedThrottle < 0.1){
+    if(requestedThrottle < 0.5){
         requestedThrottle = 0;
         reverse = false;
         requestedAngle = 0;

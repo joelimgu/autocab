@@ -9,7 +9,7 @@
 
 #define STOP 50 //PWM value to stop motors
 
-#define MIN_UPDATE_COORDINATES 0.0001 //Minimum distance to update coordinates in [deg]
+#define MIN_UPDATE_COORDINATES 0.000005 //Minimum distance to update coordinates in [deg]
 
 
 
