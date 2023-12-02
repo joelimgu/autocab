@@ -683,6 +683,7 @@ CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o: /home/pi/autocab/ras
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
   /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
+  /usr/include/c++/11/math.h \
   /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_order.hpp \
   /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__struct.hpp \
   /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__builder.hpp \
@@ -699,15 +700,18 @@ CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o: /home/pi/autocab/ras
   /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__struct.hpp \
   /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__builder.hpp \
   /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__traits.hpp \
+  /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/gnss.hpp \
+  /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__struct.hpp \
+  /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__builder.hpp \
+  /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__traits.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/empty.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/empty__struct.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/empty__builder.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/empty__traits.hpp \
   /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/steeringCmd.h \
-  /usr/include/c++/11/math.h \
   /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/propulsionCmd.h \
-  /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/corrector.h \
-  /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/car_control_node.h
+  /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/car_control_node.h \
+  /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/fromAtoB.h
 
 CMakeFiles/car_control_node.dir/src/corrector.cpp.o: /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp \
   /usr/include/stdc-predef.h \
@@ -861,11 +865,13 @@ CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o: /home/pi/autocab/raspberr
 
 /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/propulsionCmd.cpp:
 
+/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/corrector.h:
+
 /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp:
 
-/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/car_control_node.h:
+/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/fromAtoB.h:
 
-/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/corrector.h:
+/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/car_control_node.h:
 
 /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include/car_control/propulsionCmd.h:
 
@@ -878,6 +884,12 @@ CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o: /home/pi/autocab/raspberr
 /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/empty__struct.hpp:
 
 /opt/ros/humble/include/std_srvs/std_srvs/srv/empty.hpp:
+
+/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__builder.hpp:
+
+/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__struct.hpp:
+
+/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/gnss.hpp:
 
 /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/joystick_order.hpp:
 
@@ -980,6 +992,8 @@ CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o: /home/pi/autocab/raspberr
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_logging_interface.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_clock_interface.hpp:
+
+/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/generic_subscription.hpp:
 

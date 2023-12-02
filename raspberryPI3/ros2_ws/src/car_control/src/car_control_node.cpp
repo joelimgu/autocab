@@ -150,13 +150,13 @@ private:
                 /* Left wheel error and PWM */
                 left_current_pwm_error = pwmError(20.0,leftRearRPM,MAX_RPM);
                 smallLeftRearPwmCmd = leftRearPwmCmd - 50;
-                piCorrector(0.4,1.0,0.001,smallLeftRearPwmCmd,left_past_pwm_error,left_current_pwm_error);
+                piCorrector(0.12,1.22,0.001,smallLeftRearPwmCmd,left_past_pwm_error,left_current_pwm_error);
                 leftRearPwmCmd = smallLeftRearPwmCmd + 50;
 
                 /* Right wheel error and PWM */
                 right_current_pwm_error = pwmError(20.0,rightRearRPM,MAX_RPM);
                 smallRightRearPwmCmd = rightRearPwmCmd - 50;
-                piCorrector(0.4,1.0,0.001,smallRightRearPwmCmd,right_past_pwm_error,right_current_pwm_error);
+                piCorrector(0.12,1.22,0.001,smallRightRearPwmCmd,right_past_pwm_error,right_current_pwm_error);
                 rightRearPwmCmd = smallRightRearPwmCmd + 50;
                 if (leftRearPwmCmd > 100)
                 {
