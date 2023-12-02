@@ -12,7 +12,14 @@ RUN apt-get install -y \
   python3-rosdep \
   git
 RUN apt-get install -y ros-humble-joint-state-publisher-gui ros-humble-xacro python3-pip
-RUN apt-get install -y ros-humble-joint-state-publisher
+RUN apt-get install -y ros-humble-joint-state-publisher ros-humble-spatio-temporal-voxel-layer
+# GPS localisation
+RUN apt-get install -y ros-humble-robot-localization \
+    ros-humble-mapviz \
+    ros-humble-mapviz-plugins \
+    ros-humble-tile-map
+
+
 
 RUN pip install catkin_pkg
 
