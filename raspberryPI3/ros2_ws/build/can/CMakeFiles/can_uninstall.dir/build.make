@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/src/can
+CMAKE_SOURCE_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/src/can
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/build/can
+CMAKE_BINARY_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/build/can
 
 # Utility rule file for can_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/can_uninstall.dir/compiler_depend.make
 include CMakeFiles/can_uninstall.dir/progress.make
 
 CMakeFiles/can_uninstall:
-	/usr/bin/cmake -P /home/achraf/autocab/raspberryPI3/ros2_ws/build/can/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/pi/autocab/raspberryPI3/ros2_ws/build/can/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 can_uninstall: CMakeFiles/can_uninstall
 can_uninstall: CMakeFiles/can_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/can_uninstall.dir/clean:
 .PHONY : CMakeFiles/can_uninstall.dir/clean
 
 CMakeFiles/can_uninstall.dir/depend:
-	cd /home/achraf/autocab/raspberryPI3/ros2_ws/build/can && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/achraf/autocab/raspberryPI3/ros2_ws/src/can /home/achraf/autocab/raspberryPI3/ros2_ws/src/can /home/achraf/autocab/raspberryPI3/ros2_ws/build/can /home/achraf/autocab/raspberryPI3/ros2_ws/build/can /home/achraf/autocab/raspberryPI3/ros2_ws/build/can/CMakeFiles/can_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/autocab/raspberryPI3/ros2_ws/build/can && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/autocab/raspberryPI3/ros2_ws/src/can /home/pi/autocab/raspberryPI3/ros2_ws/src/can /home/pi/autocab/raspberryPI3/ros2_ws/build/can /home/pi/autocab/raspberryPI3/ros2_ws/build/can /home/pi/autocab/raspberryPI3/ros2_ws/build/can/CMakeFiles/can_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/can_uninstall.dir/depend
 

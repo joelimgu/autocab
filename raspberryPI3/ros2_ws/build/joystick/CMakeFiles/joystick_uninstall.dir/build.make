@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick
+CMAKE_SOURCE_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick
+CMAKE_BINARY_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick
 
 # Utility rule file for joystick_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/joystick_uninstall.dir/compiler_depend.make
 include CMakeFiles/joystick_uninstall.dir/progress.make
 
 CMakeFiles/joystick_uninstall:
-	/usr/bin/cmake -P /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 joystick_uninstall: CMakeFiles/joystick_uninstall
 joystick_uninstall: CMakeFiles/joystick_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/joystick_uninstall.dir/clean:
 .PHONY : CMakeFiles/joystick_uninstall.dir/clean
 
 CMakeFiles/joystick_uninstall.dir/depend:
-	cd /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick/CMakeFiles/joystick_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick/CMakeFiles/joystick_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/joystick_uninstall.dir/depend
 

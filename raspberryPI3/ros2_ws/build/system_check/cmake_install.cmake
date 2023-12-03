@@ -1,8 +1,8 @@
-# Install script for directory: /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check
+# Install script for directory: /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/achraf/autocab/raspberryPI3/ros2_ws/install/system_check")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/system_check/system_check_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/system_check" TYPE EXECUTABLE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/system_check_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/system_check" TYPE EXECUTABLE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/system_check_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/system_check/system_check_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/system_check/system_check_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/system_check/system_check_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/system_check/system_check_node")
@@ -63,11 +63,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/system_check")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/system_check")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/system_check")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/system_check")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -75,7 +75,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/environment" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/environment" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -83,46 +83,46 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/environment" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/environment" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_index/share/ament_index/resource_index/packages/system_check")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_index/share/ament_index/resource_index/packages/system_check")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/cmake" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/cmake" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check/cmake" TYPE FILE FILES
-    "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_core/system_checkConfig.cmake"
-    "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_core/system_checkConfig-version.cmake"
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_core/system_checkConfig.cmake"
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/ament_cmake_core/system_checkConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/system_check" TYPE FILE FILES "/home/pi/autocab/raspberryPI3/ros2_ws/src/system_check/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -133,5 +133,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

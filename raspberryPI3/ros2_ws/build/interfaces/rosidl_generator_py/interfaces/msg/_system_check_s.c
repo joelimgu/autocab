@@ -377,7 +377,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->comm_jetson.data,
       strlen(ros_message->comm_jetson.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -394,7 +394,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->comm_l476.data,
       strlen(ros_message->comm_l476.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -411,7 +411,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->comm_f103.data,
       strlen(ros_message->comm_f103.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -428,7 +428,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->battery.data,
       strlen(ros_message->battery.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -449,7 +449,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
       return NULL;
     }
     for (size_t i = 0; i < size; ++i) {
-      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "replace");
+      PyObject * decoded_item = PyUnicode_DecodeUTF8(src[i].data, strlen(src[i].data), "strict");
       if (!decoded_item) {
         return NULL;
       }
@@ -471,7 +471,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->gps.data,
       strlen(ros_message->gps.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -488,7 +488,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->imu.data,
       strlen(ros_message->imu.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -505,7 +505,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->lidar.data,
       strlen(ros_message->lidar.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }
@@ -522,7 +522,7 @@ PyObject * interfaces__msg__system_check__convert_to_py(void * raw_ros_message)
     field = PyUnicode_DecodeUTF8(
       ros_message->camera.data,
       strlen(ros_message->camera.data),
-      "replace");
+      "strict");
     if (!field) {
       return NULL;
     }

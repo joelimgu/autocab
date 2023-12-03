@@ -1,8 +1,8 @@
-# Install script for directory: /home/achraf/autocab/raspberryPI3/ros2_ws/build/carla_msgs/carla_msgs__py
+# Install script for directory: /home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs/carla_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/achraf/autocab/raspberryPI3/ros2_ws/install/carla_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick
+CMAKE_SOURCE_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick
+CMAKE_BINARY_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick
 
 # Utility rule file for ament_cmake_python_copy_joystick.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_joystick.dir/compiler_depend.make
 include CMakeFiles/ament_cmake_python_copy_joystick.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_joystick:
-	/usr/bin/cmake -E copy_directory /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick/ament_cmake_python/joystick/joystick
+	/usr/bin/cmake -E copy_directory /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick/ament_cmake_python/joystick/joystick
 
 ament_cmake_python_copy_joystick: CMakeFiles/ament_cmake_python_copy_joystick
 ament_cmake_python_copy_joystick: CMakeFiles/ament_cmake_python_copy_joystick.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_joystick.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_joystick.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_joystick.dir/depend:
-	cd /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/src/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick /home/achraf/autocab/raspberryPI3/ros2_ws/build/joystick/CMakeFiles/ament_cmake_python_copy_joystick.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick/CMakeFiles/ament_cmake_python_copy_joystick.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_joystick.dir/depend
 

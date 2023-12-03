@@ -1,8 +1,8 @@
-# Install script for directory: /home/achraf/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick/test
+# Install script for directory: /home/pi/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/achraf/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick")
+  set(CMAKE_INSTALL_PREFIX "/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/achraf/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick/gtest/cmake_install.cmake")
+  include("/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick/gtest/cmake_install.cmake")
 
 endif()
 

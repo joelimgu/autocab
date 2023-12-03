@@ -1,0 +1,110 @@
+[0.281s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick
+[1.240s] -- The C compiler identification is GNU 11.4.0
+[2.081s] -- The CXX compiler identification is GNU 11.4.0
+[2.194s] -- Detecting C compiler ABI info
+[3.166s] -- Detecting C compiler ABI info - done
+[3.246s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.251s] -- Detecting C compile features
+[3.258s] -- Detecting C compile features - done
+[3.297s] -- Detecting CXX compiler ABI info
+[4.442s] -- Detecting CXX compiler ABI info - done
+[4.535s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.540s] -- Detecting CXX compile features
+[4.547s] -- Detecting CXX compile features - done
+[4.680s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[7.750s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[10.492s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[12.509s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[12.602s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[12.931s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[13.337s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[13.929s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[15.646s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[15.801s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[17.951s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[18.679s] -- Found FastRTPS: /opt/ros/humble/include  
+[19.785s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[22.338s] -- Found rclpy: 3.3.4 (/opt/ros/humble/share/rclpy/cmake)
+[22.349s] -- Found interfaces: 0.0.0 (/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)
+[22.686s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[25.799s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[29.076s] -- Added test 'copyright' to check source files copyright and LICENSE
+[29.126s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[29.131s] -- Configured cppcheck include dirs: /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick/include
+[29.133s] -- Configured cppcheck exclude dirs and/or files: 
+[29.185s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[29.187s] -- Configured cpplint exclude dirs and/or files: 
+[29.212s] -- Added test 'flake8' to check Python code syntax and style conventions
+[29.240s] -- Added test 'lint_cmake' to check CMake code style
+[29.269s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[29.333s] -- Added test 'uncrustify' to check C / C++ code style
+[29.337s] -- Configured uncrustify additional arguments: 
+[29.365s] -- Added test 'xmllint' to check XML markup files
+[29.408s] -- Configuring done
+[29.526s] -- Generating done
+[29.536s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick
+[29.620s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick
+[29.626s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick -- -j4 -l4
+[30.478s] [ 50%] [32mBuilding CXX object CMakeFiles/joystick_to_cmd.dir/src/joystick_to_cmd_node.cpp.o[0m
+[124.820s] [100%] [32m[1mLinking CXX executable joystick_to_cmd[0m
+[129.534s] [100%] Built target joystick_to_cmd
+[129.960s] [100%] Built target ament_cmake_python_copy_joystick
+[133.316s] running egg_info
+[133.325s] creating joystick.egg-info
+[133.326s] writing joystick.egg-info/PKG-INFO
+[133.328s] writing dependency_links to joystick.egg-info/dependency_links.txt
+[133.330s] writing top-level names to joystick.egg-info/top_level.txt
+[133.332s] writing manifest file 'joystick.egg-info/SOURCES.txt'
+[133.354s] reading manifest file 'joystick.egg-info/SOURCES.txt'
+[133.360s] writing manifest file 'joystick.egg-info/SOURCES.txt'
+[133.658s] [100%] Built target ament_cmake_python_build_joystick_egg
+[133.786s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick -- -j4 -l4
+[134.267s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick
+[134.368s] -- Install configuration: ""
+[134.371s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_to_cmd
+[134.454s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_to_cmd" to ""
+[134.456s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/pythonpath.sh
+[134.459s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/pythonpath.dsv
+[134.463s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info
+[134.466s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/dependency_links.txt
+[134.469s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/PKG-INFO
+[134.472s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/top_level.txt
+[134.476s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/SOURCES.txt
+[134.479s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick
+[134.481s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/LICENSE
+[134.484s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/resource
+[134.486s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/resource/joystick_ros2
+[134.489s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/joystick_ros2.py
+[134.492s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/CONTRIBUTING.md
+[134.495s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/input_example.py
+[134.498s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/__init__.py
+[134.501s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/inputs.py
+[134.506s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/README.md
+[134.509s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/package.xml
+[134.512s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images
+[134.514s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images/mac_settings.png
+[134.976s] Listing '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick'...
+[134.978s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/__init__.py'...
+[134.980s] Listing '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images'...
+[134.982s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/input_example.py'...
+[134.984s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/inputs.py'...
+[134.985s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/joystick_ros2.py'...
+[134.988s] Listing '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/resource'...
+[135.025s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_ros2.py
+[135.042s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/inputs.py
+[135.048s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/package_run_dependencies/joystick
+[135.052s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/parent_prefix_path/joystick
+[135.056s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/ament_prefix_path.sh
+[135.059s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/ament_prefix_path.dsv
+[135.063s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/path.sh
+[135.066s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/path.dsv
+[135.069s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.bash
+[135.072s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.sh
+[135.076s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.zsh
+[135.079s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.dsv
+[135.082s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.dsv
+[135.087s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/packages/joystick
+[135.091s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/cmake/joystickConfig.cmake
+[135.094s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/cmake/joystickConfig-version.cmake
+[135.097s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.xml
+[135.123s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick

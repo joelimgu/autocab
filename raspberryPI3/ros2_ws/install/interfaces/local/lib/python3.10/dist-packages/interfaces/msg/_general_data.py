@@ -7,8 +7,6 @@
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -141,8 +139,8 @@ class GeneralData(metaclass=Metaclass_GeneralData):
             assert \
                 isinstance(value, float), \
                 "The 'battery_level' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'battery_level' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'battery_level' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._battery_level = value
 
     @builtins.property
@@ -156,8 +154,8 @@ class GeneralData(metaclass=Metaclass_GeneralData):
             assert \
                 isinstance(value, float), \
                 "The 'temperature' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'temperature' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert value >= -3.402823e+38 and value <= 3.402823e+38, \
+                "The 'temperature' field must be a float in [-3.402823e+38, 3.402823e+38]"
         self._temperature = value
 
     @builtins.property

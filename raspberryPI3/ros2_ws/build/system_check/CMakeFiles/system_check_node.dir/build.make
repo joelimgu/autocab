@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check
+CMAKE_SOURCE_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check
+CMAKE_BINARY_DIR = /home/pi/autocab/raspberryPI3/ros2_ws/build/system_check
 
 # Include any dependencies generated for this target.
 include CMakeFiles/system_check_node.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/system_check_node.dir/progress.make
 include CMakeFiles/system_check_node.dir/flags.make
 
 CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o: CMakeFiles/system_check_node.dir/flags.make
-CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o: /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp
+CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o: /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp
 CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o: CMakeFiles/system_check_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o -MF CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o.d -o CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o -c /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o -MF CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o.d -o CMakeFiles/system_check_node.dir/src/system_check_node.cpp.o -c /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp
 
 CMakeFiles/system_check_node.dir/src/system_check_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/system_check_node.dir/src/system_check_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp > CMakeFiles/system_check_node.dir/src/system_check_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp > CMakeFiles/system_check_node.dir/src/system_check_node.cpp.i
 
 CMakeFiles/system_check_node.dir/src/system_check_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/system_check_node.dir/src/system_check_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp -o CMakeFiles/system_check_node.dir/src/system_check_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check/src/system_check_node.cpp -o CMakeFiles/system_check_node.dir/src/system_check_node.cpp.s
 
 # Object files for target system_check_node
 system_check_node_OBJECTS = \
@@ -98,12 +98,12 @@ system_check_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrt
 system_check_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 system_check_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 system_check_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_py.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_py.so
 system_check_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 system_check_node: /opt/ros/humble/lib/librcl.so
 system_check_node: /opt/ros/humble/lib/librmw_implementation.so
@@ -171,15 +171,15 @@ system_check_node: /opt/ros/humble/lib/librmw.so
 system_check_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 system_check_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 system_check_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so
-system_check_node: /home/achraf/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_c.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so
+system_check_node: /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_c.so
 system_check_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
 system_check_node: /opt/ros/humble/lib/librcpputils.so
 system_check_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 system_check_node: /opt/ros/humble/lib/librcutils.so
-system_check_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+system_check_node: /usr/lib/aarch64-linux-gnu/libpython3.10.so
 system_check_node: CMakeFiles/system_check_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable system_check_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable system_check_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/system_check_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -191,6 +191,6 @@ CMakeFiles/system_check_node.dir/clean:
 .PHONY : CMakeFiles/system_check_node.dir/clean
 
 CMakeFiles/system_check_node.dir/depend:
-	cd /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check /home/achraf/autocab/raspberryPI3/ros2_ws/src/system_check /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check /home/achraf/autocab/raspberryPI3/ros2_ws/build/system_check/CMakeFiles/system_check_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/autocab/raspberryPI3/ros2_ws/build/system_check && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check /home/pi/autocab/raspberryPI3/ros2_ws/src/system_check /home/pi/autocab/raspberryPI3/ros2_ws/build/system_check /home/pi/autocab/raspberryPI3/ros2_ws/build/system_check /home/pi/autocab/raspberryPI3/ros2_ws/build/system_check/CMakeFiles/system_check_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/system_check_node.dir/depend
 
