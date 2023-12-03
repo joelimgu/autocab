@@ -1,0 +1,71 @@
+[0.227s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter
+[0.978s] -- The C compiler identification is GNU 11.4.0
+[1.696s] -- The CXX compiler identification is GNU 11.4.0
+[1.776s] -- Detecting C compiler ABI info
+[2.687s] -- Detecting C compiler ABI info - done
+[2.766s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.770s] -- Detecting C compile features
+[2.775s] -- Detecting C compile features - done
+[2.809s] -- Detecting CXX compiler ABI info
+[3.854s] -- Detecting CXX compiler ABI info - done
+[3.949s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.953s] -- Detecting CXX compile features
+[3.960s] -- Detecting CXX compile features - done
+[4.067s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[6.840s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[9.040s] -- Found geometry_msgs: 4.2.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[10.295s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[10.501s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[10.744s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[11.057s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[11.506s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[13.083s] -- Found message_filters: 4.3.1 (/opt/ros/humble/share/message_filters/cmake)
+[14.542s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[14.653s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[16.504s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[17.142s] -- Found FastRTPS: /opt/ros/humble/include  
+[18.283s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[20.237s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[21.354s] -- Found tf2: 0.25.0 (/opt/ros/humble/share/tf2/cmake)
+[21.801s] -- Found tf2_ros: 0.25.0 (/opt/ros/humble/share/tf2_ros/cmake)
+[27.348s] -- Configuring done
+[27.630s] -- Generating done
+[27.656s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter
+[27.753s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter
+[27.773s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter -- -j4 -l4
+[28.468s] [ 20%] [32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter.cpp.o[0m
+[28.477s] [ 40%] [32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o[0m
+[214.250s] [ 60%] [32m[1mLinking CXX static library libcomplementary_filter.a[0m
+[217.995s] [ 60%] Built target complementary_filter
+[218.273s] [ 80%] [32mBuilding CXX object CMakeFiles/complementary_filter_node.dir/src/complementary_filter_node.cpp.o[0m
+[255.064s] [100%] [32m[1mLinking CXX executable complementary_filter_node[0m
+[263.792s] [100%] Built target complementary_filter_node
+[263.929s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter -- -j4 -l4
+[264.481s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter
+[264.606s] -- Install configuration: ""
+[264.609s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/libcomplementary_filter.a
+[265.106s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/complementary_filter_node
+[265.277s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/complementary_filter_node" to ""
+[265.279s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter
+[265.280s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter/complementary_filter_ros.h
+[265.284s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter/complementary_filter.h
+[265.288s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/launch
+[265.290s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/launch/complementary_filter.launch.py
+[265.295s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/package_run_dependencies/imu_complementary_filter
+[265.299s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/parent_prefix_path/imu_complementary_filter
+[265.306s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/ament_prefix_path.sh
+[265.315s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/ament_prefix_path.dsv
+[265.322s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/path.sh
+[265.328s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/path.dsv
+[265.335s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.bash
+[265.342s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.sh
+[265.348s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.zsh
+[265.355s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.dsv
+[265.362s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.dsv
+[265.369s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/packages/imu_complementary_filter
+[265.376s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/ament_cmake_export_include_directories-extras.cmake
+[265.384s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/ament_cmake_export_dependencies-extras.cmake
+[265.392s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/imu_complementary_filterConfig.cmake
+[265.398s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/imu_complementary_filterConfig-version.cmake
+[265.408s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.xml
+[265.435s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter

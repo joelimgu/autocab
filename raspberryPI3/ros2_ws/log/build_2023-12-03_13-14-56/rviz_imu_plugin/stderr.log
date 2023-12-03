@@ -1,0 +1,6 @@
+gmake[2]: *** [CMakeFiles/rviz_imu_plugin.dir/build.make:104: CMakeFiles/rviz_imu_plugin.dir/src/imu_orientation_visual.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/rviz_imu_plugin.dir/build.make:76: CMakeFiles/rviz_imu_plugin.dir/rviz_imu_plugin_autogen/mocs_compilation.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/rviz_imu_plugin.dir/build.make:118: CMakeFiles/rviz_imu_plugin.dir/src/imu_axes_visual.cpp.o] Interrupt
+gmake[2]: *** [CMakeFiles/rviz_imu_plugin.dir/build.make:90: CMakeFiles/rviz_imu_plugin.dir/src/imu_display.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/rviz_imu_plugin.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

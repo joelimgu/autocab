@@ -1,0 +1,11 @@
+[0.349s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j4 -l4
+[0.974s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[1.012s] [35m[1mConsolidate compiler generated dependencies of target imu_filter_madgwick[0m
+[1.040s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[1.441s] [ 14%] Built target gtest
+[1.603s] [ 28%] Built target gtest_main
+[1.971s] [ 35%] [32m[1mLinking CXX shared library libimu_filter_madgwick.so[0m
+[4.780s] gmake[2]: *** Deleting file 'libimu_filter_madgwick.so'
+[5.013s] gmake[2]: *** [CMakeFiles/imu_filter_madgwick.dir/build.make:248: libimu_filter_madgwick.so] Interrupt
+[5.017s] gmake[1]: *** [CMakeFiles/Makefile2:176: CMakeFiles/imu_filter_madgwick.dir/all] Interrupt
+[5.020s] gmake: *** [Makefile:146: all] Interrupt

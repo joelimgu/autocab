@@ -1,0 +1,283 @@
+[0.000000] (-) TimerEvent: {}
+[0.002146] (carla_msgs) JobQueued: {'identifier': 'carla_msgs', 'dependencies': OrderedDict()}
+[0.004255] (imu_complementary_filter) JobQueued: {'identifier': 'imu_complementary_filter', 'dependencies': OrderedDict()}
+[0.004463] (imu_filter_madgwick) JobQueued: {'identifier': 'imu_filter_madgwick', 'dependencies': OrderedDict()}
+[0.004746] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.004908] (rviz_imu_plugin) JobQueued: {'identifier': 'rviz_imu_plugin', 'dependencies': OrderedDict()}
+[0.005010] (can) JobQueued: {'identifier': 'can', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.005103] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.005191] (imu_tools) JobQueued: {'identifier': 'imu_tools', 'dependencies': OrderedDict([('imu_complementary_filter', '/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter'), ('imu_filter_madgwick', '/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick'), ('rviz_imu_plugin', '/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin')])}
+[0.005336] (joystick) JobQueued: {'identifier': 'joystick', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.005469] (simulation) JobQueued: {'identifier': 'simulation', 'dependencies': OrderedDict([('carla_msgs', '/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs'), ('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.005565] (system_check) JobQueued: {'identifier': 'system_check', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.005660] (geicar_start) JobQueued: {'identifier': 'geicar_start', 'dependencies': OrderedDict([('imu_filter_madgwick', '/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick'), ('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces'), ('can', '/home/pi/autocab/raspberryPI3/ros2_ws/install/can'), ('car_control', '/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control'), ('system_check', '/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check')])}
+[0.005779] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.049474] (imu_filter_madgwick) JobStarted: {'identifier': 'imu_filter_madgwick'}
+[0.099074] (-) TimerEvent: {}
+[0.121223] (carla_msgs) JobStarted: {'identifier': 'carla_msgs'}
+[0.200252] (-) TimerEvent: {}
+[0.211324] (imu_complementary_filter) JobStarted: {'identifier': 'imu_complementary_filter'}
+[0.301431] (-) TimerEvent: {}
+[0.320289] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.327067] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[0.333728] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.113 56778 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.113 56778 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.372874] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'cmake'}
+[0.379523] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'build'}
+[0.387596] (imu_filter_madgwick) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.113 56778 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.113 56778 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.403544] (-) TimerEvent: {}
+[0.408014] (carla_msgs) JobProgress: {'identifier': 'carla_msgs', 'progress': 'cmake'}
+[0.415287] (carla_msgs) JobProgress: {'identifier': 'carla_msgs', 'progress': 'build'}
+[0.418586] (carla_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.113 56778 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.113 56778 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.468821] (imu_complementary_filter) JobProgress: {'identifier': 'imu_complementary_filter', 'progress': 'cmake'}
+[0.476664] (imu_complementary_filter) JobProgress: {'identifier': 'imu_complementary_filter', 'progress': 'build'}
+[0.480115] (imu_complementary_filter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.113 56778 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.113 56778 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.503825] (-) TimerEvent: {}
+[0.606656] (-) TimerEvent: {}
+[0.709683] (-) TimerEvent: {}
+[0.812837] (-) TimerEvent: {}
+[0.915649] (-) TimerEvent: {}
+[1.018450] (-) TimerEvent: {}
+[1.023011] (imu_filter_madgwick) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gtest_main\x1b[0m\n'}
+[1.060477] (imu_filter_madgwick) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target imu_filter_madgwick\x1b[0m\n'}
+[1.089475] (imu_filter_madgwick) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gtest\x1b[0m\n'}
+[1.118818] (-) TimerEvent: {}
+[1.163295] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c\x1b[0m\n'}
+[1.192539] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_generator_c\x1b[0m\n'}
+[1.219172] (-) TimerEvent: {}
+[1.322816] (-) TimerEvent: {}
+[1.326400] (imu_complementary_filter) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target complementary_filter\x1b[0m\n'}
+[1.383521] (interfaces) StdoutLine: {'line': b'[  1%] Built target interfaces__cpp\n'}
+[1.423216] (-) TimerEvent: {}
+[1.453250] (carla_msgs) StdoutLine: {'line': b'[  3%] Built target carla_msgs__cpp\n'}
+[1.490393] (imu_filter_madgwick) StdoutLine: {'line': b'[ 14%] Built target gtest\n'}
+[1.523639] (-) TimerEvent: {}
+[1.558872] (interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_interfaces\n'}
+[1.598410] (carla_msgs) StdoutLine: {'line': b'[ 12%] Built target carla_msgs__rosidl_generator_c\n'}
+[1.623950] (-) TimerEvent: {}
+[1.651709] (imu_filter_madgwick) StdoutLine: {'line': b'[ 28%] Built target gtest_main\n'}
+[1.670561] (interfaces) StdoutLine: {'line': b'[ 12%] Built target interfaces__rosidl_generator_c\n'}
+[1.710080] (carla_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_carla_msgs\n'}
+[1.724265] (-) TimerEvent: {}
+[1.775990] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.778154] (interfaces) StdoutLine: {'line': b'[ 13%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.819984] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.824588] (-) TimerEvent: {}
+[1.866432] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.915964] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.924891] (-) TimerEvent: {}
+[1.951626] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.975570] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.020856] (imu_filter_madgwick) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX shared library libimu_filter_madgwick.so\x1b[0m\n'}
+[2.023041] (imu_complementary_filter) StdoutLine: {'line': b'[ 60%] Built target complementary_filter\n'}
+[2.025029] (-) TimerEvent: {}
+[2.066682] (carla_msgs) StdoutLine: {'line': b'[ 22%] Built target carla_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.125395] (-) TimerEvent: {}
+[2.155345] (carla_msgs) StdoutLine: {'line': b'[ 32%] Built target carla_msgs__rosidl_typesupport_cpp\n'}
+[2.224075] (imu_complementary_filter) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target complementary_filter_node\x1b[0m\n'}
+[2.225588] (-) TimerEvent: {}
+[2.283661] (carla_msgs) StdoutLine: {'line': b'[ 41%] Built target carla_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.320212] (interfaces) StdoutLine: {'line': b'[ 25%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.325944] (-) TimerEvent: {}
+[2.328091] (carla_msgs) StdoutLine: {'line': b'[ 51%] Built target carla_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.368030] (interfaces) StdoutLine: {'line': b'[ 36%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[2.370782] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[2.401325] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.426270] (-) TimerEvent: {}
+[2.529242] (-) TimerEvent: {}
+[2.632583] (-) TimerEvent: {}
+[2.645081] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.662696] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.677625] (carla_msgs) StdoutLine: {'line': b'[ 61%] Built target carla_msgs__rosidl_typesupport_c\n'}
+[2.723098] (carla_msgs) StdoutLine: {'line': b'[ 70%] Built target carla_msgs__rosidl_typesupport_introspection_c\n'}
+[2.732873] (-) TimerEvent: {}
+[2.835699] (-) TimerEvent: {}
+[2.902147] (imu_complementary_filter) StdoutLine: {'line': b'[100%] Built target complementary_filter_node\n'}
+[2.936070] (-) TimerEvent: {}
+[3.036119] (interfaces) StdoutLine: {'line': b'[ 48%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[3.037541] (-) TimerEvent: {}
+[3.139087] (-) TimerEvent: {}
+[3.160866] (interfaces) StdoutLine: {'line': b'[ 59%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[3.174486] (imu_complementary_filter) CommandEnded: {'returncode': 0}
+[3.239548] (-) TimerEvent: {}
+[3.269005] (carla_msgs) StdoutLine: {'line': b'[ 70%] Built target carla_msgs\n'}
+[3.339926] (-) TimerEvent: {}
+[3.365256] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[3.440228] (-) TimerEvent: {}
+[3.543575] (-) TimerEvent: {}
+[3.642891] (interfaces) StdoutLine: {'line': b'[ 71%] Built target interfaces__rosidl_typesupport_c\n'}
+[3.644612] (-) TimerEvent: {}
+[3.728311] (carla_msgs) StdoutLine: {'line': b'[ 74%] Built target carla_msgs__py\n'}
+[3.744999] (-) TimerEvent: {}
+[3.848186] (-) TimerEvent: {}
+[3.951626] (-) TimerEvent: {}
+[3.968593] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_generator_py\x1b[0m\n'}
+[4.051935] (-) TimerEvent: {}
+[4.115569] (imu_complementary_filter) JobProgress: {'identifier': 'imu_complementary_filter', 'progress': 'install'}
+[4.152250] (-) TimerEvent: {}
+[4.254370] (-) TimerEvent: {}
+[4.275108] (carla_msgs) StdoutLine: {'line': b'[ 80%] Built target carla_msgs__rosidl_generator_py\n'}
+[4.324991] (imu_complementary_filter) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.113 56778 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.113 56778 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[4.361225] (-) TimerEvent: {}
+[4.461169] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.462468] (-) TimerEvent: {}
+[4.525192] (carla_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[4.532392] (imu_complementary_filter) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.535705] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/libcomplementary_filter.a\n'}
+[4.542687] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/lib/imu_complementary_filter/complementary_filter_node\n'}
+[4.549349] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter\n'}
+[4.562420] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter/complementary_filter_ros.h\n'}
+[4.564393] (-) TimerEvent: {}
+[4.569901] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/include/imu_complementary_filter/complementary_filter.h\n'}
+[4.573473] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/launch\n'}
+[4.577287] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/launch/complementary_filter.launch.py\n'}
+[4.581050] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/package_run_dependencies/imu_complementary_filter\n'}
+[4.584762] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/parent_prefix_path/imu_complementary_filter\n'}
+[4.588513] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/ament_prefix_path.sh\n'}
+[4.592528] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/ament_prefix_path.dsv\n'}
+[4.596198] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/path.sh\n'}
+[4.600028] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/environment/path.dsv\n'}
+[4.603770] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.bash\n'}
+[4.607777] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.sh\n'}
+[4.611514] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.zsh\n'}
+[4.617995] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/local_setup.dsv\n'}
+[4.621489] (imu_complementary_filter) StdoutLine: {'line': b'-- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.dsv\n'}
+[4.629878] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/ament_index/resource_index/packages/imu_complementary_filter\n'}
+[4.633469] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.637474] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.641545] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/imu_complementary_filterConfig.cmake\n'}
+[4.644699] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/cmake/imu_complementary_filterConfig-version.cmake\n'}
+[4.648182] (imu_complementary_filter) StdoutLine: {'line': b'-- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.xml\n'}
+[4.664912] (-) TimerEvent: {}
+[4.674410] (imu_complementary_filter) CommandEnded: {'returncode': 0}
+[4.761737] (carla_msgs) StdoutLine: {'line': b'[ 87%] Built target carla_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[4.765246] (-) TimerEvent: {}
+[4.825846] (interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[4.827476] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 107, in _call_userfunc\n'}
+[4.828878] (imu_filter_madgwick) StderrLine: {'line': b"gmake[2]: *** Deleting file 'libimu_filter_madgwick.so'\n"}
+[4.842337] (carla_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:563: CMakeFiles/carla_msgs__rosidl_typesupport_c__pyext.dir/all] Interrupt\n'}
+[4.849116] (interfaces) StderrLine: {'line': b'    f = getattr(self, tree.data)\n'}
+[4.868327] (-) TimerEvent: {}
+[4.872017] (interfaces) StderrLine: {'line': b"AttributeError: 'ValidateSymbols' object has no attribute 'expansion'\n"}
+[4.874514] (interfaces) StderrLine: {'line': b'\n'}
+[4.877537] (interfaces) StderrLine: {'line': b'During handling of the above exception, another exception occurred:\n'}
+[4.881121] (interfaces) StderrLine: {'line': b'\n'}
+[4.890404] (interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[4.893443] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 28, in <module>\n'}
+[4.897351] (interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[4.902596] (interfaces) StderrLine: {'line': b'  File "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/ament_cmake_python/interfaces/setup.py", line 1, in <module>\n'}
+[4.906383] (interfaces) StderrLine: {'line': b'    sys.exit(main())\n'}
+[4.910612] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 24, in main\n'}
+[4.914415] (interfaces) StderrLine: {'line': b'    from setuptools import find_packages\n'}
+[4.918087] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>\n'}
+[4.922101] (interfaces) StderrLine: {'line': b'    generate_cpp(args.generator_arguments_file, args.typesupports)\n'}
+[4.925820] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py", line 28, in generate_cpp\n'}
+[4.929764] (interfaces) StderrLine: {'line': b'    return generate_files(\n'}
+[4.933567] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_cmake/__init__.py", line 74, in generate_files\n'}
+[4.937354] (interfaces) StderrLine: {'line': b'    idl_file = parse_idl_file(locator)\n'}
+[4.941151] (interfaces) StderrLine: {'line': b'    import setuptools.version\n'}
+[4.945885] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>\n'}
+[4.949822] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 64, in parse_idl_file\n'}
+[4.954503] (carla_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[4.958729] (carla_msgs) StderrLine: {'line': b'  File "/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs/ament_cmake_python/carla_msgs/setup.py", line 1, in <module>\n'}
+[4.962754] (carla_msgs) StderrLine: {'line': b'    from setuptools import find_packages\n'}
+[4.967630] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>\n'}
+[4.971545] (-) TimerEvent: {}
+[4.975902] (carla_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:506: CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/all] Interrupt\n'}
+[4.980745] (carla_msgs) StderrLine: {'line': b'    import setuptools.version\n'}
+[4.984648] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>\n'}
+[4.988212] (interfaces) StderrLine: {'line': b'    content = parse_idl_string(string, png_file=png_file)\n'}
+[4.992119] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 72, in parse_idl_string\n'}
+[4.995917] (interfaces) StderrLine: {'line': b'    import pkg_resources\n'}
+[4.999567] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3267, in <module>\n'}
+[5.004206] (interfaces) StderrLine: {'line': b'    tree = get_ast_from_idl_string(idl_string)\n'}
+[5.007727] (interfaces) StderrLine: {'line': b'  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string\n'}
+[5.011343] (carla_msgs) StderrLine: {'line': b'    import pkg_resources\n'}
+[5.014614] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 78, in <module>\n'}
+[5.018346] (carla_msgs) StderrLine: {'line': b"    __import__('pkg_resources.extern.packaging.requirements')\n"}
+[5.022211] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/requirements.py", line 10, in <module>\n'}
+[5.026086] (interfaces) StderrLine: {'line': b"    _parser = Lark(grammar, start='specification', maybe_placeholders=False)\n"}
+[5.029527] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/lark.py", line 383, in __init__\n'}
+[5.032673] (interfaces) StderrLine: {'line': b'    self.terminals, self.rules, self.ignore_tokens = self.grammar.compile(self.options.start, terminals_to_keep)\n'}
+[5.035303] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 734, in compile\n'}
+[5.038042] (imu_complementary_filter) JobEnded: {'identifier': 'imu_complementary_filter', 'rc': 0}
+[5.046444] (carla_msgs) StderrLine: {'line': b'    from pkg_resources.extern.pyparsing import (  # noqa\n'}
+[5.050303] (carla_msgs) StderrLine: {'line': b'  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load\n'}
+[5.054038] (carla_msgs) StderrLine: {'line': b'  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked\n'}
+[5.057154] (carla_msgs) StderrLine: {'line': b'  File "<frozen importlib._bootstrap>", line 674, in _load_unlocked\n'}
+[5.060878] (imu_filter_madgwick) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/imu_filter_madgwick.dir/build.make:248: libimu_filter_madgwick.so] Interrupt\n'}
+[5.064351] (imu_filter_madgwick) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:176: CMakeFiles/imu_filter_madgwick.dir/all] Interrupt\n'}
+[5.067568] (imu_filter_madgwick) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[5.070692] (interfaces) StderrLine: {'line': b'    def _initialize_master_working_set():\n'}
+[5.074062] (-) TimerEvent: {}
+[5.076469] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3241, in _call_aside\n'}
+[5.079630] (interfaces) StderrLine: {'line': b'    tree = transformer.transform(rule_tree)\n'}
+[5.081938] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 252, in transform\n'}
+[5.085378] (interfaces) StderrLine: {'line': b'    tree = t.transform(tree)\n'}
+[5.088881] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 272, in transform\n'}
+[5.090712] (interfaces) StderrLine: {'line': b'    subtree.children = list(self._transform_children(subtree.children))\n'}
+[5.092508] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 138, in _transform_children\n'}
+[5.094229] (interfaces) StderrLine: {'line': b'    f(*args, **kwargs)\n'}
+[5.095848] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3279, in _initialize_master_working_set\n'}
+[5.097340] (interfaces) StderrLine: {'line': b'    res = self._transform_tree(c)\n'}
+[5.099523] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 268, in _transform_tree\n'}
+[5.101727] (interfaces) StderrLine: {'line': b'    return self._call_userfunc(tree)\n'}
+[5.103991] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 109, in _call_userfunc\n'}
+[5.106069] (interfaces) StderrLine: {'line': b'    return self.__default__(tree.data, children, tree.meta)\n'}
+[5.108376] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 163, in __default__\n'}
+[5.110632] (interfaces) StderrLine: {'line': b'    def __default__(self, data, children, meta):\n'}
+[5.113075] (interfaces) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[5.115149] (interfaces) StderrLine: {'line': b'    working_set = WorkingSet._build_master()\n'}
+[5.117135] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 564, in _build_master\n'}
+[5.118424] (carla_msgs) StderrLine: {'line': b'  File "<frozen importlib._bootstrap>", line 571, in module_from_spec\n'}
+[5.119897] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/extern/__init__.py", line 52, in create_module\n'}
+[5.121460] (carla_msgs) StderrLine: {'line': b'    return self.load_module(spec.name)\n'}
+[5.122997] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/extern/__init__.py", line 37, in load_module\n'}
+[5.124455] (carla_msgs) StderrLine: {'line': b'    __import__(extant)\n'}
+[5.125486] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 5399, in <module>\n'}
+[5.126533] (carla_msgs) StderrLine: {'line': b'    class pyparsing_common:\n'}
+[5.127627] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 5565, in pyparsing_common\n'}
+[5.129735] (interfaces) StderrLine: {'line': b'    ws = cls()\n'}
+[5.130879] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 557, in __init__\n'}
+[5.132264] (interfaces) StderrLine: {'line': b'    self.add_entry(entry)\n'}
+[5.133300] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 613, in add_entry\n'}
+[5.134869] (interfaces) StderrLine: {'line': b'    for dist in find_distributions(entry, True):\n'}
+[5.136515] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2073, in find_on_path\n'}
+[5.139282] (interfaces) StderrLine: {'line': b'    path_item_entries = _by_version_descending(filtered)\n'}
+[5.142548] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2043, in _by_version_descending\n'}
+[5.145947] (interfaces) StderrLine: {'line': b'    return sorted(names, key=_by_version, reverse=True)\n'}
+[5.150214] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2041, in _by_version\n'}
+[5.151210] (imu_filter_madgwick) JobEnded: {'identifier': 'imu_filter_madgwick', 'rc': 'SIGINT'}
+[5.155132] (interfaces) StderrLine: {'line': b'    return [try_parse(part) for part in parts]\n'}
+[5.156422] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2041, in <listcomp>\n'}
+[5.157421] (interfaces) StderrLine: {'line': b'    return [try_parse(part) for part in parts]\n'}
+[5.158194] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2031, in try_parse\n'}
+[5.158948] (carla_msgs) StderrLine: {'line': b'    sci_real = Regex(r\'[+-]?\\d+([eE][+-]?\\d+|\\.\\d*([eE][+-]?\\d+)?)\').setName("real number with scientific notation").setParseAction(convertToFloat)\n'}
+[5.160030] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 1284, in setParseAction\n'}
+[5.160898] (interfaces) StderrLine: {'line': b'    return packaging.version.Version(name)\n'}
+[5.161669] (interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/version.py", line 264, in __init__\n'}
+[5.162413] (carla_msgs) StderrLine: {'line': b'    self.parseAction = list(map(_trim_arity, list(fns)))\n'}
+[5.163144] (carla_msgs) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 1096, in _trim_arity\n'}
+[5.163980] (interfaces) StderrLine: {'line': b'    match = self._regex.search(version)\n'}
+[5.164760] (interfaces) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[5.165497] (carla_msgs) StderrLine: {'line': b"    getattr(func, '__class__').__name__)\n"}
+[5.166234] (carla_msgs) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[5.166977] (interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/build.make:87: rosidl_typesupport_cpp/interfaces/msg/joystick_order__type_support.cpp] Interrupt\n'}
+[5.167998] (interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:394: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/all] Interrupt\n'}
+[5.168773] (carla_msgs) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_build_carla_msgs_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_carla_msgs_egg] Interrupt\n'}
+[5.169639] (carla_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_carla_msgs_egg.dir/all] Interrupt\n'}
+[5.170387] (carla_msgs) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[5.171315] (interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_build_interfaces_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_interfaces_egg] Interrupt\n'}
+[5.171787] (interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_interfaces_egg.dir/all] Interrupt\n'}
+[5.172056] (interfaces) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[5.172309] (carla_msgs) JobEnded: {'identifier': 'carla_msgs', 'rc': 'SIGINT'}
+[5.173635] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 'SIGINT'}
+[5.175043] (-) TimerEvent: {}
+[5.182615] (rviz_imu_plugin) JobSkipped: {'identifier': 'rviz_imu_plugin'}
+[5.182920] (can) JobSkipped: {'identifier': 'can'}
+[5.183106] (car_control) JobSkipped: {'identifier': 'car_control'}
+[5.183292] (imu_tools) JobSkipped: {'identifier': 'imu_tools'}
+[5.183547] (joystick) JobSkipped: {'identifier': 'joystick'}
+[5.183731] (simulation) JobSkipped: {'identifier': 'simulation'}
+[5.183835] (system_check) JobSkipped: {'identifier': 'system_check'}
+[5.183928] (geicar_start) JobSkipped: {'identifier': 'geicar_start'}
+[5.184019] (-) EventReactorShutdown: {}

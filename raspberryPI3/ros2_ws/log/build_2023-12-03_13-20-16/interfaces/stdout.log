@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c[0m
+[  1%] Built target interfaces__cpp
+[  1%] Built target ament_cmake_python_copy_interfaces
+[ 12%] Built target interfaces__rosidl_generator_c
+[ 13%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp[0m
+[ 25%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[ 36%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c[0m
+[ 48%] Built target interfaces__rosidl_typesupport_introspection_c
+[ 59%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c[0m
+[ 71%] Built target interfaces__rosidl_typesupport_c

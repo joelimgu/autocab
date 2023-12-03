@@ -1,0 +1,155 @@
+[0.398s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces
+[1.184s] -- The C compiler identification is GNU 11.4.0
+[1.923s] -- The CXX compiler identification is GNU 11.4.0
+[2.004s] -- Detecting C compiler ABI info
+[2.952s] -- Detecting C compiler ABI info - done
+[3.032s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.033s] -- Detecting C compile features
+[3.036s] -- Detecting C compile features - done
+[3.067s] -- Detecting CXX compiler ABI info
+[4.107s] -- Detecting CXX compiler ABI info - done
+[4.182s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.185s] -- Detecting CXX compile features
+[4.191s] -- Detecting CXX compile features - done
+[4.291s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[6.994s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[9.182s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[10.759s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[10.960s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[11.203s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[11.515s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[11.965s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[13.323s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[13.432s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[15.292s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[15.930s] -- Found FastRTPS: /opt/ros/humble/include  
+[17.048s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[19.239s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[23.147s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[27.409s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[29.133s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[29.493s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[29.634s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[30.073s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[30.075s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[30.076s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[30.079s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[30.480s] -- Found PythonExtra: .so  
+[31.047s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[32.419s] -- Added test 'lint_cmake' to check CMake code style
+[32.563s] -- Added test 'xmllint' to check XML markup files
+[32.700s] -- Configuring done
+[34.060s] -- Generating done
+[34.162s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces
+[34.418s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces
+[34.422s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4
+[35.668s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[36.012s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[36.232s] [  2%] Built target ament_cmake_python_copy_interfaces
+[46.410s] running egg_info
+[46.440s] creating interfaces.egg-info
+[46.444s] writing interfaces.egg-info/PKG-INFO
+[46.450s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[46.459s] writing top-level names to interfaces.egg-info/top_level.txt
+[46.471s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[46.537s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[46.580s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[47.313s] [  2%] Built target ament_cmake_python_build_interfaces_egg
+[71.637s] [  3%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/joystick_order__functions.c.o[0m
+[72.337s] [  3%] Built target interfaces__cpp
+[72.640s] [  4%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/motors_feedback__functions.c.o[0m
+[73.502s] [  5%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/motors_order__functions.c.o[0m
+[74.366s] [  6%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/general_data__functions.c.o[0m
+[75.372s] [  8%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/steering_calibration__functions.c.o[0m
+[76.338s] [  9%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/ultrasonic__functions.c.o[0m
+[77.106s] [ 10%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/gnss__functions.c.o[0m
+[78.026s] [ 11%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/msg/detail/system_check__functions.c.o[0m
+[79.099s] [ 12%] [32m[1mLinking C shared library libinterfaces__rosidl_generator_c.so[0m
+[79.857s] [ 12%] Built target interfaces__rosidl_generator_c
+[79.955s] [ 13%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[96.204s] [ 14%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/joystick_order__type_support.cpp.o[0m
+[101.232s] [ 16%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/motors_order__type_support.cpp.o[0m
+[106.298s] [ 17%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/motors_feedback__type_support.cpp.o[0m
+[111.188s] [ 18%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/general_data__type_support.cpp.o[0m
+[116.086s] [ 19%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/steering_calibration__type_support.cpp.o[0m
+[121.006s] [ 20%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/ultrasonic__type_support.cpp.o[0m
+[126.118s] [ 21%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/gnss__type_support.cpp.o[0m
+[131.054s] [ 22%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/msg/detail/system_check__type_support.cpp.o[0m
+[136.784s] [ 24%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so[0m
+[137.583s] [ 24%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[137.767s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[152.725s] [ 26%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/joystick_order__type_support_c.cpp.o[0m
+[157.817s] [ 27%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/motors_order__type_support_c.cpp.o[0m
+[162.577s] [ 28%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/motors_feedback__type_support_c.cpp.o[0m
+[167.289s] [ 29%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/general_data__type_support_c.cpp.o[0m
+[171.900s] [ 31%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/steering_calibration__type_support_c.cpp.o[0m
+[176.286s] [ 32%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/ultrasonic__type_support_c.cpp.o[0m
+[181.002s] [ 33%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/gnss__type_support_c.cpp.o[0m
+[186.052s] [ 34%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/msg/detail/system_check__type_support_c.cpp.o[0m
+[191.172s] [ 35%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so[0m
+[192.396s] [ 35%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[192.530s] [ 36%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[206.716s] [ 37%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/joystick_order__type_support.c.o[0m
+[207.229s] [ 39%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/motors_order__type_support.c.o[0m
+[207.751s] [ 40%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/motors_feedback__type_support.c.o[0m
+[208.256s] [ 41%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/general_data__type_support.c.o[0m
+[208.759s] [ 42%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/steering_calibration__type_support.c.o[0m
+[209.284s] [ 43%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/ultrasonic__type_support.c.o[0m
+[209.639s] [ 44%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/gnss__type_support.c.o[0m
+[210.156s] [ 45%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/msg/detail/system_check__type_support.c.o[0m
+[210.721s] [ 47%] [32m[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so[0m
+[211.231s] [ 47%] Built target interfaces__rosidl_typesupport_introspection_c
+[211.425s] [ 48%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[223.980s] [ 49%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/joystick_order__type_support.cpp.o[0m
+[224.427s] [ 50%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/motors_order__type_support.cpp.o[0m
+[224.882s] [ 51%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/motors_feedback__type_support.cpp.o[0m
+[225.329s] [ 52%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/general_data__type_support.cpp.o[0m
+[225.779s] [ 54%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/steering_calibration__type_support.cpp.o[0m
+[226.221s] [ 55%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/ultrasonic__type_support.cpp.o[0m
+[226.512s] [ 56%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/gnss__type_support.cpp.o[0m
+[226.951s] [ 57%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/msg/system_check__type_support.cpp.o[0m
+[227.398s] [ 58%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so[0m
+[227.941s] [ 58%] Built target interfaces__rosidl_typesupport_c
+[228.087s] [ 59%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[243.483s] [ 60%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/joystick_order__type_support.cpp.o[0m
+[249.757s] [ 62%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/motors_feedback__type_support.cpp.o[0m
+[254.511s] [ 63%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/general_data__type_support.cpp.o[0m
+[260.329s] [ 64%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/steering_calibration__type_support.cpp.o[0m
+[265.694s] [ 65%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/ultrasonic__type_support.cpp.o[0m
+[270.392s] [ 66%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/gnss__type_support.cpp.o[0m
+[275.064s] [ 67%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/system_check__type_support.cpp.o[0m
+[280.195s] [ 68%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/msg/detail/dds_fastrtps/motors_order__type_support.cpp.o[0m
+[285.630s] [ 70%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[286.873s] [ 70%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[287.000s] [ 71%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[296.517s] gmake[2]: *** Deleting file 'rosidl_typesupport_cpp/interfaces/msg/joystick_order__type_support.cpp'
+[296.521s] Traceback (most recent call last):
+[296.524s]   File "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 28, in <module>
+[296.552s]     sys.exit(main())
+[296.555s]   File "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 24, in main
+[296.556s]     generate_cpp(args.generator_arguments_file, args.typesupports)
+[296.558s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py", line 28, in generate_cpp
+[296.559s]     return generate_files(
+[296.593s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[296.600s]     idl_file = parse_idl_file(locator)
+[296.602s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[296.604s]     content = parse_idl_string(string, png_file=png_file)
+[296.613s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[296.625s]     tree = get_ast_from_idl_string(idl_string)
+[296.627s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 89, in get_ast_from_idl_string
+[296.629s]     return _parser.parse(idl_string)
+[296.630s]   File "/usr/lib/python3/dist-packages/lark/lark.py", line 619, in parse
+[296.637s]     return self.parser.parse(text, start=start, on_error=on_error)
+[296.639s]   File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 99, in parse
+[296.641s]     return self.parser.parse(stream, chosen_start, **kw)
+[296.643s]   File "/usr/lib/python3/dist-packages/lark/parsers/earley.py", line 266, in parse
+[296.645s]     to_scan = self._parse(lexer, columns, to_scan, start_symbol)
+[296.648s]   File "/usr/lib/python3/dist-packages/lark/parsers/xearley.py", line 144, in _parse
+[296.650s]     self.predict_and_complete(i, to_scan, columns, transitives)
+[296.652s]   File "/usr/lib/python3/dist-packages/lark/parsers/earley.py", line 153, in predict_and_complete
+[296.654s]     to_scan.add(new_item)
+[296.656s] KeyboardInterrupt
+[296.776s] gmake[2]: *** [CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/build.make:87: rosidl_typesupport_cpp/interfaces/msg/joystick_order__type_support.cpp] Interrupt
+[296.778s] gmake[1]: *** [CMakeFiles/Makefile2:394: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/all] Interrupt
+[296.780s] gmake: *** [Makefile:146: all] Interrupt
+[296.788s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4

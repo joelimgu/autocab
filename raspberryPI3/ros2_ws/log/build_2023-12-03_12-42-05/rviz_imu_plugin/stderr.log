@@ -1,0 +1,3 @@
+gmake[2]: *** [CMakeFiles/rviz_imu_plugin.dir/build.make:146: CMakeFiles/rviz_imu_plugin.dir/src/mag_display.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/rviz_imu_plugin.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

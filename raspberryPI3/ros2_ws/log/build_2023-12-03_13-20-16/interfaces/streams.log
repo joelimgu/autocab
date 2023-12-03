@@ -1,0 +1,92 @@
+[0.335s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4
+[1.159s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c[0m
+[1.379s] [  1%] Built target interfaces__cpp
+[1.554s] [  1%] Built target ament_cmake_python_copy_interfaces
+[1.667s] [ 12%] Built target interfaces__rosidl_generator_c
+[1.773s] [ 13%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.815s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[1.947s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp[0m
+[2.315s] [ 25%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[2.363s] [ 36%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[2.640s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c[0m
+[2.658s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c[0m
+[3.031s] [ 48%] Built target interfaces__rosidl_typesupport_introspection_c
+[3.156s] [ 59%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[3.360s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c[0m
+[3.638s] [ 71%] Built target interfaces__rosidl_typesupport_c
+[4.821s] Traceback (most recent call last):
+[4.823s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 107, in _call_userfunc
+[4.862s]     f = getattr(self, tree.data)
+[4.868s] AttributeError: 'ValidateSymbols' object has no attribute 'expansion'
+[4.871s] 
+[4.874s] During handling of the above exception, another exception occurred:
+[4.883s] 
+[4.887s] Traceback (most recent call last):
+[4.891s]   File "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 28, in <module>
+[4.895s] Traceback (most recent call last):
+[4.899s]   File "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/ament_cmake_python/interfaces/setup.py", line 1, in <module>
+[4.904s]     sys.exit(main())
+[4.908s]   File "/opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp", line 24, in main
+[4.911s]     from setuptools import find_packages
+[4.915s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+[4.919s]     generate_cpp(args.generator_arguments_file, args.typesupports)
+[4.923s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py", line 28, in generate_cpp
+[4.927s]     return generate_files(
+[4.930s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[4.934s]     idl_file = parse_idl_file(locator)
+[4.938s]     import setuptools.version
+[4.943s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[4.948s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[4.985s]     content = parse_idl_string(string, png_file=png_file)
+[4.989s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[4.993s]     import pkg_resources
+[4.997s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3267, in <module>
+[5.001s]     tree = get_ast_from_idl_string(idl_string)
+[5.004s]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+[5.023s]     _parser = Lark(grammar, start='specification', maybe_placeholders=False)
+[5.026s]   File "/usr/lib/python3/dist-packages/lark/lark.py", line 383, in __init__
+[5.029s]     self.terminals, self.rules, self.ignore_tokens = self.grammar.compile(self.options.start, terminals_to_keep)
+[5.031s]   File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 734, in compile
+[5.067s]     def _initialize_master_working_set():
+[5.073s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3241, in _call_aside
+[5.075s]     tree = transformer.transform(rule_tree)
+[5.078s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 252, in transform
+[5.082s]     tree = t.transform(tree)
+[5.084s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 272, in transform
+[5.086s]     subtree.children = list(self._transform_children(subtree.children))
+[5.088s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 138, in _transform_children
+[5.089s]     f(*args, **kwargs)
+[5.091s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3279, in _initialize_master_working_set
+[5.093s]     res = self._transform_tree(c)
+[5.095s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 268, in _transform_tree
+[5.097s]     return self._call_userfunc(tree)
+[5.100s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 109, in _call_userfunc
+[5.102s]     return self.__default__(tree.data, children, tree.meta)
+[5.104s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 163, in __default__
+[5.107s]     def __default__(self, data, children, meta):
+[5.109s] KeyboardInterrupt
+[5.111s]     working_set = WorkingSet._build_master()
+[5.112s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 564, in _build_master
+[5.125s]     ws = cls()
+[5.126s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 557, in __init__
+[5.127s]     self.add_entry(entry)
+[5.129s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 613, in add_entry
+[5.130s]     for dist in find_distributions(entry, True):
+[5.133s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2073, in find_on_path
+[5.136s]     path_item_entries = _by_version_descending(filtered)
+[5.138s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2043, in _by_version_descending
+[5.143s]     return sorted(names, key=_by_version, reverse=True)
+[5.145s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2041, in _by_version
+[5.150s]     return [try_parse(part) for part in parts]
+[5.151s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2041, in <listcomp>
+[5.152s]     return [try_parse(part) for part in parts]
+[5.153s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2031, in try_parse
+[5.156s]     return packaging.version.Version(name)
+[5.156s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/version.py", line 264, in __init__
+[5.159s]     match = self._regex.search(version)
+[5.159s] KeyboardInterrupt
+[5.162s] gmake[2]: *** [CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/build.make:87: rosidl_typesupport_cpp/interfaces/msg/joystick_order__type_support.cpp] Interrupt
+[5.163s] gmake[1]: *** [CMakeFiles/Makefile2:394: CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/all] Interrupt
+[5.166s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_interfaces_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_interfaces_egg] Interrupt
+[5.166s] gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_interfaces_egg.dir/all] Interrupt
+[5.166s] gmake: *** [Makefile:146: all] Interrupt

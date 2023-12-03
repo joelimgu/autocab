@@ -1,0 +1,23 @@
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_generator_c[0m
+[  3%] Built target carla_msgs__cpp
+[ 12%] Built target carla_msgs__rosidl_generator_c
+[ 12%] Built target ament_cmake_python_copy_carla_msgs
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_c[0m
+[ 22%] Built target carla_msgs__rosidl_typesupport_fastrtps_cpp
+[ 32%] Built target carla_msgs__rosidl_typesupport_cpp
+[ 41%] Built target carla_msgs__rosidl_typesupport_fastrtps_c
+[ 51%] Built target carla_msgs__rosidl_typesupport_introspection_cpp
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_c[0m
+[ 61%] Built target carla_msgs__rosidl_typesupport_c
+[ 70%] Built target carla_msgs__rosidl_typesupport_introspection_c
+[ 70%] Built target carla_msgs
+[ 74%] Built target carla_msgs__py
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_generator_py[0m
+[ 80%] Built target carla_msgs__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 87%] Built target carla_msgs__rosidl_typesupport_introspection_c__pyext

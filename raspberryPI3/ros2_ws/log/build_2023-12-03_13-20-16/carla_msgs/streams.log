@@ -1,0 +1,57 @@
+[0.318s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs -- -j4 -l4
+[1.066s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_generator_c[0m
+[1.327s] [  3%] Built target carla_msgs__cpp
+[1.472s] [ 12%] Built target carla_msgs__rosidl_generator_c
+[1.583s] [ 12%] Built target ament_cmake_python_copy_carla_msgs
+[1.649s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[1.740s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_cpp[0m
+[1.789s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_cpp[0m
+[1.849s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_c[0m
+[1.940s] [ 22%] Built target carla_msgs__rosidl_typesupport_fastrtps_cpp
+[2.029s] [ 32%] Built target carla_msgs__rosidl_typesupport_cpp
+[2.157s] [ 41%] Built target carla_msgs__rosidl_typesupport_fastrtps_c
+[2.202s] [ 51%] Built target carla_msgs__rosidl_typesupport_introspection_cpp
+[2.244s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_c[0m
+[2.275s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_c[0m
+[2.551s] [ 61%] Built target carla_msgs__rosidl_typesupport_c
+[2.597s] [ 70%] Built target carla_msgs__rosidl_typesupport_introspection_c
+[3.143s] [ 70%] Built target carla_msgs
+[3.602s] [ 74%] Built target carla_msgs__py
+[3.842s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_generator_py[0m
+[4.149s] [ 80%] Built target carla_msgs__rosidl_generator_py
+[4.335s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[4.399s] [35m[1mConsolidate compiler generated dependencies of target carla_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.635s] [ 87%] Built target carla_msgs__rosidl_typesupport_introspection_c__pyext
+[4.721s] gmake[1]: *** [CMakeFiles/Makefile2:563: CMakeFiles/carla_msgs__rosidl_typesupport_c__pyext.dir/all] Interrupt
+[4.830s] Traceback (most recent call last):
+[4.834s]   File "/home/pi/autocab/raspberryPI3/ros2_ws/build/carla_msgs/ament_cmake_python/carla_msgs/setup.py", line 1, in <module>
+[4.838s]     from setuptools import find_packages
+[4.843s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+[4.852s] gmake[1]: *** [CMakeFiles/Makefile2:506: CMakeFiles/carla_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/all] Interrupt
+[4.856s]     import setuptools.version
+[4.859s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[4.886s]     import pkg_resources
+[4.890s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 78, in <module>
+[4.893s]     __import__('pkg_resources.extern.packaging.requirements')
+[4.897s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/requirements.py", line 10, in <module>
+[4.922s]     from pkg_resources.extern.pyparsing import (  # noqa
+[4.926s]   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+[4.929s]   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+[4.932s]   File "<frozen importlib._bootstrap>", line 674, in _load_unlocked
+[4.992s]   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[4.993s]   File "/usr/lib/python3/dist-packages/pkg_resources/extern/__init__.py", line 52, in create_module
+[4.995s]     return self.load_module(spec.name)
+[4.996s]   File "/usr/lib/python3/dist-packages/pkg_resources/extern/__init__.py", line 37, in load_module
+[4.998s]     __import__(extant)
+[4.999s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 5399, in <module>
+[5.000s]     class pyparsing_common:
+[5.002s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 5565, in pyparsing_common
+[5.032s]     sci_real = Regex(r'[+-]?\d+([eE][+-]?\d+|\.\d*([eE][+-]?\d+)?)').setName("real number with scientific notation").setParseAction(convertToFloat)
+[5.033s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 1284, in setParseAction
+[5.035s]     self.parseAction = list(map(_trim_arity, list(fns)))
+[5.036s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 1096, in _trim_arity
+[5.038s]     getattr(func, '__class__').__name__)
+[5.039s] KeyboardInterrupt
+[5.042s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_carla_msgs_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_carla_msgs_egg] Interrupt
+[5.043s] gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_carla_msgs_egg.dir/all] Interrupt
+[5.043s] gmake: *** [Makefile:146: all] Interrupt

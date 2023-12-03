@@ -1,0 +1,6 @@
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[35m[1mConsolidate compiler generated dependencies of target imu_filter_madgwick[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[ 14%] Built target gtest
+[ 28%] Built target gtest_main
+[ 35%] [32m[1mLinking CXX shared library libimu_filter_madgwick.so[0m
