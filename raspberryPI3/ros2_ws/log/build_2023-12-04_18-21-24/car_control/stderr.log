@@ -1,0 +1,22 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/pi/sebastian/autocab/raspberryPI3/ros2_ws/build/car_control/CMakeCache.txt is different than the directory /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp: No such file or directory
+compilation terminated.
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/corrector.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/propulsionCmd.cpp:23:1:[m[K [01;31m[Kfatal error: [m[Kopening dependency file CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o.d: No such file or directory
+   23 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:104: CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o] Error 1
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/steeringCmd.cpp:24:1:[m[K [01;31m[Kfatal error: [m[Kopening dependency file CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o.d: No such file or directory
+   24 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:90: CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o] Error 1
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:298:1:[m[K [01;31m[Kfatal error: [m[Kopening dependency file CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o.d: No such file or directory
+  298 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
