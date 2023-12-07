@@ -47,9 +47,9 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
             }
         }else{
             if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
-                requestedAngle = -1.0 + (angle/MIN_ANGLE_FOR_MAX_STEERING);
+                requestedAngle = -1.0 * (angle/MIN_ANGLE_FOR_MAX_STEERING);
             }else{
-                requestedAngle = 1.0 - (angle/MIN_ANGLE_FOR_MAX_STEERING);
+                requestedAngle = 1.0 * (angle/MIN_ANGLE_FOR_MAX_STEERING);
             }
         }
 
