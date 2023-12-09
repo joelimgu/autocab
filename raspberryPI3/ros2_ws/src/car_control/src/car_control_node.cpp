@@ -35,6 +35,11 @@ public:
         currentLongitude = 0;
         currentDirection[0]=1;
         currentDirection[1]=1;
+        departurePoint = 'A';
+        finalPoint = 'A';
+        departurePointReached = true;
+        finalPointReached = true;
+        requestNumber = 0;
     
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -148,6 +153,14 @@ private:
             //Autonomous Mode
             } else if (mode==1){
 
+                if (!departurePointReached){
+
+                } else if (!finalPointReached){
+
+                } else {
+
+                }
+
                 straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
             
                 RCLCPP_INFO(this->get_logger(), "Valeur de requestedThrottle : %f", requestedThrottle);
@@ -242,7 +255,31 @@ private:
         }
         RCLCPP_INFO(this->get_logger(), "Data GPS stored, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
     }
-    
+
+    /* Update departurePoint and finalPoint from serveur_data [callback function]  :
+    *
+    * This function is called when a message is published on the "/serveur_data" topic
+    * 
+    */
+
+   /*
+    void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
+    {
+        if (departurePointReached && finalPointReached && (requestNumber != serveurData.requestNumber)){
+            sleep(5);   //wait 5 seconds
+            departurePointReached = false;
+            finalPointReached = false;
+            departurePoint = serveurData.departurePoint;
+            finalPoint = serveurData.finalPoint;
+            requestNumber = serveurData.requestNumber;
+            calculateTrajectory(departurePoint, finalPoint, this->get_logger());
+            RCLCPP_INFO(this->get_logger(), "Data serveur updated, departurePoint = %c, finalPoint = %c", departurePoint, finalPoint);
+        }
+        
+    }
+    */
+
+
     // ---- Private variables ----
 
     //General variables
@@ -267,6 +304,13 @@ private:
     float currentLatitude;
     float currentLongitude;
     float currentDirection[2];
+
+    //trajectory variables
+    char departurePoint;
+    char finalPoint;
+    bool departurePointReached;
+    bool finalPointReached;
+    int requestNumber;
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
