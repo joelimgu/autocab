@@ -6,6 +6,7 @@
 #include "rclcpp/rclcpp.hpp"
 
 
+
 #define MIN_ANGLE_FOR_MAX_STEERING 15 //Minimum angle to set maximum steering in [deg]
 
 #define MIN_DISTANCE_FOR_MAX_THROTTLE 3 //Minimum distance to set maximum throttle in [m]
