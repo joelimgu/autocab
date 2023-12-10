@@ -61,5 +61,5 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
 
     return 0;
 
-    
 }
+
