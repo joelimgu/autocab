@@ -42,6 +42,13 @@ public:
         departurePointReached = true;
         finalPointReached = true;
         requestNumber = 0;
+
+        coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}));
+        coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}));
+        coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}));
+        coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}));
+
+        graph.createGraph(coordinates);
     
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -154,14 +161,29 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-
-                // if (!departurePointReached){
-
-                // } else if (!finalPointReached){
-
-                // } else {
-
-                // }
+                
+                /*
+                //Ici on met a jour les variables departurePointReached et finalPointReached
+                if (pathToDeparturePoint.empty()){
+                    departurePointReached = true;
+                } else if (pathToFinalPoint.empty()){
+                    finalPointReached = true;
+                }
+                //Ici il faut toujours pouvoir garder le controle de la voiture avec la manette. 
+                //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
+                if (!departurePointReached){
+                    straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+                    steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+                } else if (!finalPointReached){
+                    straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+                    steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+                } else {
+                    manualPropulsionCmd(0, false, leftRearPwmCmd,rightRearPwmCmd);
+                    steeringCmd(0,currentAngle, steeringPwmCmd);
+                }
+                */
 
                 straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
             
@@ -255,6 +277,7 @@ private:
             currentLongitude = gnssData.longitude;
             RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
         }
+        
         RCLCPP_INFO(this->get_logger(), "Data GPS stored, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
     }
 
@@ -274,7 +297,8 @@ private:
             departurePoint = serveurData.departurePoint;
             finalPoint = serveurData.finalPoint;
             requestNumber = serveurData.requestNumber;
-            calculateTrajectory(departurePoint, finalPoint, this->get_logger());
+            pathToDeparturePoint = graph.shortest_path('A', departurePoint);
+            pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
             RCLCPP_INFO(this->get_logger(), "Data serveur updated, departurePoint = %c, finalPoint = %c", departurePoint, finalPoint);
         }
         
@@ -313,6 +337,10 @@ private:
     bool departurePointReached;
     bool finalPointReached;
     int requestNumber;
+    Graph graph;
+    map<char, float[2]> coordinates;
+    vector<char> pathToDeparturePoint;
+    vector<char> pathToFinalPoint;    //Gérer l'initialisation de currentPoint
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
