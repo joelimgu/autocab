@@ -29,12 +29,14 @@ public:
     {
         start = false;
         mode = 0;
+
         requestedThrottle = 0;
         requestedSteerAngle = 0;
         currentLatitude = 0;
         currentLongitude = 0;
         currentDirection[0]=1;
         currentDirection[1]=1;
+
         departurePoint = 'A';
         finalPoint = 'A';
         departurePointReached = true;
@@ -153,13 +155,13 @@ private:
             //Autonomous Mode
             } else if (mode==1){
 
-                if (!departurePointReached){
+                // if (!departurePointReached){
 
-                } else if (!finalPointReached){
+                // } else if (!finalPointReached){
 
-                } else {
+                // } else {
 
-                }
+                // }
 
                 straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
             
