@@ -1,0 +1,116 @@
+[0.078s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.289s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[0.395s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[0.399s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o[0m
+[11.215s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[11.217s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[11.217s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[11.218s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:6[m[K,
+[11.219s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[11.220s] /usr/include/c++/11/bits/stl_pair.h: In instantiation of ‘[01m[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_CopyMovePair() [with bool __implicit = true; _U1 = const char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int][m[K’:
+[11.221s] [01m[K/usr/include/c++/11/bits/stl_pair.h:334:36:[m[K   required by substitution of ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, const char, _U2>(), bool>::type <anonymous> > constexpr std::pair<const char, int>::pair(const char&, _U2&&) [with _U2 = void; typename std::enable_if<_CopyMovePair<true, const char, _U2>(), bool>::type <anonymous> = <missing>][m[K’
+[11.222s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:[m[K   required from here
+[11.223s] [01m[K/usr/include/c++/11/bits/stl_pair.h:134:15:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.224s]   134 |         using [01;31m[K__do_converts[m[K = __and_<is_convertible<const _U1&, _T1>,
+[11.224s]       |               [01;31m[K^~~~~~~~~~~~~[m[K
+[11.225s] [01m[K/usr/include/c++/11/bits/stl_pair.h:136:15:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.225s]   136 |         using [01;31m[K__converts[m[K = typename conditional<__implicit,
+[11.226s]       |               [01;31m[K^~~~~~~~~~[m[K
+[11.227s] [01m[K/usr/include/c++/11/bits/stl_pair.h:142:26:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.227s]   142 |                       >::[01;31m[Kvalue[m[K;
+[11.228s]       |                          [01;31m[K^~~~~[m[K
+[11.228s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:340:5:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[11.229s]   340 |     [01;31m[KGraph[m[K graph;
+[11.229s]       |     [01;31m[K^~~~~[m[K
+[11.230s] /usr/include/c++/11/bits/stl_pair.h: In instantiation of ‘[01m[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_CopyMovePair() [with bool __implicit = false; _U1 = const char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int][m[K’:
+[11.231s] [01m[K/usr/include/c++/11/bits/stl_pair.h:341:37:[m[K   required by substitution of ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, const char, _U2>(), bool>::type <anonymous> > std::pair<const char, int>::pair(const char&, _U2&&) [with _U2 = void; typename std::enable_if<_CopyMovePair<false, const char, _U2>(), bool>::type <anonymous> = <missing>][m[K’
+[11.231s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:[m[K   required from here
+[11.232s] [01m[K/usr/include/c++/11/bits/stl_pair.h:134:15:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.232s]   134 |         using [01;31m[K__do_converts[m[K = __and_<is_convertible<const _U1&, _T1>,
+[11.233s]       |               [01;31m[K^~~~~~~~~~~~~[m[K
+[11.233s] [01m[K/usr/include/c++/11/bits/stl_pair.h:136:15:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.234s]   136 |         using [01;31m[K__converts[m[K = typename conditional<__implicit,
+[11.235s]       |               [01;31m[K^~~~~~~~~~[m[K
+[11.235s] [01m[K/usr/include/c++/11/bits/stl_pair.h:142:26:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.236s]   142 |                       >::[01;31m[Kvalue[m[K;
+[11.237s]       |                          [01;31m[K^~~~~[m[K
+[11.237s] /usr/include/c++/11/bits/stl_pair.h: In instantiation of ‘[01m[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_MoveConstructiblePair() [with _U1 = char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int][m[K’:
+[11.238s] [01m[K/usr/include/c++/11/bits/stl_pair.h:348:39:[m[K   required by substitution of ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<const char, int>::pair(_U1&&, _U2&&) [with _U1 = char; _U2 = void; typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <missing>][m[K’
+[11.239s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:[m[K   required from here
+[11.239s] [01m[K/usr/include/c++/11/bits/stl_pair.h:121:54:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.240s]   121 |                       is_constructible<_T2, _U2&&>>::[01;31m[Kvalue[m[K;
+[11.240s]       |                                                      [01;31m[K^~~~~[m[K
+[11.241s] /usr/include/c++/11/bits/stl_pair.h: In instantiation of ‘[01m[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_ImplicitlyMoveConvertiblePair() [with _U1 = char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int][m[K’:
+[11.241s] [01m[K/usr/include/c++/11/bits/stl_pair.h:350:47:[m[K   required by substitution of ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<const char, int>::pair(_U1&&, _U2&&) [with _U1 = char; _U2 = void; typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <missing>][m[K’
+[11.242s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:[m[K   required from here
+[11.243s] [01m[K/usr/include/c++/11/bits/stl_pair.h:128:52:[m[K [01;31m[Kerror: [m[Kforming reference to void
+[11.243s]   128 |                       is_convertible<_U2&&, _T2>>::[01;31m[Kvalue[m[K;
+[11.244s]       |                                                    [01;31m[K^~~~~[m[K
+[11.244s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:[m[K In member function ‘[01m[Kvoid Graph::createGraph(std::map<char, float [2]>)[m[K’:
+[11.245s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::unordered_map<char, int>&[m[K’
+[11.246s]   157 |         [01;31m[Kadd_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}})[m[K;
+[11.246s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.247s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)[m[K’
+[11.247s]    88 |     void add_vertex(char name, [01;36m[Kconst unordered_map<char, int>& edges[m[K)
+[11.248s]       |                                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[11.249s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:158:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::unordered_map<char, int>&[m[K’
+[11.249s]   158 |         [01;31m[Kadd_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}})[m[K;
+[11.250s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.250s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)[m[K’
+[11.251s]    88 |     void add_vertex(char name, [01;36m[Kconst unordered_map<char, int>& edges[m[K)
+[11.252s]       |                                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[11.252s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:159:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::unordered_map<char, int>&[m[K’
+[11.253s]   159 |         [01;31m[Kadd_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}})[m[K;
+[11.253s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.254s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)[m[K’
+[11.254s]    88 |     void add_vertex(char name, [01;36m[Kconst unordered_map<char, int>& edges[m[K)
+[11.255s]       |                                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[11.255s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:160:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::unordered_map<char, int>&[m[K’
+[11.256s]   160 |         [01;31m[Kadd_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}})[m[K;
+[11.257s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.257s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)[m[K’
+[11.258s]    88 |     void add_vertex(char name, [01;36m[Kconst unordered_map<char, int>& edges[m[K)
+[11.258s]       |                                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[11.259s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:[m[K In member function ‘[01m[Kvoid Graph::distance(float*, float*)[m[K’:
+[11.260s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:166:20:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[11.260s]   166 |         return [01;31m[Ksqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2))[m[K;
+[11.261s]       |                [01;31m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[12.095s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[12.096s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[12.096s]    46 |         coordinates.insert(('A', [01;31m[K{[m[K43.570596, 1.466500}));
+[12.097s]       |                                  [01;31m[K^[m[K
+[12.097s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[12.098s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[12.099s]    46 |         coordinates.insert([01;36m[K([m[K'A', {43.570596, 1.466500}));
+[12.099s]       |                            [01;36m[K^[m[K
+[12.100s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[12.101s]    47 |         coordinates.insert(('B', [01;31m[K{[m[K43.570596, 1.466500}));
+[12.102s]       |                                  [01;31m[K^[m[K
+[12.103s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[12.104s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[12.105s]    47 |         coordinates.insert([01;36m[K([m[K'B', {43.570596, 1.466500}));
+[12.105s]       |                            [01;36m[K^[m[K
+[12.106s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[12.106s]    48 |         coordinates.insert(('C', [01;31m[K{[m[K43.570596, 1.466500}));
+[12.107s]       |                                  [01;31m[K^[m[K
+[12.108s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[12.108s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[12.109s]    48 |         coordinates.insert([01;36m[K([m[K'C', {43.570596, 1.466500}));
+[12.110s]       |                            [01;36m[K^[m[K
+[12.110s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[12.111s]    49 |         coordinates.insert(('D', [01;31m[K{[m[K43.570596, 1.466500}));
+[12.112s]       |                                  [01;31m[K^[m[K
+[12.113s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[12.113s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[12.114s]    49 |         coordinates.insert([01;36m[K([m[K'D', {43.570596, 1.466500}));
+[12.115s]       |                            [01;36m[K^[m[K
+[12.121s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgraph[m[K’ was not declared in this scope; did you mean ‘[01m[Kisgraph[m[K’?
+[12.121s]    51 |         [01;31m[Kgraph[m[K.createGraph(coordinates);
+[12.122s]       |         [01;31m[K^~~~~[m[K
+[12.123s]       |         [32m[Kisgraph[m[K
+[13.220s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1
+[13.220s] gmake[2]: *** Waiting for unfinished jobs....
+[32.318s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[32.319s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[32.320s] gmake: *** [Makefile:146: all] Error 2
+[32.326s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

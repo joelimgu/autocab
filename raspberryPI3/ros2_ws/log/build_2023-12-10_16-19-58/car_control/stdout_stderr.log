@@ -1,0 +1,42 @@
+[35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o[0m
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:340:5:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+  340 |     [01;31m[KGraph[m[K graph;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   46 |         coordinates.insert(('A', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   46 |         coordinates.insert([01;36m[K([m[K'A', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   47 |         coordinates.insert(('B', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   47 |         coordinates.insert([01;36m[K([m[K'B', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   48 |         coordinates.insert(('C', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   48 |         coordinates.insert([01;36m[K([m[K'C', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   49 |         coordinates.insert(('D', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   49 |         coordinates.insert([01;36m[K([m[K'D', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgraph[m[K’ was not declared in this scope; did you mean ‘[01m[Kisgraph[m[K’?
+   51 |         [01;31m[Kgraph[m[K.createGraph(coordinates);
+      |         [01;31m[K^~~~~[m[K
+      |         [32m[Kisgraph[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

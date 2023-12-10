@@ -1,0 +1,863 @@
+[0.000000] (-) TimerEvent: {}
+[0.005865] (-) JobUnselected: {'identifier': 'can'}
+[0.006672] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.007091] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.007330] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.007557] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.007833] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.008091] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.008314] (-) JobUnselected: {'identifier': 'joystick'}
+[0.008534] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.008751] (-) JobUnselected: {'identifier': 'simulation'}
+[0.008966] (-) JobUnselected: {'identifier': 'system_check'}
+[0.009199] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.009499] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.094665] (-) TimerEvent: {}
+[0.182397] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.188563] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.196359] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.115 60265 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.115 60265 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.206279] (-) TimerEvent: {}
+[0.307995] (-) TimerEvent: {}
+[0.409298] (-) TimerEvent: {}
+[0.510645] (-) TimerEvent: {}
+[0.611922] (-) TimerEvent: {}
+[0.713235] (-) TimerEvent: {}
+[0.731881] (car_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target car_control_node\x1b[0m\n'}
+[0.813484] (-) TimerEvent: {}
+[0.914712] (-) TimerEvent: {}
+[1.016088] (-) TimerEvent: {}
+[1.024027] (car_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o\x1b[0m\n'}
+[1.035566] (car_control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o\x1b[0m\n'}
+[1.116447] (-) TimerEvent: {}
+[1.218047] (-) TimerEvent: {}
+[1.319432] (-) TimerEvent: {}
+[1.420960] (-) TimerEvent: {}
+[1.522341] (-) TimerEvent: {}
+[1.623865] (-) TimerEvent: {}
+[1.725229] (-) TimerEvent: {}
+[1.826594] (-) TimerEvent: {}
+[1.928103] (-) TimerEvent: {}
+[2.029465] (-) TimerEvent: {}
+[2.130816] (-) TimerEvent: {}
+[2.232194] (-) TimerEvent: {}
+[2.333561] (-) TimerEvent: {}
+[2.434911] (-) TimerEvent: {}
+[2.536363] (-) TimerEvent: {}
+[2.637757] (-) TimerEvent: {}
+[2.739151] (-) TimerEvent: {}
+[2.840658] (-) TimerEvent: {}
+[2.942030] (-) TimerEvent: {}
+[3.043413] (-) TimerEvent: {}
+[3.144826] (-) TimerEvent: {}
+[3.246185] (-) TimerEvent: {}
+[3.347915] (-) TimerEvent: {}
+[3.449459] (-) TimerEvent: {}
+[3.551156] (-) TimerEvent: {}
+[3.652567] (-) TimerEvent: {}
+[3.753809] (-) TimerEvent: {}
+[3.855143] (-) TimerEvent: {}
+[3.956422] (-) TimerEvent: {}
+[4.057677] (-) TimerEvent: {}
+[4.158975] (-) TimerEvent: {}
+[4.260355] (-) TimerEvent: {}
+[4.361601] (-) TimerEvent: {}
+[4.463174] (-) TimerEvent: {}
+[4.565982] (-) TimerEvent: {}
+[4.667249] (-) TimerEvent: {}
+[4.769189] (-) TimerEvent: {}
+[4.871415] (-) TimerEvent: {}
+[4.973424] (-) TimerEvent: {}
+[5.075113] (-) TimerEvent: {}
+[5.176639] (-) TimerEvent: {}
+[5.277971] (-) TimerEvent: {}
+[5.379313] (-) TimerEvent: {}
+[5.480729] (-) TimerEvent: {}
+[5.582053] (-) TimerEvent: {}
+[5.683449] (-) TimerEvent: {}
+[5.785042] (-) TimerEvent: {}
+[5.886581] (-) TimerEvent: {}
+[5.988111] (-) TimerEvent: {}
+[6.089789] (-) TimerEvent: {}
+[6.191185] (-) TimerEvent: {}
+[6.292635] (-) TimerEvent: {}
+[6.394395] (-) TimerEvent: {}
+[6.495929] (-) TimerEvent: {}
+[6.597313] (-) TimerEvent: {}
+[6.698771] (-) TimerEvent: {}
+[6.800331] (-) TimerEvent: {}
+[6.901736] (-) TimerEvent: {}
+[7.003298] (-) TimerEvent: {}
+[7.104838] (-) TimerEvent: {}
+[7.206371] (-) TimerEvent: {}
+[7.307827] (-) TimerEvent: {}
+[7.409240] (-) TimerEvent: {}
+[7.510762] (-) TimerEvent: {}
+[7.612404] (-) TimerEvent: {}
+[7.714100] (-) TimerEvent: {}
+[7.815613] (-) TimerEvent: {}
+[7.917188] (-) TimerEvent: {}
+[8.018686] (-) TimerEvent: {}
+[8.120594] (-) TimerEvent: {}
+[8.222096] (-) TimerEvent: {}
+[8.323601] (-) TimerEvent: {}
+[8.425283] (-) TimerEvent: {}
+[8.526927] (-) TimerEvent: {}
+[8.628747] (-) TimerEvent: {}
+[8.730354] (-) TimerEvent: {}
+[8.831889] (-) TimerEvent: {}
+[8.933532] (-) TimerEvent: {}
+[9.034958] (-) TimerEvent: {}
+[9.136406] (-) TimerEvent: {}
+[9.237773] (-) TimerEvent: {}
+[9.339247] (-) TimerEvent: {}
+[9.440925] (-) TimerEvent: {}
+[9.542402] (-) TimerEvent: {}
+[9.643988] (-) TimerEvent: {}
+[9.745497] (-) TimerEvent: {}
+[9.847067] (-) TimerEvent: {}
+[9.948632] (-) TimerEvent: {}
+[10.050259] (-) TimerEvent: {}
+[10.152000] (-) TimerEvent: {}
+[10.253478] (-) TimerEvent: {}
+[10.355126] (-) TimerEvent: {}
+[10.456609] (-) TimerEvent: {}
+[10.558293] (-) TimerEvent: {}
+[10.659849] (-) TimerEvent: {}
+[10.761241] (-) TimerEvent: {}
+[10.862650] (-) TimerEvent: {}
+[10.964340] (-) TimerEvent: {}
+[11.066020] (-) TimerEvent: {}
+[11.167758] (-) TimerEvent: {}
+[11.269183] (-) TimerEvent: {}
+[11.370612] (-) TimerEvent: {}
+[11.472101] (-) TimerEvent: {}
+[11.573635] (-) TimerEvent: {}
+[11.675282] (-) TimerEvent: {}
+[11.777135] (-) TimerEvent: {}
+[11.879361] (-) TimerEvent: {}
+[11.981180] (-) TimerEvent: {}
+[12.082795] (-) TimerEvent: {}
+[12.184263] (-) TimerEvent: {}
+[12.285947] (-) TimerEvent: {}
+[12.387752] (-) TimerEvent: {}
+[12.489333] (-) TimerEvent: {}
+[12.591168] (-) TimerEvent: {}
+[12.693212] (-) TimerEvent: {}
+[12.795010] (-) TimerEvent: {}
+[12.896534] (-) TimerEvent: {}
+[12.997955] (-) TimerEvent: {}
+[13.099376] (-) TimerEvent: {}
+[13.200872] (-) TimerEvent: {}
+[13.302347] (-) TimerEvent: {}
+[13.403837] (-) TimerEvent: {}
+[13.505344] (-) TimerEvent: {}
+[13.606855] (-) TimerEvent: {}
+[13.708442] (-) TimerEvent: {}
+[13.809898] (-) TimerEvent: {}
+[13.911448] (-) TimerEvent: {}
+[14.012909] (-) TimerEvent: {}
+[14.114440] (-) TimerEvent: {}
+[14.215903] (-) TimerEvent: {}
+[14.317295] (-) TimerEvent: {}
+[14.418783] (-) TimerEvent: {}
+[14.520285] (-) TimerEvent: {}
+[14.621727] (-) TimerEvent: {}
+[14.723217] (-) TimerEvent: {}
+[14.824739] (-) TimerEvent: {}
+[14.926308] (-) TimerEvent: {}
+[15.028097] (-) TimerEvent: {}
+[15.129496] (-) TimerEvent: {}
+[15.230902] (-) TimerEvent: {}
+[15.332380] (-) TimerEvent: {}
+[15.433861] (-) TimerEvent: {}
+[15.535247] (-) TimerEvent: {}
+[15.636674] (-) TimerEvent: {}
+[15.738130] (-) TimerEvent: {}
+[15.840168] (-) TimerEvent: {}
+[15.941637] (-) TimerEvent: {}
+[16.043149] (-) TimerEvent: {}
+[16.145699] (-) TimerEvent: {}
+[16.247213] (-) TimerEvent: {}
+[16.348700] (-) TimerEvent: {}
+[16.450159] (-) TimerEvent: {}
+[16.551613] (-) TimerEvent: {}
+[16.653139] (-) TimerEvent: {}
+[16.754582] (-) TimerEvent: {}
+[16.856237] (-) TimerEvent: {}
+[16.957718] (-) TimerEvent: {}
+[17.059230] (-) TimerEvent: {}
+[17.161216] (-) TimerEvent: {}
+[17.262687] (-) TimerEvent: {}
+[17.364137] (-) TimerEvent: {}
+[17.465542] (-) TimerEvent: {}
+[17.566995] (-) TimerEvent: {}
+[17.668823] (-) TimerEvent: {}
+[17.770201] (-) TimerEvent: {}
+[17.871749] (-) TimerEvent: {}
+[17.973144] (-) TimerEvent: {}
+[18.074584] (-) TimerEvent: {}
+[18.176139] (-) TimerEvent: {}
+[18.277615] (-) TimerEvent: {}
+[18.379030] (-) TimerEvent: {}
+[18.480633] (-) TimerEvent: {}
+[18.582179] (-) TimerEvent: {}
+[18.683764] (-) TimerEvent: {}
+[18.785192] (-) TimerEvent: {}
+[18.886621] (-) TimerEvent: {}
+[18.988108] (-) TimerEvent: {}
+[19.089551] (-) TimerEvent: {}
+[19.190962] (-) TimerEvent: {}
+[19.292485] (-) TimerEvent: {}
+[19.393890] (-) TimerEvent: {}
+[19.495371] (-) TimerEvent: {}
+[19.596867] (-) TimerEvent: {}
+[19.698334] (-) TimerEvent: {}
+[19.799835] (-) TimerEvent: {}
+[19.901339] (-) TimerEvent: {}
+[20.003296] (-) TimerEvent: {}
+[20.104771] (-) TimerEvent: {}
+[20.207366] (-) TimerEvent: {}
+[20.309094] (-) TimerEvent: {}
+[20.411387] (-) TimerEvent: {}
+[20.512891] (-) TimerEvent: {}
+[20.614977] (-) TimerEvent: {}
+[20.716494] (-) TimerEvent: {}
+[20.818752] (-) TimerEvent: {}
+[20.921547] (-) TimerEvent: {}
+[21.023918] (-) TimerEvent: {}
+[21.126310] (-) TimerEvent: {}
+[21.227829] (-) TimerEvent: {}
+[21.329345] (-) TimerEvent: {}
+[21.430815] (-) TimerEvent: {}
+[21.532303] (-) TimerEvent: {}
+[21.633730] (-) TimerEvent: {}
+[21.735196] (-) TimerEvent: {}
+[21.836764] (-) TimerEvent: {}
+[21.938297] (-) TimerEvent: {}
+[22.039899] (-) TimerEvent: {}
+[22.141321] (-) TimerEvent: {}
+[22.242901] (-) TimerEvent: {}
+[22.344785] (-) TimerEvent: {}
+[22.446534] (-) TimerEvent: {}
+[22.548175] (-) TimerEvent: {}
+[22.649782] (-) TimerEvent: {}
+[22.751162] (-) TimerEvent: {}
+[22.852777] (-) TimerEvent: {}
+[22.954293] (-) TimerEvent: {}
+[23.055948] (-) TimerEvent: {}
+[23.157610] (-) TimerEvent: {}
+[23.259211] (-) TimerEvent: {}
+[23.360766] (-) TimerEvent: {}
+[23.462316] (-) TimerEvent: {}
+[23.563978] (-) TimerEvent: {}
+[23.665463] (-) TimerEvent: {}
+[23.766967] (-) TimerEvent: {}
+[23.868509] (-) TimerEvent: {}
+[23.970123] (-) TimerEvent: {}
+[24.071782] (-) TimerEvent: {}
+[24.173469] (-) TimerEvent: {}
+[24.275253] (-) TimerEvent: {}
+[24.377136] (-) TimerEvent: {}
+[24.479282] (-) TimerEvent: {}
+[24.582206] (-) TimerEvent: {}
+[24.683919] (-) TimerEvent: {}
+[24.785419] (-) TimerEvent: {}
+[24.886899] (-) TimerEvent: {}
+[24.988457] (-) TimerEvent: {}
+[25.089929] (-) TimerEvent: {}
+[25.191448] (-) TimerEvent: {}
+[25.293019] (-) TimerEvent: {}
+[25.394440] (-) TimerEvent: {}
+[25.495994] (-) TimerEvent: {}
+[25.597438] (-) TimerEvent: {}
+[25.698858] (-) TimerEvent: {}
+[25.800351] (-) TimerEvent: {}
+[25.901874] (-) TimerEvent: {}
+[26.003372] (-) TimerEvent: {}
+[26.104949] (-) TimerEvent: {}
+[26.206526] (-) TimerEvent: {}
+[26.308090] (-) TimerEvent: {}
+[26.409619] (-) TimerEvent: {}
+[26.511308] (-) TimerEvent: {}
+[26.552744] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1\x1b[m\x1b[K:\n'}
+[26.554548] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:30:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[26.556383] (car_control) StderrLine: {'line': b'   30 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::void add_vertex(char name, const unordered_map<char, float>& edges);\n'}
+[26.557811] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[26.561303] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:31:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[26.562778] (car_control) StderrLine: {'line': b'   31 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::vector<char> shortest_path(char start, char finish);\n'}
+[26.564192] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[26.568979] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:32:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[26.570454] (car_control) StderrLine: {'line': b'   32 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::void createGraph(map<char, float[2]> coordinates);\n'}
+[26.571588] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[26.576949] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:33:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[26.578401] (car_control) StderrLine: {'line': b'   33 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::float distance(float a[2], float b[2]);\n'}
+[26.579610] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[26.611732] (-) TimerEvent: {}
+[26.714696] (-) TimerEvent: {}
+[26.817450] (-) TimerEvent: {}
+[26.920336] (-) TimerEvent: {}
+[26.993211] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19\x1b[m\x1b[K:\n'}
+[26.994782] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:30:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[26.996112] (car_control) StderrLine: {'line': b'   30 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::void add_vertex(char name, const unordered_map<char, float>& edges);\n'}
+[26.997505] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[27.001661] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:31:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[27.003110] (car_control) StderrLine: {'line': b'   31 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::vector<char> shortest_path(char start, char finish);\n'}
+[27.004427] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[27.009892] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:32:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[27.011350] (car_control) StderrLine: {'line': b'   32 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::void createGraph(map<char, float[2]> coordinates);\n'}
+[27.012580] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[27.017613] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:33:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[27.018915] (car_control) StderrLine: {'line': b'   33 | \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K::float distance(float a[2], float b[2]);\n'}
+[27.020806] (-) TimerEvent: {}
+[27.021882] (car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[27.031215] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:341:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[27.032806] (car_control) StderrLine: {'line': b'  341 |     \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K graph;\n'}
+[27.033927] (car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[27.121161] (-) TimerEvent: {}
+[27.227381] (-) TimerEvent: {}
+[27.328863] (-) TimerEvent: {}
+[27.430383] (-) TimerEvent: {}
+[27.531852] (-) TimerEvent: {}
+[27.633339] (-) TimerEvent: {}
+[27.734897] (-) TimerEvent: {}
+[27.838418] (-) TimerEvent: {}
+[27.939993] (-) TimerEvent: {}
+[28.041464] (-) TimerEvent: {}
+[28.142965] (-) TimerEvent: {}
+[28.244566] (-) TimerEvent: {}
+[28.346056] (-) TimerEvent: {}
+[28.448956] (-) TimerEvent: {}
+[28.550342] (-) TimerEvent: {}
+[29.623839] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[29.625157] (-) TimerEvent: {}
+[29.626101] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.627483] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(('A', \x1b[01;31m\x1b[K{\x1b[m\x1b[K43.570596, 1.466500}));\n"}
+[29.628923] (car_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[29.630061] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.631185] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[29.632454] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(\x1b[01;36m\x1b[K(\x1b[m\x1b[K'A', {43.570596, 1.466500}));\n"}
+[29.633608] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[29.634811] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.636018] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(('B', \x1b[01;31m\x1b[K{\x1b[m\x1b[K43.570596, 1.466500}));\n"}
+[29.637336] (car_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[29.638482] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.639688] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[29.640926] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(\x1b[01;36m\x1b[K(\x1b[m\x1b[K'B', {43.570596, 1.466500}));\n"}
+[29.642073] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[29.643204] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.644524] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(('C', \x1b[01;31m\x1b[K{\x1b[m\x1b[K43.570596, 1.466500}));\n"}
+[29.647576] (car_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[29.648811] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.649972] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[29.651092] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(\x1b[01;36m\x1b[K(\x1b[m\x1b[K'C', {43.570596, 1.466500}));\n"}
+[29.652259] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[29.653848] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.655317] (car_control) StderrLine: {'line': b"   50 |         coordinates.insert(('D', \x1b[01;31m\x1b[K{\x1b[m\x1b[K43.570596, 1.466500}));\n"}
+[29.656675] (car_control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[29.657882] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[29.659183] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[29.660436] (car_control) StderrLine: {'line': b"   50 |         coordinates.insert(\x1b[01;36m\x1b[K(\x1b[m\x1b[K'D', {43.570596, 1.466500}));\n"}
+[29.661528] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[29.662710] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:52:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgraph\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kisgraph\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[29.663912] (car_control) StderrLine: {'line': b'   52 |         \x1b[01;31m\x1b[Kgraph\x1b[m\x1b[K.createGraph(coordinates);\n'}
+[29.665043] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[29.666079] (car_control) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kisgraph\x1b[m\x1b[K\n'}
+[29.725521] (-) TimerEvent: {}
+[29.826912] (-) TimerEvent: {}
+[29.928567] (-) TimerEvent: {}
+[30.030206] (-) TimerEvent: {}
+[30.131551] (-) TimerEvent: {}
+[30.233040] (-) TimerEvent: {}
+[30.334676] (-) TimerEvent: {}
+[30.436393] (-) TimerEvent: {}
+[30.537870] (-) TimerEvent: {}
+[30.639594] (-) TimerEvent: {}
+[30.741141] (-) TimerEvent: {}
+[30.842618] (-) TimerEvent: {}
+[30.946403] (-) TimerEvent: {}
+[31.047903] (-) TimerEvent: {}
+[31.149412] (-) TimerEvent: {}
+[31.251498] (-) TimerEvent: {}
+[31.353367] (-) TimerEvent: {}
+[31.455006] (-) TimerEvent: {}
+[31.556626] (-) TimerEvent: {}
+[31.658069] (-) TimerEvent: {}
+[31.759750] (-) TimerEvent: {}
+[31.861104] (-) TimerEvent: {}
+[31.963337] (-) TimerEvent: {}
+[32.064765] (-) TimerEvent: {}
+[32.166103] (-) TimerEvent: {}
+[32.267460] (-) TimerEvent: {}
+[32.368902] (-) TimerEvent: {}
+[32.470650] (-) TimerEvent: {}
+[32.492084] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1\n'}
+[32.493501] (car_control) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[32.571005] (-) TimerEvent: {}
+[32.672373] (-) TimerEvent: {}
+[32.773699] (-) TimerEvent: {}
+[32.875126] (-) TimerEvent: {}
+[32.976624] (-) TimerEvent: {}
+[33.077951] (-) TimerEvent: {}
+[33.179280] (-) TimerEvent: {}
+[33.280657] (-) TimerEvent: {}
+[33.382010] (-) TimerEvent: {}
+[33.483350] (-) TimerEvent: {}
+[33.584757] (-) TimerEvent: {}
+[34.142880] (-) TimerEvent: {}
+[34.244279] (-) TimerEvent: {}
+[34.345595] (-) TimerEvent: {}
+[34.446984] (-) TimerEvent: {}
+[34.548466] (-) TimerEvent: {}
+[34.649810] (-) TimerEvent: {}
+[34.751363] (-) TimerEvent: {}
+[34.852780] (-) TimerEvent: {}
+[34.954040] (-) TimerEvent: {}
+[35.055324] (-) TimerEvent: {}
+[35.156854] (-) TimerEvent: {}
+[35.258316] (-) TimerEvent: {}
+[35.359804] (-) TimerEvent: {}
+[35.461139] (-) TimerEvent: {}
+[35.562536] (-) TimerEvent: {}
+[35.663931] (-) TimerEvent: {}
+[35.765220] (-) TimerEvent: {}
+[35.866525] (-) TimerEvent: {}
+[35.967871] (-) TimerEvent: {}
+[36.069275] (-) TimerEvent: {}
+[36.171050] (-) TimerEvent: {}
+[36.272587] (-) TimerEvent: {}
+[36.374080] (-) TimerEvent: {}
+[36.475508] (-) TimerEvent: {}
+[36.576889] (-) TimerEvent: {}
+[36.678165] (-) TimerEvent: {}
+[36.779581] (-) TimerEvent: {}
+[36.880941] (-) TimerEvent: {}
+[36.982298] (-) TimerEvent: {}
+[37.083609] (-) TimerEvent: {}
+[37.184940] (-) TimerEvent: {}
+[37.286223] (-) TimerEvent: {}
+[37.387508] (-) TimerEvent: {}
+[37.488884] (-) TimerEvent: {}
+[37.590170] (-) TimerEvent: {}
+[37.691505] (-) TimerEvent: {}
+[37.792847] (-) TimerEvent: {}
+[37.894118] (-) TimerEvent: {}
+[37.995441] (-) TimerEvent: {}
+[38.096818] (-) TimerEvent: {}
+[38.198211] (-) TimerEvent: {}
+[38.299516] (-) TimerEvent: {}
+[38.400885] (-) TimerEvent: {}
+[38.502158] (-) TimerEvent: {}
+[38.603554] (-) TimerEvent: {}
+[38.704957] (-) TimerEvent: {}
+[38.806256] (-) TimerEvent: {}
+[38.907594] (-) TimerEvent: {}
+[39.008941] (-) TimerEvent: {}
+[39.110211] (-) TimerEvent: {}
+[39.211567] (-) TimerEvent: {}
+[39.312936] (-) TimerEvent: {}
+[39.414247] (-) TimerEvent: {}
+[39.515750] (-) TimerEvent: {}
+[39.617358] (-) TimerEvent: {}
+[39.718655] (-) TimerEvent: {}
+[39.819957] (-) TimerEvent: {}
+[39.921276] (-) TimerEvent: {}
+[40.022590] (-) TimerEvent: {}
+[40.123927] (-) TimerEvent: {}
+[40.225240] (-) TimerEvent: {}
+[40.326530] (-) TimerEvent: {}
+[40.427910] (-) TimerEvent: {}
+[40.529225] (-) TimerEvent: {}
+[40.630520] (-) TimerEvent: {}
+[40.731843] (-) TimerEvent: {}
+[40.833139] (-) TimerEvent: {}
+[40.934460] (-) TimerEvent: {}
+[41.035882] (-) TimerEvent: {}
+[41.137247] (-) TimerEvent: {}
+[41.238672] (-) TimerEvent: {}
+[41.340076] (-) TimerEvent: {}
+[41.441441] (-) TimerEvent: {}
+[41.542972] (-) TimerEvent: {}
+[41.644506] (-) TimerEvent: {}
+[41.745880] (-) TimerEvent: {}
+[41.847289] (-) TimerEvent: {}
+[41.948827] (-) TimerEvent: {}
+[42.050129] (-) TimerEvent: {}
+[42.151521] (-) TimerEvent: {}
+[42.252921] (-) TimerEvent: {}
+[42.354283] (-) TimerEvent: {}
+[42.455568] (-) TimerEvent: {}
+[42.556921] (-) TimerEvent: {}
+[42.658214] (-) TimerEvent: {}
+[42.759543] (-) TimerEvent: {}
+[42.860926] (-) TimerEvent: {}
+[42.962254] (-) TimerEvent: {}
+[43.063576] (-) TimerEvent: {}
+[43.164937] (-) TimerEvent: {}
+[43.266341] (-) TimerEvent: {}
+[43.367853] (-) TimerEvent: {}
+[43.469136] (-) TimerEvent: {}
+[43.570467] (-) TimerEvent: {}
+[43.671875] (-) TimerEvent: {}
+[43.773235] (-) TimerEvent: {}
+[43.874564] (-) TimerEvent: {}
+[43.975918] (-) TimerEvent: {}
+[44.077206] (-) TimerEvent: {}
+[44.178625] (-) TimerEvent: {}
+[44.279938] (-) TimerEvent: {}
+[44.381196] (-) TimerEvent: {}
+[44.482462] (-) TimerEvent: {}
+[44.583818] (-) TimerEvent: {}
+[44.685077] (-) TimerEvent: {}
+[44.786404] (-) TimerEvent: {}
+[44.887732] (-) TimerEvent: {}
+[44.988994] (-) TimerEvent: {}
+[45.090261] (-) TimerEvent: {}
+[45.191538] (-) TimerEvent: {}
+[45.292866] (-) TimerEvent: {}
+[45.394130] (-) TimerEvent: {}
+[45.495490] (-) TimerEvent: {}
+[45.597062] (-) TimerEvent: {}
+[45.698375] (-) TimerEvent: {}
+[45.799744] (-) TimerEvent: {}
+[45.901036] (-) TimerEvent: {}
+[46.002318] (-) TimerEvent: {}
+[46.103706] (-) TimerEvent: {}
+[46.204973] (-) TimerEvent: {}
+[46.306302] (-) TimerEvent: {}
+[46.407558] (-) TimerEvent: {}
+[46.508887] (-) TimerEvent: {}
+[46.610204] (-) TimerEvent: {}
+[46.711493] (-) TimerEvent: {}
+[46.812981] (-) TimerEvent: {}
+[46.914277] (-) TimerEvent: {}
+[47.015607] (-) TimerEvent: {}
+[47.116932] (-) TimerEvent: {}
+[47.218203] (-) TimerEvent: {}
+[47.319468] (-) TimerEvent: {}
+[47.420866] (-) TimerEvent: {}
+[47.522191] (-) TimerEvent: {}
+[47.623567] (-) TimerEvent: {}
+[47.724868] (-) TimerEvent: {}
+[47.826097] (-) TimerEvent: {}
+[47.927431] (-) TimerEvent: {}
+[48.028775] (-) TimerEvent: {}
+[48.130027] (-) TimerEvent: {}
+[48.231296] (-) TimerEvent: {}
+[48.332673] (-) TimerEvent: {}
+[48.434003] (-) TimerEvent: {}
+[48.535279] (-) TimerEvent: {}
+[48.636673] (-) TimerEvent: {}
+[48.737995] (-) TimerEvent: {}
+[48.839241] (-) TimerEvent: {}
+[48.940826] (-) TimerEvent: {}
+[49.042073] (-) TimerEvent: {}
+[49.143408] (-) TimerEvent: {}
+[49.244755] (-) TimerEvent: {}
+[49.346202] (-) TimerEvent: {}
+[49.447479] (-) TimerEvent: {}
+[49.548878] (-) TimerEvent: {}
+[49.650222] (-) TimerEvent: {}
+[49.751532] (-) TimerEvent: {}
+[49.852881] (-) TimerEvent: {}
+[49.954136] (-) TimerEvent: {}
+[50.055444] (-) TimerEvent: {}
+[50.156901] (-) TimerEvent: {}
+[50.258241] (-) TimerEvent: {}
+[50.359568] (-) TimerEvent: {}
+[50.460890] (-) TimerEvent: {}
+[50.562183] (-) TimerEvent: {}
+[50.663598] (-) TimerEvent: {}
+[50.764985] (-) TimerEvent: {}
+[50.866317] (-) TimerEvent: {}
+[50.967696] (-) TimerEvent: {}
+[51.069004] (-) TimerEvent: {}
+[51.170302] (-) TimerEvent: {}
+[51.271588] (-) TimerEvent: {}
+[51.372932] (-) TimerEvent: {}
+[51.474254] (-) TimerEvent: {}
+[51.575729] (-) TimerEvent: {}
+[51.677042] (-) TimerEvent: {}
+[51.778418] (-) TimerEvent: {}
+[51.879860] (-) TimerEvent: {}
+[51.981137] (-) TimerEvent: {}
+[52.082521] (-) TimerEvent: {}
+[52.183899] (-) TimerEvent: {}
+[52.285183] (-) TimerEvent: {}
+[52.386614] (-) TimerEvent: {}
+[52.488110] (-) TimerEvent: {}
+[52.589400] (-) TimerEvent: {}
+[52.690706] (-) TimerEvent: {}
+[52.792042] (-) TimerEvent: {}
+[52.893332] (-) TimerEvent: {}
+[52.994661] (-) TimerEvent: {}
+[53.095960] (-) TimerEvent: {}
+[53.197267] (-) TimerEvent: {}
+[53.298576] (-) TimerEvent: {}
+[53.399927] (-) TimerEvent: {}
+[53.501269] (-) TimerEvent: {}
+[53.602601] (-) TimerEvent: {}
+[53.704037] (-) TimerEvent: {}
+[53.805347] (-) TimerEvent: {}
+[53.906681] (-) TimerEvent: {}
+[54.008280] (-) TimerEvent: {}
+[54.109564] (-) TimerEvent: {}
+[54.210908] (-) TimerEvent: {}
+[54.312252] (-) TimerEvent: {}
+[54.413580] (-) TimerEvent: {}
+[54.514823] (-) TimerEvent: {}
+[54.616164] (-) TimerEvent: {}
+[54.717511] (-) TimerEvent: {}
+[54.818785] (-) TimerEvent: {}
+[54.920121] (-) TimerEvent: {}
+[55.021409] (-) TimerEvent: {}
+[55.122686] (-) TimerEvent: {}
+[55.224026] (-) TimerEvent: {}
+[55.325298] (-) TimerEvent: {}
+[55.426545] (-) TimerEvent: {}
+[55.527937] (-) TimerEvent: {}
+[55.629250] (-) TimerEvent: {}
+[55.730591] (-) TimerEvent: {}
+[55.831931] (-) TimerEvent: {}
+[55.933287] (-) TimerEvent: {}
+[56.034563] (-) TimerEvent: {}
+[56.135954] (-) TimerEvent: {}
+[56.237218] (-) TimerEvent: {}
+[56.338516] (-) TimerEvent: {}
+[56.439818] (-) TimerEvent: {}
+[56.541121] (-) TimerEvent: {}
+[56.642432] (-) TimerEvent: {}
+[56.743886] (-) TimerEvent: {}
+[56.845184] (-) TimerEvent: {}
+[56.946526] (-) TimerEvent: {}
+[57.047815] (-) TimerEvent: {}
+[57.149085] (-) TimerEvent: {}
+[57.250342] (-) TimerEvent: {}
+[57.351736] (-) TimerEvent: {}
+[57.453005] (-) TimerEvent: {}
+[57.554298] (-) TimerEvent: {}
+[57.655709] (-) TimerEvent: {}
+[57.756995] (-) TimerEvent: {}
+[57.858282] (-) TimerEvent: {}
+[57.959608] (-) TimerEvent: {}
+[58.060956] (-) TimerEvent: {}
+[58.162262] (-) TimerEvent: {}
+[58.263620] (-) TimerEvent: {}
+[58.364982] (-) TimerEvent: {}
+[58.466321] (-) TimerEvent: {}
+[58.567808] (-) TimerEvent: {}
+[58.669153] (-) TimerEvent: {}
+[58.770418] (-) TimerEvent: {}
+[58.871770] (-) TimerEvent: {}
+[58.973104] (-) TimerEvent: {}
+[59.074410] (-) TimerEvent: {}
+[59.175856] (-) TimerEvent: {}
+[59.277172] (-) TimerEvent: {}
+[59.378475] (-) TimerEvent: {}
+[59.479812] (-) TimerEvent: {}
+[59.581103] (-) TimerEvent: {}
+[59.682408] (-) TimerEvent: {}
+[59.783798] (-) TimerEvent: {}
+[59.885058] (-) TimerEvent: {}
+[59.986325] (-) TimerEvent: {}
+[60.087711] (-) TimerEvent: {}
+[60.188994] (-) TimerEvent: {}
+[60.290309] (-) TimerEvent: {}
+[60.391580] (-) TimerEvent: {}
+[60.492913] (-) TimerEvent: {}
+[60.594213] (-) TimerEvent: {}
+[60.695580] (-) TimerEvent: {}
+[60.796928] (-) TimerEvent: {}
+[60.898367] (-) TimerEvent: {}
+[60.999705] (-) TimerEvent: {}
+[61.101036] (-) TimerEvent: {}
+[61.202316] (-) TimerEvent: {}
+[61.303719] (-) TimerEvent: {}
+[61.405025] (-) TimerEvent: {}
+[61.506475] (-) TimerEvent: {}
+[61.607819] (-) TimerEvent: {}
+[61.709129] (-) TimerEvent: {}
+[61.810406] (-) TimerEvent: {}
+[61.911785] (-) TimerEvent: {}
+[62.013052] (-) TimerEvent: {}
+[62.114355] (-) TimerEvent: {}
+[62.215560] (-) TimerEvent: {}
+[62.316993] (-) TimerEvent: {}
+[62.418259] (-) TimerEvent: {}
+[62.519595] (-) TimerEvent: {}
+[62.620932] (-) TimerEvent: {}
+[62.722239] (-) TimerEvent: {}
+[62.823500] (-) TimerEvent: {}
+[62.924850] (-) TimerEvent: {}
+[63.026153] (-) TimerEvent: {}
+[63.127452] (-) TimerEvent: {}
+[63.228825] (-) TimerEvent: {}
+[63.330089] (-) TimerEvent: {}
+[63.431411] (-) TimerEvent: {}
+[63.532811] (-) TimerEvent: {}
+[63.634107] (-) TimerEvent: {}
+[63.735441] (-) TimerEvent: {}
+[63.836785] (-) TimerEvent: {}
+[63.938083] (-) TimerEvent: {}
+[64.039393] (-) TimerEvent: {}
+[64.140893] (-) TimerEvent: {}
+[64.242218] (-) TimerEvent: {}
+[64.345698] (-) TimerEvent: {}
+[64.446980] (-) TimerEvent: {}
+[64.548652] (-) TimerEvent: {}
+[64.649974] (-) TimerEvent: {}
+[64.751244] (-) TimerEvent: {}
+[64.852618] (-) TimerEvent: {}
+[64.954006] (-) TimerEvent: {}
+[65.055301] (-) TimerEvent: {}
+[65.156657] (-) TimerEvent: {}
+[65.257971] (-) TimerEvent: {}
+[65.359359] (-) TimerEvent: {}
+[65.460853] (-) TimerEvent: {}
+[65.562410] (-) TimerEvent: {}
+[65.663866] (-) TimerEvent: {}
+[65.765145] (-) TimerEvent: {}
+[65.866421] (-) TimerEvent: {}
+[65.967800] (-) TimerEvent: {}
+[66.069127] (-) TimerEvent: {}
+[66.170403] (-) TimerEvent: {}
+[66.271744] (-) TimerEvent: {}
+[66.373019] (-) TimerEvent: {}
+[66.474347] (-) TimerEvent: {}
+[66.575864] (-) TimerEvent: {}
+[66.677244] (-) TimerEvent: {}
+[66.778664] (-) TimerEvent: {}
+[66.880060] (-) TimerEvent: {}
+[66.981323] (-) TimerEvent: {}
+[67.082607] (-) TimerEvent: {}
+[67.184022] (-) TimerEvent: {}
+[67.285449] (-) TimerEvent: {}
+[67.386850] (-) TimerEvent: {}
+[67.488394] (-) TimerEvent: {}
+[67.589924] (-) TimerEvent: {}
+[67.691351] (-) TimerEvent: {}
+[67.792930] (-) TimerEvent: {}
+[67.894332] (-) TimerEvent: {}
+[67.995920] (-) TimerEvent: {}
+[68.097189] (-) TimerEvent: {}
+[68.198625] (-) TimerEvent: {}
+[68.299921] (-) TimerEvent: {}
+[68.401200] (-) TimerEvent: {}
+[68.502509] (-) TimerEvent: {}
+[68.603965] (-) TimerEvent: {}
+[68.705248] (-) TimerEvent: {}
+[68.806510] (-) TimerEvent: {}
+[68.907859] (-) TimerEvent: {}
+[69.009155] (-) TimerEvent: {}
+[69.110409] (-) TimerEvent: {}
+[69.211801] (-) TimerEvent: {}
+[69.313088] (-) TimerEvent: {}
+[69.414495] (-) TimerEvent: {}
+[69.515948] (-) TimerEvent: {}
+[69.617286] (-) TimerEvent: {}
+[69.718647] (-) TimerEvent: {}
+[69.819931] (-) TimerEvent: {}
+[69.921339] (-) TimerEvent: {}
+[70.022690] (-) TimerEvent: {}
+[70.124041] (-) TimerEvent: {}
+[70.225298] (-) TimerEvent: {}
+[70.326612] (-) TimerEvent: {}
+[70.427894] (-) TimerEvent: {}
+[70.529253] (-) TimerEvent: {}
+[70.630532] (-) TimerEvent: {}
+[70.731870] (-) TimerEvent: {}
+[70.833227] (-) TimerEvent: {}
+[70.934507] (-) TimerEvent: {}
+[71.035788] (-) TimerEvent: {}
+[71.137071] (-) TimerEvent: {}
+[71.238324] (-) TimerEvent: {}
+[71.339767] (-) TimerEvent: {}
+[71.441562] (-) TimerEvent: {}
+[71.542781] (-) TimerEvent: {}
+[71.644035] (-) TimerEvent: {}
+[71.745211] (-) TimerEvent: {}
+[71.846421] (-) TimerEvent: {}
+[71.947597] (-) TimerEvent: {}
+[72.048819] (-) TimerEvent: {}
+[72.149973] (-) TimerEvent: {}
+[72.251196] (-) TimerEvent: {}
+[72.352500] (-) TimerEvent: {}
+[72.453768] (-) TimerEvent: {}
+[72.555018] (-) TimerEvent: {}
+[72.656262] (-) TimerEvent: {}
+[72.757434] (-) TimerEvent: {}
+[72.858649] (-) TimerEvent: {}
+[72.960349] (-) TimerEvent: {}
+[73.061631] (-) TimerEvent: {}
+[73.162956] (-) TimerEvent: {}
+[73.264260] (-) TimerEvent: {}
+[73.365476] (-) TimerEvent: {}
+[73.466682] (-) TimerEvent: {}
+[73.567982] (-) TimerEvent: {}
+[73.669203] (-) TimerEvent: {}
+[73.770430] (-) TimerEvent: {}
+[73.871754] (-) TimerEvent: {}
+[73.972946] (-) TimerEvent: {}
+[74.074128] (-) TimerEvent: {}
+[74.175331] (-) TimerEvent: {}
+[74.276593] (-) TimerEvent: {}
+[74.377843] (-) TimerEvent: {}
+[74.479057] (-) TimerEvent: {}
+[74.580535] (-) TimerEvent: {}
+[74.681861] (-) TimerEvent: {}
+[74.783130] (-) TimerEvent: {}
+[74.884458] (-) TimerEvent: {}
+[74.985759] (-) TimerEvent: {}
+[75.087074] (-) TimerEvent: {}
+[75.188577] (-) TimerEvent: {}
+[75.289891] (-) TimerEvent: {}
+[75.391192] (-) TimerEvent: {}
+[75.492584] (-) TimerEvent: {}
+[75.593942] (-) TimerEvent: {}
+[75.695442] (-) TimerEvent: {}
+[75.796814] (-) TimerEvent: {}
+[75.898092] (-) TimerEvent: {}
+[75.999379] (-) TimerEvent: {}
+[76.100883] (-) TimerEvent: {}
+[76.202194] (-) TimerEvent: {}
+[76.303476] (-) TimerEvent: {}
+[76.404844] (-) TimerEvent: {}
+[76.506143] (-) TimerEvent: {}
+[76.607534] (-) TimerEvent: {}
+[76.708923] (-) TimerEvent: {}
+[76.810265] (-) TimerEvent: {}
+[76.911611] (-) TimerEvent: {}
+[77.012959] (-) TimerEvent: {}
+[77.114248] (-) TimerEvent: {}
+[77.215615] (-) TimerEvent: {}
+[77.317004] (-) TimerEvent: {}
+[77.418356] (-) TimerEvent: {}
+[77.519741] (-) TimerEvent: {}
+[77.621036] (-) TimerEvent: {}
+[77.722346] (-) TimerEvent: {}
+[77.823738] (-) TimerEvent: {}
+[77.925057] (-) TimerEvent: {}
+[78.026396] (-) TimerEvent: {}
+[78.127861] (-) TimerEvent: {}
+[78.229167] (-) TimerEvent: {}
+[78.330442] (-) TimerEvent: {}
+[78.431796] (-) TimerEvent: {}
+[78.533073] (-) TimerEvent: {}
+[78.634350] (-) TimerEvent: {}
+[78.735620] (-) TimerEvent: {}
+[78.837023] (-) TimerEvent: {}
+[78.938903] (-) TimerEvent: {}
+[79.040319] (-) TimerEvent: {}
+[79.141651] (-) TimerEvent: {}
+[79.226635] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1\n'}
+[79.228902] (car_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2\n'}
+[79.231005] (car_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[79.242394] (-) TimerEvent: {}
+[79.246376] (car_control) CommandEnded: {'returncode': 2}
+[79.342744] (-) TimerEvent: {}
+[79.444049] (-) TimerEvent: {}
+[79.545379] (-) TimerEvent: {}
+[79.646621] (-) TimerEvent: {}
+[79.747838] (-) TimerEvent: {}
+[79.850456] (-) TimerEvent: {}
+[79.864593] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 2}
+[79.877433] (-) EventReactorShutdown: {}

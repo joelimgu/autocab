@@ -1,0 +1,72 @@
+[0.195s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.723s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[1.015s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[1.027s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o[0m
+[26.544s] In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[26.546s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:30:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[26.548s]    30 | [01;31m[KGraph[m[K::void add_vertex(char name, const unordered_map<char, float>& edges);
+[26.549s]       | [01;31m[K^~~~~[m[K
+[26.553s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:31:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[26.554s]    31 | [01;31m[KGraph[m[K::vector<char> shortest_path(char start, char finish);
+[26.556s]       | [01;31m[K^~~~~[m[K
+[26.560s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:32:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[26.562s]    32 | [01;31m[KGraph[m[K::void createGraph(map<char, float[2]> coordinates);
+[26.564s]       | [01;31m[K^~~~~[m[K
+[26.568s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:33:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[26.570s]    33 | [01;31m[KGraph[m[K::float distance(float a[2], float b[2]);
+[26.571s]       | [01;31m[K^~~~~[m[K
+[26.985s] In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19[m[K:
+[26.986s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:30:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[26.987s]    30 | [01;31m[KGraph[m[K::void add_vertex(char name, const unordered_map<char, float>& edges);
+[26.991s]       | [01;31m[K^~~~~[m[K
+[26.993s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:31:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[26.994s]    31 | [01;31m[KGraph[m[K::vector<char> shortest_path(char start, char finish);
+[26.996s]       | [01;31m[K^~~~~[m[K
+[27.001s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:32:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[27.003s]    32 | [01;31m[KGraph[m[K::void createGraph(map<char, float[2]> coordinates);
+[27.004s]       | [01;31m[K^~~~~[m[K
+[27.009s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:33:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[27.011s]    33 | [01;31m[KGraph[m[K::float distance(float a[2], float b[2]);
+[27.015s]       | [01;31m[K^~~~~[m[K
+[27.023s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:341:5:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[27.024s]   341 |     [01;31m[KGraph[m[K graph;
+[27.025s]       |     [01;31m[K^~~~~[m[K
+[29.615s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[29.618s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[29.619s]    47 |         coordinates.insert(('A', [01;31m[K{[m[K43.570596, 1.466500}));
+[29.620s]       |                                  [01;31m[K^[m[K
+[29.621s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[29.622s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[29.624s]    47 |         coordinates.insert([01;36m[K([m[K'A', {43.570596, 1.466500}));
+[29.625s]       |                            [01;36m[K^[m[K
+[29.626s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[29.627s]    48 |         coordinates.insert(('B', [01;31m[K{[m[K43.570596, 1.466500}));
+[29.629s]       |                                  [01;31m[K^[m[K
+[29.630s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[29.631s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[29.632s]    48 |         coordinates.insert([01;36m[K([m[K'B', {43.570596, 1.466500}));
+[29.633s]       |                            [01;36m[K^[m[K
+[29.635s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[29.638s]    49 |         coordinates.insert(('C', [01;31m[K{[m[K43.570596, 1.466500}));
+[29.639s]       |                                  [01;31m[K^[m[K
+[29.640s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[29.641s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[29.642s]    49 |         coordinates.insert([01;36m[K([m[K'C', {43.570596, 1.466500}));
+[29.644s]       |                            [01;36m[K^[m[K
+[29.645s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[29.647s]    50 |         coordinates.insert(('D', [01;31m[K{[m[K43.570596, 1.466500}));
+[29.648s]       |                                  [01;31m[K^[m[K
+[29.649s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[29.650s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[29.652s]    50 |         coordinates.insert([01;36m[K([m[K'D', {43.570596, 1.466500}));
+[29.653s]       |                            [01;36m[K^[m[K
+[29.654s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgraph[m[K’ was not declared in this scope; did you mean ‘[01m[Kisgraph[m[K’?
+[29.655s]    52 |         [01;31m[Kgraph[m[K.createGraph(coordinates);
+[29.656s]       |         [01;31m[K^~~~~[m[K
+[29.657s]       |         [32m[Kisgraph[m[K
+[32.484s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1
+[32.485s] gmake[2]: *** Waiting for unfinished jobs....
+[79.218s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[79.220s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[79.222s] gmake: *** [Makefile:146: all] Error 2
+[79.238s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

@@ -1,0 +1,805 @@
+[0.078s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.289s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[0.437s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[0.441s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o[0m
+[11.072s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:82:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ does not name a type
+[11.072s]    82 |     [01;31m[Kunordered_map[m[K<char, const unordered_map<char, int>> vertices;
+[11.073s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[11.081s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ does not name a type
+[11.081s]    86 |     void add_vertex(char name, const [01;31m[Kunordered_map[m[K<char, int>& edges)
+[11.082s]       |                                      [01;31m[K^~~~~~~~~~~~~[m[K
+[11.083s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+[11.083s]    86 |     void add_vertex(char name, const unordered_map[01;31m[K<[m[Kchar, int>& edges)
+[11.084s]       |                                                   [01;31m[K^[m[K
+[11.087s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:91:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type
+[11.087s]    91 |     [01;31m[Kvector[m[K<char> shortest_path(char start, char finish)
+[11.089s]       |     [01;31m[K^~~~~~[m[K
+[11.089s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:152:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ has not been declared
+[11.090s]   152 |     void createGraph([01;31m[Kmap[m[K<char, float[2]> coordinates)
+[11.091s]       |                      [01;31m[K^~~[m[K
+[11.091s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:152:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+[11.092s]   152 |     void createGraph(map[01;31m[K<[m[Kchar, float[2]> coordinates)
+[11.093s]       |                         [01;31m[K^[m[K
+[11.113s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:[m[K In member function ‘[01m[Kvoid Graph::add_vertex(char, int)[m[K’:
+[11.114s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kvertices[m[K’ was not declared in this scope
+[11.116s]    88 |         [01;31m[Kvertices[m[K.insert(unordered_map<char, const unordered_map<char, int>>::value_type(name, edges));
+[11.117s]       |         [01;31m[K^~~~~~~~[m[K
+[11.117s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ was not declared in this scope
+[11.118s]    88 |         vertices.insert([01;31m[Kunordered_map[m[K<char, const unordered_map<char, int>>::value_type(name, edges));
+[11.119s]       |                         [01;31m[K^~~~~~~~~~~~~[m[K
+[11.119s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:25:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[11.120s] In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+[11.120s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[11.121s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[11.122s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[11.122s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:6[m[K,
+[11.123s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[11.124s] [01m[K/usr/include/c++/11/bits/unordered_map.h:102:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::unordered_map[m[K’
+[11.124s]   102 |     class [01;36m[Kunordered_map[m[K
+[11.125s]       |           [01;36m[K^~~~~~~~~~~~~[m[K
+[11.126s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:23[m[K,
+[11.127s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[11.127s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[11.128s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:6[m[K,
+[11.128s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[11.128s] [01m[K/usr/include/c++/11/unordered_map:64:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::unordered_map[m[K’
+[11.129s]    64 |       using [01;36m[Kunordered_map[m[K
+[11.129s]       |             [01;36m[K^~~~~~~~~~~~~[m[K
+[11.130s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kchar[m[K’
+[11.130s]    88 |         vertices.insert(unordered_map<[01;31m[Kchar[m[K, const unordered_map<char, int>>::value_type(name, edges));
+[11.131s]       |                                       [01;31m[K^~~~[m[K
+[11.131s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:45:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+[11.132s]    88 |         vertices.insert(unordered_map<char, [01;31m[Kconst[m[K unordered_map<char, int>>::value_type(name, edges));
+[11.133s]       |                                             [01;31m[K^~~~~[m[K
+[11.133s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:71:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+[11.134s]    88 |         vertices.insert(unordered_map<char, const unordered_map<char, [01;31m[Kint[m[K>>::value_type(name, edges));
+[11.135s]       |                                                                       [01;31m[K^~~[m[K
+[11.135s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kname[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.136s]    86 |     void add_vertex([01;35m[Kchar name[m[K, const unordered_map<char, int>& edges)
+[11.137s]       |                     [01;35m[K~~~~~^~~~[m[K
+[11.149s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:[m[K In member function ‘[01m[Kvoid Graph::createGraph(int)[m[K’:
+[11.150s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:155:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoordinates[m[K’ was not declared in this scope
+[11.150s]   155 |         add_vertex('A', {{'B', distance([01;31m[Kcoordinates[m[K['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}});
+[11.151s]       |                                         [01;31m[K^~~~~~~~~~~[m[K
+[11.152s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:155:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kint[m[K’
+[11.152s]   155 |         [01;31m[Kadd_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}})[m[K;
+[11.153s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.153s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:32:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, int)[m[K’
+[11.154s]    86 |     void add_vertex(char name, [01;36m[Kconst unordered_map[m[K<char, int>& edges)
+[11.154s]       |                                [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[11.155s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:156:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kint[m[K’
+[11.156s]   156 |         [01;31m[Kadd_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}})[m[K;
+[11.156s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.157s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:32:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, int)[m[K’
+[11.157s]    86 |     void add_vertex(char name, [01;36m[Kconst unordered_map[m[K<char, int>& edges)
+[11.158s]       |                                [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[11.159s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kint[m[K’
+[11.159s]   157 |         [01;31m[Kadd_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}})[m[K;
+[11.160s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.160s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:32:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, int)[m[K’
+[11.161s]    86 |     void add_vertex(char name, [01;36m[Kconst unordered_map[m[K<char, int>& edges)
+[11.161s]       |                                [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[11.162s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:158:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kint[m[K’
+[11.163s]   158 |         [01;31m[Kadd_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}})[m[K;
+[11.163s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.164s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:86:32:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid Graph::add_vertex(char, int)[m[K’
+[11.164s]    86 |     void add_vertex(char name, [01;36m[Kconst unordered_map[m[K<char, int>& edges)
+[11.165s]       |                                [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[11.165s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:[m[K In member function ‘[01m[Kvoid Graph::distance(float*, float*)[m[K’:
+[11.166s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:164:20:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[11.167s]   164 |         return [01;31m[Ksqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2))[m[K;
+[11.167s]       |                [01;31m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.236s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:340:5:[m[K [01;31m[Kerror: [m[K‘[01m[KGraph[m[K’ does not name a type
+[11.237s]   340 |     [01;31m[KGraph[m[K graph;
+[11.238s]       |     [01;31m[K^~~~~[m[K
+[12.130s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[12.131s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)[m[K’
+[12.131s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;31m[K)[m[K);
+[12.132s]       |                                                                           [01;31m[K^[m[K
+[12.132s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.133s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.134s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.134s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.134s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.135s]   452 |         [01;36m[Kpair[m[K(tuple<_Args1...>&, tuple<_Args2...>&,
+[12.135s]       |         [01;36m[K^~~~[m[K
+[12.135s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.136s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_Tps ...>[m[K’ and ‘[01m[Kchar[m[K’
+[12.136s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.136s]       |                                                                           [01;36m[K^[m[K
+[12.137s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.139s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.143s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.146s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.148s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.151s]   387 |         [01;36m[Kpair[m[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+[12.154s]       |         [01;36m[K^~~~[m[K
+[12.155s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.156s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[12.156s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.157s]       |                                                                           [01;36m[K^[m[K
+[12.158s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.158s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.159s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.160s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.161s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.161s]   381 |         explicit constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.162s]       |                            [01;36m[K^~~~[m[K
+[12.163s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.164s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.164s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.165s]       |                                                                           [01;36m[K^[m[K
+[12.166s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.167s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.167s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.168s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.169s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.170s]   371 |         constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.170s]       |                   [01;36m[K^~~~[m[K
+[12.171s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.172s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.172s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.173s]       |                                                                           [01;36m[K^[m[K
+[12.174s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.174s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.175s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.176s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.176s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.177s]   361 |         explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.178s]       |                            [01;36m[K^~~~[m[K
+[12.179s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.180s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.180s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.181s]       |                                                                           [01;36m[K^[m[K
+[12.182s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.182s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.183s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.183s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.184s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.185s]   352 |         constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.185s]       |                   [01;36m[K^~~~[m[K
+[12.186s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.186s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.187s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.187s]       |                                                                           [01;36m[K^[m[K
+[12.188s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.189s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.190s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.190s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.191s]   343 |        explicit [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.191s]       |                 [01;36m[K^~~~[m[K
+[12.192s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.192s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.193s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.194s]       |                                                                           [01;36m[K^[m[K
+[12.194s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.195s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.196s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.196s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.197s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.198s]   336 |        constexpr [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.198s]       |                  [01;36m[K^~~~[m[K
+[12.199s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.199s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.200s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.200s]       |                                                                           [01;36m[K^[m[K
+[12.201s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.202s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.202s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.203s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.203s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.204s]   329 |        explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.204s]       |                           [01;36m[K^~~~[m[K
+[12.205s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.206s] [01m[K/usr/include/c++/11/bits/stl_pair.h:328:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.206s]   328 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.207s]       |                                      [01;31m[K^~~~~[m[K
+[12.207s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.208s]   322 |        constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.208s]       |                  [01;36m[K^~~~[m[K
+[12.209s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.209s] [01m[K/usr/include/c++/11/bits/stl_pair.h:321:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.210s]   321 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.211s]       |                                      [01;31m[K^~~~[m[K
+[12.211s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.212s]   309 |         explicit constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.213s]       |                            [01;36m[K^~~~[m[K
+[12.213s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.214s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.214s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.215s]       |                                                                           [01;36m[K^[m[K
+[12.215s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.216s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.217s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.217s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.218s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.219s]   300 |         constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.219s]       |                   [01;36m[K^~~~[m[K
+[12.220s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.220s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.221s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.221s]       |                                                                           [01;36m[K^[m[K
+[12.222s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.222s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.223s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.223s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.224s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.225s]   276 |       explicit constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.225s]       |                          [01;36m[K^~~~[m[K
+[12.226s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.226s] [01m[K/usr/include/c++/11/bits/stl_pair.h:275:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.227s]   275 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.227s]       |                                      [01;31m[K^~~~~[m[K
+[12.228s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.229s]   266 |       constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.229s]       |                 [01;36m[K^~~~[m[K
+[12.230s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.230s] [01m[K/usr/include/c++/11/bits/stl_pair.h:265:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.231s]   265 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.231s]       |                                      [01;31m[K^~~~[m[K
+[12.232s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.233s]   245 |       explicit constexpr [01;36m[Kpair[m[K()
+[12.233s]       |                          [01;36m[K^~~~[m[K
+[12.234s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.234s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.235s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.235s]       |                                                                           [01;36m[K^[m[K
+[12.236s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.236s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.237s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.238s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.238s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.239s]   232 |       _GLIBCXX_CONSTEXPR [01;36m[Kpair[m[K()
+[12.239s]       |                          [01;36m[K^~~~[m[K
+[12.240s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.241s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.241s]    46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.242s]       |                                                                           [01;36m[K^[m[K
+[12.242s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.243s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.244s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.244s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.245s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.245s]   315 |       constexpr [01;36m[Kpair[m[K(pair&&) = default;         ///< Move constructor
+[12.246s]       |                 [01;36m[K^~~~[m[K
+[12.246s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.247s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.247s]   314 |       constexpr [01;36m[Kpair[m[K(const pair&) = default;    ///< Copy constructor
+[12.248s]       |                 [01;36m[K^~~~[m[K
+[12.248s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.249s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)[m[K’
+[12.250s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;31m[K)[m[K);
+[12.250s]       |                                                                           [01;31m[K^[m[K
+[12.251s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.251s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.252s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.252s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.253s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.254s]   452 |         [01;36m[Kpair[m[K(tuple<_Args1...>&, tuple<_Args2...>&,
+[12.254s]       |         [01;36m[K^~~~[m[K
+[12.255s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.255s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_Tps ...>[m[K’ and ‘[01m[Kchar[m[K’
+[12.256s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.256s]       |                                                                           [01;36m[K^[m[K
+[12.257s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.257s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.258s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.258s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.259s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.260s]   387 |         [01;36m[Kpair[m[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+[12.260s]       |         [01;36m[K^~~~[m[K
+[12.261s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.261s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[12.262s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.263s]       |                                                                           [01;36m[K^[m[K
+[12.263s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.264s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.264s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.265s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.265s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.266s]   381 |         explicit constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.267s]       |                            [01;36m[K^~~~[m[K
+[12.267s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.268s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.268s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.269s]       |                                                                           [01;36m[K^[m[K
+[12.270s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.270s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.271s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.271s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.272s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.273s]   371 |         constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.273s]       |                   [01;36m[K^~~~[m[K
+[12.274s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.274s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.275s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.275s]       |                                                                           [01;36m[K^[m[K
+[12.276s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.277s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.277s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.278s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.278s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.279s]   361 |         explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.279s]       |                            [01;36m[K^~~~[m[K
+[12.280s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.280s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.281s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.282s]       |                                                                           [01;36m[K^[m[K
+[12.282s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.283s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.284s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.284s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.285s]   352 |         constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.285s]       |                   [01;36m[K^~~~[m[K
+[12.286s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.286s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.287s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.288s]       |                                                                           [01;36m[K^[m[K
+[12.288s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.289s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.289s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.290s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.291s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.291s]   343 |        explicit [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.292s]       |                 [01;36m[K^~~~[m[K
+[12.292s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.293s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.294s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.294s]       |                                                                           [01;36m[K^[m[K
+[12.295s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.296s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.297s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.297s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.298s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.298s]   336 |        constexpr [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.299s]       |                  [01;36m[K^~~~[m[K
+[12.299s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.300s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.301s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.301s]       |                                                                           [01;36m[K^[m[K
+[12.302s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.302s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.303s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.303s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.304s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.305s]   329 |        explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.305s]       |                           [01;36m[K^~~~[m[K
+[12.306s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.306s] [01m[K/usr/include/c++/11/bits/stl_pair.h:328:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.307s]   328 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.307s]       |                                      [01;31m[K^~~~~[m[K
+[12.308s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.308s]   322 |        constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.309s]       |                  [01;36m[K^~~~[m[K
+[12.310s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.310s] [01m[K/usr/include/c++/11/bits/stl_pair.h:321:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.311s]   321 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.311s]       |                                      [01;31m[K^~~~[m[K
+[12.312s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.312s]   309 |         explicit constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.313s]       |                            [01;36m[K^~~~[m[K
+[12.313s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.314s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.314s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.315s]       |                                                                           [01;36m[K^[m[K
+[12.315s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.316s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.316s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.317s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.318s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.318s]   300 |         constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.319s]       |                   [01;36m[K^~~~[m[K
+[12.319s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.320s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.321s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.321s]       |                                                                           [01;36m[K^[m[K
+[12.322s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.322s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.323s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.323s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.324s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.325s]   276 |       explicit constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.325s]       |                          [01;36m[K^~~~[m[K
+[12.326s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.327s] [01m[K/usr/include/c++/11/bits/stl_pair.h:275:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.327s]   275 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.328s]       |                                      [01;31m[K^~~~~[m[K
+[12.328s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.329s]   266 |       constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.329s]       |                 [01;36m[K^~~~[m[K
+[12.330s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.330s] [01m[K/usr/include/c++/11/bits/stl_pair.h:265:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.331s]   265 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.332s]       |                                      [01;31m[K^~~~[m[K
+[12.333s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.334s]   245 |       explicit constexpr [01;36m[Kpair[m[K()
+[12.335s]       |                          [01;36m[K^~~~[m[K
+[12.335s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.336s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.337s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.337s]       |                                                                           [01;36m[K^[m[K
+[12.338s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.338s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.339s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.339s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.340s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.340s]   232 |       _GLIBCXX_CONSTEXPR [01;36m[Kpair[m[K()
+[12.341s]       |                          [01;36m[K^~~~[m[K
+[12.341s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.342s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.342s]    47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.343s]       |                                                                           [01;36m[K^[m[K
+[12.344s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.344s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.345s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.345s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.346s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.346s]   315 |       constexpr [01;36m[Kpair[m[K(pair&&) = default;         ///< Move constructor
+[12.347s]       |                 [01;36m[K^~~~[m[K
+[12.347s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.348s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.348s]   314 |       constexpr [01;36m[Kpair[m[K(const pair&) = default;    ///< Copy constructor
+[12.349s]       |                 [01;36m[K^~~~[m[K
+[12.350s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.350s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)[m[K’
+[12.351s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;31m[K)[m[K);
+[12.351s]       |                                                                           [01;31m[K^[m[K
+[12.352s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.352s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.353s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.353s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.354s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.355s]   452 |         [01;36m[Kpair[m[K(tuple<_Args1...>&, tuple<_Args2...>&,
+[12.355s]       |         [01;36m[K^~~~[m[K
+[12.356s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.356s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_Tps ...>[m[K’ and ‘[01m[Kchar[m[K’
+[12.357s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.357s]       |                                                                           [01;36m[K^[m[K
+[12.358s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.358s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.360s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.360s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.361s]   387 |         [01;36m[Kpair[m[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+[12.361s]       |         [01;36m[K^~~~[m[K
+[12.362s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.362s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[12.363s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.364s]       |                                                                           [01;36m[K^[m[K
+[12.364s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.365s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.366s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.366s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.367s]   381 |         explicit constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.368s]       |                            [01;36m[K^~~~[m[K
+[12.368s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.369s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.369s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.370s]       |                                                                           [01;36m[K^[m[K
+[12.370s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.371s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.372s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.373s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.373s]   371 |         constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.374s]       |                   [01;36m[K^~~~[m[K
+[12.374s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.375s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.375s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.376s]       |                                                                           [01;36m[K^[m[K
+[12.377s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.377s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.378s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.378s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.379s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.379s]   361 |         explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.380s]       |                            [01;36m[K^~~~[m[K
+[12.380s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.381s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.382s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.382s]       |                                                                           [01;36m[K^[m[K
+[12.383s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.383s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.384s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.384s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.385s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.386s]   352 |         constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.386s]       |                   [01;36m[K^~~~[m[K
+[12.387s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.387s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.388s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.388s]       |                                                                           [01;36m[K^[m[K
+[12.389s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.390s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.390s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.391s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.391s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.392s]   343 |        explicit [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.392s]       |                 [01;36m[K^~~~[m[K
+[12.393s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.393s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.394s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.394s]       |                                                                           [01;36m[K^[m[K
+[12.395s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.396s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.397s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.397s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.398s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.399s]   336 |        constexpr [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.399s]       |                  [01;36m[K^~~~[m[K
+[12.400s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.400s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.401s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.402s]       |                                                                           [01;36m[K^[m[K
+[12.402s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.403s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.403s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.404s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.404s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.405s]   329 |        explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.405s]       |                           [01;36m[K^~~~[m[K
+[12.406s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.406s] [01m[K/usr/include/c++/11/bits/stl_pair.h:328:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.407s]   328 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.408s]       |                                      [01;31m[K^~~~~[m[K
+[12.408s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.409s]   322 |        constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.410s]       |                  [01;36m[K^~~~[m[K
+[12.410s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.411s] [01m[K/usr/include/c++/11/bits/stl_pair.h:321:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.411s]   321 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.412s]       |                                      [01;31m[K^~~~[m[K
+[12.413s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.414s]   309 |         explicit constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.414s]       |                            [01;36m[K^~~~[m[K
+[12.415s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.416s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.417s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.417s]       |                                                                           [01;36m[K^[m[K
+[12.418s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.418s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.420s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.420s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.421s]   300 |         constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.422s]       |                   [01;36m[K^~~~[m[K
+[12.422s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.423s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.423s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.424s]       |                                                                           [01;36m[K^[m[K
+[12.424s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.425s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.425s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.426s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.427s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.427s]   276 |       explicit constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.428s]       |                          [01;36m[K^~~~[m[K
+[12.428s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.429s] [01m[K/usr/include/c++/11/bits/stl_pair.h:275:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.429s]   275 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.430s]       |                                      [01;31m[K^~~~~[m[K
+[12.431s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.431s]   266 |       constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.432s]       |                 [01;36m[K^~~~[m[K
+[12.432s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.433s] [01m[K/usr/include/c++/11/bits/stl_pair.h:265:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.433s]   265 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.434s]       |                                      [01;31m[K^~~~[m[K
+[12.434s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.435s]   245 |       explicit constexpr [01;36m[Kpair[m[K()
+[12.435s]       |                          [01;36m[K^~~~[m[K
+[12.436s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.437s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.437s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.438s]       |                                                                           [01;36m[K^[m[K
+[12.438s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.439s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.439s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.440s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.440s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.441s]   232 |       _GLIBCXX_CONSTEXPR [01;36m[Kpair[m[K()
+[12.441s]       |                          [01;36m[K^~~~[m[K
+[12.442s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.442s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.443s]    48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.444s]       |                                                                           [01;36m[K^[m[K
+[12.444s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.445s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.445s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.446s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.447s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.447s]   315 |       constexpr [01;36m[Kpair[m[K(pair&&) = default;         ///< Move constructor
+[12.448s]       |                 [01;36m[K^~~~[m[K
+[12.448s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.449s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.449s]   314 |       constexpr [01;36m[Kpair[m[K(const pair&) = default;    ///< Copy constructor
+[12.450s]       |                 [01;36m[K^~~~[m[K
+[12.450s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.451s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)[m[K’
+[12.451s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;31m[K)[m[K);
+[12.452s]       |                                                                           [01;31m[K^[m[K
+[12.453s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.453s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.454s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.454s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.455s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.455s]   452 |         [01;36m[Kpair[m[K(tuple<_Args1...>&, tuple<_Args2...>&,
+[12.456s]       |         [01;36m[K^~~~[m[K
+[12.456s] [01m[K/usr/include/c++/11/bits/stl_pair.h:452:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.457s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_Tps ...>[m[K’ and ‘[01m[Kchar[m[K’
+[12.457s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.458s]       |                                                                           [01;36m[K^[m[K
+[12.458s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.459s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.459s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.460s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.461s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]][m[K’
+[12.461s]   387 |         [01;36m[Kpair[m[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+[12.462s]       |         [01;36m[K^~~~[m[K
+[12.462s] [01m[K/usr/include/c++/11/bits/stl_pair.h:387:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.463s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[12.463s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.464s]       |                                                                           [01;36m[K^[m[K
+[12.464s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.465s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.465s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.466s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.467s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.467s]   381 |         explicit constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.468s]       |                            [01;36m[K^~~~[m[K
+[12.468s] [01m[K/usr/include/c++/11/bits/stl_pair.h:381:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.469s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.470s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.470s]       |                                                                           [01;36m[K^[m[K
+[12.471s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.471s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.472s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.472s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.473s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.473s]   371 |         constexpr [01;36m[Kpair[m[K(pair<_U1, _U2>&& __p)
+[12.474s]       |                   [01;36m[K^~~~[m[K
+[12.474s] [01m[K/usr/include/c++/11/bits/stl_pair.h:371:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.475s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.475s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.476s]       |                                                                           [01;36m[K^[m[K
+[12.477s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.477s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.478s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.478s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.479s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.480s]   361 |         explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.480s]       |                            [01;36m[K^~~~[m[K
+[12.481s] [01m[K/usr/include/c++/11/bits/stl_pair.h:361:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.481s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.482s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.483s]       |                                                                           [01;36m[K^[m[K
+[12.483s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.484s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.484s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.485s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.485s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.486s]   352 |         constexpr [01;36m[Kpair[m[K(_U1&& __x, _U2&& __y)
+[12.487s]       |                   [01;36m[K^~~~[m[K
+[12.487s] [01m[K/usr/include/c++/11/bits/stl_pair.h:352:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.488s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.488s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.489s]       |                                                                           [01;36m[K^[m[K
+[12.489s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.490s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.490s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.491s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.492s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.492s]   343 |        explicit [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.493s]       |                 [01;36m[K^~~~[m[K
+[12.493s] [01m[K/usr/include/c++/11/bits/stl_pair.h:343:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.494s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.495s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.495s]       |                                                                           [01;36m[K^[m[K
+[12.496s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.497s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.497s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.498s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.499s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.499s]   336 |        constexpr [01;36m[Kpair[m[K(const _T1& __x, _U2&& __y)
+[12.500s]       |                  [01;36m[K^~~~[m[K
+[12.500s] [01m[K/usr/include/c++/11/bits/stl_pair.h:336:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.501s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_U2[m[K’
+[12.501s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.502s]       |                                                                           [01;36m[K^[m[K
+[12.503s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.503s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.504s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.504s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.505s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.505s]   329 |        explicit constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.506s]       |                           [01;36m[K^~~~[m[K
+[12.506s] [01m[K/usr/include/c++/11/bits/stl_pair.h:329:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.507s] [01m[K/usr/include/c++/11/bits/stl_pair.h:328:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.508s]   328 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.508s]       |                                      [01;31m[K^~~~~[m[K
+[12.509s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.509s]   322 |        constexpr [01;36m[Kpair[m[K(_U1&& __x, const _T2& __y)
+[12.510s]       |                  [01;36m[K^~~~[m[K
+[12.510s] [01m[K/usr/include/c++/11/bits/stl_pair.h:322:18:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.511s] [01m[K/usr/include/c++/11/bits/stl_pair.h:321:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.512s]   321 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.512s]       |                                      [01;31m[K^~~~[m[K
+[12.513s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.513s]   309 |         explicit constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.514s]       |                            [01;36m[K^~~~[m[K
+[12.515s] [01m[K/usr/include/c++/11/bits/stl_pair.h:309:28:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.515s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.516s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.516s]       |                                                                           [01;36m[K^[m[K
+[12.517s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.517s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.518s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.518s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.519s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.520s]   300 |         constexpr [01;36m[Kpair[m[K(const pair<_U1, _U2>& __p)
+[12.520s]       |                   [01;36m[K^~~~[m[K
+[12.521s] [01m[K/usr/include/c++/11/bits/stl_pair.h:300:19:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.521s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kchar[m[K’
+[12.522s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.522s]       |                                                                           [01;36m[K^[m[K
+[12.523s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.524s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.524s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.525s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.525s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.526s]   276 |       explicit constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.527s]       |                          [01;36m[K^~~~[m[K
+[12.527s] [01m[K/usr/include/c++/11/bits/stl_pair.h:276:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.528s] [01m[K/usr/include/c++/11/bits/stl_pair.h:275:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.528s]   275 |                          bool>::type=[01;31m[Kfalse[m[K>
+[12.529s]       |                                      [01;31m[K^~~~~[m[K
+[12.530s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.530s]   266 |       constexpr [01;36m[Kpair[m[K(const _T1& __a, const _T2& __b)
+[12.531s]       |                 [01;36m[K^~~~[m[K
+[12.531s] [01m[K/usr/include/c++/11/bits/stl_pair.h:266:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.532s] [01m[K/usr/include/c++/11/bits/stl_pair.h:265:38:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, bool>[m[K’
+[12.532s]   265 |                          bool>::type=[01;31m[Ktrue[m[K>
+[12.533s]       |                                      [01;31m[K^~~~[m[K
+[12.534s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.534s]   245 |       explicit constexpr [01;36m[Kpair[m[K()
+[12.535s]       |                          [01;36m[K^~~~[m[K
+[12.535s] [01m[K/usr/include/c++/11/bits/stl_pair.h:245:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.536s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.536s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.537s]       |                                                                           [01;36m[K^[m[K
+[12.538s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.538s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.539s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.539s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.540s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]][m[K’
+[12.540s]   232 |       _GLIBCXX_CONSTEXPR [01;36m[Kpair[m[K()
+[12.541s]       |                          [01;36m[K^~~~[m[K
+[12.542s] [01m[K/usr/include/c++/11/bits/stl_pair.h:232:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.542s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 2 provided
+[12.543s]    49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}[01;36m[K)[m[K);
+[12.543s]       |                                                                           [01;36m[K^[m[K
+[12.544s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[12.544s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[12.545s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[12.545s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[12.546s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.547s]   315 |       constexpr [01;36m[Kpair[m[K(pair&&) = default;         ///< Move constructor
+[12.547s]       |                 [01;36m[K^~~~[m[K
+[12.548s] [01m[K/usr/include/c++/11/bits/stl_pair.h:315:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.548s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]][m[K’
+[12.549s]   314 |       constexpr [01;36m[Kpair[m[K(const pair&) = default;    ///< Copy constructor
+[12.549s]       |                 [01;36m[K^~~~[m[K
+[12.550s] [01m[K/usr/include/c++/11/bits/stl_pair.h:314:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[12.550s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:51:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgraph[m[K’ was not declared in this scope; did you mean ‘[01m[Kisgraph[m[K’?
+[12.551s]    51 |         [01;31m[Kgraph[m[K.createGraph(coordinates);
+[12.551s]       |         [01;31m[K^~~~~[m[K
+[12.552s]       |         [32m[Kisgraph[m[K
+[12.952s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1
+[12.952s] gmake[2]: *** Waiting for unfinished jobs....
+[32.396s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[32.397s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[32.398s] gmake: *** [Makefile:146: all] Error 2
+[32.403s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

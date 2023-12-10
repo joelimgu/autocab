@@ -4,6 +4,12 @@
 #include <cstdint>
 #include <stdint.h>
 #include "rclcpp/rclcpp.hpp"
+#include <unordered_map>
+#include <map>
+#include <vector>
+#include <limits>
+#include <algorithm>
+#include <iostream>
 
 
 
@@ -20,5 +26,26 @@ Cette fonction nous sert de test pour déplacer la voiture d'un point A (le poin
 Pour l'instant, ce point B est fixé à la main dans le code 
 */
 int straightLine(float aLatitude, float aLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger);
+
+
+
+/**
+     * Represents a graph data structure.
+     * 
+     * A graph is a collection of nodes (vertices) and edges that connect these nodes.
+     * It can be used to represent relationships between objects or entities.
+**/
+class Graph{
+    
+    unordered_map<char, const unordered_map<char, float>> vertices;
+    
+public:
+
+    void add_vertex(char name, const unordered_map<char, float>& edges);
+    vector<char> shortest_path(char start, char finish);
+    void createGraph(map<char, float[2]> coordinates);
+    float distance(float a[2], float b[2]);
+}
+
 
 #endif /*__fromAtoB_H */

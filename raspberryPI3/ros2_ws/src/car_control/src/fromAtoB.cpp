@@ -2,11 +2,9 @@
 #include <math.h>
 #include <stdio.h>
 #include <unordered_map>
-#include <map.h>
-#include <vector>
-#include <limits>
-#include <algorithm>
-#include <iostream>
+
+
+using namespace std ;
 
 
 /*
@@ -71,98 +69,83 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
 }
 
 
-/**
-     * Represents a graph data structure.
-     * 
-     * A graph is a collection of nodes (vertices) and edges that connect these nodes.
-     * It can be used to represent relationships between objects or entities.
-**/
-class Graph {
+void Graph::add_vertex(char name, const unordered_map<char, float>& edges)
+{
+    vertices.insert(unordered_map<char, const unordered_map<char, float>>::value_type(name, edges));
+}
 
-    unordered_map<char, const unordered_map<char, int>> vertices;
+vector<char> Graph::shortest_path(char start, char finish)
+{
+    unordered_map<char, float> distances;
+    unordered_map<char, char> previous;
+    vector<char> nodes;
+    vector<char> path;
     
-public:
+    auto comparator = [&] (char left, char right) { return distances[left] > distances[right]; };
 
-    void add_vertex(char name, const unordered_map<char, int>& edges)
+    for (auto& vertex : vertices)
     {
-        vertices.insert(unordered_map<char, const unordered_map<char, int>>::value_type(name, edges));
-    }
-    
-    vector<char> shortest_path(char start, char finish)
-    {
-        unordered_map<char, int> distances;
-        unordered_map<char, char> previous;
-        vector<char> nodes;
-        vector<char> path;
-        
-        auto comparator = [&] (char left, char right) { return distances[left] > distances[right]; };
-
-        for (auto& vertex : vertices)
+        if (vertex.first == start)
         {
-            if (vertex.first == start)
-            {
-                distances[vertex.first] = 0;
-            }
-            else
-            {
-                distances[vertex.first] = numeric_limits<int>::max();
-            }
-            
-            nodes.push_back(vertex.first);
-            push_heap(begin(nodes), end(nodes), comparator);
+            distances[vertex.first] = 0;
+        }
+        else
+        {
+            distances[vertex.first] = numeric_limits<float>::max();
         }
         
-        while (!nodes.empty())
+        nodes.push_back(vertex.first);
+        push_heap(begin(nodes), end(nodes), comparator);
+    }
+    
+    while (!nodes.empty())
+    {
+        pop_heap(begin(nodes), end(nodes), comparator);
+        char smallest = nodes.back();
+        nodes.pop_back();
+        
+        if (smallest == finish)
         {
-            pop_heap(begin(nodes), end(nodes), comparator);
-            char smallest = nodes.back();
-            nodes.pop_back();
-            
-            if (smallest == finish)
+            while (previous.find(smallest) != end(previous))
             {
-                while (previous.find(smallest) != end(previous))
-                {
-                    path.push_back(smallest);
-                    smallest = previous[smallest];
-                }
-                
-                break;
+                path.push_back(smallest);
+                smallest = previous[smallest];
             }
             
-            if (distances[smallest] == numeric_limits<int>::max())
-            {
-                break;
-            }
-            
-            for (auto& neighbor : vertices[smallest])
-            {
-                int alt = distances[smallest] + neighbor.second;
-                if (alt < distances[neighbor.first])
-                {
-                    distances[neighbor.first] = alt;
-                    previous[neighbor.first] = smallest;
-                    make_heap(begin(nodes), end(nodes), comparator);
-                }
-            }
+            break;
         }
         
-        return path;
-    }
-
-    void createGraph(map<char, float[2]> coordinates)
-    {
-            
-        add_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}});
-        add_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}});
-        add_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}});
-        add_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}});
+        if (distances[smallest] == numeric_limits<int>::max())
+        {
+            break;
+        }
         
+        for (auto& neighbor : vertices[smallest])
+        {
+            float alt = distances[smallest] + neighbor.second;
+            if (alt < distances[neighbor.first])
+            {
+                distances[neighbor.first] = alt;
+                previous[neighbor.first] = smallest;
+                make_heap(begin(nodes), end(nodes), comparator);
+            }
+        }
     }
+    
+    return path;
+}
 
-    void distance(float a[2], float b[2])
-    {
-        return sqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2));
-    }
+void Graph::createGraph(map<char, float[2]> coordinates)
+{
+        
+    add_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}});
+    add_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}});
+    add_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}});
+    add_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}});
+    
+}
 
-
-};
+float Graph::distance(float a[2], float b[2])
+{
+    return sqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2));
+}

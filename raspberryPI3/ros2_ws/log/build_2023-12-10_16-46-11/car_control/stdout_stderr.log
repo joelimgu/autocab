@@ -1,0 +1,120 @@
+[35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o[0m
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ does not name a type
+   40 |     [01;31m[Kunordered_map[m[K<char, const unordered_map<char, float>> vertices;
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:44:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ does not name a type
+   44 |     void add_vertex(char name, const [01;31m[Kunordered_map[m[K<char, float>& edges);
+      |                                      [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:44:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   44 |     void add_vertex(char name, const unordered_map[01;31m[K<[m[Kchar, float>& edges);
+      |                                                   [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:45:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type
+   45 |     [01;31m[Kvector[m[K<char> shortest_path(char start, char finish);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:46:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ has not been declared
+   46 |     void createGraph([01;31m[Kmap[m[K<char, float[2]> coordinates);
+      |                      [01;31m[K^~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:46:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   46 |     void createGraph(map[01;31m[K<[m[Kchar, float[2]> coordinates);
+      |                         [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:48:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   48 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:72:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Graph::add_vertex(char, const std::unordered_map<char, float>&)[m[K’
+   72 | void [01;31m[KGraph[m[K::add_vertex(char name, const unordered_map<char, float>& edges)
+      |      [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:44:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid Graph::add_vertex(char, int)[m[K’
+   44 |     void [01;36m[Kadd_vertex[m[K(char name, const unordered_map<char, float>& edges);
+      |          [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:38:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Graph[m[K’ defined here
+   38 | class [01;36m[KGraph[m[K{
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:77:14:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kstd::vector<char> Graph::shortest_path(char, char)[m[K’
+   77 | vector<char> [01;31m[KGraph[m[K::shortest_path(char start, char finish)
+      |              [01;31m[K^~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:77:14:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kstd::vector<char> Graph::shortest_path(char, char)[m[K’
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:38:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Graph[m[K’ defined here
+   38 | class [01;36m[KGraph[m[K{
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:138:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Graph::createGraph(std::map<char, float [2]>)[m[K’
+  138 | void [01;31m[KGraph[m[K::createGraph(map<char, float[2]> coordinates)
+      |      [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:46:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid Graph::createGraph(int)[m[K’
+   46 |     void [01;36m[KcreateGraph[m[K(map<char, float[2]> coordinates);
+      |          [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:38:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Graph[m[K’ defined here
+   38 | class [01;36m[KGraph[m[K{
+      |       [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ does not name a type
+   40 |     [01;31m[Kunordered_map[m[K<char, const unordered_map<char, float>> vertices;
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:44:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kunordered_map[m[K’ does not name a type
+   44 |     void add_vertex(char name, const [01;31m[Kunordered_map[m[K<char, float>& edges);
+      |                                      [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:44:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   44 |     void add_vertex(char name, const unordered_map[01;31m[K<[m[Kchar, float>& edges);
+      |                                                   [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:45:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type
+   45 |     [01;31m[Kvector[m[K<char> shortest_path(char start, char finish);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:46:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ has not been declared
+   46 |     void createGraph([01;31m[Kmap[m[K<char, float[2]> coordinates);
+      |                      [01;31m[K^~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:46:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   46 |     void createGraph(map[01;31m[K<[m[Kchar, float[2]> coordinates);
+      |                         [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:48:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   48 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   47 |         coordinates.insert(('A', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   47 |         coordinates.insert([01;36m[K([m[K'A', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   48 |         coordinates.insert(('B', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   48 |         coordinates.insert([01;36m[K([m[K'B', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   49 |         coordinates.insert(('C', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   49 |         coordinates.insert([01;36m[K([m[K'C', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+   50 |         coordinates.insert(('D', [01;31m[K{[m[K43.570596, 1.466500}));
+      |                                  [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:28:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   50 |         coordinates.insert([01;36m[K([m[K'D', {43.570596, 1.466500}));
+      |                            [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:52:27:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::map<char, float [2]>[m[K’ to ‘[01m[Kint[m[K’
+   52 |         graph.createGraph([01;31m[Kcoordinates[m[K);
+      |                           [01;31m[K^~~~~~~~~~~[m[K
+      |                           [01;31m[K|[m[K
+      |                           [01;31m[Kstd::map<char, float [2]>[m[K
+In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19[m[K:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:46:22:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid Graph::createGraph(int)[m[K’
+   46 |     void createGraph([01;36m[Kmap[m[K<char, float[2]> coordinates);
+      |                      [01;36m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

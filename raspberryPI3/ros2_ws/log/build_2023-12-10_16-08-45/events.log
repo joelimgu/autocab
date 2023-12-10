@@ -1,0 +1,1189 @@
+[0.000000] (-) TimerEvent: {}
+[0.001406] (-) JobUnselected: {'identifier': 'can'}
+[0.001523] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.002051] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.002136] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.004110] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.004299] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.004552] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.004698] (-) JobUnselected: {'identifier': 'joystick'}
+[0.004788] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.004862] (-) JobUnselected: {'identifier': 'simulation'}
+[0.004936] (-) JobUnselected: {'identifier': 'system_check'}
+[0.005018] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.005153] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.071834] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.075291] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.079066] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.115 60265 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.115 60265 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.098999] (-) TimerEvent: {}
+[0.199664] (-) TimerEvent: {}
+[0.289197] (car_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target car_control_node\x1b[0m\n'}
+[0.299813] (-) TimerEvent: {}
+[0.396043] (car_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o\x1b[0m\n'}
+[0.400032] (-) TimerEvent: {}
+[0.400685] (car_control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o\x1b[0m\n'}
+[0.500229] (-) TimerEvent: {}
+[0.600941] (-) TimerEvent: {}
+[0.701671] (-) TimerEvent: {}
+[0.802417] (-) TimerEvent: {}
+[0.903167] (-) TimerEvent: {}
+[1.003897] (-) TimerEvent: {}
+[1.104683] (-) TimerEvent: {}
+[1.205467] (-) TimerEvent: {}
+[1.306342] (-) TimerEvent: {}
+[1.407796] (-) TimerEvent: {}
+[1.509133] (-) TimerEvent: {}
+[1.610597] (-) TimerEvent: {}
+[1.711989] (-) TimerEvent: {}
+[1.813302] (-) TimerEvent: {}
+[1.914598] (-) TimerEvent: {}
+[2.015876] (-) TimerEvent: {}
+[2.117186] (-) TimerEvent: {}
+[2.218445] (-) TimerEvent: {}
+[2.319879] (-) TimerEvent: {}
+[2.421164] (-) TimerEvent: {}
+[2.522397] (-) TimerEvent: {}
+[2.623735] (-) TimerEvent: {}
+[2.725096] (-) TimerEvent: {}
+[2.826502] (-) TimerEvent: {}
+[2.927885] (-) TimerEvent: {}
+[3.029490] (-) TimerEvent: {}
+[3.130880] (-) TimerEvent: {}
+[3.232321] (-) TimerEvent: {}
+[3.334631] (-) TimerEvent: {}
+[3.437275] (-) TimerEvent: {}
+[3.539940] (-) TimerEvent: {}
+[3.642667] (-) TimerEvent: {}
+[3.745742] (-) TimerEvent: {}
+[3.848501] (-) TimerEvent: {}
+[3.951414] (-) TimerEvent: {}
+[4.054382] (-) TimerEvent: {}
+[4.157346] (-) TimerEvent: {}
+[4.260370] (-) TimerEvent: {}
+[4.363063] (-) TimerEvent: {}
+[4.465939] (-) TimerEvent: {}
+[4.569080] (-) TimerEvent: {}
+[4.672082] (-) TimerEvent: {}
+[4.775309] (-) TimerEvent: {}
+[4.878504] (-) TimerEvent: {}
+[4.981507] (-) TimerEvent: {}
+[5.083332] (-) TimerEvent: {}
+[5.186448] (-) TimerEvent: {}
+[5.289735] (-) TimerEvent: {}
+[5.392657] (-) TimerEvent: {}
+[5.495591] (-) TimerEvent: {}
+[5.598268] (-) TimerEvent: {}
+[5.700970] (-) TimerEvent: {}
+[5.804000] (-) TimerEvent: {}
+[5.906852] (-) TimerEvent: {}
+[6.010111] (-) TimerEvent: {}
+[6.113968] (-) TimerEvent: {}
+[6.217320] (-) TimerEvent: {}
+[6.320691] (-) TimerEvent: {}
+[6.423683] (-) TimerEvent: {}
+[6.526352] (-) TimerEvent: {}
+[6.629150] (-) TimerEvent: {}
+[6.731912] (-) TimerEvent: {}
+[6.834582] (-) TimerEvent: {}
+[6.937682] (-) TimerEvent: {}
+[7.040771] (-) TimerEvent: {}
+[7.143564] (-) TimerEvent: {}
+[7.247164] (-) TimerEvent: {}
+[7.354644] (-) TimerEvent: {}
+[7.457671] (-) TimerEvent: {}
+[7.560392] (-) TimerEvent: {}
+[7.663427] (-) TimerEvent: {}
+[7.766237] (-) TimerEvent: {}
+[7.869827] (-) TimerEvent: {}
+[7.973283] (-) TimerEvent: {}
+[8.076429] (-) TimerEvent: {}
+[8.179348] (-) TimerEvent: {}
+[8.282193] (-) TimerEvent: {}
+[8.385162] (-) TimerEvent: {}
+[8.488227] (-) TimerEvent: {}
+[8.591101] (-) TimerEvent: {}
+[8.693828] (-) TimerEvent: {}
+[8.796594] (-) TimerEvent: {}
+[8.899581] (-) TimerEvent: {}
+[9.002430] (-) TimerEvent: {}
+[9.105230] (-) TimerEvent: {}
+[9.208036] (-) TimerEvent: {}
+[9.311345] (-) TimerEvent: {}
+[9.415200] (-) TimerEvent: {}
+[9.518512] (-) TimerEvent: {}
+[9.623609] (-) TimerEvent: {}
+[9.726288] (-) TimerEvent: {}
+[9.829091] (-) TimerEvent: {}
+[9.932173] (-) TimerEvent: {}
+[10.035185] (-) TimerEvent: {}
+[10.137940] (-) TimerEvent: {}
+[10.241281] (-) TimerEvent: {}
+[10.345116] (-) TimerEvent: {}
+[10.448380] (-) TimerEvent: {}
+[10.551262] (-) TimerEvent: {}
+[10.654803] (-) TimerEvent: {}
+[10.757837] (-) TimerEvent: {}
+[10.860730] (-) TimerEvent: {}
+[10.963562] (-) TimerEvent: {}
+[11.066286] (-) TimerEvent: {}
+[11.169112] (-) TimerEvent: {}
+[11.271953] (-) TimerEvent: {}
+[11.374797] (-) TimerEvent: {}
+[11.477585] (-) TimerEvent: {}
+[11.580421] (-) TimerEvent: {}
+[11.683252] (-) TimerEvent: {}
+[11.786176] (-) TimerEvent: {}
+[11.889033] (-) TimerEvent: {}
+[11.991741] (-) TimerEvent: {}
+[12.093486] (-) TimerEvent: {}
+[12.195233] (-) TimerEvent: {}
+[12.296780] (-) TimerEvent: {}
+[12.400332] (-) TimerEvent: {}
+[12.501841] (-) TimerEvent: {}
+[12.603515] (-) TimerEvent: {}
+[12.705332] (-) TimerEvent: {}
+[12.806848] (-) TimerEvent: {}
+[12.908458] (-) TimerEvent: {}
+[13.010069] (-) TimerEvent: {}
+[13.111814] (-) TimerEvent: {}
+[13.213397] (-) TimerEvent: {}
+[13.314890] (-) TimerEvent: {}
+[13.416427] (-) TimerEvent: {}
+[13.517932] (-) TimerEvent: {}
+[13.619582] (-) TimerEvent: {}
+[13.721156] (-) TimerEvent: {}
+[13.822684] (-) TimerEvent: {}
+[13.924275] (-) TimerEvent: {}
+[14.025844] (-) TimerEvent: {}
+[14.127403] (-) TimerEvent: {}
+[14.228847] (-) TimerEvent: {}
+[14.330372] (-) TimerEvent: {}
+[14.431973] (-) TimerEvent: {}
+[14.533463] (-) TimerEvent: {}
+[14.634994] (-) TimerEvent: {}
+[14.736530] (-) TimerEvent: {}
+[14.838257] (-) TimerEvent: {}
+[14.939879] (-) TimerEvent: {}
+[15.041344] (-) TimerEvent: {}
+[15.142829] (-) TimerEvent: {}
+[15.244364] (-) TimerEvent: {}
+[15.346081] (-) TimerEvent: {}
+[15.447786] (-) TimerEvent: {}
+[15.549300] (-) TimerEvent: {}
+[15.650843] (-) TimerEvent: {}
+[15.752442] (-) TimerEvent: {}
+[15.854114] (-) TimerEvent: {}
+[15.955790] (-) TimerEvent: {}
+[16.057400] (-) TimerEvent: {}
+[16.159232] (-) TimerEvent: {}
+[16.261269] (-) TimerEvent: {}
+[16.363523] (-) TimerEvent: {}
+[16.465068] (-) TimerEvent: {}
+[16.566724] (-) TimerEvent: {}
+[16.668299] (-) TimerEvent: {}
+[16.769970] (-) TimerEvent: {}
+[16.871555] (-) TimerEvent: {}
+[16.973086] (-) TimerEvent: {}
+[17.074646] (-) TimerEvent: {}
+[17.176238] (-) TimerEvent: {}
+[17.277808] (-) TimerEvent: {}
+[17.337524] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[17.339508] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[17.340441] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[17.341426] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:6\x1b[m\x1b[K,\n'}
+[17.341980] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:1\x1b[m\x1b[K:\n'}
+[17.343134] (car_control) StderrLine: {'line': b'/usr/include/c++/11/bits/stl_pair.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_CopyMovePair() [with bool __implicit = true; _U1 = const char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[17.344201] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:334:36:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, const char, _U2>(), bool>::type <anonymous> > constexpr std::pair<const char, int>::pair(const char&, _U2&&) [with _U2 = void; typename std::enable_if<_CopyMovePair<true, const char, _U2>(), bool>::type <anonymous> = <missing>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.345278] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:\x1b[m\x1b[K   required from here\n'}
+[17.346293] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:134:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.346906] (car_control) StderrLine: {'line': b'  134 |         using \x1b[01;31m\x1b[K__do_converts\x1b[m\x1b[K = __and_<is_convertible<const _U1&, _T1>,\n'}
+[17.347574] (car_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.348206] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:136:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.348937] (car_control) StderrLine: {'line': b'  136 |         using \x1b[01;31m\x1b[K__converts\x1b[m\x1b[K = typename conditional<__implicit,\n'}
+[17.349559] (car_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.350234] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:142:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.350914] (car_control) StderrLine: {'line': b'  142 |                       >::\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K;\n'}
+[17.351826] (car_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[17.352376] (car_control) StderrLine: {'line': b'/usr/include/c++/11/bits/stl_pair.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_CopyMovePair() [with bool __implicit = false; _U1 = const char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[17.352938] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:341:37:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, const char, _U2>(), bool>::type <anonymous> > std::pair<const char, int>::pair(const char&, _U2&&) [with _U2 = void; typename std::enable_if<_CopyMovePair<false, const char, _U2>(), bool>::type <anonymous> = <missing>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.353568] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:\x1b[m\x1b[K   required from here\n'}
+[17.354115] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:134:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.354620] (car_control) StderrLine: {'line': b'  134 |         using \x1b[01;31m\x1b[K__do_converts\x1b[m\x1b[K = __and_<is_convertible<const _U1&, _T1>,\n'}
+[17.355294] (car_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.355918] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:136:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.356443] (car_control) StderrLine: {'line': b'  136 |         using \x1b[01;31m\x1b[K__converts\x1b[m\x1b[K = typename conditional<__implicit,\n'}
+[17.357025] (car_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.357555] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:142:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.358096] (car_control) StderrLine: {'line': b'  142 |                       >::\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K;\n'}
+[17.358592] (car_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[17.359168] (car_control) StderrLine: {'line': b'/usr/include/c++/11/bits/stl_pair.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_MoveConstructiblePair() [with _U1 = char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[17.359749] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:348:39:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<const char, int>::pair(_U1&&, _U2&&) [with _U1 = char; _U2 = void; typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <missing>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.360391] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:\x1b[m\x1b[K   required from here\n'}
+[17.360915] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:121:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.361416] (car_control) StderrLine: {'line': b'  121 |                       is_constructible<_T2, _U2&&>>::\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K;\n'}
+[17.361957] (car_control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[17.362456] (car_control) StderrLine: {'line': b'/usr/include/c++/11/bits/stl_pair.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstatic constexpr bool std::_PCC<<anonymous>, _T1, _T2>::_ImplicitlyMoveConvertiblePair() [with _U1 = char; _U2 = void; bool <anonymous> = true; _T1 = const char; _T2 = int]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[17.363029] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:350:47:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<const char, int>::pair(_U1&&, _U2&&) [with _U1 = char; _U2 = void; typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <missing>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.363654] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:\x1b[m\x1b[K   required from here\n'}
+[17.364177] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:128:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kforming reference to void\n'}
+[17.364719] (car_control) StderrLine: {'line': b'  128 |                       is_convertible<_U2&&, _T2>>::\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K;\n'}
+[17.365339] (car_control) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[17.365935] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Graph::createGraph(std::map<char, float [2]>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[17.366509] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:157:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::unordered_map<char, int>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.367335] (car_control) StderrLine: {'line': b"  157 |         \x1b[01;31m\x1b[Kadd_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}})\x1b[m\x1b[K;\n"}
+[17.368530] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.369174] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 2 of \xe2\x80\x98\x1b[01m\x1b[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.369767] (car_control) StderrLine: {'line': b'   88 |     void add_vertex(char name, \x1b[01;36m\x1b[Kconst unordered_map<char, int>& edges\x1b[m\x1b[K)\n'}
+[17.370327] (car_control) StderrLine: {'line': b'      |                                \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[17.370845] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:158:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::unordered_map<char, int>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.371568] (car_control) StderrLine: {'line': b"  158 |         \x1b[01;31m\x1b[Kadd_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}})\x1b[m\x1b[K;\n"}
+[17.372179] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.372748] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 2 of \xe2\x80\x98\x1b[01m\x1b[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.373280] (car_control) StderrLine: {'line': b'   88 |     void add_vertex(char name, \x1b[01;36m\x1b[Kconst unordered_map<char, int>& edges\x1b[m\x1b[K)\n'}
+[17.373889] (car_control) StderrLine: {'line': b'      |                                \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[17.374427] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:159:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::unordered_map<char, int>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.375088] (car_control) StderrLine: {'line': b"  159 |         \x1b[01;31m\x1b[Kadd_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}})\x1b[m\x1b[K;\n"}
+[17.375678] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.376309] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 2 of \xe2\x80\x98\x1b[01m\x1b[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.376846] (car_control) StderrLine: {'line': b'   88 |     void add_vertex(char name, \x1b[01;36m\x1b[Kconst unordered_map<char, int>& edges\x1b[m\x1b[K)\n'}
+[17.377362] (car_control) StderrLine: {'line': b'      |                                \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[17.377890] (-) TimerEvent: {}
+[17.379223] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:160:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::unordered_map<char, int>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.379978] (car_control) StderrLine: {'line': b"  160 |         \x1b[01;31m\x1b[Kadd_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}})\x1b[m\x1b[K;\n"}
+[17.380578] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.381134] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:88:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 2 of \xe2\x80\x98\x1b[01m\x1b[Kvoid Graph::add_vertex(char, const std::unordered_map<char, int>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[17.381637] (car_control) StderrLine: {'line': b'   88 |     void add_vertex(char name, \x1b[01;36m\x1b[Kconst unordered_map<char, int>& edges\x1b[m\x1b[K)\n'}
+[17.382188] (car_control) StderrLine: {'line': b'      |                                \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[17.382717] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Graph::distance(float*, float*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[17.383424] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp:166:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kreturn-statement with a value, in function returning \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[17.384015] (car_control) StderrLine: {'line': b'  166 |         return \x1b[01;31m\x1b[Ksqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2))\x1b[m\x1b[K;\n'}
+[17.384589] (car_control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[17.385097] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:340:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[17.385652] (car_control) StderrLine: {'line': b'  340 |     \x1b[01;31m\x1b[KGraph\x1b[m\x1b[K graph;\n'}
+[17.386164] (car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[17.478128] (-) TimerEvent: {}
+[17.580150] (-) TimerEvent: {}
+[17.681713] (-) TimerEvent: {}
+[17.783271] (-) TimerEvent: {}
+[17.884795] (-) TimerEvent: {}
+[17.986308] (-) TimerEvent: {}
+[18.087853] (-) TimerEvent: {}
+[18.189391] (-) TimerEvent: {}
+[18.256572] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.258824] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.261441] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.263973] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[18.268021] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.271166] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.273497] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.276832] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.278916] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.279753] (car_control) StderrLine: {'line': b'  452 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(tuple<_Args1...>&, tuple<_Args2...>&,\n'}
+[18.280355] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.280928] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.281503] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<_Tps ...>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.282093] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.282760] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.283485] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.284169] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.284863] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.285497] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.286177] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.286994] (car_control) StderrLine: {'line': b'  387 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);\n'}
+[18.287945] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.288694] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.289408] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 2 provided\n'}
+[18.289894] (-) TimerEvent: {}
+[18.291276] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.292020] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.292614] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.293217] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.293851] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.294555] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.295271] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.296123] (car_control) StderrLine: {'line': b'  381 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.296846] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.297507] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.298160] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.298883] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.299642] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.300445] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.301078] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.301570] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.302182] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.302887] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.303815] (car_control) StderrLine: {'line': b'  371 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.304570] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.305488] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.306075] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.306587] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.307203] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.307781] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.308318] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.308825] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.309370] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.309928] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.310593] (car_control) StderrLine: {'line': b'  361 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.311296] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.311895] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.312462] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.313014] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.313621] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.314224] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.314801] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.315517] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.316114] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.316680] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.317271] (car_control) StderrLine: {'line': b'  352 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.317833] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.318375] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.318942] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.319574] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.320089] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.320651] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.321201] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.321702] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.322271] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.322814] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.323522] (car_control) StderrLine: {'line': b'  343 |        explicit \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.324088] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.324589] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.325088] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.325576] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.326079] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.326612] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.327206] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.327724] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.328236] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.328722] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.329200] (car_control) StderrLine: {'line': b'  336 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.329652] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.330118] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.330659] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.331280] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.331797] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.332374] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.332884] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.333367] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.333885] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.334371] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.334885] (car_control) StderrLine: {'line': b'  329 |        explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.335595] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.336097] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.336613] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:328:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.337149] (car_control) StderrLine: {'line': b'  328 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.337676] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.338179] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.338722] (car_control) StderrLine: {'line': b'  322 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.339294] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.339812] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.340370] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:321:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.340891] (car_control) StderrLine: {'line': b'  321 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.341389] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.341890] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.342529] (car_control) StderrLine: {'line': b'  309 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.343115] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.343674] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.344304] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.344859] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.345480] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.346061] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.346575] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.347224] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.347867] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.348386] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.349009] (car_control) StderrLine: {'line': b'  300 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.349540] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.350062] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.350567] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.351312] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.351885] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.352457] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.353015] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.353545] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.354096] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.354637] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.355274] (car_control) StderrLine: {'line': b'  276 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.355793] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.356327] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.356871] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:275:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.357402] (car_control) StderrLine: {'line': b'  275 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.357925] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.358454] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.359231] (car_control) StderrLine: {'line': b'  266 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.359842] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.360380] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.360997] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:265:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.361631] (car_control) StderrLine: {'line': b'  265 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.362244] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.362802] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.363513] (car_control) StderrLine: {'line': b'  245 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.364060] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.364593] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.365112] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.365667] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.366231] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.366728] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.367308] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.367830] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.368343] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.369523] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.370149] (car_control) StderrLine: {'line': b'  232 |       _GLIBCXX_CONSTEXPR \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.370716] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.371572] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.372175] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:46:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.372809] (car_control) StderrLine: {'line': b"   46 |         coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.373362] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.373918] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.374410] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.374916] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.375611] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.376150] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.376740] (car_control) StderrLine: {'line': b'  315 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair&&) = default;         ///< Move constructor\n'}
+[18.377267] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.377783] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.378333] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.378870] (car_control) StderrLine: {'line': b'  314 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair&) = default;    ///< Copy constructor\n'}
+[18.379551] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.380069] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.380589] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.381129] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.381637] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[18.382181] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.382688] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.383459] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.384089] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.384642] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.385206] (car_control) StderrLine: {'line': b'  452 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(tuple<_Args1...>&, tuple<_Args2...>&,\n'}
+[18.385704] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.386219] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.386737] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<_Tps ...>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.387392] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.387941] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.388459] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.389014] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.389541] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.390011] (-) TimerEvent: {}
+[18.391246] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.396475] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.397617] (car_control) StderrLine: {'line': b'  387 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);\n'}
+[18.398560] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.399186] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.399835] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 2 provided\n'}
+[18.400354] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.400948] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.401607] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.402161] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.402716] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.403273] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.403801] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.404395] (car_control) StderrLine: {'line': b'  381 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.404906] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.405400] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.405891] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.406383] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.406912] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.407515] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.408055] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.408616] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.409150] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.409698] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.410416] (car_control) StderrLine: {'line': b'  371 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.410962] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.411589] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.412151] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.412789] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.413416] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.414051] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.414669] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.415291] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.415853] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.416443] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.417073] (car_control) StderrLine: {'line': b'  361 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.417619] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.418146] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.418662] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.419253] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.419770] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.420273] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.421056] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.421607] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.422143] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.422681] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.423307] (car_control) StderrLine: {'line': b'  352 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.423855] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.424334] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.424782] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.425231] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.425694] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.426210] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.426747] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.427320] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.427819] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.428309] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.428988] (car_control) StderrLine: {'line': b'  343 |        explicit \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.429513] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.430096] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.430618] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.431440] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.431984] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.432507] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.433030] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.433566] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.434097] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.434622] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.435220] (car_control) StderrLine: {'line': b'  336 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.435759] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.436281] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.436826] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.437335] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.437832] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.438328] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.438827] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.439387] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.439901] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.440458] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.441034] (car_control) StderrLine: {'line': b'  329 |        explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.441592] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.442194] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.442721] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:328:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.443346] (car_control) StderrLine: {'line': b'  328 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.443898] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.444446] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.445074] (car_control) StderrLine: {'line': b'  322 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.445690] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.446239] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.446804] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:321:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.447515] (car_control) StderrLine: {'line': b'  321 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.448084] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.448628] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.449185] (car_control) StderrLine: {'line': b'  309 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.449692] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.450283] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.450845] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.451514] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.452054] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.452585] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.453094] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.453604] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.454132] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.454663] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.455382] (car_control) StderrLine: {'line': b'  300 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.456001] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.456535] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.457016] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.457547] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.458076] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.458650] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.459232] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.459780] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.460354] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.460896] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.461492] (car_control) StderrLine: {'line': b'  276 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.462000] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.462518] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.463078] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:275:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.463643] (car_control) StderrLine: {'line': b'  275 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.464156] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.464683] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.465231] (car_control) StderrLine: {'line': b'  266 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.465734] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.466247] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.466742] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:265:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.467440] (car_control) StderrLine: {'line': b'  265 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.467969] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.468466] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.469188] (car_control) StderrLine: {'line': b'  245 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.469716] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.470241] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.470766] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.471365] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.471904] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.472523] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.473058] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.473579] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.474206] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.474763] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.475431] (car_control) StderrLine: {'line': b'  232 |       _GLIBCXX_CONSTEXPR \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.475974] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.476498] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.477015] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.477546] (car_control) StderrLine: {'line': b"   47 |         coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.478057] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.478558] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.479220] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.479803] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.480328] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.480927] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.481447] (car_control) StderrLine: {'line': b'  315 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair&&) = default;         ///< Move constructor\n'}
+[18.481962] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.482485] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.483051] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.483640] (car_control) StderrLine: {'line': b'  314 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair&) = default;    ///< Copy constructor\n'}
+[18.484157] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.484680] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.485257] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.485832] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.486384] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[18.486914] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.487515] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.488047] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.488588] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.489104] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.489734] (car_control) StderrLine: {'line': b'  452 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(tuple<_Args1...>&, tuple<_Args2...>&,\n'}
+[18.490233] (-) TimerEvent: {}
+[18.491946] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.492857] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.493527] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<_Tps ...>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.494074] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.494617] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.495250] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.495813] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.496333] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.496870] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.497377] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.497918] (car_control) StderrLine: {'line': b'  387 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);\n'}
+[18.498412] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.498926] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.499546] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 2 provided\n'}
+[18.500069] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.500616] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.501133] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.501646] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.502161] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.502691] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.503292] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.504104] (car_control) StderrLine: {'line': b'  381 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.504755] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.505271] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.505817] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.506357] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.506874] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.507586] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.508074] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.508571] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.509204] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.509722] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.510290] (car_control) StderrLine: {'line': b'  371 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.510812] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.511420] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.511963] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.512487] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.513052] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.513592] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.514147] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.514761] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.515371] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.515904] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.516539] (car_control) StderrLine: {'line': b'  361 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.517110] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.517645] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.518173] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.518701] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.519295] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.519814] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.520311] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.520827] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.521357] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.521859] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.522513] (car_control) StderrLine: {'line': b'  352 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.523136] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.523696] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.524215] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.524756] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.525304] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.525854] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.526416] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.526963] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.527590] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.528141] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.528716] (car_control) StderrLine: {'line': b'  343 |        explicit \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.529286] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.529819] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.530421] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.531034] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.531603] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.532160] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.532744] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.533579] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.534300] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.534828] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.535530] (car_control) StderrLine: {'line': b'  336 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.536226] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.536677] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.537171] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.537719] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.538250] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.538770] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.539450] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.540070] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.540607] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.541101] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.541721] (car_control) StderrLine: {'line': b'  329 |        explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.542273] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.542804] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.543402] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:328:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.543977] (car_control) StderrLine: {'line': b'  328 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.544505] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.545039] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.545642] (car_control) StderrLine: {'line': b'  322 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.546149] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.546664] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.547282] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:321:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.547839] (car_control) StderrLine: {'line': b'  321 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.548362] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.548886] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.549446] (car_control) StderrLine: {'line': b'  309 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.549984] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.550519] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.551165] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.551762] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.552291] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.552851] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.553383] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.553907] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.554501] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.555109] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.555809] (car_control) StderrLine: {'line': b'  300 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.556339] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.556832] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.557355] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.557876] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.558439] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.559011] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.559572] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.560120] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.560640] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.561157] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.561697] (car_control) StderrLine: {'line': b'  276 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.562207] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.562703] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.563414] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:275:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.564094] (car_control) StderrLine: {'line': b'  275 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.564748] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.565266] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.565851] (car_control) StderrLine: {'line': b'  266 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.566408] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.566959] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.567643] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:265:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.568164] (car_control) StderrLine: {'line': b'  265 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.568771] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.569978] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.570620] (car_control) StderrLine: {'line': b'  245 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.571339] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.571897] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.572439] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.573028] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.573563] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.574074] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.574679] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.575354] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.575937] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.576482] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.577042] (car_control) StderrLine: {'line': b'  232 |       _GLIBCXX_CONSTEXPR \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.577593] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.578147] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.578678] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.579405] (car_control) StderrLine: {'line': b"   48 |         coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.579935] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.580488] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.581018] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.581550] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.582083] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.582627] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.583208] (car_control) StderrLine: {'line': b'  315 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair&&) = default;         ///< Move constructor\n'}
+[18.583765] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.584278] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.584848] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.585453] (car_control) StderrLine: {'line': b'  314 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair&) = default;    ///< Copy constructor\n'}
+[18.586032] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.586564] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.587271] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<char, float [2]>::pair(char, <brace-enclosed initializer list>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.587867] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;31m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.588384] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[18.588887] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.589395] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.589983] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.590509] (-) TimerEvent: {}
+[18.591867] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.592575] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, long unsigned int ..._Indexes1, class ... _Args2, long unsigned int ..._Indexes2> std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {_Args1 ...}; long unsigned int ..._Indexes1 = {_Indexes1 ...}; _Args2 = {_Args2 ...}; long unsigned int ..._Indexes2 = {_Indexes2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.593165] (car_control) StderrLine: {'line': b'  452 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(tuple<_Args1...>&, tuple<_Args2...>&,\n'}
+[18.593709] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.594285] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:452:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.594847] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<_Tps ...>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.595500] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.596058] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.596631] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.597164] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.597708] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.598242] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.598860] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ... _Args1, class ... _Args2> std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {_Args1 ...}; _Args2 = {_Args2 ...}; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.599541] (car_control) StderrLine: {'line': b'  387 |         \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);\n'}
+[18.600074] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.600598] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.601101] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 2 provided\n'}
+[18.601640] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.602129] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.602637] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.603204] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.603730] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.604349] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.604869] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.605521] (car_control) StderrLine: {'line': b'  381 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.606057] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.606571] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:381:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.607143] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.607687] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.608295] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.608848] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.609371] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.609893] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.610428] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.610940] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(std::pair<_U1, _U2>&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.611726] (car_control) StderrLine: {'line': b'  371 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair<_U1, _U2>&& __p)\n'}
+[18.612271] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.612798] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:371:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.613345] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.613918] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.614500] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.615094] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.615656] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.616158] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.616652] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.617242] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && (! _ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.617909] (car_control) StderrLine: {'line': b'  361 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.618929] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.619585] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:361:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.620118] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.620649] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.621191] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.621710] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.622239] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.622762] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.623449] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.623978] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_MoveConstructiblePair<_U1, _U2>() && _ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, _U2&&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_MoveConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyMoveConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.624523] (car_control) StderrLine: {'line': b'  352 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, _U2&& __y)\n'}
+[18.625055] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.625576] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:352:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.626188] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.626731] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.627331] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.627878] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.628395] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.628918] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.629522] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.630062] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<false, char, _U2>(), bool>::type <anonymous> > std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<false, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.630625] (car_control) StderrLine: {'line': b'  343 |        explicit \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.631265] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.631827] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:343:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.632366] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.632883] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.633473] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.634025] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.634556] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.635201] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.635833] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.636382] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U2, typename std::enable_if<_CopyMovePair<true, char, _U2>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, _U2&&) [with _U2 = _U2; typename std::enable_if<std::_PCC<true, _T1, _T2>::_CopyMovePair<true, _T1, _U2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.636959] (car_control) StderrLine: {'line': b'  336 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __x, _U2&& __y)\n'}
+[18.637514] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.638045] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:336:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.638568] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_U2\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.639190] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.639790] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.640397] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.640924] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.641442] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.641966] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.642519] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<false, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<false, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.643134] (car_control) StderrLine: {'line': b'  329 |        explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.643716] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.644238] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:329:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.644755] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:328:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.645273] (car_control) StderrLine: {'line': b'  328 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.645793] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.646327] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, typename std::enable_if<_MoveCopyPair<true, _U1, float [2]>(), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(_U1&&, const _T2&) [with _U1 = _U1; typename std::enable_if<std::_PCC<true, _T1, _T2>::_MoveCopyPair<true, _U1, _T2>(), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.646891] (car_control) StderrLine: {'line': b'  322 |        constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(_U1&& __x, const _T2& __y)\n'}
+[18.647460] (car_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.647992] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:322:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.648579] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:321:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.649389] (car_control) StderrLine: {'line': b'  321 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.649983] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.650523] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.651350] (car_control) StderrLine: {'line': b'  309 |         explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.651920] (car_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.652437] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:309:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.652992] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.653523] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.654072] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.654591] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.655171] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.655732] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.656269] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.656803] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<char, _U1>::value) || (! std::is_same<float [2], _U2>::value)), char, float [2]>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const std::pair<_U1, _U2>&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<((! std::is_same<_T1, _U1>::value) || (! std::is_same<_T2, _U2>::value)), _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.657359] (car_control) StderrLine: {'line': b'  300 |         constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair<_U1, _U2>& __p)\n'}
+[18.657881] (car_control) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.658396] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:300:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.659110] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<_T1, _T2>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.659747] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.660293] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.660834] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.661377] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.661913] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.662454] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.663024] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && (! _ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && (! std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>())), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.663753] (car_control) StderrLine: {'line': b'  276 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.664337] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.664870] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:276:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.665395] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:275:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.665949] (car_control) StderrLine: {'line': b'  275 |                          bool>::type=\x1b[01;31m\x1b[Kfalse\x1b[m\x1b[K>\n'}
+[18.666469] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.667031] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<(_ConstructiblePair<_U1, _U2>() && _ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair(const _T1&, const _T2&) [with _U1 = _U1; _U2 = _U2; typename std::enable_if<(std::_PCC<true, _T1, _T2>::_ConstructiblePair<_U1, _U2>() && std::_PCC<true, _T1, _T2>::_ImplicitlyConvertiblePair<_U1, _U2>()), bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.667642] (car_control) StderrLine: {'line': b'  266 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const _T1& __a, const _T2& __b)\n'}
+[18.668197] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.668755] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:266:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.669388] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:265:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, bool>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.669915] (car_control) StderrLine: {'line': b'  265 |                          bool>::type=\x1b[01;31m\x1b[Ktrue\x1b[m\x1b[K>\n'}
+[18.670430] (car_control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.671001] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_Dp>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::is_default_constructible<_U1>, std::is_default_constructible<_U2>, std::__not_<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> > > >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.671599] (car_control) StderrLine: {'line': b'  245 |       explicit constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.672117] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.672639] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:245:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.673171] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.673756] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.674330] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.674898] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.675541] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.676073] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.676702] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.677288] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _U1, class _U2, typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> > constexpr std::pair<_T1, _T2>::pair() [with _U1 = _U1; _U2 = _U2; typename std::enable_if<std::__and_<std::__is_implicitly_default_constructible<_U1>, std::__is_implicitly_default_constructible<_U2> >::value, bool>::type <anonymous> = <anonymous>; _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.677972] (car_control) StderrLine: {'line': b'  232 |       _GLIBCXX_CONSTEXPR \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K()\n'}
+[18.678575] (car_control) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.679153] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:232:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[18.679746] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:75:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 2 provided\n'}
+[18.680275] (car_control) StderrLine: {'line': b"   49 |         coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}\x1b[01;36m\x1b[K)\x1b[m\x1b[K);\n"}
+[18.680803] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[18.681360] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[18.681906] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[18.682426] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[18.682952] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[18.683567] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(std::pair<_T1, _T2>&&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.684109] (car_control) StderrLine: {'line': b'  315 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(pair&&) = default;         ///< Move constructor\n'}
+[18.684605] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.685102] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:315:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.685683] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::pair<_T1, _T2>::pair(const std::pair<_T1, _T2>&) [with _T1 = char; _T2 = float [2]]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[18.686246] (car_control) StderrLine: {'line': b'  314 |       constexpr \x1b[01;36m\x1b[Kpair\x1b[m\x1b[K(const pair&) = default;    ///< Copy constructor\n'}
+[18.686812] (car_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[18.687422] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:314:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 2 provided\n'}
+[18.687947] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:51:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgraph\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kisgraph\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[18.688505] (car_control) StderrLine: {'line': b'   51 |         \x1b[01;31m\x1b[Kgraph\x1b[m\x1b[K.createGraph(coordinates);\n'}
+[18.689044] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[18.689596] (car_control) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kisgraph\x1b[m\x1b[K\n'}
+[18.690732] (-) TimerEvent: {}
+[18.792277] (-) TimerEvent: {}
+[18.893814] (-) TimerEvent: {}
+[18.995305] (-) TimerEvent: {}
+[19.096794] (-) TimerEvent: {}
+[19.198261] (-) TimerEvent: {}
+[19.299781] (-) TimerEvent: {}
+[19.401272] (-) TimerEvent: {}
+[19.423735] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Error 1\n'}
+[19.424356] (car_control) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[19.501481] (-) TimerEvent: {}
+[19.602212] (-) TimerEvent: {}
+[19.703016] (-) TimerEvent: {}
+[19.803749] (-) TimerEvent: {}
+[19.904474] (-) TimerEvent: {}
+[20.005200] (-) TimerEvent: {}
+[20.105937] (-) TimerEvent: {}
+[20.206694] (-) TimerEvent: {}
+[20.307467] (-) TimerEvent: {}
+[20.408179] (-) TimerEvent: {}
+[20.508913] (-) TimerEvent: {}
+[20.609655] (-) TimerEvent: {}
+[20.710372] (-) TimerEvent: {}
+[20.811135] (-) TimerEvent: {}
+[20.911857] (-) TimerEvent: {}
+[21.012631] (-) TimerEvent: {}
+[21.113373] (-) TimerEvent: {}
+[21.214145] (-) TimerEvent: {}
+[21.314938] (-) TimerEvent: {}
+[21.415673] (-) TimerEvent: {}
+[21.516402] (-) TimerEvent: {}
+[21.617093] (-) TimerEvent: {}
+[21.717818] (-) TimerEvent: {}
+[21.818570] (-) TimerEvent: {}
+[21.919336] (-) TimerEvent: {}
+[22.020056] (-) TimerEvent: {}
+[22.120775] (-) TimerEvent: {}
+[22.221487] (-) TimerEvent: {}
+[22.322236] (-) TimerEvent: {}
+[22.422957] (-) TimerEvent: {}
+[22.523802] (-) TimerEvent: {}
+[22.624671] (-) TimerEvent: {}
+[22.725407] (-) TimerEvent: {}
+[22.826167] (-) TimerEvent: {}
+[22.927029] (-) TimerEvent: {}
+[23.027765] (-) TimerEvent: {}
+[23.128473] (-) TimerEvent: {}
+[23.229242] (-) TimerEvent: {}
+[23.329970] (-) TimerEvent: {}
+[23.430728] (-) TimerEvent: {}
+[23.531634] (-) TimerEvent: {}
+[23.632376] (-) TimerEvent: {}
+[23.733128] (-) TimerEvent: {}
+[23.833899] (-) TimerEvent: {}
+[23.934624] (-) TimerEvent: {}
+[24.035407] (-) TimerEvent: {}
+[24.136132] (-) TimerEvent: {}
+[24.236858] (-) TimerEvent: {}
+[24.337584] (-) TimerEvent: {}
+[24.438321] (-) TimerEvent: {}
+[24.539094] (-) TimerEvent: {}
+[24.639809] (-) TimerEvent: {}
+[24.740508] (-) TimerEvent: {}
+[24.841234] (-) TimerEvent: {}
+[24.941949] (-) TimerEvent: {}
+[25.042671] (-) TimerEvent: {}
+[25.143428] (-) TimerEvent: {}
+[25.244133] (-) TimerEvent: {}
+[25.344844] (-) TimerEvent: {}
+[25.445586] (-) TimerEvent: {}
+[25.546292] (-) TimerEvent: {}
+[25.647120] (-) TimerEvent: {}
+[25.747805] (-) TimerEvent: {}
+[25.848513] (-) TimerEvent: {}
+[25.949222] (-) TimerEvent: {}
+[26.049956] (-) TimerEvent: {}
+[26.150690] (-) TimerEvent: {}
+[26.251429] (-) TimerEvent: {}
+[26.352142] (-) TimerEvent: {}
+[26.452851] (-) TimerEvent: {}
+[26.553551] (-) TimerEvent: {}
+[26.654290] (-) TimerEvent: {}
+[26.755034] (-) TimerEvent: {}
+[26.855779] (-) TimerEvent: {}
+[26.956505] (-) TimerEvent: {}
+[27.057218] (-) TimerEvent: {}
+[27.157917] (-) TimerEvent: {}
+[27.258659] (-) TimerEvent: {}
+[27.359408] (-) TimerEvent: {}
+[27.460110] (-) TimerEvent: {}
+[27.560803] (-) TimerEvent: {}
+[27.661543] (-) TimerEvent: {}
+[27.762257] (-) TimerEvent: {}
+[27.863013] (-) TimerEvent: {}
+[27.963706] (-) TimerEvent: {}
+[28.064412] (-) TimerEvent: {}
+[28.165184] (-) TimerEvent: {}
+[28.265899] (-) TimerEvent: {}
+[28.366598] (-) TimerEvent: {}
+[28.467343] (-) TimerEvent: {}
+[28.568035] (-) TimerEvent: {}
+[28.668880] (-) TimerEvent: {}
+[28.769576] (-) TimerEvent: {}
+[28.870312] (-) TimerEvent: {}
+[28.971049] (-) TimerEvent: {}
+[29.071763] (-) TimerEvent: {}
+[29.172481] (-) TimerEvent: {}
+[29.273189] (-) TimerEvent: {}
+[29.373970] (-) TimerEvent: {}
+[29.474700] (-) TimerEvent: {}
+[29.575457] (-) TimerEvent: {}
+[29.676170] (-) TimerEvent: {}
+[29.776913] (-) TimerEvent: {}
+[29.877626] (-) TimerEvent: {}
+[29.978352] (-) TimerEvent: {}
+[30.079103] (-) TimerEvent: {}
+[30.179804] (-) TimerEvent: {}
+[30.280535] (-) TimerEvent: {}
+[30.381263] (-) TimerEvent: {}
+[30.482012] (-) TimerEvent: {}
+[30.582716] (-) TimerEvent: {}
+[30.683464] (-) TimerEvent: {}
+[30.784183] (-) TimerEvent: {}
+[30.884898] (-) TimerEvent: {}
+[30.985628] (-) TimerEvent: {}
+[31.086332] (-) TimerEvent: {}
+[31.187075] (-) TimerEvent: {}
+[31.287774] (-) TimerEvent: {}
+[31.388493] (-) TimerEvent: {}
+[31.489200] (-) TimerEvent: {}
+[31.589897] (-) TimerEvent: {}
+[31.690635] (-) TimerEvent: {}
+[31.791375] (-) TimerEvent: {}
+[31.892078] (-) TimerEvent: {}
+[31.992816] (-) TimerEvent: {}
+[32.093505] (-) TimerEvent: {}
+[32.194241] (-) TimerEvent: {}
+[32.294928] (-) TimerEvent: {}
+[32.395641] (-) TimerEvent: {}
+[32.496344] (-) TimerEvent: {}
+[32.597041] (-) TimerEvent: {}
+[32.697749] (-) TimerEvent: {}
+[32.798469] (-) TimerEvent: {}
+[32.899180] (-) TimerEvent: {}
+[32.999899] (-) TimerEvent: {}
+[33.100614] (-) TimerEvent: {}
+[33.201305] (-) TimerEvent: {}
+[33.302023] (-) TimerEvent: {}
+[33.402762] (-) TimerEvent: {}
+[33.503554] (-) TimerEvent: {}
+[33.604294] (-) TimerEvent: {}
+[33.705085] (-) TimerEvent: {}
+[33.805857] (-) TimerEvent: {}
+[33.906606] (-) TimerEvent: {}
+[34.007410] (-) TimerEvent: {}
+[34.108152] (-) TimerEvent: {}
+[34.208866] (-) TimerEvent: {}
+[34.309585] (-) TimerEvent: {}
+[34.410315] (-) TimerEvent: {}
+[34.511065] (-) TimerEvent: {}
+[34.611766] (-) TimerEvent: {}
+[34.712503] (-) TimerEvent: {}
+[34.813260] (-) TimerEvent: {}
+[34.914002] (-) TimerEvent: {}
+[35.014736] (-) TimerEvent: {}
+[35.115495] (-) TimerEvent: {}
+[35.216219] (-) TimerEvent: {}
+[35.316919] (-) TimerEvent: {}
+[35.417612] (-) TimerEvent: {}
+[35.518307] (-) TimerEvent: {}
+[35.619072] (-) TimerEvent: {}
+[35.720021] (-) TimerEvent: {}
+[35.820664] (-) TimerEvent: {}
+[35.921340] (-) TimerEvent: {}
+[36.022001] (-) TimerEvent: {}
+[36.122633] (-) TimerEvent: {}
+[36.223296] (-) TimerEvent: {}
+[36.323933] (-) TimerEvent: {}
+[36.424556] (-) TimerEvent: {}
+[36.525184] (-) TimerEvent: {}
+[36.625831] (-) TimerEvent: {}
+[36.726468] (-) TimerEvent: {}
+[36.827166] (-) TimerEvent: {}
+[36.927833] (-) TimerEvent: {}
+[37.028558] (-) TimerEvent: {}
+[37.129321] (-) TimerEvent: {}
+[37.230041] (-) TimerEvent: {}
+[37.330794] (-) TimerEvent: {}
+[37.431572] (-) TimerEvent: {}
+[37.532280] (-) TimerEvent: {}
+[37.633062] (-) TimerEvent: {}
+[37.733836] (-) TimerEvent: {}
+[37.834585] (-) TimerEvent: {}
+[37.935377] (-) TimerEvent: {}
+[38.036117] (-) TimerEvent: {}
+[38.136845] (-) TimerEvent: {}
+[38.237590] (-) TimerEvent: {}
+[38.338315] (-) TimerEvent: {}
+[38.439167] (-) TimerEvent: {}
+[38.540044] (-) TimerEvent: {}
+[38.544050] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1\n'}
+[38.544922] (car_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2\n'}
+[38.545848] (car_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[38.551814] (car_control) CommandEnded: {'returncode': 2}
+[38.640225] (-) TimerEvent: {}
+[38.741072] (-) TimerEvent: {}
+[38.831244] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 2}
+[38.841203] (-) TimerEvent: {}
+[38.843308] (-) EventReactorShutdown: {}

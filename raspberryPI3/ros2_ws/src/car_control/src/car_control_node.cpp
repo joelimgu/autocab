@@ -3,6 +3,7 @@
 #include <functional>
 #include <memory>
 #include <math.h>
+#include <unordered_map>
 
 #include "interfaces/msg/motors_order.hpp"
 #include "interfaces/msg/motors_feedback.hpp"
@@ -43,10 +44,10 @@ public:
         finalPointReached = true;
         requestNumber = 0;
 
-        coordinates.insert(pair<char, float[2]>('A', {43.570596, 1.466500}));
-        coordinates.insert(pair<char, float[2]>('B', {43.570596, 1.466500}));
-        coordinates.insert(pair<char, float[2]>('C', {43.570596, 1.466500}));
-        coordinates.insert(pair<char, float[2]>('D', {43.570596, 1.466500}));
+        coordinates.insert(('A', {43.570596, 1.466500}));
+        coordinates.insert(('B', {43.570596, 1.466500}));
+        coordinates.insert(('C', {43.570596, 1.466500}));
+        coordinates.insert(('D', {43.570596, 1.466500}));
 
         graph.createGraph(coordinates);
     
