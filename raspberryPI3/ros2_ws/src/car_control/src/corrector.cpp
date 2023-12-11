@@ -14,6 +14,7 @@ float pwmError(float desiredRPM,float measuredRPM,float maxRPM)
     return error;
 }
 
+/* reverse = 1 when we want the wheel to reverse, otherwise reverse = 0*/
 int correctWheelSpeed(float& PwmCmd, float& past_pwm_error,float& current_pwm_error,float& wheelRPM,bool reverse)
 {
     /* Assumptions made, such as both Wheels' speeds are the same at all times */
