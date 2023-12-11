@@ -21,13 +21,18 @@
 
 #define MIN_THROTTLE 0.4
 
+using namespace std;
 /*
 Cette fonction nous sert de test pour déplacer la voiture d'un point A (le point actuel) à un point B (le point de destination)
 Pour l'instant, ce point B est fixé à la main dans le code 
 */
 int straightLine(float aLatitude, float aLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger);
 
+/* Fonction qui permet de trouver le point le plus proche qui est accessible en ligne droite */
+char detectClosestPoint(float currentLat, float currentLon,const std::map<char, float[2]> &pointMap);
 
+/* Calcule une distance avec les latitudes et longitudes de deux points */
+float distance(float a[2], float b[2]);
 
 /**
      * Represents a graph data structure.
@@ -37,15 +42,14 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
 **/
 class Graph{
     
-    unordered_map<char, const unordered_map<char, float>> vertices;
+    std::unordered_map<char, const std::unordered_map<char, float>> vertices;
     
 public:
 
-    void add_vertex(char name, const unordered_map<char, float>& edges);
-    vector<char> shortest_path(char start, char finish);
-    void createGraph(map<char, float[2]> coordinates);
-    float distance(float a[2], float b[2]);
-}
+    void add_vertex(char name, const std::unordered_map<char, float>& edges);
+    std::vector<char> shortest_path(char start, char finish);
+    void createGraph(std::map<char, float[2]> coordinates);
+};
 
 
 #endif /*__fromAtoB_H */

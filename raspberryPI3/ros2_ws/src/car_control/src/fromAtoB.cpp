@@ -4,6 +4,7 @@
 #include <unordered_map>
 
 
+
 using namespace std ;
 
 
@@ -70,17 +71,17 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
 }
 
 
-void Graph::add_vertex(char name, const unordered_map<char, float>& edges)
+void Graph::add_vertex(char name, const std::unordered_map<char, float>& edges)
 {
-    vertices.insert(unordered_map<char, const unordered_map<char, float>>::value_type(name, edges));
+    vertices.insert(std::unordered_map<char, const std::unordered_map<char, float>>::value_type(name, edges));
 }
 
 vector<char> Graph::shortest_path(char start, char finish)
 {
-    unordered_map<char, float> distances;
-    unordered_map<char, char> previous;
-    vector<char> nodes;
-    vector<char> path;
+    std::unordered_map<char, float> distances;
+    std::unordered_map<char, char> previous;
+    std::vector<char> nodes;
+    std::vector<char> path;
     
     auto comparator = [&] (char left, char right) { return distances[left] > distances[right]; };
 
@@ -136,20 +137,39 @@ vector<char> Graph::shortest_path(char start, char finish)
     return path;
 }
 
-void Graph::createGraph(map<char, float[2]> coordinates)
+void Graph::createGraph(std::map<char, float[2]> coordinates)
 {
-        
+    /* Changer cette partie , on ne peut pas créer des maps avec {}*/
     add_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}});
     add_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}});
     add_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}});
     add_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}});
-    
 }
 
-float Graph::distance(float a[2], float b[2])
+float distance(float a[2], float b[2])
 {
     return sqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2));
 }
 
+char detectClosestPoint(float currentLat, float currentLon,std::map<char, float[2]> &pointMap)
+{
+    /* Calculer les distances entre les coordonnees de la voiture et chaque point */
+    float minDistance = -1;
+    char point = '0';
+    float currentPos[2];
+    currentPos[0] = currentLat;
+    currentPos[1] = currentLon;
+    /* Use iterator to iterate on the coordinates of the pointMap and find the min distance */
+    for (std::map<char, float[2]>::iterator it = pointMap.begin(); it != pointMap.end(); ++it)
+    {
+        float computedDistance = distance(currentPos,it->second);
+        if((minDistance = -1) || computedDistance<minDistance)
+        {
+            minDistance = computedDistance;
+            point = it->first;
+        }
+    }
+    return point;
+}
 
 

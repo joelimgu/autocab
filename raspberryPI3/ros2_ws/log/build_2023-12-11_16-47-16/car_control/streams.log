@@ -1,0 +1,68 @@
+[0.075s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.268s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[0.403s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[11.897s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[11.898s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'A'
+[11.898s]    47 |         coordinates.insert([[01;31m[K'A'[m[K, {43.570596, 1.466500}]);
+[11.899s]       |                             [01;31m[K^~~[m[K
+[11.899s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[11.900s]    47 |         coordinates.insert(['A'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[11.900s]       |                                [01;31m[K^[m[K
+[11.901s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[11.901s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[11.903s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[11.904s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[11.904s]    47 |         coordinates.insert(['A', {43.570596, 1.466500}[01;31m[K][m[K);
+[11.905s]       |                                                       [01;31m[K^[m[K
+[11.906s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:47:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[11.906s]    47 |         coordinates.insert[01;36m[K([m[K['A', {43.570596, 1.466500}]);
+[11.907s]       |                           [01;36m[K^[m[K
+[11.907s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'B'
+[11.908s]    48 |         coordinates.insert([[01;31m[K'B'[m[K, {43.570596, 1.466500}]);
+[11.908s]       |                             [01;31m[K^~~[m[K
+[11.908s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[11.909s]    48 |         coordinates.insert(['B'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[11.910s]       |                                [01;31m[K^[m[K
+[11.910s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[11.911s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[11.911s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[11.912s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[11.912s]    48 |         coordinates.insert(['B', {43.570596, 1.466500}[01;31m[K][m[K);
+[11.912s]       |                                                       [01;31m[K^[m[K
+[11.913s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:48:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[11.914s]    48 |         coordinates.insert[01;36m[K([m[K['B', {43.570596, 1.466500}]);
+[11.914s]       |                           [01;36m[K^[m[K
+[11.915s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'C'
+[11.915s]    49 |         coordinates.insert([[01;31m[K'C'[m[K, {43.570596, 1.466500}]);
+[11.916s]       |                             [01;31m[K^~~[m[K
+[11.916s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[11.917s]    49 |         coordinates.insert(['C'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[11.917s]       |                                [01;31m[K^[m[K
+[11.918s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[11.918s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[11.919s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[11.919s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[11.920s]    49 |         coordinates.insert(['C', {43.570596, 1.466500}[01;31m[K][m[K);
+[11.920s]       |                                                       [01;31m[K^[m[K
+[11.920s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:49:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[11.921s]    49 |         coordinates.insert[01;36m[K([m[K['C', {43.570596, 1.466500}]);
+[11.921s]       |                           [01;36m[K^[m[K
+[11.922s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'D'
+[11.924s]    50 |         coordinates.insert([[01;31m[K'D'[m[K, {43.570596, 1.466500}]);
+[11.924s]       |                             [01;31m[K^~~[m[K
+[11.925s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[11.925s]    50 |         coordinates.insert(['D'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[11.926s]       |                                [01;31m[K^[m[K
+[11.926s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[11.927s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[11.927s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[11.928s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[11.928s]    50 |         coordinates.insert(['D', {43.570596, 1.466500}[01;31m[K][m[K);
+[11.929s]       |                                                       [01;31m[K^[m[K
+[11.929s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:50:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[11.930s]    50 |         coordinates.insert[01;36m[K([m[K['D', {43.570596, 1.466500}]);
+[11.931s]       |                           [01;36m[K^[m[K
+[34.133s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[34.136s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[34.137s] gmake: *** [Makefile:146: all] Error 2
+[34.143s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

@@ -44,10 +44,16 @@ public:
         finalPointReached = true;
         requestNumber = 0;
 
-        coordinates.insert(('A', {43.570596, 1.466500}));
-        coordinates.insert(('B', {43.570596, 1.466500}));
-        coordinates.insert(('C', {43.570596, 1.466500}));
-        coordinates.insert(('D', {43.570596, 1.466500}));
+        coordinates['A'] = {43.570596, 1.466500};
+        coordinates['B'] = {43.570596, 1.466501}; 
+        coordinates['C'] = {43.570596, 1.466502};
+        coordinates['D'] = (43.570596, 1.466503);
+        /*
+        coordinates.insert(['A', {43.570596, 1.466500}]);
+        coordinates.insert(['B', {43.570596, 1.466500}]);
+        coordinates.insert(['C', {43.570596, 1.466500}]);
+        coordinates.insert(['D', {43.570596, 1.466500}]);
+        */
 
         graph.createGraph(coordinates);
     
