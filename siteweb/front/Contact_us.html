@@ -236,6 +236,40 @@
         }
 </style>
 
+<style>
+
+    /* Contact Form Styles */
+.container form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-size: 18px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+</style>
+
 </head>
 
 <body>
@@ -256,66 +290,31 @@
         </div>
     </div>
 
+    <section class="container mt-5">
+        <h2 class="display-5 text-center mb-4">Contact Form</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+          </div>
+      
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+          </div>
+      
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
     
 
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-                <h2 class="display-5">Less congestion and pollution</h2>
-                <p class="lead-3">Sustainable</p>
-            </div>
-            <div class=" shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 21px 21px;  padding: 20px ">
-                <p class="lead-1">
-                    This project stands out for its combination of cutting-edge technology, connectivity and shared mobility.
-                    The aim of our project is to develop an autonomous electric cab that offers an innovative and sustainable service.
-                    </p>
-            </div>
-        </div>
-        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Safer street</h2>
-                <p class="lead-4">Autonomous</p>
-            </div>
-            <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <p class="lead-1">
-                    ​​From a forward-looking perspective, the potential benefits of the project will be reduced transport costs, improved 
-                    road safety and reduced dependence on private vehicles. For this to happen, 
-                    the right regulations and infrastructure are needed.
-                    </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-                <h2 class="display-5">Innovative technology</h2>
-                <p class="lead-5">Futuristic</p>
-            </div>
-            <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <p class="lead-1">
-                    This project stands out for its combination of cutting-edge technology, 
-                    connectivity and shared mobility. The autonomous cab is equipped with 
-                    advanced sensors, navigation and communication systems.
-                    </p>
-            </div>
-        </div>
-        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Dreamy experience</h2>
-                <p class="lead-6">Visionary</p>
-            </div>
-            <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <p class="lead-1">
-                the AutoCab project is a visionary initiative that promises to reinvent the way we get around town. 
-                By combining autonomous technology, sustainability and connectivity, it paves the way for a future of more efficient, 
-                cleaner and more accessible urban transportation for all.
-            </p>
-            </div>
-        </div>
-    </div>
-
+   
     <footer class="container py-5">
         <div class="row">
             <div class="col-12 col-md">
