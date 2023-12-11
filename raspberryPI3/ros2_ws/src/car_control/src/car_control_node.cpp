@@ -292,7 +292,6 @@ private:
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
         if (departurePointReached && finalPointReached && (requestNumber != serveurData.requestNumber)){
-            sleep(5);   //wait 5 seconds
             departurePointReached = false;
             finalPointReached = false;
             departurePoint = serveurData.departurePoint;
@@ -341,7 +340,8 @@ private:
     Graph graph;
     map<char, float[2]> coordinates;
     vector<char> pathToDeparturePoint;
-    vector<char> pathToFinalPoint;    //Gérer l'initialisation de currentPoint
+    vector<char> pathToFinalPoint;    
+    char currentPoint;   //Gérer l'initialisation de currentPoint dans gnssdatacallback
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;

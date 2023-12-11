@@ -33,6 +33,7 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
         requestedThrottle = 0;
         reverse = false;
         requestedAngle = 0;
+
     }else{
 
         //Cette section permet de déterminer si la voiture doit aller à droite ou gauche
@@ -149,3 +150,6 @@ float Graph::distance(float a[2], float b[2])
 {
     return sqrt(pow(EARTH_RADIUS*(M_PI/180)*(b[0] - a[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(b[1] - a[1]), 2));
 }
+
+
+
