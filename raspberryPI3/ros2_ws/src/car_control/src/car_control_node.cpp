@@ -40,24 +40,20 @@ public:
 
         departurePoint = 'A';
         finalPoint = 'A';
+        currentPoint = 'A' ;
         departurePointReached = true;
         finalPointReached = true;
         requestNumber = 0;
-
-        float tabA[2] = {43.570596, 1.466500};
-        coordinates['A'] = tabA;
-        float tabB[2] = {43.570596, 1.466501};
-        coordinates['B'] = tabB;
-        float tabC[2] = {43.570596, 1.466502};
-        coordinates['C'] = tabC;
-        float tabD[2] = {43.570596, 1.466503};
-        coordinates['D'] = tabD;
-        /*
-        coordinates.insert(['A', {43.570596, 1.466500}]);
-        coordinates.insert(['B', {43.570596, 1.466500}]);
-        coordinates.insert(['C', {43.570596, 1.466500}]);
-        coordinates.insert(['D', {43.570596, 1.466500}]);
-        */
+        
+        (coordinates['A'])[0] = 43.570596;
+        (coordinates['A'])[1] = 1.466500;
+        (coordinates['B'])[0] = 43.570596;
+        (coordinates['B'])[1] = 1.466501;
+        (coordinates['C'])[0] = 43.570596;
+        (coordinates['C'])[1] = 1.466502;
+        (coordinates['D'])[0] = 43.570596;
+        (coordinates['D'])[1] = 1.466503;
+        
 
         graph.createGraph(coordinates);
     
@@ -80,9 +76,11 @@ public:
         subscription_gnss_data_ = this->create_subscription<interfaces::msg::Gnss>(
         "gnss_data", 10, std::bind(&car_control::gnssDataCallback, this, _1));
 
+        subscription_serveur_data_ = this->create_subscription<interfaces::msg::Serveur>(
+        "serveur_data", 10, std::bind(&car_control::serveurDataCallback, this, _1));
+
 
         
-
         server_calibration_ = this->create_service<std_srvs::srv::Empty>(
                             "steering_calibration", std::bind(&car_control::steeringCalibration, this, std::placeholders::_1, std::placeholders::_2));
 
@@ -117,6 +115,9 @@ private:
 
             if (mode==0){
                 RCLCPP_INFO(this->get_logger(), "Switching to MANUAL Mode");
+                requestNumber = 0 ;
+                departurePointReached = true ;
+                finalPointReached = true ;
             }else if (mode==1){
                 RCLCPP_INFO(this->get_logger(), "Switching to AUTONOMOUS Mode");
             }else if (mode==2){
@@ -286,6 +287,7 @@ private:
             currentDirection[1] =  gnssData.longitude - currentLongitude;
             currentLatitude = gnssData.latitude;
             currentLongitude = gnssData.longitude;
+            currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
             RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
         }
         
@@ -307,7 +309,7 @@ private:
             departurePoint = serveurData.departurePoint;
             finalPoint = serveurData.finalPoint;
             requestNumber = serveurData.requestNumber;
-            pathToDeparturePoint = graph.shortest_path('A', departurePoint);
+            pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
             pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
             RCLCPP_INFO(this->get_logger(), "Data serveur updated, departurePoint = %c, finalPoint = %c", departurePoint, finalPoint);
         }
@@ -362,6 +364,7 @@ private:
     rclcpp::Subscription<interfaces::msg::MotorsFeedback>::SharedPtr subscription_motors_feedback_;
     rclcpp::Subscription<interfaces::msg::SteeringCalibration>::SharedPtr subscription_steering_calibration_;
     rclcpp::Subscription<interfaces::msg::Gnss>::SharedPtr subscription_gnss_data_;
+    rclcpp::Subscription<interfaces::msg::Serveur>::SharedPtr subscription_serveur_data_;
 
     //Timer
     rclcpp::TimerBase::SharedPtr timer_;

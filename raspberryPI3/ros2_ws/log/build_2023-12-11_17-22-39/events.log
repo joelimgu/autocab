@@ -1,0 +1,487 @@
+[0.000000] (-) TimerEvent: {}
+[0.001821] (-) JobUnselected: {'identifier': 'can'}
+[0.002516] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.004839] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.005074] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.005398] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.005583] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.005684] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.005803] (-) JobUnselected: {'identifier': 'joystick'}
+[0.005910] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.006035] (-) JobUnselected: {'identifier': 'simulation'}
+[0.006148] (-) JobUnselected: {'identifier': 'system_check'}
+[0.006259] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.007784] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.074649] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.078401] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.082444] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.115 50593 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi'), ('SSH_TTY', '/dev/pts/8'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '14'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.115 50593 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.099559] (-) TimerEvent: {}
+[0.201195] (-) TimerEvent: {}
+[0.300392] (car_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target car_control_node\x1b[0m\n'}
+[0.301359] (-) TimerEvent: {}
+[0.402215] (-) TimerEvent: {}
+[0.420501] (car_control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o\x1b[0m\n'}
+[0.502484] (-) TimerEvent: {}
+[0.603517] (-) TimerEvent: {}
+[0.704338] (-) TimerEvent: {}
+[0.805135] (-) TimerEvent: {}
+[0.906005] (-) TimerEvent: {}
+[1.006795] (-) TimerEvent: {}
+[1.107864] (-) TimerEvent: {}
+[1.208678] (-) TimerEvent: {}
+[1.309744] (-) TimerEvent: {}
+[1.410583] (-) TimerEvent: {}
+[1.511389] (-) TimerEvent: {}
+[1.612165] (-) TimerEvent: {}
+[1.712938] (-) TimerEvent: {}
+[1.813687] (-) TimerEvent: {}
+[1.914503] (-) TimerEvent: {}
+[2.015277] (-) TimerEvent: {}
+[2.116095] (-) TimerEvent: {}
+[2.216988] (-) TimerEvent: {}
+[2.317932] (-) TimerEvent: {}
+[2.418826] (-) TimerEvent: {}
+[2.519645] (-) TimerEvent: {}
+[2.620571] (-) TimerEvent: {}
+[2.721478] (-) TimerEvent: {}
+[2.822442] (-) TimerEvent: {}
+[2.923298] (-) TimerEvent: {}
+[3.024256] (-) TimerEvent: {}
+[3.125342] (-) TimerEvent: {}
+[3.226187] (-) TimerEvent: {}
+[3.327016] (-) TimerEvent: {}
+[3.428373] (-) TimerEvent: {}
+[3.529337] (-) TimerEvent: {}
+[3.630735] (-) TimerEvent: {}
+[3.732527] (-) TimerEvent: {}
+[3.833441] (-) TimerEvent: {}
+[3.934534] (-) TimerEvent: {}
+[4.035545] (-) TimerEvent: {}
+[4.136731] (-) TimerEvent: {}
+[4.237662] (-) TimerEvent: {}
+[4.338567] (-) TimerEvent: {}
+[4.439830] (-) TimerEvent: {}
+[4.540775] (-) TimerEvent: {}
+[4.642355] (-) TimerEvent: {}
+[4.743836] (-) TimerEvent: {}
+[4.845375] (-) TimerEvent: {}
+[4.946849] (-) TimerEvent: {}
+[5.048238] (-) TimerEvent: {}
+[5.149132] (-) TimerEvent: {}
+[5.250218] (-) TimerEvent: {}
+[5.351821] (-) TimerEvent: {}
+[5.453475] (-) TimerEvent: {}
+[5.555244] (-) TimerEvent: {}
+[5.656097] (-) TimerEvent: {}
+[5.757107] (-) TimerEvent: {}
+[5.858040] (-) TimerEvent: {}
+[5.958972] (-) TimerEvent: {}
+[6.059847] (-) TimerEvent: {}
+[6.160680] (-) TimerEvent: {}
+[6.261731] (-) TimerEvent: {}
+[6.362690] (-) TimerEvent: {}
+[6.463573] (-) TimerEvent: {}
+[6.564473] (-) TimerEvent: {}
+[6.665412] (-) TimerEvent: {}
+[6.766391] (-) TimerEvent: {}
+[6.867349] (-) TimerEvent: {}
+[6.968317] (-) TimerEvent: {}
+[7.069417] (-) TimerEvent: {}
+[7.170334] (-) TimerEvent: {}
+[7.271228] (-) TimerEvent: {}
+[7.372071] (-) TimerEvent: {}
+[7.472939] (-) TimerEvent: {}
+[7.573819] (-) TimerEvent: {}
+[7.674635] (-) TimerEvent: {}
+[7.775474] (-) TimerEvent: {}
+[7.876356] (-) TimerEvent: {}
+[7.977189] (-) TimerEvent: {}
+[8.078118] (-) TimerEvent: {}
+[8.179002] (-) TimerEvent: {}
+[8.279954] (-) TimerEvent: {}
+[8.380844] (-) TimerEvent: {}
+[8.481715] (-) TimerEvent: {}
+[8.582600] (-) TimerEvent: {}
+[8.683456] (-) TimerEvent: {}
+[8.784310] (-) TimerEvent: {}
+[8.885142] (-) TimerEvent: {}
+[8.986006] (-) TimerEvent: {}
+[9.086915] (-) TimerEvent: {}
+[9.187818] (-) TimerEvent: {}
+[9.288844] (-) TimerEvent: {}
+[9.389732] (-) TimerEvent: {}
+[9.490734] (-) TimerEvent: {}
+[9.591609] (-) TimerEvent: {}
+[9.692499] (-) TimerEvent: {}
+[9.793582] (-) TimerEvent: {}
+[9.895028] (-) TimerEvent: {}
+[9.996313] (-) TimerEvent: {}
+[10.097894] (-) TimerEvent: {}
+[10.198952] (-) TimerEvent: {}
+[10.300123] (-) TimerEvent: {}
+[10.401245] (-) TimerEvent: {}
+[10.502239] (-) TimerEvent: {}
+[10.603473] (-) TimerEvent: {}
+[10.704506] (-) TimerEvent: {}
+[10.805406] (-) TimerEvent: {}
+[10.906661] (-) TimerEvent: {}
+[11.007846] (-) TimerEvent: {}
+[11.108755] (-) TimerEvent: {}
+[11.209673] (-) TimerEvent: {}
+[11.310542] (-) TimerEvent: {}
+[11.411701] (-) TimerEvent: {}
+[11.415782] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.416848] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kstd::map<char, float [2]>::insert(<brace-enclosed initializer list>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.417310] (car_control) StderrLine: {'line': b"   58 |         \x1b[01;31m\x1b[Kcoordinates.insert({'A', tabA})\x1b[m\x1b[K;\n"}
+[11.417722] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.419351] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/map:61\x1b[m\x1b[K,\n'}
+[11.419943] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24\x1b[m\x1b[K,\n'}
+[11.420386] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[11.420817] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[11.421249] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[11.421675] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[11.422208] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:816:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Tp>, _Pair>::value, std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> > std::map<_Key, _Tp, _Compare, _Alloc>::insert(_Pair&&) [with _Pair = _Pair; _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.422705] (car_control) StderrLine: {'line': b'  816 |         \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(_Pair&& __x)\n'}
+[11.423218] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.423641] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:816:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[11.424046] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[K_Pair\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.424480] (car_control) StderrLine: {'line': b"   58 |         \x1b[01;36m\x1b[Kcoordinates.insert({'A', tabA})\x1b[m\x1b[K;\n"}
+[11.424894] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.425296] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/map:61\x1b[m\x1b[K,\n'}
+[11.425692] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24\x1b[m\x1b[K,\n'}
+[11.429117] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[11.429729] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[11.430324] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[11.430862] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[11.431313] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:875:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Tp>, _Pair>::value, typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator> std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, _Pair&&) [with _Pair = _Pair; _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.431802] (car_control) StderrLine: {'line': b'  875 |         \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(const_iterator __position, _Pair&& __x)\n'}
+[11.432228] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.432639] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:875:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[11.433080] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[11.433636] (car_control) StderrLine: {'line': b"   58 |         \x1b[01;36m\x1b[Kcoordinates.insert({'A', tabA})\x1b[m\x1b[K;\n"}
+[11.434172] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.434589] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/map:61\x1b[m\x1b[K,\n'}
+[11.435079] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24\x1b[m\x1b[K,\n'}
+[11.435505] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[11.435926] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[11.436399] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[11.436874] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[11.437507] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:893:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _InputIterator> void std::map<_Key, _Tp, _Compare, _Alloc>::insert(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.438287] (car_control) StderrLine: {'line': b'  893 |         \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(_InputIterator __first, _InputIterator __last)\n'}
+[11.439239] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.440020] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:893:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[11.440594] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[11.441055] (car_control) StderrLine: {'line': b"   58 |         \x1b[01;36m\x1b[Kcoordinates.insert({'A', tabA})\x1b[m\x1b[K;\n"}
+[11.441453] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.441864] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/map:61\x1b[m\x1b[K,\n'}
+[11.442304] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24\x1b[m\x1b[K,\n'}
+[11.442716] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[11.443095] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[11.443472] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[11.443867] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[11.444274] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:629:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::node_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::insert_return_type; std::map<_Key, _Tp, _Compare, _Alloc>::node_type = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::node_type]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.444769] (car_control) StderrLine: {'line': b'  629 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(node_type&& __nh)\n'}
+[11.445183] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.445622] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:629:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::map<char, float [2]>::node_type&&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::node_type&&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[11.446226] (car_control) StderrLine: {'line': b'  629 |       insert(\x1b[01;36m\x1b[Knode_type&& __nh\x1b[m\x1b[K)\n'}
+[11.447936] (car_control) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K~~~~~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[11.448471] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:634:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, std::map<_Key, _Tp, _Compare, _Alloc>::node_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::const_iterator; std::map<_Key, _Tp, _Compare, _Alloc>::node_type = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::node_type]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.449307] (car_control) StderrLine: {'line': b'  634 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(const_iterator __hint, node_type&& __nh)\n'}
+[11.450212] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.450764] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:634:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[11.451206] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:803:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const value_type&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other = std::allocator<std::pair<const char, float [2]> >; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> > = __gnu_cxx::__alloc_traits<std::allocator<std::pair<const char, float [2]> >, std::pair<const char, float [2]> >::rebind<std::pair<const char, float [2]> >; typename _Allocator::value_type = std::pair<const char, float [2]>; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.451855] (car_control) StderrLine: {'line': b'  803 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(const value_type& __x)\n'}
+[11.452294] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.452681] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:803:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst value_type&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst std::pair<const char, float [2]>&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[11.453096] (car_control) StderrLine: {'line': b'  803 |       insert(\x1b[01;36m\x1b[Kconst value_type& __x\x1b[m\x1b[K)\n'}
+[11.453517] (car_control) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[11.453994] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:810:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::value_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other = std::allocator<std::pair<const char, float [2]> >; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> > = __gnu_cxx::__alloc_traits<std::allocator<std::pair<const char, float [2]> >, std::pair<const char, float [2]> >::rebind<std::pair<const char, float [2]> >; typename _Allocator::value_type = std::pair<const char, float [2]>; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.454621] (car_control) StderrLine: {'line': b'  810 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(value_type&& __x)\n'}
+[11.455064] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.455479] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:810:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::map<char, float [2]>::value_type&&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<const char, float [2]>&&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[11.455905] (car_control) StderrLine: {'line': b'  810 |       insert(\x1b[01;36m\x1b[Kvalue_type&& __x\x1b[m\x1b[K)\n'}
+[11.456314] (car_control) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[11.456714] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:830:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::initializer_list<std::pair<const _Key, _Tp> >) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.457146] (car_control) StderrLine: {'line': b'  830 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(std::initializer_list<value_type> __list)\n'}
+[11.457641] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.458213] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:830:48:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::initializer_list<std::pair<const char, float [2]> >\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.458677] (car_control) StderrLine: {'line': b'  830 |       insert(\x1b[01;36m\x1b[Kstd::initializer_list<value_type> __list\x1b[m\x1b[K)\n'}
+[11.459076] (car_control) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[11.459478] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:860:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, const value_type&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::const_iterator; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.459980] (car_control) StderrLine: {'line': b'  860 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(const_iterator __position, const value_type& __x)\n'}
+[11.460423] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.460840] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:860:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[11.461246] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:870:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, std::map<_Key, _Tp, _Compare, _Alloc>::value_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::const_iterator; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.461711] (car_control) StderrLine: {'line': b'  870 |       \x1b[01;36m\x1b[Kinsert\x1b[m\x1b[K(const_iterator __position, value_type&& __x)\n'}
+[11.462372] (car_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.462839] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_map.h:870:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[11.463350] (car_control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected identifier before 'B'\n"}
+[11.463880] (car_control) StderrLine: {'line': b"   59 |         coordinates.insert([\x1b[01;31m\x1b[K'B'\x1b[m\x1b[K, {43.570596, 1.466500}]);\n"}
+[11.464321] (car_control) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[11.464723] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K]\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.465158] (car_control) StderrLine: {'line': b"   59 |         coordinates.insert(['B'\x1b[01;31m\x1b[K,\x1b[m\x1b[K {43.570596, 1.466500}]);\n"}
+[11.465596] (car_control) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[11.466101] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[11.466601] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.467328] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.467798] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K]\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.468232] (car_control) StderrLine: {'line': b"   59 |         coordinates.insert(['B', {43.570596, 1.466500}\x1b[01;31m\x1b[K]\x1b[m\x1b[K);\n"}
+[11.468662] (car_control) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[11.469072] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.469498] (car_control) StderrLine: {'line': b"   59 |         coordinates.insert\x1b[01;36m\x1b[K(\x1b[m\x1b[K['B', {43.570596, 1.466500}]);\n"}
+[11.469989] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[11.470472] (car_control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected identifier before 'C'\n"}
+[11.470984] (car_control) StderrLine: {'line': b"   60 |         coordinates.insert([\x1b[01;31m\x1b[K'C'\x1b[m\x1b[K, {43.570596, 1.466500}]);\n"}
+[11.471451] (car_control) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[11.471887] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K]\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.472339] (car_control) StderrLine: {'line': b"   60 |         coordinates.insert(['C'\x1b[01;31m\x1b[K,\x1b[m\x1b[K {43.570596, 1.466500}]);\n"}
+[11.472763] (car_control) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[11.473209] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[11.473727] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.474232] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.474684] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K]\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.475156] (car_control) StderrLine: {'line': b"   60 |         coordinates.insert(['C', {43.570596, 1.466500}\x1b[01;31m\x1b[K]\x1b[m\x1b[K);\n"}
+[11.475696] (car_control) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[11.476207] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.476665] (car_control) StderrLine: {'line': b"   60 |         coordinates.insert\x1b[01;36m\x1b[K(\x1b[m\x1b[K['C', {43.570596, 1.466500}]);\n"}
+[11.477075] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[11.477856] (car_control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected identifier before 'D'\n"}
+[11.478362] (car_control) StderrLine: {'line': b"   61 |         coordinates.insert([\x1b[01;31m\x1b[K'D'\x1b[m\x1b[K, {43.570596, 1.466500}]);\n"}
+[11.478809] (car_control) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[11.479267] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K]\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.479807] (car_control) StderrLine: {'line': b"   61 |         coordinates.insert(['D'\x1b[01;31m\x1b[K,\x1b[m\x1b[K {43.570596, 1.466500}]);\n"}
+[11.480331] (car_control) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[11.480960] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[11.481464] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.482052] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.482551] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K]\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[11.483007] (car_control) StderrLine: {'line': b"   61 |         coordinates.insert(['D', {43.570596, 1.466500}\x1b[01;31m\x1b[K]\x1b[m\x1b[K);\n"}
+[11.483431] (car_control) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[11.483949] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.484413] (car_control) StderrLine: {'line': b"   61 |         coordinates.insert\x1b[01;36m\x1b[K(\x1b[m\x1b[K['D', {43.570596, 1.466500}]);\n"}
+[11.484843] (car_control) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[11.511895] (-) TimerEvent: {}
+[11.613324] (-) TimerEvent: {}
+[11.714458] (-) TimerEvent: {}
+[11.815307] (-) TimerEvent: {}
+[11.916206] (-) TimerEvent: {}
+[12.017100] (-) TimerEvent: {}
+[12.117967] (-) TimerEvent: {}
+[12.219161] (-) TimerEvent: {}
+[12.320347] (-) TimerEvent: {}
+[12.421228] (-) TimerEvent: {}
+[12.522178] (-) TimerEvent: {}
+[12.623077] (-) TimerEvent: {}
+[12.724301] (-) TimerEvent: {}
+[12.825168] (-) TimerEvent: {}
+[12.925976] (-) TimerEvent: {}
+[13.026778] (-) TimerEvent: {}
+[13.127684] (-) TimerEvent: {}
+[13.228618] (-) TimerEvent: {}
+[13.329671] (-) TimerEvent: {}
+[13.430535] (-) TimerEvent: {}
+[13.531357] (-) TimerEvent: {}
+[13.632188] (-) TimerEvent: {}
+[13.733024] (-) TimerEvent: {}
+[13.833949] (-) TimerEvent: {}
+[13.934991] (-) TimerEvent: {}
+[14.036175] (-) TimerEvent: {}
+[14.137380] (-) TimerEvent: {}
+[14.238494] (-) TimerEvent: {}
+[14.339797] (-) TimerEvent: {}
+[14.440723] (-) TimerEvent: {}
+[14.541570] (-) TimerEvent: {}
+[14.642460] (-) TimerEvent: {}
+[14.743384] (-) TimerEvent: {}
+[14.844291] (-) TimerEvent: {}
+[14.945305] (-) TimerEvent: {}
+[15.046167] (-) TimerEvent: {}
+[15.147010] (-) TimerEvent: {}
+[15.247887] (-) TimerEvent: {}
+[15.348750] (-) TimerEvent: {}
+[15.449634] (-) TimerEvent: {}
+[15.550551] (-) TimerEvent: {}
+[15.651468] (-) TimerEvent: {}
+[15.752322] (-) TimerEvent: {}
+[15.853203] (-) TimerEvent: {}
+[15.954085] (-) TimerEvent: {}
+[16.054946] (-) TimerEvent: {}
+[16.155775] (-) TimerEvent: {}
+[16.256631] (-) TimerEvent: {}
+[16.357572] (-) TimerEvent: {}
+[16.458525] (-) TimerEvent: {}
+[16.559464] (-) TimerEvent: {}
+[16.660361] (-) TimerEvent: {}
+[16.761291] (-) TimerEvent: {}
+[16.862197] (-) TimerEvent: {}
+[16.963106] (-) TimerEvent: {}
+[17.064256] (-) TimerEvent: {}
+[17.165147] (-) TimerEvent: {}
+[17.266001] (-) TimerEvent: {}
+[17.366911] (-) TimerEvent: {}
+[17.467834] (-) TimerEvent: {}
+[17.569514] (-) TimerEvent: {}
+[17.670541] (-) TimerEvent: {}
+[17.771642] (-) TimerEvent: {}
+[17.873015] (-) TimerEvent: {}
+[17.974176] (-) TimerEvent: {}
+[18.075163] (-) TimerEvent: {}
+[18.176007] (-) TimerEvent: {}
+[18.277036] (-) TimerEvent: {}
+[18.377988] (-) TimerEvent: {}
+[18.478889] (-) TimerEvent: {}
+[18.579783] (-) TimerEvent: {}
+[18.680677] (-) TimerEvent: {}
+[18.781562] (-) TimerEvent: {}
+[18.882461] (-) TimerEvent: {}
+[18.983343] (-) TimerEvent: {}
+[19.084171] (-) TimerEvent: {}
+[19.184992] (-) TimerEvent: {}
+[19.285882] (-) TimerEvent: {}
+[19.386699] (-) TimerEvent: {}
+[19.487611] (-) TimerEvent: {}
+[19.588464] (-) TimerEvent: {}
+[19.689319] (-) TimerEvent: {}
+[19.790190] (-) TimerEvent: {}
+[19.891020] (-) TimerEvent: {}
+[19.991888] (-) TimerEvent: {}
+[20.093083] (-) TimerEvent: {}
+[20.193965] (-) TimerEvent: {}
+[20.295153] (-) TimerEvent: {}
+[20.396087] (-) TimerEvent: {}
+[20.496963] (-) TimerEvent: {}
+[20.597893] (-) TimerEvent: {}
+[20.699078] (-) TimerEvent: {}
+[20.800326] (-) TimerEvent: {}
+[20.901187] (-) TimerEvent: {}
+[21.002391] (-) TimerEvent: {}
+[21.103564] (-) TimerEvent: {}
+[21.204718] (-) TimerEvent: {}
+[21.306334] (-) TimerEvent: {}
+[21.407480] (-) TimerEvent: {}
+[21.508650] (-) TimerEvent: {}
+[21.609493] (-) TimerEvent: {}
+[21.710354] (-) TimerEvent: {}
+[21.811209] (-) TimerEvent: {}
+[21.912082] (-) TimerEvent: {}
+[22.012955] (-) TimerEvent: {}
+[22.114156] (-) TimerEvent: {}
+[22.215009] (-) TimerEvent: {}
+[23.218833] (-) TimerEvent: {}
+[23.320250] (-) TimerEvent: {}
+[23.421096] (-) TimerEvent: {}
+[23.522278] (-) TimerEvent: {}
+[23.623493] (-) TimerEvent: {}
+[23.724648] (-) TimerEvent: {}
+[23.825845] (-) TimerEvent: {}
+[23.926723] (-) TimerEvent: {}
+[24.027576] (-) TimerEvent: {}
+[24.128593] (-) TimerEvent: {}
+[24.229381] (-) TimerEvent: {}
+[24.330229] (-) TimerEvent: {}
+[24.431044] (-) TimerEvent: {}
+[24.531883] (-) TimerEvent: {}
+[24.632765] (-) TimerEvent: {}
+[24.733629] (-) TimerEvent: {}
+[24.834591] (-) TimerEvent: {}
+[24.935479] (-) TimerEvent: {}
+[25.036357] (-) TimerEvent: {}
+[25.137851] (-) TimerEvent: {}
+[25.238777] (-) TimerEvent: {}
+[25.339667] (-) TimerEvent: {}
+[25.441031] (-) TimerEvent: {}
+[25.541893] (-) TimerEvent: {}
+[25.642718] (-) TimerEvent: {}
+[25.743551] (-) TimerEvent: {}
+[25.844720] (-) TimerEvent: {}
+[25.945661] (-) TimerEvent: {}
+[26.046839] (-) TimerEvent: {}
+[26.147696] (-) TimerEvent: {}
+[26.248584] (-) TimerEvent: {}
+[26.349492] (-) TimerEvent: {}
+[26.450385] (-) TimerEvent: {}
+[26.551277] (-) TimerEvent: {}
+[26.652226] (-) TimerEvent: {}
+[26.753137] (-) TimerEvent: {}
+[26.854072] (-) TimerEvent: {}
+[26.954982] (-) TimerEvent: {}
+[27.055905] (-) TimerEvent: {}
+[27.156856] (-) TimerEvent: {}
+[27.257878] (-) TimerEvent: {}
+[27.358821] (-) TimerEvent: {}
+[27.459697] (-) TimerEvent: {}
+[27.560664] (-) TimerEvent: {}
+[27.661643] (-) TimerEvent: {}
+[27.762603] (-) TimerEvent: {}
+[27.863526] (-) TimerEvent: {}
+[27.964373] (-) TimerEvent: {}
+[28.065534] (-) TimerEvent: {}
+[28.166378] (-) TimerEvent: {}
+[28.267299] (-) TimerEvent: {}
+[28.368213] (-) TimerEvent: {}
+[28.469398] (-) TimerEvent: {}
+[28.570329] (-) TimerEvent: {}
+[28.671243] (-) TimerEvent: {}
+[28.772146] (-) TimerEvent: {}
+[28.873014] (-) TimerEvent: {}
+[28.973914] (-) TimerEvent: {}
+[29.075134] (-) TimerEvent: {}
+[29.176013] (-) TimerEvent: {}
+[29.276904] (-) TimerEvent: {}
+[29.378156] (-) TimerEvent: {}
+[29.479397] (-) TimerEvent: {}
+[29.580409] (-) TimerEvent: {}
+[29.681394] (-) TimerEvent: {}
+[29.782511] (-) TimerEvent: {}
+[29.883558] (-) TimerEvent: {}
+[29.984343] (-) TimerEvent: {}
+[30.085155] (-) TimerEvent: {}
+[30.186221] (-) TimerEvent: {}
+[30.287274] (-) TimerEvent: {}
+[30.388088] (-) TimerEvent: {}
+[30.488920] (-) TimerEvent: {}
+[30.589720] (-) TimerEvent: {}
+[30.690536] (-) TimerEvent: {}
+[30.791608] (-) TimerEvent: {}
+[30.892450] (-) TimerEvent: {}
+[30.993331] (-) TimerEvent: {}
+[31.094430] (-) TimerEvent: {}
+[31.195289] (-) TimerEvent: {}
+[31.296160] (-) TimerEvent: {}
+[31.397095] (-) TimerEvent: {}
+[31.498057] (-) TimerEvent: {}
+[31.598916] (-) TimerEvent: {}
+[31.699818] (-) TimerEvent: {}
+[31.800733] (-) TimerEvent: {}
+[31.901933] (-) TimerEvent: {}
+[32.002827] (-) TimerEvent: {}
+[32.103666] (-) TimerEvent: {}
+[32.204545] (-) TimerEvent: {}
+[32.305512] (-) TimerEvent: {}
+[32.406462] (-) TimerEvent: {}
+[32.507638] (-) TimerEvent: {}
+[32.608872] (-) TimerEvent: {}
+[32.710885] (-) TimerEvent: {}
+[32.812114] (-) TimerEvent: {}
+[32.913387] (-) TimerEvent: {}
+[33.014590] (-) TimerEvent: {}
+[33.115797] (-) TimerEvent: {}
+[33.216905] (-) TimerEvent: {}
+[33.527299] (-) TimerEvent: {}
+[33.615181] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1\n'}
+[33.616368] (car_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2\n'}
+[33.617062] (car_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[33.623355] (car_control) CommandEnded: {'returncode': 2}
+[33.628773] (-) TimerEvent: {}
+[33.729911] (-) TimerEvent: {}
+[33.833952] (-) TimerEvent: {}
+[33.934799] (-) TimerEvent: {}
+[34.035820] (-) TimerEvent: {}
+[34.137315] (-) TimerEvent: {}
+[34.238522] (-) TimerEvent: {}
+[34.339519] (-) TimerEvent: {}
+[34.440393] (-) TimerEvent: {}
+[34.541527] (-) TimerEvent: {}
+[34.619078] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 2}
+[35.429744] (-) TimerEvent: {}
+[35.431033] (-) EventReactorShutdown: {}

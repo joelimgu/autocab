@@ -1,0 +1,146 @@
+[2.546s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[2.777s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[2.901s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[13.570s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[13.571s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:51:26:[m[K [01;31m[Kerror: [m[Kinvalid array assignment
+[13.571s]    51 |         coordinates['B'] = tabB;
+[13.572s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:53:26:[m[K [01;31m[Kerror: [m[Kinvalid array assignment
+[13.572s]    53 |         coordinates['C'] = tabC;
+[13.573s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:55:26:[m[K [01;31m[Kerror: [m[Kinvalid array assignment
+[13.573s]    55 |         coordinates['D'] = tabD;
+[13.573s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:56:10:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K/[m[K’ token
+[13.574s]    56 |         *[01;31m[K/[m[K
+[13.574s]       |          [01;31m[K^[m[K
+[13.588s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::map<char, float [2]>::insert(<brace-enclosed initializer list>)[m[K’
+[13.591s]    58 |         [01;31m[Kcoordinates.insert({'A', tabA})[m[K;
+[13.593s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[13.593s] In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+[13.594s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[13.594s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.595s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.595s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.596s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[13.596s] [01m[K/usr/include/c++/11/bits/stl_map.h:816:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Tp>, _Pair>::value, std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> > std::map<_Key, _Tp, _Compare, _Alloc>::insert(_Pair&&) [with _Pair = _Pair; _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >][m[K’
+[13.597s]   816 |         [01;36m[Kinsert[m[K(_Pair&& __x)
+[13.597s]       |         [01;36m[K^~~~~~[m[K
+[13.597s] [01m[K/usr/include/c++/11/bits/stl_map.h:816:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[13.598s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Pair[m[K’
+[13.599s]    58 |         [01;36m[Kcoordinates.insert({'A', tabA})[m[K;
+[13.599s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[13.600s] In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+[13.601s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[13.602s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.603s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.604s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.604s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[13.605s] [01m[K/usr/include/c++/11/bits/stl_map.h:875:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Tp>, _Pair>::value, typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator> std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, _Pair&&) [with _Pair = _Pair; _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >][m[K’
+[13.605s]   875 |         [01;36m[Kinsert[m[K(const_iterator __position, _Pair&& __x)
+[13.606s]       |         [01;36m[K^~~~~~[m[K
+[13.606s] [01m[K/usr/include/c++/11/bits/stl_map.h:875:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[13.607s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[13.607s]    58 |         [01;36m[Kcoordinates.insert({'A', tabA})[m[K;
+[13.608s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[13.608s] In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+[13.608s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[13.609s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.609s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.610s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.610s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[13.611s] [01m[K/usr/include/c++/11/bits/stl_map.h:893:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _InputIterator> void std::map<_Key, _Tp, _Compare, _Alloc>::insert(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >][m[K’
+[13.611s]   893 |         [01;36m[Kinsert[m[K(_InputIterator __first, _InputIterator __last)
+[13.611s]       |         [01;36m[K^~~~~~[m[K
+[13.612s] [01m[K/usr/include/c++/11/bits/stl_map.h:893:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[13.612s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[13.613s]    58 |         [01;36m[Kcoordinates.insert({'A', tabA})[m[K;
+[13.613s]       |         [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[13.613s] In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+[13.614s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[13.614s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.615s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.615s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.615s]                  from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[13.616s] [01m[K/usr/include/c++/11/bits/stl_map.h:629:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::node_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::insert_return_type; std::map<_Key, _Tp, _Compare, _Alloc>::node_type = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::node_type][m[K’
+[13.616s]   629 |       [01;36m[Kinsert[m[K(node_type&& __nh)
+[13.617s]       |       [01;36m[K^~~~~~[m[K
+[13.617s] [01m[K/usr/include/c++/11/bits/stl_map.h:629:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::map<char, float [2]>::node_type&&[m[K’ {aka ‘[01m[Kstd::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::node_type&&[m[K’}
+[13.618s]   629 |       insert([01;36m[Knode_type&& __nh[m[K)
+[13.618s]       |              [01;36m[K~~~~~~~~~~~~^~~~[m[K
+[13.619s] [01m[K/usr/include/c++/11/bits/stl_map.h:634:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, std::map<_Key, _Tp, _Compare, _Alloc>::node_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::const_iterator; std::map<_Key, _Tp, _Compare, _Alloc>::node_type = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::node_type][m[K’
+[13.619s]   634 |       [01;36m[Kinsert[m[K(const_iterator __hint, node_type&& __nh)
+[13.620s]       |       [01;36m[K^~~~~~[m[K
+[13.620s] [01m[K/usr/include/c++/11/bits/stl_map.h:634:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[13.621s] [01m[K/usr/include/c++/11/bits/stl_map.h:803:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const value_type&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other = std::allocator<std::pair<const char, float [2]> >; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> > = __gnu_cxx::__alloc_traits<std::allocator<std::pair<const char, float [2]> >, std::pair<const char, float [2]> >::rebind<std::pair<const char, float [2]> >; typename _Allocator::value_type = std::pair<const char, float [2]>; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>][m[K’
+[13.621s]   803 |       [01;36m[Kinsert[m[K(const value_type& __x)
+[13.621s]       |       [01;36m[K^~~~~~[m[K
+[13.622s] [01m[K/usr/include/c++/11/bits/stl_map.h:803:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst value_type&[m[K’ {aka ‘[01m[Kconst std::pair<const char, float [2]>&[m[K’}
+[13.622s]   803 |       insert([01;36m[Kconst value_type& __x[m[K)
+[13.623s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+[13.623s] [01m[K/usr/include/c++/11/bits/stl_map.h:810:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::value_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> >::other = std::allocator<std::pair<const char, float [2]> >; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Tp> > = __gnu_cxx::__alloc_traits<std::allocator<std::pair<const char, float [2]> >, std::pair<const char, float [2]> >::rebind<std::pair<const char, float [2]> >; typename _Allocator::value_type = std::pair<const char, float [2]>; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>][m[K’
+[13.624s]   810 |       [01;36m[Kinsert[m[K(value_type&& __x)
+[13.624s]       |       [01;36m[K^~~~~~[m[K
+[13.625s] [01m[K/usr/include/c++/11/bits/stl_map.h:810:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::map<char, float [2]>::value_type&&[m[K’ {aka ‘[01m[Kstd::pair<const char, float [2]>&&[m[K’}
+[13.625s]   810 |       insert([01;36m[Kvalue_type&& __x[m[K)
+[13.626s]       |              [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[13.626s] [01m[K/usr/include/c++/11/bits/stl_map.h:830:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::initializer_list<std::pair<const _Key, _Tp> >) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >][m[K’
+[13.626s]   830 |       [01;36m[Kinsert[m[K(std::initializer_list<value_type> __list)
+[13.627s]       |       [01;36m[K^~~~~~[m[K
+[13.628s] [01m[K/usr/include/c++/11/bits/stl_map.h:830:48:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::initializer_list<std::pair<const char, float [2]> >[m[K’
+[13.628s]   830 |       insert([01;36m[Kstd::initializer_list<value_type> __list[m[K)
+[13.628s]       |              [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[13.629s] [01m[K/usr/include/c++/11/bits/stl_map.h:860:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, const value_type&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::const_iterator; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>][m[K’
+[13.629s]   860 |       [01;36m[Kinsert[m[K(const_iterator __position, const value_type& __x)
+[13.630s]       |       [01;36m[K^~~~~~[m[K
+[13.630s] [01m[K/usr/include/c++/11/bits/stl_map.h:860:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[13.631s] [01m[K/usr/include/c++/11/bits/stl_map.h:870:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, std::map<_Key, _Tp, _Compare, _Alloc>::value_type&&) [with _Key = char; _Tp = float [2]; _Compare = std::less<char>; _Alloc = std::allocator<std::pair<const char, float [2]> >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::iterator; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree<char, std::pair<const char, float [2]>, std::_Select1st<std::pair<const char, float [2]> >, std::less<char>, std::allocator<std::pair<const char, float [2]> > >::const_iterator; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const char, float [2]>][m[K’
+[13.631s]   870 |       [01;36m[Kinsert[m[K(const_iterator __position, value_type&& __x)
+[13.632s]       |       [01;36m[K^~~~~~[m[K
+[13.632s] [01m[K/usr/include/c++/11/bits/stl_map.h:870:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[13.633s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'B'
+[13.633s]    59 |         coordinates.insert([[01;31m[K'B'[m[K, {43.570596, 1.466500}]);
+[13.634s]       |                             [01;31m[K^~~[m[K
+[13.634s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[13.635s]    59 |         coordinates.insert(['B'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[13.635s]       |                                [01;31m[K^[m[K
+[13.636s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[13.636s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[13.636s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[13.637s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[13.637s]    59 |         coordinates.insert(['B', {43.570596, 1.466500}[01;31m[K][m[K);
+[13.638s]       |                                                       [01;31m[K^[m[K
+[13.638s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[13.639s]    59 |         coordinates.insert[01;36m[K([m[K['B', {43.570596, 1.466500}]);
+[13.639s]       |                           [01;36m[K^[m[K
+[13.640s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'C'
+[13.640s]    60 |         coordinates.insert([[01;31m[K'C'[m[K, {43.570596, 1.466500}]);
+[13.641s]       |                             [01;31m[K^~~[m[K
+[13.641s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[13.642s]    60 |         coordinates.insert(['C'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[13.643s]       |                                [01;31m[K^[m[K
+[13.644s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[13.644s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[13.645s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[13.645s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[13.646s]    60 |         coordinates.insert(['C', {43.570596, 1.466500}[01;31m[K][m[K);
+[13.646s]       |                                                       [01;31m[K^[m[K
+[13.647s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[13.647s]    60 |         coordinates.insert[01;36m[K([m[K['C', {43.570596, 1.466500}]);
+[13.648s]       |                           [01;36m[K^[m[K
+[13.648s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'D'
+[13.648s]    61 |         coordinates.insert([[01;31m[K'D'[m[K, {43.570596, 1.466500}]);
+[13.649s]       |                             [01;31m[K^~~[m[K
+[13.649s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+[13.650s]    61 |         coordinates.insert(['D'[01;31m[K,[m[K {43.570596, 1.466500}]);
+[13.650s]       |                                [01;31m[K^[m[K
+[13.651s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[13.651s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[13.652s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[13.652s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+[13.653s]    61 |         coordinates.insert(['D', {43.570596, 1.466500}[01;31m[K][m[K);
+[13.653s]       |                                                       [01;31m[K^[m[K
+[13.654s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[13.654s]    61 |         coordinates.insert[01;36m[K([m[K['D', {43.570596, 1.466500}]);
+[13.654s]       |                           [01;36m[K^[m[K
+[34.811s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[34.813s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[34.815s] gmake: *** [Makefile:146: all] Error 2
+[34.820s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

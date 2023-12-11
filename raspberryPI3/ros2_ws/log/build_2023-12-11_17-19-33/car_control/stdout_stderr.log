@@ -1,0 +1,66 @@
+[35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'A'
+   58 |         coordinates.insert([[01;31m[K'A'[m[K, tabA]);
+      |                             [01;31m[K^~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+   58 |         coordinates.insert(['A'[01;31m[K,[m[K tabA]);
+      |                                [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+   58 |         coordinates.insert(['A', tabA[01;31m[K][m[K);
+      |                                      [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   58 |         coordinates.insert[01;36m[K([m[K['A', tabA]);
+      |                           [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'B'
+   59 |         coordinates.insert([[01;31m[K'B'[m[K, {43.570596, 1.466500}]);
+      |                             [01;31m[K^~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+   59 |         coordinates.insert(['B'[01;31m[K,[m[K {43.570596, 1.466500}]);
+      |                                [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+   59 |         coordinates.insert(['B', {43.570596, 1.466500}[01;31m[K][m[K);
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   59 |         coordinates.insert[01;36m[K([m[K['B', {43.570596, 1.466500}]);
+      |                           [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'C'
+   60 |         coordinates.insert([[01;31m[K'C'[m[K, {43.570596, 1.466500}]);
+      |                             [01;31m[K^~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+   60 |         coordinates.insert(['C'[01;31m[K,[m[K {43.570596, 1.466500}]);
+      |                                [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+   60 |         coordinates.insert(['C', {43.570596, 1.466500}[01;31m[K][m[K);
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   60 |         coordinates.insert[01;36m[K([m[K['C', {43.570596, 1.466500}]);
+      |                           [01;36m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before 'D'
+   61 |         coordinates.insert([[01;31m[K'D'[m[K, {43.570596, 1.466500}]);
+      |                             [01;31m[K^~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+   61 |         coordinates.insert(['D'[01;31m[K,[m[K {43.570596, 1.466500}]);
+      |                                [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In lambda function:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K][m[K’ token
+   61 |         coordinates.insert(['D', {43.570596, 1.466500}[01;31m[K][m[K);
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:61:27:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   61 |         coordinates.insert[01;36m[K([m[K['D', {43.570596, 1.466500}]);
+      |                           [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
