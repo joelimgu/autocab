@@ -44,10 +44,14 @@ public:
         finalPointReached = true;
         requestNumber = 0;
 
-        coordinates['A'] = {43.570596, 1.466500};
-        coordinates['B'] = {43.570596, 1.466501}; 
-        coordinates['C'] = {43.570596, 1.466502};
-        coordinates['D'] = (43.570596, 1.466503);
+        float tabA[2] = {43.570596, 1.466500};
+        coordinates['A'] = tabA;
+        float tabB[2] = {43.570596, 1.466501};
+        coordinates['B'] = tabB;
+        float tabC[2] = {43.570596, 1.466502};
+        coordinates['C'] = tabC;
+        float tabD[2] = {43.570596, 1.466503};
+        coordinates['D'] = tabD;
         /*
         coordinates.insert(['A', {43.570596, 1.466500}]);
         coordinates.insert(['B', {43.570596, 1.466500}]);
