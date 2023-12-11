@@ -1,0 +1,45 @@
+[0.088s] Invoking command in '/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/sebastian/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.302s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[0.410s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[0.413s] [ 40%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/corrector.cpp.o[0m
+[0.519s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp:3:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kint[m[K’
+[0.520s]     3 | [01;31m[Kint[m[K piCorrector(float kp, float ki, float Te,float& smallPwmCmd, float& past_pwm_error,float& current_pwm_error)
+[0.521s]       | [01;31m[K^~~[m[K
+[0.527s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:118: CMakeFiles/car_control_node.dir/src/corrector.cpp.o] Error 1
+[0.528s] gmake[2]: *** Waiting for unfinished jobs....
+[10.248s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:18:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kusing[m[K’
+[10.249s]    18 | [01;31m[Kusing[m[K namespace std;
+[10.249s]       | [01;31m[K^~~~~[m[K
+[10.250s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kplaceholders[m[K’ has not been declared
+[10.250s]    19 | using [01;31m[Kplaceholders[m[K::_1;
+[10.251s]       |       [01;31m[K^~~~~~~~~~~~[m[K
+[10.823s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[10.824s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:40:84:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+[10.824s]    40 | _order", 10, std::bind(&car_control::joystickOrderCallback, this, [01;31m[K_1[m[K));
+[10.825s]       |                                                                   [01;31m[K^~[m[K
+[10.825s]       |                                                                   [32m[Kstd::placeholders::_1[m[K
+[10.826s] In file included from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[10.826s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[10.827s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[10.827s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[10.828s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[10.828s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[10.828s]                  from [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[10.829s] [01m[K/usr/include/c++/11/functional:225:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+[10.829s]   225 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+[10.830s]       |                                  [01;36m[K^~[m[K
+[10.849s] In file included from [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:16[m[K:
+[10.850s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/car_control_node.h:8:27:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+[10.850s]     8 | #define PERIOD_UPDATE_CMD [01;31m[K1ms[m[K //Period to update proupulsion and steering command in [ms]
+[10.851s]       |                           [01;31m[K^~~[m[K
+[10.851s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:54:42:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KPERIOD_UPDATE_CMD[m[K’
+[10.852s]    54 |         timer_ = this->create_wall_timer([01;36m[KPERIOD_UPDATE_CMD[m[K, std::bind(&car_control::updateCmd, this));
+[10.852s]       |                                          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[10.905s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[10.906s] [01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:157:17:[m[K [01;31m[Kerror: [m[K‘[01m[KcorrectWheelSpeed[m[K’ was not declared in this scope
+[10.906s]   157 |                 [01;31m[KcorrectWheelSpeed[m[K(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,1);
+[10.907s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[15.496s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[15.497s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[15.498s] gmake: *** [Makefile:146: all] Error 2
+[15.504s] Invoked command in '/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/sebastian/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

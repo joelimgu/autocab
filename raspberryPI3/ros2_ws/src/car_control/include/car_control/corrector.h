@@ -9,4 +9,6 @@ int piCorrector(float kp,float ki,float Te,float& smallPwmCmd,float& past_pwm_er
 
 float pwmError(float desiredRPM,float measuredRPM,float maxRPM);
 
+int correctWheelSpeed(float& PwmCmd, float& past_pwm_error,float& current_pwm_error,float& wheelRPM,bool reverse);
+
 #endif

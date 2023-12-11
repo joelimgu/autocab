@@ -1,0 +1,11 @@
+[01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp:[m[K In function ‘[01m[Kint correctWheelSpeed(float&, float&, float&, float&, bool)[m[K’:
+[01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp:47:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   47 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[01m[K/home/pi/sebastian/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:157:17:[m[K [01;31m[Kerror: [m[K‘[01m[KcorrectWheelSpeed[m[K’ was not declared in this scope
+  157 |                 [01;31m[KcorrectWheelSpeed[m[K(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,1);
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

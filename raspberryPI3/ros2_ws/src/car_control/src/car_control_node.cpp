@@ -145,37 +145,11 @@ private:
             }
             else if (mode==0)
             {
-                /* Assumptions made, such as both Wheels' speeds are the same at all times */
-                /* Closed loop error calculation */
                 /* Left wheel error and PWM */
-                left_current_pwm_error = pwmError(20.0,leftRearRPM,MAX_RPM);
-                smallLeftRearPwmCmd = leftRearPwmCmd - 50;
-                piCorrector(0.12,1.22,0.001,smallLeftRearPwmCmd,left_past_pwm_error,left_current_pwm_error);
-                leftRearPwmCmd = smallLeftRearPwmCmd + 50;
+                correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
 
                 /* Right wheel error and PWM */
-                right_current_pwm_error = pwmError(20.0,rightRearRPM,MAX_RPM);
-                smallRightRearPwmCmd = -rightRearPwmCmd + 50; /* Il faut changer cette ligne pour la marche arriere */
-                piCorrector(0.12,1.22,0.001,smallRightRearPwmCmd,right_past_pwm_error,right_current_pwm_error);
-                rightRearPwmCmd = -smallRightRearPwmCmd + 50; /* Il faut changer cette ligne pour la marche arriere, liam s'en occupe*/
-                if (leftRearPwmCmd > 100)
-                {
-                    /* Capping the PWM command to 100 */
-                    leftRearPwmCmd = 100;
-                }
-                else if (rightRearPwmCmd > 100)
-                {
-                    /* Capping the PWM command to 100 */
-                    rightRearPwmCmd = 100;
-                }
-                if (leftRearPwmCmd < 0)
-                {
-                    leftRearPwmCmd = 0;
-                }
-                else if (rightRearPwmCmd < 0)
-                {
-                    rightRearPwmCmd = 0;
-                } 
+                correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
             }
         }
         if (false)
