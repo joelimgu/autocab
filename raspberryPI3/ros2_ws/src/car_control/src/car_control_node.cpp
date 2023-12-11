@@ -155,9 +155,9 @@ private:
 
                 /* Right wheel error and PWM */
                 right_current_pwm_error = pwmError(20.0,rightRearRPM,MAX_RPM);
-                smallRightRearPwmCmd = rightRearPwmCmd - 50;
+                smallRightRearPwmCmd = -rightRearPwmCmd + 50; /* Il faut changer cette ligne pour la marche arriere */
                 piCorrector(0.12,1.22,0.001,smallRightRearPwmCmd,right_past_pwm_error,right_current_pwm_error);
-                rightRearPwmCmd = smallRightRearPwmCmd + 50;
+                rightRearPwmCmd = -smallRightRearPwmCmd + 50; /* Il faut changer cette ligne pour la marche arriere, liam s'en occupe*/
                 if (leftRearPwmCmd > 100)
                 {
                     /* Capping the PWM command to 100 */
@@ -168,12 +168,24 @@ private:
                     /* Capping the PWM command to 100 */
                     rightRearPwmCmd = 100;
                 }
+                if (leftRearPwmCmd < 0)
+                {
+                    leftRearPwmCmd = 0;
+                }
+                else if (rightRearPwmCmd < 0)
+                {
+                    rightRearPwmCmd = 0;
+                } 
             }
+        }
+        if (false)
+        {
+            leftRearPwmCmd = 100 - leftRearPwmCmd;
+            rightRearPwmCmd = 100 -rightRearPwmCmd;
         }
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
-
         steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
         //Send order to motors
         motorsOrder.steering_pwm = steeringPwmCmd;
