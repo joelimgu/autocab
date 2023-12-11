@@ -48,7 +48,7 @@ typedef struct interfaces__msg__SystemCheck
   bool l476;
   bool f103;
   /// report
-  ///  "OK" or "Failed"
+  /// "OK" or "Failed"
   rosidl_runtime_c__String comm_jetson;
   /// "OK" or "Failed"
   rosidl_runtime_c__String comm_l476;

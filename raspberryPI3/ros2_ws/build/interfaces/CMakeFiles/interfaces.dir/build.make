@@ -74,6 +74,7 @@ CMakeFiles/interfaces: /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces/msg/
 CMakeFiles/interfaces: /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces/msg/Ultrasonic.msg
 CMakeFiles/interfaces: /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces/msg/Gnss.msg
 CMakeFiles/interfaces: /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces/msg/SystemCheck.msg
+CMakeFiles/interfaces: /home/pi/autocab/raspberryPI3/ros2_ws/src/interfaces/msg/Serveur.msg
 
 interfaces: CMakeFiles/interfaces
 interfaces: CMakeFiles/interfaces.dir/build.make

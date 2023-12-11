@@ -10,7 +10,8 @@
     "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces:msg/SteeringCalibration.idl",
     "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces:msg/Ultrasonic.idl",
     "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces:msg/Gnss.idl",
-    "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces:msg/SystemCheck.idl"
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces:msg/SystemCheck.idl",
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces:msg/Serveur.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c",
@@ -28,6 +29,7 @@
     "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces/msg/SteeringCalibration.idl",
     "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces/msg/Ultrasonic.idl",
     "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces/msg/Gnss.idl",
-    "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces/msg/SystemCheck.idl"
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces/msg/SystemCheck.idl",
+    "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces/msg/Serveur.idl"
   ]
 }

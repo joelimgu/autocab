@@ -1,0 +1,57 @@
+[0.076s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4
+[0.250s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.192s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[1.414s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.428s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.460s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.521s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.608s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.914s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.924s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.925s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.653s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[5.002s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[5.003s]   execute_process(/usr/bin/python3.10 -m rosidl_adapter --package-name
+[5.003s]   interfaces --arguments-file
+[5.004s]   /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter__arguments__interfaces.json
+[5.004s]   --output-dir
+[5.004s]   /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces
+[5.005s]   --output-file
+[5.006s]   /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/rosidl_adapter/interfaces.idls)
+[5.006s]   returned error code 1:
+[5.007s] 
+[5.007s]   Error processing 'char departurePoint 'A'' of 'interfaces/Serveur':
+[5.008s]   ''departurePoint' is an invalid field name.  It should have the pattern
+[5.008s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[5.009s] 
+[5.009s]   Traceback (most recent call last):
+[5.009s] 
+[5.010s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[5.010s]       return _run_code(code, main_globals, None,
+[5.011s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[5.011s]       exec(code, run_globals)
+[5.011s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[5.012s]       sys.exit(main())
+[5.012s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[5.014s]       abs_idl_file = convert_to_idl(
+[5.016s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[5.017s]       return convert_msg_to_idl(
+[5.018s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[5.018s]       msg = parse_message_string(package_name, input_file.stem, content)
+[5.019s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string
+[5.020s]       fields.append(Field(
+[5.020s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__
+[5.021s]       raise NameError(
+[5.022s] 
+[5.023s]   NameError: 'departurePoint' is an invalid field name.  It should have the
+[5.025s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[5.026s] 
+[5.027s] Call Stack (most recent call first):
+[5.028s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[5.031s]   CMakeLists.txt:27 (rosidl_generate_interfaces)
+[5.033s] 
+[5.035s] [0m
+[5.036s] -- Configuring incomplete, errors occurred!
+[5.036s] See also "/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces/CMakeFiles/CMakeOutput.log".
+[5.042s] gmake: *** [Makefile:2259: cmake_check_build_system] Error 1
+[5.062s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/interfaces -- -j4 -l4

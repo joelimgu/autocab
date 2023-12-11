@@ -1,0 +1,50 @@
+[35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:191:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<char>::erase(int)[m[K’
+  191 |                         [01;31m[KpathToDeparturePoint.erase(0)[m[K ;
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1430:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::const_iterator) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::iterator = std::vector<char>::iterator; std::vector<_Tp, _Alloc>::const_iterator = std::vector<char>::const_iterator][m[K’
+ 1430 |       [01;36m[Kerase[m[K(const_iterator __position)
+      |       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1430:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::vector<char>::const_iterator[m[K’
+ 1430 |       erase([01;36m[Kconst_iterator __position[m[K)
+      |             [01;36m[K~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1457:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::const_iterator, std::vector<_Tp, _Alloc>::const_iterator) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::iterator = std::vector<char>::iterator; std::vector<_Tp, _Alloc>::const_iterator = std::vector<char>::const_iterator][m[K’
+ 1457 |       [01;36m[Kerase[m[K(const_iterator __first, const_iterator __last)
+      |       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1457:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:196:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<char>::erase(int)[m[K’
+  196 |                         [01;31m[KpathToFinalPoint.erase(0)[m[K ;
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1430:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::const_iterator) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::iterator = std::vector<char>::iterator; std::vector<_Tp, _Alloc>::const_iterator = std::vector<char>::const_iterator][m[K’
+ 1430 |       [01;36m[Kerase[m[K(const_iterator __position)
+      |       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1430:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::vector<char>::const_iterator[m[K’
+ 1430 |       erase([01;36m[Kconst_iterator __position[m[K)
+      |             [01;36m[K~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1457:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::erase(std::vector<_Tp, _Alloc>::const_iterator, std::vector<_Tp, _Alloc>::const_iterator) [with _Tp = char; _Alloc = std::allocator<char>; std::vector<_Tp, _Alloc>::iterator = std::vector<char>::iterator; std::vector<_Tp, _Alloc>::const_iterator = std::vector<char>::const_iterator][m[K’
+ 1457 |       [01;36m[Kerase[m[K(const_iterator __first, const_iterator __last)
+      |       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1457:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

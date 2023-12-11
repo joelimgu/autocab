@@ -1,0 +1,27 @@
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:191:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<char>[m[K’ has no member named ‘[01m[Kpop_heap[m[K’
+  191 |                         pathToDeparturePoint.[01;31m[Kpop_heap[m[K ;
+      |                                              [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:196:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<char>[m[K’ has no member named ‘[01m[Kpop_heap[m[K’
+  196 |                         pathToFinalPoint.[01;31m[Kpop_heap[m[K ;
+      |                                          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::serveurDataCallback(const Serveur&)[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:303:89:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Serveur[m[K’ {aka ‘[01m[Kconst struct interfaces::msg::Serveur_<std::allocator<void> >[m[K’} has no member named ‘[01m[KrequestNumber[m[K’; did you mean ‘[01m[Krequest_number[m[K’?
+  303 |         if (departurePointReached && finalPointReached && (requestNumber != serveurData.[01;31m[KrequestNumber[m[K)){
+      |                                                                                         [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                                                         [32m[Krequest_number[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:306:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Serveur[m[K’ {aka ‘[01m[Kconst struct interfaces::msg::Serveur_<std::allocator<void> >[m[K’} has no member named ‘[01m[KdeparturePoint[m[K’; did you mean ‘[01m[Kdeparture_point[m[K’?
+  306 |             departurePoint = serveurData.[01;31m[KdeparturePoint[m[K;
+      |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                          [32m[Kdeparture_point[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:307:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Serveur[m[K’ {aka ‘[01m[Kconst struct interfaces::msg::Serveur_<std::allocator<void> >[m[K’} has no member named ‘[01m[KfinalPoint[m[K’; did you mean ‘[01m[Kfinal_point[m[K’?
+  307 |             finalPoint = serveurData.[01;31m[KfinalPoint[m[K;
+      |                                      [01;31m[K^~~~~~~~~~[m[K
+      |                                      [32m[Kfinal_point[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:308:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Serveur[m[K’ {aka ‘[01m[Kconst struct interfaces::msg::Serveur_<std::allocator<void> >[m[K’} has no member named ‘[01m[KrequestNumber[m[K’; did you mean ‘[01m[Krequest_number[m[K’?
+  308 |             requestNumber = serveurData.[01;31m[KrequestNumber[m[K;
+      |                                         [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                         [32m[Krequest_number[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

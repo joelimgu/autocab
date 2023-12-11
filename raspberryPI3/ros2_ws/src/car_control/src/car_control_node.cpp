@@ -10,6 +10,7 @@
 #include "interfaces/msg/steering_calibration.hpp"
 #include "interfaces/msg/joystick_order.hpp"
 #include "interfaces/msg/gnss.hpp"
+#include "interfaces/msg/serveur.hpp"
 
 #include "std_srvs/srv/empty.hpp"
 
@@ -174,7 +175,7 @@ private:
             //Autonomous Mode
             } else if (mode==1){
                 
-                /*
+                
                 //Ici on met a jour les variables departurePointReached et finalPointReached
                 if (pathToDeparturePoint.empty()){
                     departurePointReached = true;
@@ -183,27 +184,24 @@ private:
                 }
                 //Ici il faut toujours pouvoir garder le controle de la voiture avec la manette. 
                 //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
+                bool arrived = false ;
                 if (!departurePointReached){
-                    straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                    manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-                    steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+                    arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[0]])[0], (coordinates[pathToDeparturePoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    if (arrived == true){
+                        pathToDeparturePoint.erase(pathToDeparturePoint.begin()) ;
+                    }
                 } else if (!finalPointReached){
-                    straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                    manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-                    steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+                    straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[0]])[0], (coordinates[pathToFinalPoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    if (arrived == true){
+                        pathToFinalPoint.erase(pathToFinalPoint.begin()) ;
+                    }
                 } else {
-                    manualPropulsionCmd(0, false, leftRearPwmCmd,rightRearPwmCmd);
-                    steeringCmd(0,currentAngle, steeringPwmCmd);
+                    requestedThrottle = 0;
+                    requestedSteerAngle = 0;
+                    reverse = false ;
                 }
-                */
-
-                straightLine(currentLatitude, currentLongitude, currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-            
-                RCLCPP_INFO(this->get_logger(), "Valeur de requestedThrottle : %f", requestedThrottle);
-                RCLCPP_INFO(this->get_logger(), "Valeur de requestedAngle : %f", requestedSteerAngle);
 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-
                 steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
             }
@@ -300,22 +298,21 @@ private:
     * 
     */
 
-   /*
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        if (departurePointReached && finalPointReached && (requestNumber != serveurData.requestNumber)){
+        if (mode==1 && departurePointReached && finalPointReached && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
-            departurePoint = serveurData.departurePoint;
-            finalPoint = serveurData.finalPoint;
-            requestNumber = serveurData.requestNumber;
+            departurePoint = serveurData.departure_point;
+            finalPoint = serveurData.final_point;
+            requestNumber = serveurData.request_number;
             pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
             pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
             RCLCPP_INFO(this->get_logger(), "Data serveur updated, departurePoint = %c, finalPoint = %c", departurePoint, finalPoint);
         }
         
     }
-    */
+    
 
 
     // ---- Private variables ----

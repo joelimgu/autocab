@@ -8,6 +8,8 @@ msg/MotorsFeedback.idl
 msg/MotorsFeedback.msg
 msg/MotorsOrder.idl
 msg/MotorsOrder.msg
+msg/Serveur.idl
+msg/Serveur.msg
 msg/SteeringCalibration.idl
 msg/SteeringCalibration.msg
 msg/SystemCheck.idl

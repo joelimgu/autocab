@@ -13,13 +13,11 @@ Cette fonction nous sert de test pour déplacer la voiture d'un point A (le poin
 Pour l'instant, ce point B est fixé à la main dans le code 
 */
 
-int straightLine(float aLatitude, float aLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger){
+bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger){
 
+    bool arrived;
     float bVector[2];
     float bVectorOrtho[2];
-
-    float bLatitude = 43.570596;
-    float bLongitude = 1.466500;
 
     //Cette section permet de réduire la vitesse proche du point B
     float distance = sqrt(pow(EARTH_RADIUS*(M_PI/180)*(bLatitude - aLatitude), 2) + pow(EARTH_RADIUS*(M_PI/180)*(bLongitude - aLongitude), 2));
@@ -34,6 +32,7 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
         requestedThrottle = 0;
         reverse = false;
         requestedAngle = 0;
+        arrived = true;
 
     }else{
 
@@ -63,10 +62,11 @@ int straightLine(float aLatitude, float aLongitude, float aVector[2], float& req
         RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f", angle);
 
         reverse = false;
+        arrived = false;
 
     }
 
-    return 0;
+    return arrived;
 
 }
 

@@ -1,0 +1,83 @@
+[0.096s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4
+[0.247s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.088s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[1.279s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.291s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.320s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.372s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.444s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.713s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.723s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.709s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.455s] -- Found interfaces: 0.0.0 (/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)
+[3.528s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.009s] -- Found std_srvs: 4.2.2 (/opt/ros/humble/share/std_srvs/cmake)
+[4.093s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.481s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.481s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include>
+[4.482s] -- Configured cppcheck exclude dirs and/or files: 
+[4.487s] -- Added test 'lint_cmake' to check CMake code style
+[4.499s] -- Added test 'uncrustify' to check C / C++ code style
+[4.499s] -- Configured uncrustify additional arguments: 
+[4.501s] -- Added test 'xmllint' to check XML markup files
+[4.509s] -- Configuring done
+[4.583s] -- Generating done
+[4.594s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control
+[4.728s] [35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[4.859s] [ 20%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[17.330s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:43:[m[K [01;31m[Kerror: [m[K‘[01m[KServeur[m[K’ is not a member of ‘[01m[Kinterfaces::msg[m[K’
+[17.330s]   364 |     rclcpp::Subscription<interfaces::msg::[01;31m[KServeur[m[K>::SharedPtr subscription_serveur_data_;
+[17.330s]       |                                           [01;31m[K^~~~~~~[m[K
+[17.331s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[17.331s]   364 |     rclcpp::Subscription<interfaces::msg::Serveur[01;31m[K>[m[K::SharedPtr subscription_serveur_data_;
+[17.331s]       |                                                  [01;31m[K^[m[K
+[17.332s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[17.332s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[17.333s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[17.333s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:53:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[17.334s]   364 |     rclcpp::Subscription<interfaces::msg::Serveur>::[01;31m[KSharedPtr[m[K subscription_serveur_data_;
+[17.334s]       |                                                     [01;31m[K^~~~~~~~~[m[K
+[17.334s]       |                                                              [32m[K;[m[K
+[17.344s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:364:63:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_serveur_data_[m[K’ does not name a type
+[17.344s]   364 |     rclcpp::Subscription<interfaces::msg::Serveur>::SharedPtr [01;31m[Ksubscription_serveur_data_[m[K;
+[17.345s]       |                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.551s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[17.552s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:79:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_serveur_data_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksubscription_gnss_data_[m[K’?
+[17.553s]    79 |         [01;31m[Ksubscription_serveur_data_[m[K = this->create_subscription<interfaces::msg::Serveur>(
+[17.554s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.554s]       |         [32m[Ksubscription_gnss_data_[m[K
+[17.554s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:79:81:[m[K [01;31m[Kerror: [m[K‘[01m[KServeur[m[K’ is not a member of ‘[01m[Kinterfaces::msg[m[K’
+[17.555s]    79 |         subscription_serveur_data_ = this->create_subscription<interfaces::msg::[01;31m[KServeur[m[K>(
+[17.555s]       |                                                                                 [01;31m[K^~~~~~~[m[K
+[17.556s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:80:53:[m[K [01;31m[Kerror: [m[K‘[01m[KserveurDataCallback[m[K’ is not a member of ‘[01m[Kcar_control[m[K’
+[17.557s]    80 |         "serveur_data", 10, std::bind(&car_control::[01;31m[KserveurDataCallback[m[K, this, _1));
+[17.557s]       |                                                     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[17.636s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::updateCmd()[m[K’:
+[17.636s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:188:119:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kfloat[m[K’ to ‘[01m[Kfloat*[m[K’
+[17.637s]   188 |                     arrived = straightLine(currentLatitude, currentLongitude, [01;31m[K(coordinates[pathToDeparturePoint[0]])[0][m[K, (coordinates[pathToDeparturePoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+[17.637s]       |                                                                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[17.638s]       |                                                                                                                       [01;31m[K|[m[K
+[17.638s]       |                                                                                                                       [01;31m[Kfloat[m[K
+[17.639s] In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19[m[K:
+[17.639s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:29:59:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint straightLine(float, float, float*, float&, bool&, float&, rclcpp::Logger)[m[K’
+[17.640s]    29 | int straightLine(float aLatitude, float aLongitude, [01;36m[Kfloat aVector[2][m[K, float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger);
+[17.640s]       |                                                     [01;36m[K~~~~~~^~~~~~~~~~[m[K
+[17.641s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:190:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<char>[m[K’ has no member named ‘[01m[Kpop_heap[m[K’
+[17.641s]   190 |                         pathToDeparturePoint.[01;31m[Kpop_heap[m[K ;
+[17.642s]       |                                              [01;31m[K^~~~~~~~[m[K
+[17.647s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:193:105:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kfloat[m[K’ to ‘[01m[Kfloat*[m[K’
+[17.648s]   193 |                     straightLine(currentLatitude, currentLongitude, [01;31m[K(coordinates[pathToFinalPoint[0]])[0][m[K, (coordinates[pathToFinalPoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+[17.648s]       |                                                                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[17.649s]       |                                                                                                         [01;31m[K|[m[K
+[17.650s]       |                                                                                                         [01;31m[Kfloat[m[K
+[17.651s] In file included from [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:19[m[K:
+[17.654s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/../include/car_control/fromAtoB.h:29:59:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint straightLine(float, float, float*, float&, bool&, float&, rclcpp::Logger)[m[K’
+[17.655s]    29 | int straightLine(float aLatitude, float aLongitude, [01;36m[Kfloat aVector[2][m[K, float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger);
+[17.655s]       |                                                     [01;36m[K~~~~~~^~~~~~~~~~[m[K
+[17.656s] [01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:195:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<char>[m[K’ has no member named ‘[01m[Kpop_heap[m[K’
+[17.662s]   195 |                         pathToFinalPoint.[01;31m[Kpop_heap[m[K ;
+[17.663s]       |                                          [01;31m[K^~~~~~~~[m[K
+[43.030s] gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+[43.033s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+[43.033s] gmake: *** [Makefile:146: all] Error 2
+[43.042s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control' returned '2': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/car_control -- -j4 -l4

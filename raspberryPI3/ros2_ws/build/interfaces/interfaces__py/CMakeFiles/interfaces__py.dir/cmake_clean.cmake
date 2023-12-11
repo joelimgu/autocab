@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/interfaces/msg/_motors_feedback_s.c"
   "../rosidl_generator_py/interfaces/msg/_motors_order.py"
   "../rosidl_generator_py/interfaces/msg/_motors_order_s.c"
+  "../rosidl_generator_py/interfaces/msg/_serveur.py"
+  "../rosidl_generator_py/interfaces/msg/_serveur_s.c"
   "../rosidl_generator_py/interfaces/msg/_steering_calibration.py"
   "../rosidl_generator_py/interfaces/msg/_steering_calibration_s.c"
   "../rosidl_generator_py/interfaces/msg/_system_check.py"
