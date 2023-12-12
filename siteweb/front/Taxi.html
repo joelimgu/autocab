@@ -49,6 +49,9 @@
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
 
+<!-- Script JS map -->
+<script src="map_define.js"></script> 
+
 
  <!-- Define image size for the website-->
 
@@ -291,19 +294,7 @@ crossorigin=""></script>
      <!--Map Conatiner -->
     <div id="map"></div>
 
-    <script>
-
-        // initialize the map
-        var map = L.map('map').setView([43.5707, 1.466], 17.5);
-      
-        // load a tile layer
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-      
-    </script>
+   
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">  
     <div class="position-relative top-50 start-100 translate-middle">
@@ -345,7 +336,6 @@ crossorigin=""></script>
     </div>
 </footer>
 
-<!--<script>src="map_define.js"</script> -->
 
 
 </body>
