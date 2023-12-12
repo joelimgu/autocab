@@ -41,10 +41,14 @@
 
 <!-- Leaflet CSS/JS-->
 <!-- Leaflet CSS-->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
- 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 <!-- Leaflet JS-->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+
 
  <!-- Define image size for the website-->
 
@@ -239,6 +243,11 @@
         }
 </style>
 
+<style>
+    #map { height: 600px;
+           }
+ </style>
+
 </head>
 
 <body>
@@ -255,46 +264,15 @@
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4">Call a taxi</h1>
-            <p class="lead font-weight-normal">Choose your destination in the map above</p>
+            <p class="lead font-weight-normal">Choose your destination in the map bellow</p>
         </div>
     </div>
 
-     <!--Map Conatiner -->
-    <div id="map"></div>
-    <script>src="map_define.js"</script>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
-                <h2 class="display-5">Less congestion and pollution</h2>
-                <p class="lead-3">Sustainable</p>
-            </div>
-            <div class=" shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 21px 21px;  padding: 20px ">
-                <p class="lead-1">
-                    This project stands out for its combination of cutting-edge technology, connectivity and shared mobility.
-                    The aim of our project is to develop an autonomous electric cab that offers an innovative and sustainable service.
-                    </p>
-            </div>
-        </div>
-        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">Safer street</h2>
-                <p class="lead-4">Autonomous</p>
-            </div>
-            <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <p class="lead-1">
-                    ​​From a forward-looking perspective, the potential benefits of the project will be reduced transport costs, improved 
-                    road safety and reduced dependence on private vehicles. For this to happen, 
-                    the right regulations and infrastructure are needed.
-                    </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="my-3 p-3">
-                <h2 class="display-5">Innovative technology</h2>
+                <h2 class="display-5">How it works ?</h2>
                 <p class="lead-5">Futuristic</p>
             </div>
             <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -307,7 +285,7 @@
         </div>
         <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 py-3">
-                <h2 class="display-5">Dreamy experience</h2>
+                <h2 class="display-5">Choose your destination</h2>
                 <p class="lead-6">Visionary</p>
             </div>
             <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
@@ -319,6 +297,26 @@
             </div>
         </div>
     </div>
+
+     <!--Map Conatiner -->
+    <div id="map"></div>
+
+    <script>
+
+        // initialize the map
+        var map = L.map('map').setView([43.5707, 1.466], 18);
+      
+        // load a tile layer
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+      
+        </script>
+    
+
+<a class="btn btn-outline-secondary" href="Waiting.html">Start</a>
 
     <footer class="container py-5">
         <div class="row">
@@ -365,6 +363,9 @@
             </div>
         </div>
     </footer>
+
+<!--<script>src="map_define.js"</script> -->
+
 
 </body>
 
