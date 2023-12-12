@@ -191,6 +191,10 @@ private:
             //Autonomous Mode
             } else if (mode==1){
                 
+                pathToDeparturePoint = graph.shortest_path('F', 'H');
+                pathToFinalPoint = graph.shortest_path('H','C');
+                RCLCPP_INFO(this->get_logger(), "Premier point pathTodeparturepoint : %c %c %c\n", pathToDeparturePoint[0],pathToDeparturePoint[1],pathToDeparturePoint[2]);
+                RCLCPP_INFO(this->get_logger(), "Premier,deuxieme et troisieme point pathTofinalPoint : %c %c %c %c\n", pathToFinalPoint[0],pathToFinalPoint[1],pathToFinalPoint[2],pathToFinalPoint[3]);
 
                 if (!arrivedAtCurrentPoint){
 
@@ -314,8 +318,6 @@ private:
             currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
             RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
         }
-        
-        RCLCPP_INFO(this->get_logger(), "Data GPS stored, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
     }
 
     /* Update departurePoint and finalPoint from serveur_data [callback function]  :
