@@ -184,14 +184,6 @@ private:
 
                 } else {
 
-                     //Ici on met a jour les variables departurePointReached et finalPointReached
-                    if (!departurePointReached && pathToDeparturePoint.empty()){
-                        departurePointReached = true;
-                        waitingTime(5); //On attend 5 secondes avant de partir
-                    } else if (!finalPointReached && pathToFinalPoint.empty()){
-                        finalPointReached = true;
-                        waitingTime(5); //On attend 5 secondes avant de partir
-                    }
                     //Ici il faut toujours pouvoir garder le controle de la voiture avec la manette. 
                     //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
                     bool arrived = false ;
@@ -199,11 +191,19 @@ private:
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[0]])[0], (coordinates[pathToDeparturePoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
                             pathToDeparturePoint.erase(pathToDeparturePoint.begin()) ;
+                            if (pathToDeparturePoint.empty()){
+                                departurePointReached = true;
+                                waitingTime(5); //On attend 5 secondes avant de partir
+                            }
                         }
                     } else if (!finalPointReached){
                         straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[0]])[0], (coordinates[pathToFinalPoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
                             pathToFinalPoint.erase(pathToFinalPoint.begin()) ;
+                            if (pathToFinalPoint.empty()){
+                                finalPointReached = true;
+                                waitingTime(5); //On attend 5 secondes avant de partir
+                            }
                         }
                     } else {
                         requestedThrottle = 0;
