@@ -44,6 +44,7 @@ public:
         currentPoint = 'A' ;
         departurePointReached = true;
         finalPointReached = true;
+        arrivedAtCurrentPoint = true;
         requestNumber = 0;
         
         (coordinates['A'])[0] = 43.570596;
@@ -119,6 +120,7 @@ private:
                 requestNumber = 0 ;
                 departurePointReached = true ;
                 finalPointReached = true ;
+                arrivedAtCurrentPoint = true ;
             }else if (mode==1){
                 RCLCPP_INFO(this->get_logger(), "Switching to AUTONOMOUS Mode");
             }else if (mode==2){
@@ -175,30 +177,40 @@ private:
             //Autonomous Mode
             } else if (mode==1){
                 
-                
-                //Ici on met a jour les variables departurePointReached et finalPointReached
-                if (pathToDeparturePoint.empty()){
-                    departurePointReached = true;
-                } else if (pathToFinalPoint.empty()){
-                    finalPointReached = true;
-                }
-                //Ici il faut toujours pouvoir garder le controle de la voiture avec la manette. 
-                //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
-                bool arrived = false ;
-                if (!departurePointReached){
-                    arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[0]])[0], (coordinates[pathToDeparturePoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                    if (arrived == true){
-                        pathToDeparturePoint.erase(pathToDeparturePoint.begin()) ;
-                    }
-                } else if (!finalPointReached){
-                    straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[0]])[0], (coordinates[pathToFinalPoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                    if (arrived == true){
-                        pathToFinalPoint.erase(pathToFinalPoint.begin()) ;
-                    }
+
+                if (!arrivedAtCurrentPoint){
+
+                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger())
+
                 } else {
-                    requestedThrottle = 0;
-                    requestedSteerAngle = 0;
-                    reverse = false ;
+
+                     //Ici on met a jour les variables departurePointReached et finalPointReached
+                    if (!departurePointReached && pathToDeparturePoint.empty()){
+                        departurePointReached = true;
+                        waitingTime(5); //On attend 5 secondes avant de partir
+                    } else if (!finalPointReached && pathToFinalPoint.empty()){
+                        finalPointReached = true;
+                        waitingTime(5); //On attend 5 secondes avant de partir
+                    }
+                    //Ici il faut toujours pouvoir garder le controle de la voiture avec la manette. 
+                    //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
+                    bool arrived = false ;
+                    if (!departurePointReached){
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[0]])[0], (coordinates[pathToDeparturePoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        if (arrived == true){
+                            pathToDeparturePoint.erase(pathToDeparturePoint.begin()) ;
+                        }
+                    } else if (!finalPointReached){
+                        straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[0]])[0], (coordinates[pathToFinalPoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        if (arrived == true){
+                            pathToFinalPoint.erase(pathToFinalPoint.begin()) ;
+                        }
+                    } else {
+                        requestedThrottle = 0;
+                        requestedSteerAngle = 0;
+                        reverse = false ;
+                    }
+
                 }
 
                 manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
@@ -303,6 +315,7 @@ private:
         if (mode==1 && departurePointReached && finalPointReached && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
+            arrivedAtCurrentPoint = false;
             departurePoint = serveurData.departure_point;
             finalPoint = serveurData.final_point;
             requestNumber = serveurData.request_number;
@@ -350,7 +363,8 @@ private:
     map<char, float[2]> coordinates;
     vector<char> pathToDeparturePoint;
     vector<char> pathToFinalPoint;    
-    char currentPoint;   //Gérer l'initialisation de currentPoint dans gnssdatacallback
+    char currentPoint;
+    bool arrivedAtCurrentPoint;
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;

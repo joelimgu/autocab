@@ -172,4 +172,21 @@ char detectClosestPoint(float currentLat, float currentLon,std::map<char, float[
     return point;
 }
 
+/*
+bool reachedClosestPoint (float currentLat, float currentLon, char currentPoint, map<char, float[2]> &pointMap)
+{
+    float currentPos[2];
+    currentPos[0] = currentLat;
+    currentPos[1] = currentLon;
+    float distance = sqrt(pow(EARTH_RADIUS*(M_PI/180)*(pointMap[currentPoint][0] - currentPos[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(pointMap[currentPoint][1] - currentPos[1]), 2));
+    if(distance < MIN_DISTANCE_FOR_MAX_THROTTLE)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+*/
 
