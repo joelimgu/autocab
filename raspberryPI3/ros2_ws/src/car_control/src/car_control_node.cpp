@@ -47,14 +47,28 @@ public:
         arrivedAtCurrentPoint = true;
         requestNumber = 0;
         
-        (coordinates['A'])[0] = 43.570596;
-        (coordinates['A'])[1] = 1.466500;
-        (coordinates['B'])[0] = 43.570596;
-        (coordinates['B'])[1] = 1.466501;
-        (coordinates['C'])[0] = 43.570596;
-        (coordinates['C'])[1] = 1.466502;
-        (coordinates['D'])[0] = 43.570596;
-        (coordinates['D'])[1] = 1.466503;
+        (coordinates['A'])[0] = 43.570593;
+        (coordinates['A'])[1] = 1.466513;
+        (coordinates['B'])[0] = 43.570853;
+        (coordinates['B'])[1] = 1.467021;
+        (coordinates['C'])[0] = 43.571061;
+        (coordinates['C'])[1] = 1.466837;
+        (coordinates['D'])[0] = 43.570342;
+        (coordinates['D'])[1] = 1.466029;
+        (coordinates['E'])[0] = 43.570567;
+        (coordinates['E'])[1] = 1.465800;
+        (coordinates['F'])[0] = 43.570671;
+        (coordinates['F'])[1] = 1.467218;
+        (coordinates['G'])[0] = 43.570706;
+        (coordinates['G'])[1] = 1.465661;
+        (coordinates['H'])[0] = 43.570942;
+        (coordinates['H'])[1] = 1.465445;
+        (coordinates['I'])[0] = 43.571185;
+        (coordinates['I'])[1] = 1.465951;
+        (coordinates['J'])[0] = 43.571440;
+        (coordinates['J'])[1] = 1.466431;
+        (coordinates['K'])[0] = 43.571233;
+        (coordinates['K'])[1] = 1.466667;
         
 
         graph.createGraph(coordinates);
@@ -180,7 +194,7 @@ private:
 
                 if (!arrivedAtCurrentPoint){
 
-                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger())
+                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
 
                 } else {
 
@@ -193,7 +207,7 @@ private:
                             pathToDeparturePoint.erase(pathToDeparturePoint.begin()) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
-                                waitingTime(5); //On attend 5 secondes avant de partir
+                                sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else if (!finalPointReached){
@@ -202,7 +216,7 @@ private:
                             pathToFinalPoint.erase(pathToFinalPoint.begin()) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
-                                waitingTime(5); //On attend 5 secondes avant de partir
+                                sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else {

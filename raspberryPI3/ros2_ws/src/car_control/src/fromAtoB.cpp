@@ -140,10 +140,17 @@ vector<char> Graph::shortest_path(char start, char finish)
 void Graph::createGraph(std::map<char, float[2]> coordinates)
 {
     /* Changer cette partie , on ne peut pas créer des maps avec {}*/
-    add_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'C', distance(coordinates['A'], coordinates['C'])}, {'D', distance(coordinates['A'], coordinates['D'])}});
-    add_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'D', distance(coordinates['B'], coordinates['D'])}});
-    add_vertex('C', {{'A', distance(coordinates['C'], coordinates['A'])}, {'B', distance(coordinates['C'], coordinates['B'])}, {'D', distance(coordinates['C'], coordinates['D'])}});
-    add_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'B', distance(coordinates['D'], coordinates['B'])}, {'C', distance(coordinates['D'], coordinates['C'])}});
+    add_vertex('A', {{'B', distance(coordinates['A'], coordinates['B'])}, {'D', distance(coordinates['A'], coordinates['D'])}});
+    add_vertex('B', {{'A', distance(coordinates['B'], coordinates['A'])}, {'C', distance(coordinates['B'], coordinates['C'])}, {'F', distance(coordinates['B'], coordinates['F'])}});
+    add_vertex('C', {{'B', distance(coordinates['C'], coordinates['B'])}, {'K', distance(coordinates['C'], coordinates['K'])}});
+    add_vertex('D', {{'A', distance(coordinates['D'], coordinates['A'])}, {'E', distance(coordinates['D'], coordinates['E'])}});
+    add_vertex('E', {{'D', distance(coordinates['E'], coordinates['D'])}, {'G', distance(coordinates['E'], coordinates['G'])}});
+    add_vertex('F', {{'B', distance(coordinates['F'], coordinates['B'])}});
+    add_vertex('G', {{'E', distance(coordinates['G'], coordinates['E'])}, {'H', distance(coordinates['G'], coordinates['H'])}});
+    add_vertex('H', {{'G', distance(coordinates['H'], coordinates['G'])}, {'I', distance(coordinates['H'], coordinates['I'])}});
+    add_vertex('I', {{'H', distance(coordinates['I'], coordinates['H'])}, {'J', distance(coordinates['I'], coordinates['J'])}});
+    add_vertex('J', {{'I', distance(coordinates['J'], coordinates['I'])}, {'K', distance(coordinates['J'], coordinates['K'])}});
+    add_vertex('K', {{'J', distance(coordinates['K'], coordinates['J'])}, {'C', distance(coordinates['K'], coordinates['C'])}});
 }
 
 float distance(float a[2], float b[2])
