@@ -210,7 +210,7 @@ private:
                     if (!departurePointReached){
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
-                            pathToDeparturePoint.erase(pathToDeparturePoint.last()) ;
+                            pathToDeparturePoint.erase(pathToDeparturePoint.end()) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
                                 sleep(5); //On attend 5 secondes avant de partir
@@ -219,7 +219,7 @@ private:
                     } else if (!finalPointReached){
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
-                            pathToFinalPoint.erase(pathToFinalPoint.last()) ;
+                            pathToFinalPoint.erase(pathToFinalPoint.end()) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
                                 sleep(5); //On attend 5 secondes avant de partir
