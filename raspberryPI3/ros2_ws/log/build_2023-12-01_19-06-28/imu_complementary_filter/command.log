@@ -1,2 +1,0 @@
-Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter -- -j4 -l4
-Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_complementary_filter -- -j4 -l4

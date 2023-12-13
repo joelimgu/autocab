@@ -1,4 +1,0 @@
-gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:117: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o] Interrupt
-gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Interrupt
-gmake: *** [Makefile:146: all] Interrupt
