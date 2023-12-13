@@ -16,12 +16,12 @@
 
 #include "../include/car_control/steeringCmd.h"
 #include "../include/car_control/propulsionCmd.h"
+#include "../include/car_control/corrector.h"
 #include "../include/car_control/car_control_node.h"
 #include "../include/car_control/fromAtoB.h"
 
 using namespace std;
 using placeholders::_1;
-
 
 class car_control : public rclcpp::Node {
 
@@ -157,6 +157,8 @@ private:
     */
     void motorsFeedbackCallback(const interfaces::msg::MotorsFeedback & motorsFeedback){
         currentAngle = motorsFeedback.steering_angle;
+        leftRearRPM = motorsFeedback.left_rear_speed;
+        rightRearRPM = motorsFeedback.right_rear_speed;
     }
 
 
@@ -172,21 +174,20 @@ private:
 
         auto motorsOrder = interfaces::msg::MotorsOrder();
 
-        if (!start){    //Car stopped
+        if (!start)
+        {    //Car stopped
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = STOP;
             steeringPwmCmd = STOP;
 
 
-        }else{ //Car started
+        }
+        else
+        { //Car started
 
             //Manual Mode
-            if (mode==0){
-                
-                manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-
-                steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
-
+            if (mode==0)
+            {
 
             //Autonomous Mode
             } else if (mode==1){
@@ -231,17 +232,24 @@ private:
                     }
 
                 }
-
-                manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-                steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
-
             }
         }
 
+        /* Left wheel error and PWM */
+        correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
 
+        /* Right wheel error and PWM */
+        correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
+
+        manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+        steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+
+        
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
+        steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+        //Send order to motors
         motorsOrder.steering_pwm = steeringPwmCmd;
 
 
@@ -281,8 +289,8 @@ private:
     *
     * This function is called when a message is published on the "/steering_calibration" topic
     */
-    void steeringCalibrationCallback (const interfaces::msg::SteeringCalibration & calibrationMsg){
-
+    void steeringCalibrationCallback (const interfaces::msg::SteeringCalibration & calibrationMsg)
+    {
         if (calibrationMsg.in_progress == true && calibrationMsg.user_need == false){
         RCLCPP_INFO(this->get_logger(), "Steering Calibration in progress, please wait ....");
 
@@ -355,14 +363,24 @@ private:
     //Motors feedback variables
     float currentAngle;
 
+    /* Automatic control mode variables */
+    float right_past_pwm_error = 0;
+    float right_current_pwm_error = 0;
+    float left_past_pwm_error = 0;
+    float left_current_pwm_error = 0;
+
     //Manual Mode variables (with joystick control)
     bool reverse;
     float requestedThrottle;
     float requestedSteerAngle;
 
     //Control variables
-    uint8_t leftRearPwmCmd;
-    uint8_t rightRearPwmCmd;
+    float leftRearPwmCmd;
+    float rightRearPwmCmd;
+    float smallRightRearPwmCmd = 0.0;
+    float smallLeftRearPwmCmd = 0.0;
+    float leftRearRPM;
+    float rightRearRPM;
     uint8_t steeringPwmCmd;
 
     //gnss data variables
