@@ -168,11 +168,14 @@ private:
         if (ObstacleCmdFront(front_left, front_center, front_right) == STOP && reverse == false){
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = leftRearPwmCmd;
+            RCLCPP_INFO(this->get_logger(), "obstacle is in front of the car");
         }
 
         if (ObstacleCmdRear(rear_left, rear_center, rear_right) == STOP && reverse == true){
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = leftRearPwmCmd;
+            RCLCPP_INFO(this->get_logger(), "obstacle is in rear of the car");
+
         }
 
 
