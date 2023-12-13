@@ -199,8 +199,6 @@ private:
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = STOP;
             steeringPwmCmd = STOP;
-
-
         }
         else
         { //Car started
@@ -215,8 +213,8 @@ private:
                 //tests pour prouver que le calcul de plus court chemin fonctionne
                 pathToDeparturePoint = graph.shortest_path('F', 'H');
                 pathToFinalPoint = graph.shortest_path('H','C');
-                RCLCPP_INFO(this->get_logger(), "Premier point pathTodeparturepoint : %c %c %c\n", pathToDeparturePoint[0],pathToDeparturePoint[1],pathToDeparturePoint[2]);
-                RCLCPP_INFO(this->get_logger(), "Premier,deuxieme et troisieme point pathTofinalPoint : %c %c %c %c\n", pathToFinalPoint[0],pathToFinalPoint[1],pathToFinalPoint[2],pathToFinalPoint[3]);
+                // RCLCPP_INFO(this->get_logger(), "Premier point pathTodeparturepoint : %c %c %c\n", pathToDeparturePoint[0],pathToDeparturePoint[1],pathToDeparturePoint[2]);
+                // RCLCPP_INFO(this->get_logger(), "Premier,deuxieme et troisieme point pathTofinalPoint : %c %c %c %c\n", pathToFinalPoint[0],pathToFinalPoint[1],pathToFinalPoint[2],pathToFinalPoint[3]);
 
                 if (!arrivedAtCurrentPoint){
 
@@ -254,6 +252,14 @@ private:
                 }
             }
 
+            /* Left wheel error and PWM */
+            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
+            /* Right wheel error and PWM */
+            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
+
+            manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+            steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+
             //Obstacle Detection in all modes
             if (ObstacleCmdFront(front_left, front_center, front_right) == STOP && reverse == false){
                 leftRearPwmCmd = STOP;
@@ -264,14 +270,6 @@ private:
                 leftRearPwmCmd = STOP;
                 rightRearPwmCmd = leftRearPwmCmd;
             }
-
-            /* Left wheel error and PWM */
-            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
-            /* Right wheel error and PWM */
-            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
-
-            manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-            steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
         }
 
         
