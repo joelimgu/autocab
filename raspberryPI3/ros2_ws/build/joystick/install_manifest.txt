@@ -16,6 +16,7 @@
 /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/package.xml
 /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images/mac_settings.png
 /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_ros2.py
+/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/inputs.py
 /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/package_run_dependencies/joystick
 /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/parent_prefix_path/joystick
 /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/ament_prefix_path.sh

@@ -1,0 +1,72 @@
+[0.201s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin -- -j4 -l4
+[0.916s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.021s] -- Found message_filters: 4.3.1 (/opt/ros/humble/share/message_filters/cmake)
+[5.130s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[5.170s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[5.305s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[5.485s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.743s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.828s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.857s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[10.348s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[13.246s] -- Found rviz_common: 11.2.2 (/opt/ros/humble/share/rviz_common/cmake)
+[13.345s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[13.367s] -- Found OGRE
+[13.369s] --   static     : OFF
+[13.371s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[13.373s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[13.374s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[13.375s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[13.377s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[13.378s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[13.379s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[13.381s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[13.395s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[13.397s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[13.398s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[13.400s] -- Could not find freeimage library
+[13.937s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_RELEASE: _render_system_gl_static_library_abs-NOTFOUND
+[13.940s] -- rviz_ogre_vendor::RenderSystem_GL for IMPORTED_LOCATION_DEBUG: _render_system_gl_static_library_abs-NOTFOUND
+[14.652s] -- library: /usr/lib/aarch64-linux-gnu/libcurl.so
+[23.929s] -- Configuring done
+[24.570s] -- Generating done
+[24.611s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin
+[25.423s] [ 11%] [34m[1mAutomatic MOC for target rviz_imu_plugin[0m
+[25.806s] [ 11%] Built target rviz_imu_plugin_autogen
+[26.105s] [ 22%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/rviz_imu_plugin_autogen/mocs_compilation.cpp.o[0m
+[228.875s] [ 33%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_axes_visual.cpp.o[0m
+[302.788s] [ 44%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_acc_visual.cpp.o[0m
+[341.010s] [ 55%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/mag_display.cpp.o[0m
+[495.800s] [ 66%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/mag_visual.cpp.o[0m
+[534.107s] [ 77%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_orientation_visual.cpp.o[0m
+[604.485s] [ 88%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_display.cpp.o[0m
+[747.748s] [100%] [32m[1mLinking CXX shared library librviz_imu_plugin.so[0m
+[769.899s] [100%] Built target rviz_imu_plugin
+[770.044s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin -- -j4 -l4
+[770.808s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin
+[770.899s] -- Install configuration: ""
+[770.901s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/plugin_description.xml
+[770.906s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/environment/library_path.sh
+[770.912s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/environment/library_path.dsv
+[770.920s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib/librviz_imu_plugin.so
+[771.163s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib/librviz_imu_plugin.so" to ""
+[771.167s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/ament_index/resource_index/package_run_dependencies/rviz_imu_plugin
+[771.168s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/ament_index/resource_index/parent_prefix_path/rviz_imu_plugin
+[771.169s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/environment/ament_prefix_path.sh
+[771.174s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/environment/ament_prefix_path.dsv
+[771.175s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/environment/path.sh
+[771.180s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/environment/path.dsv
+[771.184s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/local_setup.bash
+[771.186s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/local_setup.sh
+[771.188s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/local_setup.zsh
+[771.189s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/local_setup.dsv
+[771.190s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.dsv
+[771.195s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/ament_index/resource_index/packages/rviz_imu_plugin
+[771.197s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/ament_index/resource_index/rviz_common__pluginlib__plugin/rviz_imu_plugin
+[771.200s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/cmake/ament_cmake_export_include_directories-extras.cmake
+[771.202s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/cmake/ament_cmake_export_libraries-extras.cmake
+[771.204s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/cmake/ament_cmake_export_dependencies-extras.cmake
+[771.205s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/cmake/rviz_imu_pluginConfig.cmake
+[771.206s] -- Up-to-date: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/cmake/rviz_imu_pluginConfig-version.cmake
+[771.207s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/share/rviz_imu_plugin/package.xml
+[771.235s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/rviz_imu_plugin

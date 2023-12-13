@@ -1,0 +1,91 @@
+[0.252s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick -- -j4 -l4
+[0.659s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.068s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[3.671s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.709s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.798s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.965s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.206s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.284s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[5.310s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[8.287s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[10.520s] -- Found rclpy: 3.3.4 (/opt/ros/humble/share/rclpy/cmake)
+[10.527s] -- Found interfaces: 0.0.0 (/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake)
+[10.871s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[13.587s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[14.707s] -- Added test 'copyright' to check source files copyright and LICENSE
+[14.757s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[14.763s] -- Configured cppcheck include dirs: /home/pi/autocab/raspberryPI3/ros2_ws/src/joystick/include
+[14.767s] -- Configured cppcheck exclude dirs and/or files: 
+[14.801s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[14.802s] -- Configured cpplint exclude dirs and/or files: 
+[14.809s] -- Added test 'flake8' to check Python code syntax and style conventions
+[14.822s] -- Added test 'lint_cmake' to check CMake code style
+[14.830s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[14.866s] -- Added test 'uncrustify' to check C / C++ code style
+[14.869s] -- Configured uncrustify additional arguments: 
+[14.875s] -- Added test 'xmllint' to check XML markup files
+[14.889s] -- Configuring done
+[15.107s] -- Generating done
+[15.140s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick
+[15.688s] [ 50%] [32mBuilding CXX object CMakeFiles/joystick_to_cmd.dir/src/joystick_to_cmd_node.cpp.o[0m
+[133.779s] [100%] [32m[1mLinking CXX executable joystick_to_cmd[0m
+[139.501s] [100%] Built target joystick_to_cmd
+[140.208s] [100%] Built target ament_cmake_python_copy_joystick
+[145.026s] running egg_info
+[145.039s] writing joystick.egg-info/PKG-INFO
+[145.053s] writing dependency_links to joystick.egg-info/dependency_links.txt
+[145.061s] writing top-level names to joystick.egg-info/top_level.txt
+[145.097s] reading manifest file 'joystick.egg-info/SOURCES.txt'
+[145.110s] writing manifest file 'joystick.egg-info/SOURCES.txt'
+[145.512s] [100%] Built target ament_cmake_python_build_joystick_egg
+[145.655s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick -- -j4 -l4
+[146.124s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick
+[146.254s] -- Install configuration: ""
+[146.260s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_to_cmd
+[146.357s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_to_cmd" to ""
+[146.362s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/pythonpath.sh
+[146.368s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/pythonpath.dsv
+[146.374s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info
+[146.380s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/dependency_links.txt
+[146.386s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/PKG-INFO
+[146.392s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/top_level.txt
+[146.402s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick-0.0.0-py3.10.egg-info/SOURCES.txt
+[146.408s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick
+[146.414s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/LICENSE
+[146.419s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/resource
+[146.424s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/resource/joystick_ros2
+[146.430s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/joystick_ros2.py
+[146.436s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/CONTRIBUTING.md
+[146.446s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/input_example.py
+[146.452s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/__init__.py
+[146.458s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/inputs.py
+[146.466s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/README.md
+[146.472s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/package.xml
+[146.478s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images
+[146.482s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images/mac_settings.png
+[147.363s] Listing '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick'...
+[147.364s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/__init__.py'...
+[147.366s] Listing '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/images'...
+[147.368s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/input_example.py'...
+[147.370s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/inputs.py'...
+[147.372s] Compiling '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/joystick_ros2.py'...
+[147.374s] Listing '/home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/local/lib/python3.10/dist-packages/joystick/resource'...
+[147.426s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/joystick_ros2.py
+[147.430s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/lib/joystick/inputs.py
+[147.438s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/package_run_dependencies/joystick
+[147.444s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/parent_prefix_path/joystick
+[147.451s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/ament_prefix_path.sh
+[147.457s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/ament_prefix_path.dsv
+[147.464s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/path.sh
+[147.474s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/environment/path.dsv
+[147.480s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.bash
+[147.486s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.sh
+[147.492s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.zsh
+[147.499s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/local_setup.dsv
+[147.505s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.dsv
+[147.512s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/ament_index/resource_index/packages/joystick
+[147.519s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/cmake/joystickConfig.cmake
+[147.525s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/cmake/joystickConfig-version.cmake
+[147.532s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/joystick/share/joystick/package.xml
+[147.561s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/joystick' returned '0': AMENT_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/joystick

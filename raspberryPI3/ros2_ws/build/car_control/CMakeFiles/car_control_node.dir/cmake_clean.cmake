@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/car_control_node.dir/src/corrector.cpp.o.d"
   "CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o"
   "CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o.d"
+  "CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o"
+  "CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o.d"
   "CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o"
   "CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o.d"
   "CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o"

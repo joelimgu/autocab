@@ -11,6 +11,7 @@
 #include "interfaces/msg/joystick_order.hpp"
 #include "interfaces/msg/gnss.hpp"
 #include "interfaces/msg/serveur.hpp"
+#include "interfaces/msg/ultrasonic.hpp"
 
 #include "std_srvs/srv/empty.hpp"
 
@@ -19,6 +20,7 @@
 #include "../include/car_control/corrector.h"
 #include "../include/car_control/car_control_node.h"
 #include "../include/car_control/fromAtoB.h"
+#include "../include/car_control/obstacle_detection.h"
 
 using namespace std;
 using placeholders::_1;
@@ -94,6 +96,9 @@ public:
 
         subscription_serveur_data_ = this->create_subscription<interfaces::msg::Serveur>(
         "serveur_data", 10, std::bind(&car_control::serveurDataCallback, this, _1));
+        
+        subscription_us_data = this->create_subscription<interfaces::msg::Ultrasonic>(
+        "us_data", 10, std::bind(&car_control::usDataCallback, this, _1));
 
 
         
@@ -104,6 +109,21 @@ public:
 
         
         RCLCPP_INFO(this->get_logger(), "car_control_node READY");
+    }
+
+    /* Update data from us_data [callback function]  :
+    *
+    * This function is called when a message is published on the "/us_data" topic
+    * 
+    */
+    void usDataCallback(const interfaces::msg::Ultrasonic & usData){
+        front_left = usData.front_left;
+        front_center = usData.front_center;
+        front_right = usData.front_right;
+
+        rear_left = usData.rear_left;
+        rear_center = usData.rear_center;
+        rear_right = usData.rear_right;
     }
 
     
@@ -233,23 +253,31 @@ private:
 
                 }
             }
+
+            //Obstacle Detection in all modes
+            if (ObstacleCmdFront(front_left, front_center, front_right) == STOP && reverse == false){
+                leftRearPwmCmd = STOP;
+                rightRearPwmCmd = leftRearPwmCmd;
+            }
+
+            if (ObstacleCmdRear(rear_left, rear_center, rear_right) == STOP && reverse == true){
+                leftRearPwmCmd = STOP;
+                rightRearPwmCmd = leftRearPwmCmd;
+            }
+
+            /* Left wheel error and PWM */
+            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
+            /* Right wheel error and PWM */
+            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
+
+            manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+            steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
         }
-
-        /* Left wheel error and PWM */
-        correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
-
-        /* Right wheel error and PWM */
-        correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
-
-        manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
-        steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
         
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
-        steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
-        //Send order to motors
         motorsOrder.steering_pwm = steeringPwmCmd;
 
 
@@ -400,6 +428,15 @@ private:
     vector<char> pathToFinalPoint;    
     char currentPoint;
     bool arrivedAtCurrentPoint;
+    
+    //us data variables
+    int16_t front_left;
+    int16_t front_center;
+    int16_t front_right;
+
+    int16_t rear_left;
+    int16_t rear_center;
+    int16_t rear_right;
 
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
@@ -411,6 +448,7 @@ private:
     rclcpp::Subscription<interfaces::msg::SteeringCalibration>::SharedPtr subscription_steering_calibration_;
     rclcpp::Subscription<interfaces::msg::Gnss>::SharedPtr subscription_gnss_data_;
     rclcpp::Subscription<interfaces::msg::Serveur>::SharedPtr subscription_serveur_data_;
+    rclcpp::Subscription<interfaces::msg::Ultrasonic>::SharedPtr subscription_us_data;
 
     //Timer
     rclcpp::TimerBase::SharedPtr timer_;

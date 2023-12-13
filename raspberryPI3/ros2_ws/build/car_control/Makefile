@@ -282,6 +282,30 @@ src/fromAtoB.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.s
 .PHONY : src/fromAtoB.cpp.s
 
+src/obstacle_detection.o: src/obstacle_detection.cpp.o
+.PHONY : src/obstacle_detection.o
+
+# target to build an object file
+src/obstacle_detection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o
+.PHONY : src/obstacle_detection.cpp.o
+
+src/obstacle_detection.i: src/obstacle_detection.cpp.i
+.PHONY : src/obstacle_detection.i
+
+# target to preprocess a source file
+src/obstacle_detection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.i
+.PHONY : src/obstacle_detection.cpp.i
+
+src/obstacle_detection.s: src/obstacle_detection.cpp.s
+.PHONY : src/obstacle_detection.s
+
+# target to generate assembly for a file
+src/obstacle_detection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_control_node.dir/build.make CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.s
+.PHONY : src/obstacle_detection.cpp.s
+
 src/propulsionCmd.o: src/propulsionCmd.cpp.o
 .PHONY : src/propulsionCmd.o
 
@@ -355,6 +379,9 @@ help:
 	@echo "... src/fromAtoB.o"
 	@echo "... src/fromAtoB.i"
 	@echo "... src/fromAtoB.s"
+	@echo "... src/obstacle_detection.o"
+	@echo "... src/obstacle_detection.i"
+	@echo "... src/obstacle_detection.s"
 	@echo "... src/propulsionCmd.o"
 	@echo "... src/propulsionCmd.i"
 	@echo "... src/propulsionCmd.s"
