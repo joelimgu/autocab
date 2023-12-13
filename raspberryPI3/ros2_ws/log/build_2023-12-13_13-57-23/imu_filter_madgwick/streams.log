@@ -1,0 +1,103 @@
+[0.377s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick
+[1.944s] -- The C compiler identification is GNU 11.4.0
+[3.324s] -- The CXX compiler identification is GNU 11.4.0
+[3.442s] -- Detecting C compiler ABI info
+[4.418s] -- Detecting C compiler ABI info - done
+[4.507s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.509s] -- Detecting C compile features
+[4.525s] -- Detecting C compile features - done
+[4.572s] -- Detecting CXX compiler ABI info
+[5.714s] -- Detecting CXX compiler ABI info - done
+[5.780s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.782s] -- Detecting CXX compile features
+[5.785s] -- Detecting CXX compile features - done
+[5.890s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[8.748s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[11.419s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[12.531s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[12.917s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[13.585s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[14.555s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[15.532s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[16.909s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[16.997s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[20.272s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[20.931s] -- Found FastRTPS: /opt/ros/humble/include  
+[21.744s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[23.425s] -- Found rclcpp_components: 16.0.1 (/opt/ros/humble/share/rclcpp_components/cmake)
+[24.647s] -- Found geometry_msgs: 4.2.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[25.379s] -- Found tf2_geometry_msgs: 0.25.0 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[28.955s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[29.578s] -- Found ament_cmake_gtest: 1.3.2 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[29.664s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[29.706s] -- Looking for pthread.h
+[30.801s] -- Looking for pthread.h - found
+[30.809s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[32.035s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[32.054s] -- Found Threads: TRUE  
+[33.443s] -- Configuring done
+[34.437s] -- Generating done
+[34.585s] -- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick
+[34.720s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pi/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick -DCMAKE_INSTALL_PREFIX=/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick
+[34.725s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j4 -l4
+[36.637s] [  7%] [32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/imu_filter.cpp.o[0m
+[44.393s] [ 14%] [32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/imu_filter_ros.cpp.o[0m
+[276.048s] [ 21%] [32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/stateless_orientation.cpp.o[0m
+[310.004s] [ 28%] [32m[1mLinking CXX shared library libimu_filter_madgwick.so[0m
+[319.691s] [ 28%] Built target imu_filter_madgwick
+[319.812s] [ 35%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[350.458s] [ 42%] [32m[1mLinking CXX static library libgtest.a[0m
+[352.250s] [ 42%] Built target gtest
+[352.384s] [ 50%] [32mBuilding CXX object CMakeFiles/imu_filter_madgwick_node.dir/src/imu_filter_node.cpp.o[0m
+[380.741s] [ 57%] [32m[1mLinking CXX executable imu_filter_madgwick_node[0m
+[385.880s] [ 57%] Built target imu_filter_madgwick_node
+[386.044s] [ 64%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[392.433s] [ 71%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[392.690s] [ 71%] Built target gtest_main
+[392.880s] [ 78%] [32mBuilding CXX object test/CMakeFiles/madgwick_test.dir/madgwick_test.cpp.o[0m
+[408.977s] [ 85%] [32m[1mLinking CXX executable madgwick_test[0m
+[416.628s] [ 85%] Built target madgwick_test
+[416.973s] [ 92%] [32mBuilding CXX object test/CMakeFiles/stateless_orientation_test.dir/stateless_orientation_test.cpp.o[0m
+[437.581s] [100%] [32m[1mLinking CXX executable stateless_orientation_test[0m
+[444.433s] [100%] Built target stateless_orientation_test
+[444.547s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick -- -j4 -l4
+[445.560s] Invoking command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick
+[445.663s] -- Install configuration: ""
+[445.668s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so
+[446.110s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so" to ""
+[446.114s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include
+[446.118s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick
+[446.123s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h
+[446.131s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/stateless_orientation.h
+[446.138s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/base_node.hpp
+[446.142s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_ros.h
+[446.147s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/visibility_control.h
+[446.152s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/world_frame.h
+[446.161s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/imu_filter_madgwick/imu_filter_madgwick_node
+[446.175s] -- Set runtime path of "/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib/imu_filter_madgwick/imu_filter_madgwick_node" to ""
+[446.181s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch
+[446.184s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter_component.launch.py
+[446.190s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter.launch.py
+[446.195s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/config
+[446.197s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/config/imu_filter.yaml
+[446.205s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.sh
+[446.209s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.dsv
+[446.215s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/package_run_dependencies/imu_filter_madgwick
+[446.228s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/parent_prefix_path/imu_filter_madgwick
+[446.245s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.sh
+[446.246s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.dsv
+[446.247s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.sh
+[446.249s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.dsv
+[446.250s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.bash
+[446.252s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.sh
+[446.254s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.zsh
+[446.265s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.dsv
+[446.267s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.dsv
+[446.277s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/packages/imu_filter_madgwick
+[446.295s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/ament_index/resource_index/rclcpp_components/imu_filter_madgwick
+[446.316s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_include_directories-extras.cmake
+[446.320s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_libraries-extras.cmake
+[446.325s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig.cmake
+[446.329s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig-version.cmake
+[446.332s] -- Installing: /home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.xml
+[446.361s] Invoked command in '/home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pi/autocab/raspberryPI3/ros2_ws/build/imu_filter_madgwick
