@@ -1,9 +1,0 @@
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/uninstall.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/geicar_start_uninstall.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/test.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/edit_cache.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/rebuild_cache.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/list_install_components.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/install.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/install/local.dir
-/home/pi/autocab/raspberryPI3/ros2_ws/build/geicar_start/CMakeFiles/install/strip.dir
