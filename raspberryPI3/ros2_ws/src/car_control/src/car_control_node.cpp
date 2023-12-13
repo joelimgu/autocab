@@ -206,18 +206,18 @@ private:
                     //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
                     bool arrived = false ;
                     if (!departurePointReached){
-                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[0]])[0], (coordinates[pathToDeparturePoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
-                            pathToDeparturePoint.erase(pathToDeparturePoint.begin()) ;
+                            pathToDeparturePoint.erase(pathToDeparturePoint.last()) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
                                 sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else if (!finalPointReached){
-                        straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[0]])[0], (coordinates[pathToFinalPoint[0]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
-                            pathToFinalPoint.erase(pathToFinalPoint.begin()) ;
+                            pathToFinalPoint.erase(pathToFinalPoint.last()) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
                                 sleep(5); //On attend 5 secondes avant de partir
