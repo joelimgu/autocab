@@ -191,6 +191,7 @@ private:
             //Autonomous Mode
             } else if (mode==1){
                 
+                //tests pour prouver que le calcul de plus court chemin fonctionne
                 pathToDeparturePoint = graph.shortest_path('F', 'H');
                 pathToFinalPoint = graph.shortest_path('H','C');
                 RCLCPP_INFO(this->get_logger(), "Premier point pathTodeparturepoint : %c %c %c\n", pathToDeparturePoint[0],pathToDeparturePoint[1],pathToDeparturePoint[2]);
