@@ -6,7 +6,7 @@ import websockets
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 
-def start_status_callback(msg):
+def start_status_callback(node, msg):  # Ajouter 'node' comme argument
     global start_status, prev_start_status
     start_status = msg.data
     print(f"Received start status: {start_status}")
@@ -14,9 +14,9 @@ def start_status_callback(msg):
     # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        node.create_task(send_message())  # Utiliser la boucle d'événements de ROS 2
+        node.create_task(send_message(node))  # Passer 'node' comme argument à send_message
 
-async def send_message():
+async def send_message(node):  # Ajouter 'node' comme argument
     global start_status
     uri = "ws://127.0.0.1:5501"
     async with websockets.connect(uri) as websocket:
@@ -37,7 +37,7 @@ def main():
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
-    subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
+    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: start_status_callback(node, msg), 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
     rclpy.spin(node)
@@ -48,6 +48,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
