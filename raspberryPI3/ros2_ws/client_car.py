@@ -39,8 +39,8 @@ async def main():
         websocket = await websockets.connect(uri)
 
         # Attendez que le nœud ROS publie au moins un message
-        while not start_status:
-            await asyncio.sleep(0.1)
+        #while not start_status:
+            #await asyncio.sleep(0.1)
 
         while rclpy.ok():
             try:
