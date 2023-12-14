@@ -2,6 +2,56 @@ import rclpy
 from std_msgs.msg import Bool
 import asyncio
 import websockets
+
+async def start_status_callback(msg):
+    global start_status
+    start_status = msg.data
+    print(f"Received start status: {start_status}")
+
+async def ros2_websocket_client():
+    global start_status
+
+    # Initialiser le nœud ROS 2
+    rclpy.init()
+    node = rclpy.create_node('ros2_websocket_client')
+
+    # Créer un objet Subscriber pour le topic "start_status" avec le type de message Bool
+    subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
+
+    # Adresse du serveur WebSocket
+    uri = "ws://127.0.0.1:5501"
+
+    try:
+        # Se connecter au serveur WebSocket
+        async with websockets.connect(uri) as websocket:
+            print(f"Connected to WebSocket server at {uri}")
+
+            while rclpy.ok():
+                # Envoyer la variable start_status au serveur WebSocket
+                await websocket.send(str(start_status))
+                print(f"Sent message to WebSocket server: {start_status}")
+
+                # Attendre un certain temps avant d'envoyer la prochaine mise à jour
+                await asyncio.sleep(1)
+    except websockets.exceptions.ConnectionClosedError as e:
+        print(f"Connection closed unexpectedly. Error: {e}")
+    except KeyboardInterrupt:
+        pass
+    finally:
+        # Arrêter correctement le nœud ROS 2
+        node.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    asyncio.run(ros2_websocket_client())
+
+
+
+'''
+import rclpy
+from std_msgs.msg import Bool
+import asyncio
+import websockets
 import threading
 
 start_status = False  # Variable partagée
@@ -63,3 +113,4 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+'''
