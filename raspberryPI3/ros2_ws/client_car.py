@@ -34,9 +34,6 @@ async def main():
     try:
         websocket = await websockets.connect(uri)
 
-        # Utilisez une boucle asyncio distincte pour gérer la communication WebSocket
-        asyncio.ensure_future(send_message(websocket, start_status))
-
         while rclpy.ok():
             try:
                 await asyncio.sleep(0.1)  # Peut être nécessaire pour éviter un blocage
@@ -56,6 +53,7 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
 
 
 
