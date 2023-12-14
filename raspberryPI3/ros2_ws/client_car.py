@@ -40,9 +40,12 @@ async def main():
     try:
         websocket = await websockets.connect(uri)
 
-        # Attendez que le nœud ROS publie au moins un message
+        print("Waiting for the first start status message...")
         while not shared_data.start_status:
-            await asyncio.sleep(0.1)
+            print("No start status yet. Waiting...")
+            await asyncio.sleep(1)
+
+        print("Received the first start status. Starting message sending loop.")
 
         # Lancer la boucle de publication du statut
         asyncio.ensure_future(send_message(websocket))
@@ -65,8 +68,6 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-
-
 
 
 
