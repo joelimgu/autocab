@@ -37,7 +37,7 @@ def main():
         asyncio.ensure_future(send_message(websocket, False))
 
         while rclpy.ok():
-            executor.spin_once(node, timeout_sec=0.1)
+            executor.spin_once(node)
 
     except KeyboardInterrupt:
         pass
