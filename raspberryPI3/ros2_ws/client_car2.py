@@ -3,9 +3,9 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
-def send_message():
+async def send_message():
     uri = "ws://127.0.0.1:5501"
-    with websockets.connect(uri) as websocket:
+    async with websockets.connect(uri) as websocket:
         try:
             while True:
                 message = input("Entrez votre message (ou 'exit' pour quitter) : ")
@@ -24,6 +24,7 @@ def send_message():
 asyncio.run(send_message())
 
 def start_status_callback(msg):
+    global start_status
     start_status = msg.data
     print(f"Received start status: {start_status}")
 
