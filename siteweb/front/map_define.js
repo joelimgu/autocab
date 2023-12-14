@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         layers: [osm, pointsGrp]
     });
 
-    // Any other code related to Leaflet goes here...
 });
 
 
