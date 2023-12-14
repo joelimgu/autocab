@@ -1,62 +1,54 @@
-import socket
-import threading
+import asyncio
+import websockets
 
-def traiter_client(socket_client, adresse):
+async def handle_client(websocket, path):
+    # Autoriser toutes les origines (à adapter selon vos besoins)
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept",
+    }
+
+    if "OPTIONS" in websocket.request_headers.get("Upgrade", ""):
+        # Réponse aux requêtes OPTIONS pour les demandes CORS
+        return websockets.http.response.HTTPResponse(status=200, headers=headers)
+
     try:
-        print(f"Connexion acceptée depuis {adresse}")
+        clients.add(websocket)  # Ajoutez cette ligne pour ajouter la connexion à la liste
+        print(f"Client {websocket.remote_address} connected. Number of connected clients: {len(clients)}")
 
         while True:
-            data = socket_client.recv(1024)
-            if not data:
+            message = await asyncio.wait_for(websocket.recv(), timeout=None)  # Pas de timeout
+            if not message:
                 break
 
-            print(f"Reçu depuis {adresse}: {data.decode('utf-8')}")
+            print(f"Received message from {path}: {message}")
 
-            # Diffuser le message à tous les clients connectés
-            for autre_client in clients:
-                if autre_client != socket_client:
+            # Broadcast the message to all connected clients
+            for other_client in clients:
+                if other_client != websocket:
                     try:
-                        autre_client.sendall(data)
-                    except:
+                        await other_client.send(message)
+                        print(f"Sent message to {other_client.remote_address}: {message}")
+                    except websockets.exceptions.ConnectionClosedError:
                         continue
-
+    except asyncio.TimeoutError:
+        print(f"Connection with {path} closed due to inactivity.")
+    except websockets.exceptions.ConnectionClosed:
+        print(f"Connection with {path} closed.")
     except Exception as e:
-        print(f"Erreur lors du traitement du client {adresse}: {e}")
+        print(f"Error with {path}: {e}")
     finally:
-        print(f"Connexion depuis {adresse} fermée.")
-        clients.remove(socket_client)
-        socket_client.close()
+        if websocket in clients:
+            clients.remove(websocket)
+            print(f"Client {websocket.remote_address} disconnected. Number of connected clients: {len(clients)}")
 
-# Définir l'adresse du serveur (localhost) et le port
-adresse_serveur = ('127.0.0.1', 12345)
+async def main():
+    server = await websockets.serve(handle_client, "127.0.0.1", 5501)
+    print("WebSocket server listening on ws://127.0.0.1:5501")
 
-# Créer un objet socket
-socket_serveur = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    await server.wait_closed()
 
-# Lier le socket à l'adresse du serveur
-socket_serveur.bind(adresse_serveur)
-
-# Écouter les connexions entrantes
-socket_serveur.listen(5)
-
-print("Le serveur écoute sur", adresse_serveur)
-
-# Liste pour stocker les clients connectés
-clients = []
-
-try:
-    while True:
-        # Accepter une connexion
-        socket_client, adresse_client = socket_serveur.accept()
-        clients.append(socket_client)
-
-        # Créer un thread pour traiter le client
-        thread_client = threading.Thread(target=traiter_client, args=(socket_client, adresse_client))
-        thread_client.start()
-
-except KeyboardInterrupt:
-    print("Arrêt du serveur.")
-    for client in clients:
-        client.close()
-    socket_serveur.close()
-    
+if __name__ == "__main__":
+    clients = set()
+    asyncio.run(main())

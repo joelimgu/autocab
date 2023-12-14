@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebSocket Client</title>
+
+    <!-- Désactiver la demande d'icône favicon -->
+    <link rel="icon" type="image/x-icon" href="data:;base64,iVBORw0KGgo=">
+
 </head>
 <body>
     <script>
-        const socket = new WebSocket("ws://127.0.0.1:12345");
+        const socket = new WebSocket("ws://127.0.0.1:5501");
 
         socket.onopen = function (event) {
-            console.log("WebSocket connection opened.");
+            console.log("Connexion WebSocket ouverte.");
 
             // Send a message to the server
             const message = "Hello from HTML/JavaScript client!";
@@ -22,7 +26,11 @@
         };
 
         socket.onclose = function (event) {
-            console.log("WebSocket connection closed.");
+            console.log("Connexion WebSocket fermée.");
+        };
+
+        socket.onerror = function (event) {
+            console.error("WebSocket error:", event);
         };
     </script>
 </body>
