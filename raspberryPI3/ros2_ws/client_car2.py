@@ -14,7 +14,7 @@ def start_status_callback(msg):
     # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        asyncio.create_task(send_message())  # Appeler send_message en tant que tâche asynchrone
+        rclpy.create_executor().add_node().create_task(send_message())  # Utiliser la boucle d'événements de ROS 2
 
 async def send_message():
     global start_status
@@ -23,7 +23,7 @@ async def send_message():
         try:
             message = str(start_status)  # Convertir start_status en chaîne avant de l'envoyer
             await websocket.send(message)
-            print(f"Sent message: {message}")
+                        print(f"Sent message: {message}")
 
         except websockets.exceptions.ConnectionClosedError as e:
             print(f"Connexion fermée de manière inattendue. Erreur : {e}")
@@ -47,7 +47,9 @@ def main():
     rclpy.shutdown()
 
 if __name__ == '__main__':
+    rclpy.init()
     main()
+
 
 
 
