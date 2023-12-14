@@ -3,6 +3,8 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
+start_status = False  # Variable partagée
+
 async def send_message(websocket, start_status):
     try:
         message = str(start_status)
@@ -13,32 +15,32 @@ async def send_message(websocket, start_status):
     except websockets.exceptions.ConnectionClosedOK:
         print("Connexion fermée par le serveur.")
 
-async def start_status_callback(msg, websocket):
+def start_status_callback(msg):
+    global start_status
     start_status = msg.data
     print(f"Received start status: {start_status}")
 
-    # Envoyer la variable start_status via WebSocket
-    await send_message(websocket, start_status)
-
 async def main():
+    global start_status
+
     rclpy.init()
 
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
-    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: start_status_callback(msg, websocket), 10)
+    subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
 
     uri = "ws://127.0.0.1:5501"
     try:
         websocket = await websockets.connect(uri)
 
         # Utilisez une boucle asyncio distincte pour gérer la communication WebSocket
-        asyncio.ensure_future(send_message(websocket, False))
+        asyncio.ensure_future(send_message(websocket, start_status))
 
         while rclpy.ok():
             try:
                 await asyncio.sleep(0.1)  # Peut être nécessaire pour éviter un blocage
-
+                await send_message(websocket, start_status)
             except KeyboardInterrupt:
                 break
 
@@ -54,6 +56,7 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
+
 
 
 
