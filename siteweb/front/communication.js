@@ -1,7 +1,7 @@
-const socket = new WebSocket("ws://localhost:5501");
+const socket = new WebSocket("ws://127.0.0.1:5501");
 
 socket.onopen = function (event) {
-    console.log("Connexion WebSocket ouverte.");
+    console.log("WebSocket connection opened.");
 
     // Send a message to the server
     const message = "Hello from HTML/JavaScript client!";
@@ -10,10 +10,16 @@ socket.onopen = function (event) {
 
 socket.onmessage = function (event) {
     console.log("Received response:", event.data);
+
+    // Display the received message on the webpage
+    const messageContainer = document.getElementById("message-container");
+    const newMessage = document.createElement("p");
+    newMessage.textContent = " " + event.data;
+    messageContainer.appendChild(newMessage);
 };
 
 socket.onclose = function (event) {
-    console.log("Connexion WebSocket fermée.");
+    console.log("WebSocket connection closed.");
 };
 
 socket.onerror = function (event) {
