@@ -3,34 +3,31 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
-class SharedData:
-    def __init__(self):
-        self.start_status = False
-        self.lock = asyncio.Lock()
-
-shared_data = SharedData()
-
-def start_status_callback(msg):
-    global shared_data
-    with shared_data.lock:
-        shared_data.start_status = msg.data
-        print(f"Received start status: {shared_data.start_status}")
+start_status = False  # Variable partagée
+start_status_lock = asyncio.Lock()  # Verrou pour synchroniser l'accès à la variable
 
 async def send_message(websocket):
-    global shared_data
-    while True:
-        async with shared_data.lock:
-            start_status = shared_data.start_status
-        message = str(start_status)
-        await websocket.send(message)
-        print(f"Sent message: {message}")
-        await asyncio.sleep(0.1)
+    global start_status
+    async with start_status_lock:
+        try:
+            message = str(start_status)
+            await websocket.send(message)
+            print(f"Sent message: {message}")
+        except websockets.exceptions.ConnectionClosedError as e:
+            print(f"Connexion fermée de manière inattendue. Erreur : {e}")
+        except websockets.exceptions.ConnectionClosedOK:
+            print("Connexion fermée par le serveur.")
+
+def start_status_callback(msg):
+    global start_status
+    async with start_status_lock:
+        start_status = msg.data
+        print(f"Received start status: {start_status}")
 
 async def main():
-    global shared_data
+    global start_status
 
     rclpy.init()
-
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
@@ -40,19 +37,14 @@ async def main():
     try:
         websocket = await websockets.connect(uri)
 
-        print("Waiting for the first start status message...")
-        while not shared_data.start_status:
-            print("No start status yet. Waiting...")
-            await asyncio.sleep(1)
-
-        print("Received the first start status. Starting message sending loop.")
-
-        # Lancer la boucle de publication du statut
-        asyncio.ensure_future(send_message(websocket))
+        # Attendez que le nœud ROS publie au moins un message
+        while not start_status:
+            await asyncio.sleep(0.1)
 
         while rclpy.ok():
             try:
                 await asyncio.sleep(0.1)  # Peut être nécessaire pour éviter un blocage
+                await send_message(websocket)
             except KeyboardInterrupt:
                 break
 
@@ -68,7 +60,6 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-
 
 
 
