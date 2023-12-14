@@ -37,12 +37,12 @@ def main():
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
-    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: asyncio.create_task(start_status_callback(node, msg)), 10)
+    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: asyncio.ensure_future(start_status_callback(node, msg)), 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
 
     try:
-        rclpy.spin(node)
+        rclpy.spin_until_future_complete(node, asyncio.Future())
 
     except KeyboardInterrupt:
         pass
@@ -54,8 +54,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 
 
 
