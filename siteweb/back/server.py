@@ -5,7 +5,7 @@ start_status = False  # Variable partagée
 start_status_lock = asyncio.Lock()  # Utilisation de asyncio.Lock
 
 async def handle_client(websocket, path):
-    global start_status
+    global start_status, clients
     
     # Autoriser toutes les origines (à adapter selon vos besoins)
     headers = {
