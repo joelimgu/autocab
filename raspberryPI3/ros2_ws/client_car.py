@@ -2,25 +2,32 @@ import rclpy
 from std_msgs.msg import Bool
 import asyncio
 import websockets
-from queue import Queue
 
-start_status_queue = Queue()
+class SharedData:
+    def __init__(self):
+        self.start_status = False
+        self.lock = asyncio.Lock()
+
+shared_data = SharedData()
 
 def start_status_callback(msg):
-    start_status = msg.data
-    print(f"Received start status: {start_status}")
-    start_status_queue.put(start_status)
+    global shared_data
+    with shared_data.lock:
+        shared_data.start_status = msg.data
+        print(f"Received start status: {shared_data.start_status}")
 
 async def send_message(websocket):
-    global start_status_queue
+    global shared_data
     while True:
-        start_status = start_status_queue.get()
+        async with shared_data.lock:
+            start_status = shared_data.start_status
         message = str(start_status)
         await websocket.send(message)
         print(f"Sent message: {message}")
+        await asyncio.sleep(0.1)
 
 async def main():
-    global start_status_queue
+    global shared_data
 
     rclpy.init()
 
@@ -34,7 +41,7 @@ async def main():
         websocket = await websockets.connect(uri)
 
         # Attendez que le nœud ROS publie au moins un message
-        while start_status_queue.empty():
+        while not shared_data.start_status:
             await asyncio.sleep(0.1)
 
         # Lancer la boucle de publication du statut
@@ -58,9 +65,6 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-
-
-
 
 
 
