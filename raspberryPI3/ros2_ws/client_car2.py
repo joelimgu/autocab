@@ -23,7 +23,7 @@ async def send_message():
         try:
             message = str(start_status)  # Convertir start_status en chaîne avant de l'envoyer
             await websocket.send(message)
-                        print(f"Sent message: {message}")
+            print(f"Sent message: {message}")
 
         except websockets.exceptions.ConnectionClosedError as e:
             print(f"Connexion fermée de manière inattendue. Erreur : {e}")
@@ -49,6 +49,7 @@ def main():
 if __name__ == '__main__':
     rclpy.init()
     main()
+
 
 
 
