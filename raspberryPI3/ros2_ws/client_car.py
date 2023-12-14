@@ -1,28 +1,26 @@
-'''
 import rclpy
 from std_msgs.msg import Bool
 import asyncio
 import websockets
+from queue import Queue
 
-start_status = False  # Variable partagée
+start_status_queue = Queue()
 
-async def send_message(websocket, start_status):
-    try:
+def start_status_callback(msg):
+    start_status = msg.data
+    print(f"Received start status: {start_status}")
+    start_status_queue.put(start_status)
+
+async def send_message(websocket):
+    global start_status_queue
+    while True:
+        start_status = start_status_queue.get()
         message = str(start_status)
         await websocket.send(message)
         print(f"Sent message: {message}")
-    except websockets.exceptions.ConnectionClosedError as e:
-        print(f"Connexion fermée de manière inattendue. Erreur : {e}")
-    except websockets.exceptions.ConnectionClosedOK:
-        print("Connexion fermée par le serveur.")
-
-def start_status_callback(msg):
-    global start_status
-    start_status = msg.data
-    print(f"Received start status: {start_status}")
 
 async def main():
-    global start_status
+    global start_status_queue
 
     rclpy.init()
 
@@ -36,13 +34,15 @@ async def main():
         websocket = await websockets.connect(uri)
 
         # Attendez que le nœud ROS publie au moins un message
-        while not start_status:
+        while start_status_queue.empty():
             await asyncio.sleep(0.1)
+
+        # Lancer la boucle de publication du statut
+        asyncio.ensure_future(send_message(websocket))
 
         while rclpy.ok():
             try:
                 await asyncio.sleep(0.1)  # Peut être nécessaire pour éviter un blocage
-                await send_message(websocket, start_status)
             except KeyboardInterrupt:
                 break
 
@@ -59,19 +59,20 @@ async def main():
 if __name__ == '__main__':
     asyncio.run(main())
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 '''
-
-
-
-
-
-
-
-
-
-
-
-
 import rclpy
 from std_msgs.msg import Bool
 
@@ -96,3 +97,4 @@ def main():
 if __name__ == '__main__':
     main()
 
+'''
