@@ -20,7 +20,7 @@ async def start_status_callback(msg, websocket):
     # Envoyer la variable start_status via WebSocket
     await send_message(websocket, start_status)
 
-def main():
+async def main():
     rclpy.init()
 
     node = rclpy.create_node('start_status_subscriber')
@@ -31,7 +31,7 @@ def main():
 
     uri = "ws://127.0.0.1:5501"
     try:
-        websocket = asyncio.get_event_loop().run_until_complete(websockets.connect(uri))
+        websocket = await websockets.connect(uri)
 
         # Utilisez une boucle asyncio distincte pour gérer la communication WebSocket
         asyncio.ensure_future(send_message(websocket, False))
@@ -49,14 +49,14 @@ def main():
         pass
     finally:
         if 'websocket' in locals():
-            asyncio.get_event_loop().run_until_complete(websocket.close())
+            await websocket.close()
 
         # Arrêtez correctement le nœud
         node.destroy_node()
         rclpy.shutdown()
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
 
 
 
