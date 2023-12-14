@@ -45,7 +45,7 @@ async def main():
             try:
                 await asyncio.sleep(0.1)
                 await send_message(websocket)
-                rclpy.spin_once(node, timeout_sec=0.1)
+                await rclpy.spin_once(node, timeout_sec=0.1)
             except KeyboardInterrupt:
                 break
 
@@ -61,7 +61,6 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-
 
 
 
