@@ -45,7 +45,7 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
 
         float angle = (180/M_PI) * (acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
         
-        if (angle > MIN_ANGLE_FOR_MAX_STEERING){
+        if (angle > MIN_ANGLE_FOR_MAX_STEERING || aVector[0]*bVector[0] + aVector[1]*bVector[1] < 0){
             if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
                 requestedAngle = -1.0;
             }else{
