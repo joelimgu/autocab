@@ -3,10 +3,27 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
+start_status = False  # Variable partagée
+start_status_lock = asyncio.Lock()  # Utilisation de asyncio.Lock
+
+async def send_message(websocket):
+    global start_status
+    async with start_status_lock:
+        try:
+            # Convertir le booléen en chaîne de caractères avant l'envoi
+            message = str(start_status)
+            await websocket.send(message)
+            print(f"Sent message: {message}")
+        except websockets.exceptions.ConnectionClosedError as e:
+            print(f"Connexion fermée de manière inattendue. Erreur : {e}")
+        except websockets.exceptions.ConnectionClosedOK:
+            print("Connexion fermée par le serveur.")
+
 async def start_status_callback(msg):
     global start_status
-    start_status = msg.data
-    print(f"Received start status: {start_status}")
+    async with start_status_lock:
+        start_status = msg.data
+        print(f"Received start status: {start_status}")
 
 async def ros2_websocket_client():
     global start_status
@@ -28,8 +45,7 @@ async def ros2_websocket_client():
 
             while rclpy.ok():
                 # Envoyer la variable start_status au serveur WebSocket
-                await websocket.send(str(start_status))
-                print(f"Sent message to WebSocket server: {start_status}")
+                await send_message(websocket)
 
                 # Attendre un certain temps avant d'envoyer la prochaine mise à jour
                 await asyncio.sleep(1)
@@ -44,7 +60,6 @@ async def ros2_websocket_client():
 
 if __name__ == '__main__':
     asyncio.run(ros2_websocket_client())
-
 
 
 '''
