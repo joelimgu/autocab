@@ -24,7 +24,6 @@ async def main():
     rclpy.init()
 
     node = rclpy.create_node('start_status_subscriber')
-    executor = rclpy.executors.SingleThreadedExecutor()
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
     subscriber = node.create_subscription(Bool, 'start_status', lambda msg: start_status_callback(msg, websocket), 10)
@@ -38,8 +37,6 @@ async def main():
 
         while rclpy.ok():
             try:
-                # Utilisez une boucle asyncio distincte pour gérer l'exécution asynchrone
-                executor.spin_once(node, timeout_sec=0.1)
                 await asyncio.sleep(0.1)  # Peut être nécessaire pour éviter un blocage
 
             except KeyboardInterrupt:
