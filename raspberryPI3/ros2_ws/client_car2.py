@@ -6,7 +6,7 @@ import websockets
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 
-def start_status_callback(node, msg):  # Ajouter 'node' comme argument
+async def start_status_callback(node, msg):  # Ajouter 'node' comme argument
     global start_status, prev_start_status
     start_status = msg.data
     print(f"Received start status: {start_status}")
@@ -14,7 +14,7 @@ def start_status_callback(node, msg):  # Ajouter 'node' comme argument
     # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        asyncio.create_task(send_message(node))  # Utiliser asyncio pour créer une tâche
+        await send_message(node)  # Utiliser 'await' pour attendre la fin de send_message
 
 async def send_message(node):  # Ajouter 'node' comme argument
     global start_status
@@ -37,7 +37,7 @@ def main():
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
-    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: start_status_callback(node, msg), 10)
+    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: asyncio.create_task(start_status_callback(node, msg)), 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
 
@@ -54,6 +54,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
