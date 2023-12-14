@@ -18,7 +18,7 @@ async def send_message(websocket):
         except websockets.exceptions.ConnectionClosedOK:
             print("Connexion fermée par le serveur.")
 
-def start_status_callback(msg):
+async def start_status_callback(msg):
     global start_status
     async with start_status_lock:
         start_status = msg.data
