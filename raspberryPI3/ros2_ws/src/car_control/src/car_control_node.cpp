@@ -34,6 +34,8 @@ public:
 
         publisher_steeringCalibration_ = this->create_publisher<interfaces::msg::SteeringCalibration>("steering_calibration", 10);
 
+        publisher_start_status_ = this->create_publisher<std_msgs::msg::Bool>("start_status", 10);
+
         
 
         subscription_joystick_order_ = this->create_subscription<interfaces::msg::JoystickOrder>(
@@ -52,12 +54,6 @@ public:
                             "steering_calibration", std::bind(&car_control::steeringCalibration, this, std::placeholders::_1, std::placeholders::_2));
 
         timer_ = this->create_wall_timer(PERIOD_UPDATE_CMD, std::bind(&car_control::updateCmd, this));
-
-
-        // Create the service server for getting the value of the start variable
-        get_start_service_ = this->create_service<std_srvs::srv::Empty>(
-        "get_start",
-        std::bind(&car_control::onStartService, this, std::placeholders::_1, std::placeholders::_2));
 
         
         RCLCPP_INFO(this->get_logger(), "car_control_node READY");
@@ -80,6 +76,11 @@ private:
                 RCLCPP_INFO(this->get_logger(), "START");
             else 
                 RCLCPP_INFO(this->get_logger(), "STOP");
+
+            // Publier la mise à jour de la variable "start" sur le topic "start_status"
+            auto message = std_msgs::msg::Bool();
+            message.data = start;
+            publisher_start_status_->publish(message);
         }
         
 
@@ -213,18 +214,6 @@ private:
     }
 
 
-    // Service to get the value of the start variable
-    bool onStartService(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
-                        std::shared_ptr<std_srvs::srv::Empty::Response> response)
-    {
-        (void)request;  // Unused parameter
-        response->success = start;
-        return true;
-    }
-
-    // Service server for getting the value of the start variable
-    rclcpp::Service<std_srvs::srv::Empty>::SharedPtr get_start_service_;
-
     
     // ---- Private variables ----
 
@@ -249,6 +238,8 @@ private:
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
     rclcpp::Publisher<interfaces::msg::SteeringCalibration>::SharedPtr publisher_steeringCalibration_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr publisher_start_status_;
+
 
     //Subscribers
     rclcpp::Subscription<interfaces::msg::JoystickOrder>::SharedPtr subscription_joystick_order_;
