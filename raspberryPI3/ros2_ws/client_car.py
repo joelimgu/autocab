@@ -24,7 +24,7 @@ async def start_status_callback(msg):
         start_status = msg.data
         print(f"Received start status: {start_status}")
 
-def main():
+async def main():
     global start_status
 
     rclpy.init()
