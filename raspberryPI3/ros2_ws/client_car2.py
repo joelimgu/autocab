@@ -14,7 +14,7 @@ def start_status_callback(node, msg):  # Ajouter 'node' comme argument
     # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        node.create_task(send_message(node))  # Passer 'node' comme argument à send_message
+        asyncio.create_task(send_message(node))  # Utiliser asyncio pour créer une tâche
 
 async def send_message(node):  # Ajouter 'node' comme argument
     global start_status
@@ -40,14 +40,21 @@ def main():
     subscriber = node.create_subscription(Bool, 'start_status', lambda msg: start_status_callback(node, msg), 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
-    rclpy.spin(node)
 
-    # Arrêtez correctement le nœud
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+
+    except KeyboardInterrupt:
+        pass
+
+    finally:
+        # Arrêtez correctement le nœud
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
+
 
 
 
