@@ -53,6 +53,12 @@ public:
 
         timer_ = this->create_wall_timer(PERIOD_UPDATE_CMD, std::bind(&car_control::updateCmd, this));
 
+
+        // Create the service server for getting the value of the start variable
+        get_start_service_ = this->create_service<std_srvs::srv::Empty>(
+        "get_start",
+        std::bind(&car_control::onStartService, this, std::placeholders::_1, std::placeholders::_2));
+
         
         RCLCPP_INFO(this->get_logger(), "car_control_node READY");
     }
@@ -205,6 +211,20 @@ private:
         }
     
     }
+
+
+    // Service to get the value of the start variable
+    bool onStartService(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
+                        std::shared_ptr<std_srvs::srv::Empty::Response> response)
+    {
+        (void)request;  // Unused parameter
+        response->success = start;
+        return true;
+    }
+
+    // Service server for getting the value of the start variable
+    rclcpp::Service<std_srvs::srv::Empty>::SharedPtr get_start_service_;
+
     
     // ---- Private variables ----
 
