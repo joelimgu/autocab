@@ -15,7 +15,7 @@ async def send_message(websocket, start_status):
     except websockets.exceptions.ConnectionClosedOK:
         print("Connexion fermée par le serveur.")
 
-def start_status_callback(msg):
+def start_status_callback(msg, websocket):
     global start_status
     start_status = msg.data
     print(f"Received start status: {start_status}")
@@ -28,7 +28,7 @@ async def main():
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
-    subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
+    subscriber = node.create_subscription(Bool, 'start_status', lambda msg: start_status_callback(msg, websocket), 10)
 
     uri = "ws://127.0.0.1:5501"
     try:
