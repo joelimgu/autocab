@@ -9,6 +9,7 @@
 #include "interfaces/msg/joystick_order.hpp"
 
 #include "std_srvs/srv/empty.hpp"
+#include "std_msgs/msg/bool.hpp"
 
 #include "../include/car_control/steeringCmd.h"
 #include "../include/car_control/propulsionCmd.h"
