@@ -38,7 +38,7 @@ def main():
 
         while rclpy.ok():
             try:
-                executor.spin_once(node, timeout_sec=0.1)
+                executor.spin_once(node)
             except KeyboardInterrupt:
                 break
 
