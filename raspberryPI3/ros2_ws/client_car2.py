@@ -14,10 +14,8 @@ async def send_message():
     uri = "ws://127.0.0.1:5501"
     async with websockets.connect(uri) as websocket:
         try:
-            while True:
-                message = input("Entrez votre message (ou 'exit' pour quitter) : ")
-                if message.lower() == 'exit':
-                    break
+            if message != start_status:
+                message = start_status
                 await websocket.send(message)
                 print(f"Sent message: {message}")
         except websockets.exceptions.ConnectionClosedError as e:
