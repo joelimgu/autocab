@@ -3,9 +3,9 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
-async def send_message():
+def send_message():
     uri = "ws://127.0.0.1:5501"
-    async with websockets.connect(uri) as websocket:
+    with websockets.connect(uri) as websocket:
         try:
             while True:
                 message = input("Entrez votre message (ou 'exit' pour quitter) : ")
