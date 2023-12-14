@@ -23,11 +23,14 @@ async def handle_client(websocket, path):
         print(f"Client {websocket.remote_address} connected. Number of connected clients: {len(clients)}")
 
         while True:
-            message = await asyncio.wait_for(websocket.recv(), timeout=None)  # Pas de timeout
+            message = await asyncio.wait_for(websocket.recv(), timeout=None)
             if not message:
                 break
 
             print(f"Received message from {path}: {message}")
+
+            # Convertir le message en booléen et mettre à jour start_status
+            start_status = message.lower() == "true"
 
             # Mettre à jour la variable start_status avec la dernière valeur reçue
             start_status = message

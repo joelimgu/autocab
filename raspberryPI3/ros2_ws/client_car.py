@@ -11,6 +11,7 @@ def send_message(websocket):
     global start_status
     with start_status_lock:
         try:
+            # Convertir le booléen en chaîne de caractères avant l'envoi
             message = str(start_status)
             asyncio.ensure_future(websocket.send(message))
             print(f"Sent message: {message}")
@@ -18,6 +19,7 @@ def send_message(websocket):
             print(f"Connexion fermée de manière inattendue. Erreur : {e}")
         except websockets.exceptions.ConnectionClosedOK:
             print("Connexion fermée par le serveur.")
+
 
 def start_status_callback(msg):
     global start_status
