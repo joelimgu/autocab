@@ -14,7 +14,7 @@ def start_status_callback(msg):
     # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        rclpy.create_executor().add_node().create_task(send_message())  # Utiliser la boucle d'événements de ROS 2
+        node.create_task(send_message())  # Utiliser la boucle d'événements de ROS 2
 
 async def send_message():
     global start_status
@@ -48,6 +48,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
