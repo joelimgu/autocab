@@ -24,11 +24,7 @@ def main():
     node.destroy_node()
     rclpy.shutdown()
 
-if __name__ == '__main__':
-    main()
-
-
-    async def send_message():
+async def send_message():
     uri = "ws://127.0.0.1:5501"
     async with websockets.connect(uri) as websocket:
         try:
@@ -47,3 +43,8 @@ if __name__ == '__main__':
             print("Connexion fermée par le serveur.")
 
 asyncio.run(send_message())
+
+if __name__ == '__main__':
+    main()
+
+
