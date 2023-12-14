@@ -1,11 +1,11 @@
 import asyncio
 import websockets
 
-start_status = False  # Variable partagée
-start_status_lock = asyncio.Lock()  # Utilisation de asyncio.Lock
+start_status = False  # Variable pour stocker la dernière valeur reçue
+
 
 async def handle_client(websocket, path):
-    global start_status, clients
+    global start_status
     
     # Autoriser toutes les origines (à adapter selon vos besoins)
     headers = {
@@ -19,28 +19,40 @@ async def handle_client(websocket, path):
         return websockets.http.response.HTTPResponse(status=200, headers=headers)
 
     try:
-        async with start_status_lock:
-            clients.add(websocket)  # Ajoutez cette ligne pour ajouter la connexion à la liste
-            print(f"Client {websocket.remote_address} connected. Number of connected clients: {len(clients)}")
+        clients.add(websocket)  # Ajoutez cette ligne pour ajouter la connexion à la liste
+        print(f"Client {websocket.remote_address} connected. Number of connected clients: {len(clients)}")
 
         while True:
-            # Attendez que la variable start_status soit mise à jour
-            await asyncio.sleep(0.1)
-            
-            async with start_status_lock:
-                message = str(start_status)
-                try:
-                    await websocket.send(message)
-                    print(f"Sent message to {websocket.remote_address}: {message}")
-                except websockets.exceptions.ConnectionClosedError:
-                    break
+            message = await asyncio.wait_for(websocket.recv(), timeout=None)
+            if not message:
+                break
+
+            print(f"Received message from {path}: {message}")
+
+            # Convertir le message en booléen et mettre à jour start_status
+            start_status = message.lower() == "true"
+
+            # Mettre à jour la variable start_status avec la dernière valeur reçue
+            start_status = message
+
+            # Broadcast the message to all connected clients
+            for other_client in clients:
+                if other_client != websocket:
+                    try:
+                        await other_client.send(message)
+                        print(f"Sent message to {other_client.remote_address}: {message}")
+                    except websockets.exceptions.ConnectionClosedError:
+                        continue
+    except asyncio.TimeoutError:
+        print(f"Connection with {path} closed due to inactivity.")
+    except websockets.exceptions.ConnectionClosed:
+        print(f"Connection with {path} closed.")
     except Exception as e:
         print(f"Error with {path}: {e}")
     finally:
-        async with start_status_lock:
-            if websocket in clients:
-                clients.remove(websocket)
-                print(f"Client {websocket.remote_address} disconnected. Number of connected clients: {len(clients)}")
+        if websocket in clients:
+            clients.remove(websocket)
+            print(f"Client {websocket.remote_address} disconnected. Number of connected clients: {len(clients)}")
 
 async def main():
     server = await websockets.serve(handle_client, "127.0.0.1", 5501)
