@@ -18,7 +18,7 @@ async def send_message(websocket):
         except websockets.exceptions.ConnectionClosedOK:
             print("Connexion fermée par le serveur.")
 
-async def start_status_callback(msg):
+def start_status_callback(msg):
     global start_status
     async with start_status_lock:
         start_status = msg.data
@@ -33,9 +33,6 @@ async def main():
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
 
-    executor = rclpy.executors.SingleThreadedExecutor()
-    executor.add_node(node)
-
     uri = "ws://127.0.0.1:5501"
     try:
         websocket = await websockets.connect(uri)
@@ -46,9 +43,9 @@ async def main():
 
         while rclpy.ok():
             try:
-                await asyncio.sleep(0.1)  # Peut être nécessaire pour éviter un blocage
+                await asyncio.sleep(0.1)
                 await send_message(websocket)
-                executor.spin_once(timeout_sec=0.1)
+                rclpy.spin_once(node, timeout_sec=0.1)
             except KeyboardInterrupt:
                 break
 
@@ -64,7 +61,6 @@ async def main():
 
 if __name__ == '__main__':
     asyncio.run(main())
-
 
 
 
