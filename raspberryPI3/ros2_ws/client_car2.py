@@ -50,7 +50,7 @@ def main():
 
     print("Waiting for messages. Press Ctrl+C to exit.")
     while rclpy.ok():
-        await rclpy.spin_once(node)
+        rclpy.spin_once(node)
 
     # Arrêtez correctement le nœud
     node.destroy_node()
