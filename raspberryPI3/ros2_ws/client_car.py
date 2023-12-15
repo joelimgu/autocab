@@ -3,40 +3,49 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
-async def ros_callback(msg):
-    global start_status
+start_status = False
+prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
+
+
+def start_status_callback(msg):
+    global start_status, prev_start_status
     start_status = msg.data
+    print(f"Received start status: {start_status}")
 
-async def ros_listener():
-    rclpy.init()
-    node = rclpy.create_node('ros_listener_node')
-    subscription = node.create_subscription(Bool, 'start_status', ros_callback, 10)
+     # Vérifier si start_status a changé
+    if start_status != prev_start_status:
+        prev_start_status = start_status
+        await send_message(node)  # Utiliser 'await' pour attendre la fin de send_message
 
-    while rclpy.ok():
-        rclpy.spin_once(node)
-
-async def send_to_websocket():
+async def send_message():
     uri = "ws://127.0.0.1:5501"
     async with websockets.connect(uri) as websocket:
-        global start_status
-        while True:
-            await asyncio.sleep(0.1)  # Adjust the delay as needed
-            if start_status is not None:
-                message = str(start_status)
-                await websocket.send(message)
-                print(f"Sent message to WebSocket server: {message}")
-                start_status = None
+        try:
+            message = str(start_status)  # Convertir start_status en chaîne avant de l'envoyer
+            await websocket.send(message)
+            print(f"Sent message: {message}")
 
-if __name__ == "__main__":
-    start_status = None
+        except websockets.exceptions.ConnectionClosedError as e:
+            print(f"Connexion fermée de manière inattendue. Erreur : {e}")
 
-    try:
-        loop = asyncio.get_event_loop()
-        ros_listener_task = loop.create_task(ros_listener())
-        websocket_task = loop.create_task(send_to_websocket())
-        loop.run_until_complete(asyncio.gather(ros_listener_task, websocket_task))
-    except KeyboardInterrupt:
-        pass
-    finally:
-        rclpy.shutdown()
+        except websockets.exceptions.ConnectionClosedOK:
+            print("Connexion fermée par le serveur.")
 
+asyncio.run(send_message())
+
+def main():
+    rclpy.init()
+    node = rclpy.create_node('start_status_subscriber')
+
+    # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
+    subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
+
+    print("Waiting for messages. Press Ctrl+C to exit.")
+    rclpy.spin(node)
+
+    # Arrêtez correctement le nœud
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

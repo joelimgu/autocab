@@ -3,15 +3,15 @@ import websockets
 
 #J ai un timeout à 50 secondes peut etre a cause de anaconda
 
+start_status = False
+
 async def send_message():
+    global start_status
     uri = "ws://127.0.0.1:5501"
     async with websockets.connect(uri) as websocket:
         try:
             while True:
-                message = input("Entrez votre message (ou 'exit' pour quitter) : ")
-                if message.lower() == 'exit':
-                    break
-
+                message = str(start_status)
                 await websocket.send(message)
                 print(f"Sent message: {message}")
 
