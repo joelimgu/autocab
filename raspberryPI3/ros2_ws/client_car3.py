@@ -9,7 +9,6 @@ prev_start_status = None  # Variable pour stocker la valeur précédente de star
 
 
 def start_status_callback(msg):
-    global start_status, prev_start_status
     start_status = msg.data
 
 
