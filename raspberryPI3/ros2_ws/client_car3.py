@@ -3,7 +3,7 @@ from std_msgs.msg import Bool
 import asyncio
 import websockets
 
-
+global start_status, prev_start_status
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 
@@ -34,7 +34,6 @@ asyncio.run(send_message())
 
 
 def main():
-    global start_status, prev_start_status
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
 
