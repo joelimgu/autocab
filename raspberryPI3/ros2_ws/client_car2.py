@@ -16,9 +16,9 @@ def start_status_callback(msg):
      # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        await send_message(node)  # Utiliser 'await' pour attendre la fin de send_message
+        send_message(start_status)  # Utiliser 'await' pour attendre la fin de send_message
 
-async def send_message():
+async def send_message(start_status):
     uri = "ws://127.0.0.1:5501"
     async with websockets.connect(uri) as websocket:
         try:
