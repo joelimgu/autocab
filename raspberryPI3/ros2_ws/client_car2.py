@@ -30,6 +30,8 @@ async def send_message(start_status):
         print(f"Connexion fermée de manière inattendue. Erreur : {e}")
     except websockets.exceptions.ConnectionClosedOK:
         print("Connexion fermée par le serveur.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 async def main():
     rclpy.init()
