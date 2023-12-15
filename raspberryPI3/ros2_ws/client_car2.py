@@ -21,25 +21,16 @@ async def start_status_callback(msg):
 
 async def send_message(start_status):
     uri = "ws://127.0.0.1:5501"
-    async with websockets.connect(uri) as websocket:
-        try:
-            #while True:
-                #start_status_callback(msg)
-                #message = input("Entrez votre message (ou 'exit' pour quitter) : ")
-                #if message.lower() == 'exit':
-                    #break
+    try:
+        websocket = await websockets.connect(uri)
+        message = str(start_status)
+        await websocket.send(message)
+        print(f"Sent message: {message}")
+    except websockets.exceptions.ConnectionClosedError as e:
+        print(f"Connexion fermée de manière inattendue. Erreur : {e}")
+    except websockets.exceptions.ConnectionClosedOK:
+        print("Connexion fermée par le serveur.")
 
-            message = str(start_status)  # Convertir start_status en chaîne avant de l'envoyer
-            await websocket.send(message)
-            print(f"Sent message: {message}")
-
-        except websockets.exceptions.ConnectionClosedError as e:
-            print(f"Connexion fermée de manière inattendue. Erreur : {e}")
-
-        except websockets.exceptions.ConnectionClosedOK:
-            print("Connexion fermée par le serveur.")
-
-asyncio.run(send_message(start_status))
 
 async def main():
     rclpy.init()
