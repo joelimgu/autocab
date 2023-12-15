@@ -2,48 +2,38 @@
 // Your WebSocket client code
 const socket = new WebSocket("ws://127.0.0.1:5501");
 
-socket.onopen = function (event) {
-    console.log("WebSocket connection opened.");
-    // Send a message to the server
-    const message = "Hello from HTML/JavaScript client!";
-    socket.send(message);
-};
+// JavaScript code to handle event and toggle images
+function handleMessage(event) {
+    // Get the message container element
+    var messageContainer = document.getElementById('message-container');
 
-socket.onmessage = function (event) {
-    console.log("Received response:", event.data);
-    
-    // Display the received message on the webpage
-    const messageContainer = document.getElementById("message-container");
-    const newMessage = document.createElement("p");
-    
-    // Check the value of the message and apply styles accordingly
-    if (event.data.includes("true")) {
-        newMessage.textContent = " " + event.data;
-        newMessage.classList.add("true-message");
-    } else if (event.data.includes("false")) {
-        newMessage.textContent = " " + event.data;
-        newMessage.classList.add("false-message");
-    } else {
-        newMessage.textContent = " " + event.data;
+    // Parse the message from the event data
+    var message = event.data;
+
+    // Create an image element
+    var imageElement = document.createElement('img');
+
+    // Set the default image source
+    imageElement.src = 'switch_off1.png';
+
+    // Set the image size and other styles
+    imageElement.style.width = '40px'; // Set the width of the image
+    imageElement.style.height = 'auto'; // Maintain the aspect ratio
+    imageElement.style.marginTop = '0px'; // Add spacing below the image
+
+    // Check the message value
+    if (message === 'true') {
+        // Change the image source to switch_on.png
+        imageElement.src = 'switch_on1.png';
     }
 
-    //messageContainer.appendChild(newMessage);
-    
-    // Append an image based on the value of "newMessage"
-    const imageContainer = document.createElement("div");
-    imageContainer.classList.add("image-container");
+    // Clear the message container and append the image
+    messageContainer.innerHTML = '';
+    messageContainer.appendChild(imageElement);
+}
 
-    const image = document.createElement("img");
-    if (event.data.includes("true")) {
-        image.src = "switch_on1.png"; // Replace with the actual path to your image
-    } else {
-        image.src = "switch_off1.png"; // Replace with the actual path to your image
-    }
-    image.alt = "Image Alt Text";
-    imageContainer.appendChild(image);
-
-    messageContainer.appendChild(imageContainer);
-};
+// Set up WebSocket event listener for message handling
+socket.onmessage = handleMessage;
 
 socket.onclose = function (event) {
     console.log("WebSocket connection closed.");
