@@ -10,12 +10,12 @@ prev_start_status = None  # Variable pour stocker la valeur précédente de star
 def start_status_callback(msg):
     global start_status, prev_start_status
     start_status = msg.data
-    print(f"Received start status: {start_status}")
 
-     # Vérifier si start_status a changé
+    # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
-        await send_message(node)  # Utiliser 'await' pour attendre la fin de send_message
+        print(f"Received start status: {start_status}")
+
 
 
 def main():
