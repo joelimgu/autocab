@@ -246,6 +246,31 @@
         }
 </style>
 
+<style>
+    #message-container {
+        font-family: 'Poppins', sans-serif; /* Choose your desired font family */
+        color: #333; /* Choose your desired text color */
+        font-size: 16px; /* Choose your desired font size */
+        margin-top: 10px; /* Add spacing at the top of the container */
+    }
+
+    .true-message {
+        font-weight: bold;
+        color: #00cc00; /* Custom color for true messages */
+    }
+
+    .false-message {
+        font-weight: bold;
+        color: #ff0000; /* Custom color for false messages */
+    }
+
+    .image-container img {
+        width: 40px; /* Set the width of the image */
+        height: auto; /* Maintain the aspect ratio */
+        margin-top: 0px; /* Add spacing below the image */
+    }
+</style>
+
 </head>
 
 <body>
@@ -256,6 +281,8 @@
             <a class="py-2 d-none d-md-inline-block" href="Taxi.html">Taxi</a>
             <a class="py-2 d-none d-md-inline-block" href="Contact_us.html">Contact us</a>
             <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+             <!-- Message from server -->
+            <div id="message-container"></div>
         </div>
     </nav>
 
@@ -267,7 +294,8 @@
         </div>
     </div>
 
-    
+
+
 
     <!-- Title "Safer street" and its content -->
     <div class="title-container">

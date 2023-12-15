@@ -1,7 +1,12 @@
 import asyncio
 import websockets
 
+start_status = False  # Variable pour stocker la dernière valeur reçue
+
+
 async def handle_client(websocket, path):
+    global start_status
+    
     # Autoriser toutes les origines (à adapter selon vos besoins)
     headers = {
         "Access-Control-Allow-Origin": "*",
@@ -18,11 +23,17 @@ async def handle_client(websocket, path):
         print(f"Client {websocket.remote_address} connected. Number of connected clients: {len(clients)}")
 
         while True:
-            message = await asyncio.wait_for(websocket.recv(), timeout=None)  # Pas de timeout
+            message = await asyncio.wait_for(websocket.recv(), timeout=None)
             if not message:
                 break
 
             print(f"Received message from {path}: {message}")
+
+            # Convertir le message en booléen et mettre à jour start_status
+            start_status = message.lower() == "true"
+
+            # Mettre à jour la variable start_status avec la dernière valeur reçue
+            start_status = message
 
             # Broadcast the message to all connected clients
             for other_client in clients:
