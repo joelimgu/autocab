@@ -10,11 +10,11 @@ start_status = False
 def send_message(start_status):
     uri = "ws://127.0.0.1:5501"
     try:
-        with websockets.connect(uri) as websocket:
-            while True:
-                message = str(start_status)
-                websocket.send(message)
-                print(f"Sent message: {message}")
+        websocket = websockets.connect(uri)
+        while True:
+            message = str(start_status)
+            websocket.send(message)
+            print(f"Sent message: {message}")
 
     except websockets.exceptions.ConnectionClosedError as e:
         print(f"Connexion fermée de manière inattendue. Erreur : {e}")
@@ -29,26 +29,6 @@ def start_status_callback(msg):
     print(f"Received start status: {start_status}")
     send_message(start_status)
 
-
-'''
-async def send_message():
-    global start_status
-    uri = "ws://127.0.0.1:5501"
-    async with websockets.connect(uri) as websocket:
-        try:
-            while True:
-                message = str(start_status)
-                await websocket.send(message)
-                print(f"Sent message: {message}")
-
-        except websockets.exceptions.ConnectionClosedError as e:
-            print(f"Connexion fermée de manière inattendue. Erreur : {e}")
-
-        except websockets.exceptions.ConnectionClosedOK:
-            print("Connexion fermée par le serveur.")
-
-asyncio.run(send_message())
-'''
 
 
 def main():
