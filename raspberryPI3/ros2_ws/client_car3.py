@@ -42,7 +42,7 @@ def main():
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
-    if start_status_callback(msg):
+    if start_status_callback():
         # Vérifier si start_status a changé
         if start_status != prev_start_status:
             prev_start_status = start_status
