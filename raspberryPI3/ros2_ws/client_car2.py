@@ -11,12 +11,13 @@ prev_start_status = None  # Variable pour stocker la valeur précédente de star
 def start_status_callback(msg):
     global start_status, prev_start_status
     start_status = msg.data
-    print(f"Received start status: {start_status}")
-
+    
      # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
+        print(f"Received start status: {start_status}")
         send_message(start_status)  # Utiliser 'await' pour attendre la fin de send_message
+
 
 async def send_message(start_status):
     uri = "ws://127.0.0.1:5501"
@@ -38,7 +39,7 @@ async def send_message(start_status):
         except websockets.exceptions.ConnectionClosedOK:
             print("Connexion fermée par le serveur.")
 
-asyncio.run(send_message())
+asyncio.run(send_message(start_status))
 
 def main():
     rclpy.init()
@@ -48,7 +49,8 @@ def main():
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
-    rclpy.spin(node)
+    while rclpy.ok():
+        await rclpy.spin_once(node)
 
     # Arrêtez correctement le nœud
     node.destroy_node()
