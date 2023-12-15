@@ -41,7 +41,7 @@ async def send_message(start_status):
 
 asyncio.run(send_message(start_status))
 
-def main():
+async def main():
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
 
@@ -49,6 +49,7 @@ def main():
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
+    
     while rclpy.ok():
         rclpy.spin_once(node)
 
@@ -57,5 +58,5 @@ def main():
     rclpy.shutdown()
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
 
