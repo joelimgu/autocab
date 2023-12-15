@@ -41,8 +41,12 @@ async def main():
 
     print("Waiting for messages. Press Ctrl+C to exit.")
     
-    while rclpy.ok():
-        rclpy.spin_once(node)
+    try:
+        while rclpy.ok():
+            rclpy.spin_once(node)
+            await asyncio.sleep(0.1)  # Add a small sleep to release control to the event loop
+    except KeyboardInterrupt:
+        pass
 
     # Arrêtez correctement le nœud
     node.destroy_node()
