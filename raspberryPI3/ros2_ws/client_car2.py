@@ -22,10 +22,10 @@ async def start_status_callback(msg):
 async def send_message(start_status):
     uri = "ws://127.0.0.1:5501"
     try:
-        websocket = await websockets.connect(uri)
-        message = str(start_status)
-        await websocket.send(message)
-        print(f"Sent message: {message}")
+        async with websockets.connect(uri) as websocket:
+            message = str(start_status)
+            await websocket.send(message)
+            print(f"Sent message: {message}")
     except websockets.exceptions.ConnectionClosedError as e:
         print(f"Connexion fermée de manière inattendue. Erreur : {e}")
     except websockets.exceptions.ConnectionClosedOK:
