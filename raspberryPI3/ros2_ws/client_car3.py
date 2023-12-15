@@ -5,11 +5,10 @@ import websockets
 
 
 start_status = False
-prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 
 
 def start_status_callback(msg):
-    global start_status, prev_start_status
+    global start_status
     start_status = msg.data
 
 
@@ -42,10 +41,7 @@ def main():
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
-    # Vérifier si start_status a changé
-    if start_status != prev_start_status:
-        prev_start_status = start_status
-        print(f"Received start status: {start_status}")
+    print(f"Received start status: {start_status}")
     
     rclpy.spin(node)
 
