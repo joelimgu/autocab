@@ -31,7 +31,6 @@ async def send_message(start_status):
     except websockets.exceptions.ConnectionClosedOK:
         print("Connexion fermée par le serveur.")
 
-
 async def main():
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
@@ -47,11 +46,10 @@ async def main():
             await asyncio.sleep(0.1)  # Add a small sleep to release control to the event loop
     except KeyboardInterrupt:
         pass
-
-    # Arrêtez correctement le nœud
-    node.destroy_node()
-    rclpy.shutdown()
+    finally:
+        # Arrêtez correctement le nœud
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     asyncio.run(main())
-
