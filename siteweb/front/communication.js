@@ -1,4 +1,3 @@
-
 // Your WebSocket client code
 const socket = new WebSocket("ws://127.0.0.1:5501");
 
@@ -42,3 +41,9 @@ socket.onclose = function (event) {
 socket.onerror = function (event) {
     console.error("WebSocket error:", event);
 };
+
+// Call handleMessage with a predefined message when the page is ready
+document.addEventListener('DOMContentLoaded', function () {
+    // Assuming 'false' as the initial state, adjust this if needed
+    handleMessage({ data: 'false' });
+});
