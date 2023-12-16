@@ -1,0 +1,16 @@
+[35m[1mConsolidate compiler generated dependencies of target car_control_node[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o[0m
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In constructor ‘[01m[Kcar_control::car_control()[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:94:13:[m[K [01;31m[Kerror: [m[K‘[01m[KpathTofinalPoint[m[K’ was not declared in this scope; did you mean ‘[01m[KpathToFinalPoint[m[K’?
+   94 |         if ([01;31m[KpathTofinalPoint[m[K.empty()){
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |             [32m[KpathToFinalPoint[m[K
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:[m[K In member function ‘[01m[Kvoid car_control::serveurDataCallback(const Serveur&)[m[K’:
+[01m[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:406:17:[m[K [01;31m[Kerror: [m[K‘[01m[KpathTofinalPoint[m[K’ was not declared in this scope; did you mean ‘[01m[KpathToFinalPoint[m[K’?
+  406 |             if ([01;31m[KpathTofinalPoint[m[K.empty()){
+      |                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                 [32m[KpathToFinalPoint[m[K
+gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

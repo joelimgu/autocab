@@ -51,8 +51,8 @@ public:
         // requestNumber = 0;
 
         //initialisation pour les tests
-        departurePoint = 'B';
-        finalPoint = 'K';
+        departurePoint = 'A';
+        finalPoint = 'C';
         currentPoint = 'A' ;
         departurePointReached = false;
         finalPointReached = false;
@@ -87,9 +87,14 @@ public:
 
         //tests pour prouver que le calcul de plus court chemin fonctionne
         pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+        if (pathToDeparturePoint.empty()){
+            departurePointReached = true;
+        }
         pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
-        RCLCPP_INFO(this->get_logger(), "pathTodeparturepoint : %c\n", pathToDeparturePoint[0]);
-        RCLCPP_INFO(this->get_logger(), "pathTofinalPoint : %c %c\n", pathToFinalPoint[0],pathToFinalPoint[1]);
+        RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
+        if (pathToFinalPoint.empty()){
+            finalPointReached = true;
+        }
 
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -167,10 +172,10 @@ private:
 
             if (mode==0){
                 RCLCPP_INFO(this->get_logger(), "Switching to MANUAL Mode");
-                requestNumber = 0 ;
-                departurePointReached = true ;
-                finalPointReached = true ;
-                arrivedAtCurrentPoint = true ;
+                // requestNumber = 0 ;
+                // departurePointReached = true ;
+                // finalPointReached = true ;
+                // arrivedAtCurrentPoint = true ;
             }else if (mode==1){
                 RCLCPP_INFO(this->get_logger(), "Switching to AUTONOMOUS Mode");
             }else if (mode==2){
@@ -229,7 +234,7 @@ private:
                 if (!arrivedAtCurrentPoint){
 
                     arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                    RCLCPP_INFO(this->get_logger(), "En déplaçement vers le point %c", currentPoint);
+                    RCLCPP_INFO(this->get_logger(), "En déplaçement vers le currentpoint %c", currentPoint);
 
                 } else {
 
@@ -237,23 +242,23 @@ private:
                     //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
                     bool arrived = false ;
                     if (!departurePointReached){
-                        RCLCPP_INFO(this->get_logger(), "En déplaçement vers le point %c", currentPoint);
+                        RCLCPP_INFO(this->get_logger(), "En déplaçement vers le departurepoint %c", pathToDeparturePoint[pathToDeparturePoint.size()-1]);
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
-                            pathToDeparturePoint.erase(pathToDeparturePoint.end()) ;
+                            pathToDeparturePoint.erase(pathToDeparturePoint.end()-1) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
-                                //sleep(5); //On attend 5 secondes avant de partir
+                                sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else if (!finalPointReached){
-                        RCLCPP_INFO(this->get_logger(), "En déplaçement vers le point %c", currentPoint);
+                        RCLCPP_INFO(this->get_logger(), "En déplaçement vers le finalpoint %c", pathToFinalPoint[pathToFinalPoint.size()-1]);
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
-                            pathToFinalPoint.erase(pathToFinalPoint.end()) ;
+                            pathToFinalPoint.erase(pathToFinalPoint.end()-1) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
-                                //sleep(5); //On attend 5 secondes avant de partir
+                                sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else {
@@ -383,7 +388,7 @@ private:
 
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        if (mode==1 && departurePointReached && finalPointReached && (requestNumber != serveurData.request_number)){
+        if (mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
             arrivedAtCurrentPoint = false;
@@ -391,7 +396,13 @@ private:
             finalPoint = serveurData.final_point;
             requestNumber = serveurData.request_number;
             pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+            if (pathToDeparturePoint.empty()){
+                departurePointReached = true;
+            }
             pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
+            if (pathToFinalPoint.empty()){
+                finalPointReached = true;
+            }
             RCLCPP_INFO(this->get_logger(), "Data serveur updated, departurePoint = %c, finalPoint = %c", departurePoint, finalPoint);
         }
         

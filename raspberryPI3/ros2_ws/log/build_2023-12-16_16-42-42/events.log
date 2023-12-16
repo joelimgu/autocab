@@ -1,0 +1,593 @@
+[0.000000] (-) TimerEvent: {}
+[0.001788] (-) JobUnselected: {'identifier': 'can'}
+[0.002468] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.002563] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.002644] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.002723] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.002803] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.002879] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.002954] (-) JobUnselected: {'identifier': 'joystick'}
+[0.003030] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.003109] (-) JobUnselected: {'identifier': 'simulation'}
+[0.003186] (-) JobUnselected: {'identifier': 'system_check'}
+[0.003271] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces')])}
+[0.003369] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.089712] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.092461] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.095291] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.115 53351 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/lib:/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed94da70-7e65-4fec-93a7-b26dc2e758fc.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install:/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-506be82d33.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.115 53351 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces:/home/pi/autocab/raspberryPI3/ros2_ws/install/geicar_start:/home/pi/autocab/raspberryPI3/ros2_ws/install/system_check:/home/pi/autocab/raspberryPI3/ros2_ws/install/simulation:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_tools:/home/pi/autocab/raspberryPI3/ros2_ws/install/rviz_imu_plugin:/home/pi/autocab/raspberryPI3/ros2_ws/install/car_control:/home/pi/autocab/raspberryPI3/ros2_ws/install/can:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_filter_madgwick:/home/pi/autocab/raspberryPI3/ros2_ws/install/imu_complementary_filter:/home/pi/autocab/raspberryPI3/ros2_ws/install/carla_msgs:/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.098990] (-) TimerEvent: {}
+[0.199692] (-) TimerEvent: {}
+[0.300393] (-) TimerEvent: {}
+[0.320649] (car_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target car_control_node\x1b[0m\n'}
+[0.400605] (-) TimerEvent: {}
+[0.433835] (car_control) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o\x1b[0m\n'}
+[0.500837] (-) TimerEvent: {}
+[0.601519] (-) TimerEvent: {}
+[0.702213] (-) TimerEvent: {}
+[0.802921] (-) TimerEvent: {}
+[0.903599] (-) TimerEvent: {}
+[1.004278] (-) TimerEvent: {}
+[1.104961] (-) TimerEvent: {}
+[1.205657] (-) TimerEvent: {}
+[1.306372] (-) TimerEvent: {}
+[1.407054] (-) TimerEvent: {}
+[1.507758] (-) TimerEvent: {}
+[1.608468] (-) TimerEvent: {}
+[1.709197] (-) TimerEvent: {}
+[1.809965] (-) TimerEvent: {}
+[1.910962] (-) TimerEvent: {}
+[1.987259] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:509:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunterminated argument list invoking macro "RCLCPP_INFO"\n'}
+[1.987895] (car_control) StderrLine: {'line': b'  509 | }\n'}
+[1.988255] (car_control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.011147] (-) TimerEvent: {}
+[2.111926] (-) TimerEvent: {}
+[2.212715] (-) TimerEvent: {}
+[2.313627] (-) TimerEvent: {}
+[2.414383] (-) TimerEvent: {}
+[2.515156] (-) TimerEvent: {}
+[2.615919] (-) TimerEvent: {}
+[2.716646] (-) TimerEvent: {}
+[2.817527] (-) TimerEvent: {}
+[2.918294] (-) TimerEvent: {}
+[3.019193] (-) TimerEvent: {}
+[3.119916] (-) TimerEvent: {}
+[3.220661] (-) TimerEvent: {}
+[3.321413] (-) TimerEvent: {}
+[3.422147] (-) TimerEvent: {}
+[3.522899] (-) TimerEvent: {}
+[3.623671] (-) TimerEvent: {}
+[3.724477] (-) TimerEvent: {}
+[3.825277] (-) TimerEvent: {}
+[3.926146] (-) TimerEvent: {}
+[4.026932] (-) TimerEvent: {}
+[4.127706] (-) TimerEvent: {}
+[4.228495] (-) TimerEvent: {}
+[4.329301] (-) TimerEvent: {}
+[4.430166] (-) TimerEvent: {}
+[4.530913] (-) TimerEvent: {}
+[4.631692] (-) TimerEvent: {}
+[4.732499] (-) TimerEvent: {}
+[4.833272] (-) TimerEvent: {}
+[4.933977] (-) TimerEvent: {}
+[5.034717] (-) TimerEvent: {}
+[5.135452] (-) TimerEvent: {}
+[5.236242] (-) TimerEvent: {}
+[5.336966] (-) TimerEvent: {}
+[5.437701] (-) TimerEvent: {}
+[5.538469] (-) TimerEvent: {}
+[5.639257] (-) TimerEvent: {}
+[5.740009] (-) TimerEvent: {}
+[5.840817] (-) TimerEvent: {}
+[5.941547] (-) TimerEvent: {}
+[6.042294] (-) TimerEvent: {}
+[6.143066] (-) TimerEvent: {}
+[6.243811] (-) TimerEvent: {}
+[6.344636] (-) TimerEvent: {}
+[6.445449] (-) TimerEvent: {}
+[6.546174] (-) TimerEvent: {}
+[6.646931] (-) TimerEvent: {}
+[6.747665] (-) TimerEvent: {}
+[6.848449] (-) TimerEvent: {}
+[6.949224] (-) TimerEvent: {}
+[7.049945] (-) TimerEvent: {}
+[7.150695] (-) TimerEvent: {}
+[7.251430] (-) TimerEvent: {}
+[7.352255] (-) TimerEvent: {}
+[7.453042] (-) TimerEvent: {}
+[7.553763] (-) TimerEvent: {}
+[7.654485] (-) TimerEvent: {}
+[7.755240] (-) TimerEvent: {}
+[7.856022] (-) TimerEvent: {}
+[7.956845] (-) TimerEvent: {}
+[8.057608] (-) TimerEvent: {}
+[8.158377] (-) TimerEvent: {}
+[8.259185] (-) TimerEvent: {}
+[8.359997] (-) TimerEvent: {}
+[8.460785] (-) TimerEvent: {}
+[8.561543] (-) TimerEvent: {}
+[8.662285] (-) TimerEvent: {}
+[8.763030] (-) TimerEvent: {}
+[8.863806] (-) TimerEvent: {}
+[8.964736] (-) TimerEvent: {}
+[9.065505] (-) TimerEvent: {}
+[9.166248] (-) TimerEvent: {}
+[9.267027] (-) TimerEvent: {}
+[9.367777] (-) TimerEvent: {}
+[9.468533] (-) TimerEvent: {}
+[9.569323] (-) TimerEvent: {}
+[9.670098] (-) TimerEvent: {}
+[9.770840] (-) TimerEvent: {}
+[9.871561] (-) TimerEvent: {}
+[9.972367] (-) TimerEvent: {}
+[10.073139] (-) TimerEvent: {}
+[10.074541] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[10.075228] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[10.075783] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[10.076161] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:28:41:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[10.076630] (car_control) StderrLine: {'line': b'   28 | class car_control : public rclcpp::Node \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[10.077267] (car_control) StderrLine: {'line': b'      |                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[10.096180] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kcar_control::car_control()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[10.096861] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:34:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.097375] (car_control) StderrLine: {'line': b'   34 |         \x1b[01;31m\x1b[Kstart\x1b[m\x1b[K = false;\n'}
+[10.097752] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[10.113761] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:35:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[10.114406] (car_control) StderrLine: {'line': b'   35 |         \x1b[01;31m\x1b[Kmode\x1b[m\x1b[K = 0;\n'}
+[10.114827] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[10.115164] (car_control) StderrLine: {'line': b'      |         \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[10.146420] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:37:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedThrottle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.147066] (car_control) StderrLine: {'line': b'   37 |         \x1b[01;31m\x1b[KrequestedThrottle\x1b[m\x1b[K = 0;\n'}
+[10.147567] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.173300] (-) TimerEvent: {}
+[10.183987] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:38:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedSteerAngle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.184626] (car_control) StderrLine: {'line': b'   38 |         \x1b[01;31m\x1b[KrequestedSteerAngle\x1b[m\x1b[K = 0;\n'}
+[10.185133] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.214536] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:39:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentLatitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.215199] (car_control) StderrLine: {'line': b'   39 |         \x1b[01;31m\x1b[KcurrentLatitude\x1b[m\x1b[K = 0;\n'}
+[10.215642] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.247196] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:40:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentLongitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.247918] (car_control) StderrLine: {'line': b'   40 |         \x1b[01;31m\x1b[KcurrentLongitude\x1b[m\x1b[K = 0;\n'}
+[10.248327] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.273499] (-) TimerEvent: {}
+[10.279919] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:41:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentDirection\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.280839] (car_control) StderrLine: {'line': b'   41 |         \x1b[01;31m\x1b[KcurrentDirection\x1b[m\x1b[K[0]=1;\n'}
+[10.281355] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.308797] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:54:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KdeparturePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.309465] (car_control) StderrLine: {'line': b"   54 |         \x1b[01;31m\x1b[KdeparturePoint\x1b[m\x1b[K = 'A';\n"}
+[10.309901] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.332240] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:55:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KfinalPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.332944] (car_control) StderrLine: {'line': b"   55 |         \x1b[01;31m\x1b[KfinalPoint\x1b[m\x1b[K = 'C';\n"}
+[10.333396] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.358038] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:56:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.358688] (car_control) StderrLine: {'line': b"   56 |         \x1b[01;31m\x1b[KcurrentPoint\x1b[m\x1b[K = 'A' ;\n"}
+[10.359201] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.373677] (-) TimerEvent: {}
+[10.397161] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:57:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KdeparturePointReached\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.397873] (car_control) StderrLine: {'line': b'   57 |         \x1b[01;31m\x1b[KdeparturePointReached\x1b[m\x1b[K = false;\n'}
+[10.398303] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.430459] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:58:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KfinalPointReached\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.431120] (car_control) StderrLine: {'line': b'   58 |         \x1b[01;31m\x1b[KfinalPointReached\x1b[m\x1b[K = false;\n'}
+[10.431535] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.467666] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:59:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KarrivedAtCurrentPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.468318] (car_control) StderrLine: {'line': b'   59 |         \x1b[01;31m\x1b[KarrivedAtCurrentPoint\x1b[m\x1b[K = false;\n'}
+[10.468740] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.473843] (-) TimerEvent: {}
+[10.495546] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:60:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestNumber\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.496308] (car_control) StderrLine: {'line': b'   60 |         \x1b[01;31m\x1b[KrequestNumber\x1b[m\x1b[K = 0;\n'}
+[10.496755] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.520374] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:62:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcoordinates\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.521141] (car_control) StderrLine: {'line': b"   62 |         (\x1b[01;31m\x1b[Kcoordinates\x1b[m\x1b[K['A'])[0] = 43.570593;\n"}
+[10.521589] (car_control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.538499] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:86:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgraph\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KGraph\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[10.539219] (car_control) StderrLine: {'line': b'   86 |         \x1b[01;31m\x1b[Kgraph\x1b[m\x1b[K.createGraph(coordinates);\n'}
+[10.539677] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[10.539985] (car_control) StderrLine: {'line': b'      |         \x1b[32m\x1b[KGraph\x1b[m\x1b[K\n'}
+[10.574019] (-) TimerEvent: {}
+[10.575680] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:89:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KpathToDeparturePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.576370] (car_control) StderrLine: {'line': b'   89 |         \x1b[01;31m\x1b[KpathToDeparturePoint\x1b[m\x1b[K = graph.shortest_path(currentPoint, departurePoint);\n'}
+[10.576848] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.609124] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:93:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KpathToFinalPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.609795] (car_control) StderrLine: {'line': b'   93 |         \x1b[01;31m\x1b[KpathToFinalPoint\x1b[m\x1b[K = graph.shortest_path(departurePoint, finalPoint);\n'}
+[10.610236] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.637108] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:99:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_can_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.637668] (car_control) StderrLine: {'line': b'   99 |         \x1b[01;31m\x1b[Kpublisher_can_\x1b[m\x1b[K= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);\n'}
+[10.638050] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.674211] (-) TimerEvent: {}
+[10.698755] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:101:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_steeringCalibration_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.699316] (car_control) StderrLine: {'line': b'  101 |         \x1b[01;31m\x1b[Kpublisher_steeringCalibration_\x1b[m\x1b[K = this->create_publisher<interfaces::msg::SteeringCalibration>("steering_calibration", 10);\n'}
+[10.699730] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.750397] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:105:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_joystick_order_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.750938] (car_control) StderrLine: {'line': b'  105 |         \x1b[01;31m\x1b[Ksubscription_joystick_order_\x1b[m\x1b[K = this->create_subscription<interfaces::msg::JoystickOrder>(\n'}
+[10.751300] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.774405] (-) TimerEvent: {}
+[10.875126] (-) TimerEvent: {}
+[10.966330] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:108:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_motors_feedback_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[10.966887] (car_control) StderrLine: {'line': b'  108 |         \x1b[01;31m\x1b[Ksubscription_motors_feedback_\x1b[m\x1b[K = this->create_subscription<interfaces::msg::MotorsFeedback>(\n'}
+[10.967305] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.975347] (-) TimerEvent: {}
+[11.076139] (-) TimerEvent: {}
+[11.175224] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:111:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_steering_calibration_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.176117] (-) TimerEvent: {}
+[11.176564] (car_control) StderrLine: {'line': b'  111 |         \x1b[01;31m\x1b[Ksubscription_steering_calibration_\x1b[m\x1b[K = this->create_subscription<interfaces::msg::SteeringCalibration>(\n'}
+[11.177182] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.177575] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:112:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsteeringCalibrationCallback\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kcar_control\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.177957] (car_control) StderrLine: {'line': b'  112 |         "steering_calibration", 10, std::bind(&car_control::\x1b[01;31m\x1b[KsteeringCalibrationCallback\x1b[m\x1b[K, this, _1));\n'}
+[11.178319] (car_control) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.214582] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:114:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_gnss_data_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.215449] (car_control) StderrLine: {'line': b'  114 |         \x1b[01;31m\x1b[Ksubscription_gnss_data_\x1b[m\x1b[K = this->create_subscription<interfaces::msg::Gnss>(\n'}
+[11.215857] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.216308] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:115:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KgnssDataCallback\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kcar_control\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.216606] (car_control) StderrLine: {'line': b'  115 |         "gnss_data", 10, std::bind(&car_control::\x1b[01;31m\x1b[KgnssDataCallback\x1b[m\x1b[K, this, _1));\n'}
+[11.217039] (car_control) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.256206] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:117:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_serveur_data_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.257074] (car_control) StderrLine: {'line': b'  117 |         \x1b[01;31m\x1b[Ksubscription_serveur_data_\x1b[m\x1b[K = this->create_subscription<interfaces::msg::Serveur>(\n'}
+[11.257523] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.257887] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:118:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KserveurDataCallback\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kcar_control\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.258170] (car_control) StderrLine: {'line': b'  118 |         "serveur_data", 10, std::bind(&car_control::\x1b[01;31m\x1b[KserveurDataCallback\x1b[m\x1b[K, this, _1));\n'}
+[11.258497] (car_control) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.276323] (-) TimerEvent: {}
+[11.292498] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:120:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_us_data\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.293106] (car_control) StderrLine: {'line': b'  120 |         \x1b[01;31m\x1b[Ksubscription_us_data\x1b[m\x1b[K = this->create_subscription<interfaces::msg::Ultrasonic>(\n'}
+[11.293472] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.376542] (-) TimerEvent: {}
+[11.477305] (-) TimerEvent: {}
+[11.493430] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:125:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserver_calibration_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.494264] (car_control) StderrLine: {'line': b'  125 |         \x1b[01;31m\x1b[Kserver_calibration_\x1b[m\x1b[K = this->create_service<std_srvs::srv::Empty>(\n'}
+[11.494710] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.495092] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:126:77:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsteeringCalibration\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kcar_control\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.495461] (car_control) StderrLine: {'line': b'  126 |                             "steering_calibration", std::bind(&car_control::\x1b[01;31m\x1b[KsteeringCalibration\x1b[m\x1b[K, this, std::placeholders::_1, std::placeholders::_2));\n'}
+[11.495825] (car_control) StderrLine: {'line': b'      |                                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.511715] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:128:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[11.512245] (car_control) StderrLine: {'line': b'  128 |         \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(PERIOD_UPDATE_CMD, std::bind(&car_control::updateCmd, this));\n'}
+[11.512683] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[11.513126] (car_control) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[11.564586] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid car_control::usDataCallback(const Ultrasonic&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.565357] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:140:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfront_left\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.565763] (car_control) StderrLine: {'line': b'  140 |         \x1b[01;31m\x1b[Kfront_left\x1b[m\x1b[K = usData.front_left;\n'}
+[11.566127] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.577483] (-) TimerEvent: {}
+[11.590619] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:141:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfront_center\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.591269] (car_control) StderrLine: {'line': b'  141 |         \x1b[01;31m\x1b[Kfront_center\x1b[m\x1b[K = usData.front_center;\n'}
+[11.591703] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.615343] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:142:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfront_right\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.616049] (car_control) StderrLine: {'line': b'  142 |         \x1b[01;31m\x1b[Kfront_right\x1b[m\x1b[K = usData.front_right;\n'}
+[11.616494] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.638020] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:144:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krear_left\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.638649] (car_control) StderrLine: {'line': b'  144 |         \x1b[01;31m\x1b[Krear_left\x1b[m\x1b[K = usData.rear_left;\n'}
+[11.639067] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[11.662095] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:145:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krear_center\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.662756] (car_control) StderrLine: {'line': b'  145 |         \x1b[01;31m\x1b[Krear_center\x1b[m\x1b[K = usData.rear_center;\n'}
+[11.663181] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.677656] (-) TimerEvent: {}
+[11.685536] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:146:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krear_right\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.686471] (car_control) StderrLine: {'line': b'  146 |         \x1b[01;31m\x1b[Krear_right\x1b[m\x1b[K = usData.rear_right;\n'}
+[11.687074] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.704390] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid car_control::joystickOrderCallback(const JoystickOrder&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.704971] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:159:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.705416] (car_control) StderrLine: {'line': b'  159 |         if (joyOrder.start != \x1b[01;31m\x1b[Kstart\x1b[m\x1b[K){\n'}
+[11.705755] (car_control) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[11.724409] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:169:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[11.724984] (car_control) StderrLine: {'line': b'  169 |         if (joyOrder.mode != \x1b[01;31m\x1b[Kmode\x1b[m\x1b[K && joyOrder.mode != -1){ //if mode change\n'}
+[11.725346] (car_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[11.725678] (car_control) StderrLine: {'line': b'      |                              \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[11.768529] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:182:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KstartSteeringCalibration\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.769247] (car_control) StderrLine: {'line': b'  182 |                 \x1b[01;31m\x1b[KstartSteeringCalibration\x1b[m\x1b[K();\n'}
+[11.769678] (car_control) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.777845] (-) TimerEvent: {}
+[11.786415] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:186:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[11.787174] (car_control) StderrLine: {'line': b'  186 |         if (\x1b[01;31m\x1b[Kmode\x1b[m\x1b[K == 0 && start){  //if manual mode -> update requestedThrottle, requestedSteerAngle and reverse from joystick order\n'}
+[11.787645] (car_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[11.788028] (car_control) StderrLine: {'line': b'      |             \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[11.804816] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:186:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.805453] (car_control) StderrLine: {'line': b'  186 |         if (mode == 0 && \x1b[01;31m\x1b[Kstart\x1b[m\x1b[K){  //if manual mode -> update requestedThrottle, requestedSteerAngle and reverse from joystick order\n'}
+[11.805943] (car_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[11.837618] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:187:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedThrottle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.838337] (car_control) StderrLine: {'line': b'  187 |             \x1b[01;31m\x1b[KrequestedThrottle\x1b[m\x1b[K = joyOrder.throttle;\n'}
+[11.838933] (car_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.873790] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:188:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedSteerAngle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.874363] (car_control) StderrLine: {'line': b'  188 |             \x1b[01;31m\x1b[KrequestedSteerAngle\x1b[m\x1b[K = joyOrder.steer;\n'}
+[11.874889] (car_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.875374] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:189:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Koverloaded function with no contextual type information\n'}
+[11.875779] (car_control) StderrLine: {'line': b'  189 |             reverse = joyOrder.\x1b[01;31m\x1b[Kreverse\x1b[m\x1b[K;\n'}
+[11.876137] (car_control) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[11.878005] (-) TimerEvent: {}
+[11.901131] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid car_control::motorsFeedbackCallback(const MotorsFeedback&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.901794] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:199:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentAngle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.902231] (car_control) StderrLine: {'line': b'  199 |         \x1b[01;31m\x1b[KcurrentAngle\x1b[m\x1b[K = motorsFeedback.steering_angle;\n'}
+[11.902578] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.925808] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:200:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KleftRearRPM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.926462] (car_control) StderrLine: {'line': b'  200 |         \x1b[01;31m\x1b[KleftRearRPM\x1b[m\x1b[K = motorsFeedback.left_rear_speed;\n'}
+[11.926879] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.951626] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:201:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrightRearRPM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.952365] (car_control) StderrLine: {'line': b'  201 |         \x1b[01;31m\x1b[KrightRearRPM\x1b[m\x1b[K = motorsFeedback.right_rear_speed;\n'}
+[11.952839] (car_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[11.970287] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid car_control::updateCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.970934] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:217:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.971364] (car_control) StderrLine: {'line': b'  217 |         if (!\x1b[01;31m\x1b[Kstart\x1b[m\x1b[K)\n'}
+[11.971713] (car_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[11.978180] (-) TimerEvent: {}
+[11.998996] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:219:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KleftRearPwmCmd\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[11.999632] (car_control) StderrLine: {'line': b'  219 |             \x1b[01;31m\x1b[KleftRearPwmCmd\x1b[m\x1b[K = STOP;\n'}
+[12.000058] (car_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.029287] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:220:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrightRearPwmCmd\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.029939] (car_control) StderrLine: {'line': b'  220 |             \x1b[01;31m\x1b[KrightRearPwmCmd\x1b[m\x1b[K = STOP;\n'}
+[12.030358] (car_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.051219] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:221:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsteeringPwmCmd\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KsteeringCmd\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[12.051888] (car_control) StderrLine: {'line': b'  221 |             \x1b[01;31m\x1b[KsteeringPwmCmd\x1b[m\x1b[K = STOP;\n'}
+[12.052319] (car_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.052698] (car_control) StderrLine: {'line': b'      |             \x1b[32m\x1b[KsteeringCmd\x1b[m\x1b[K\n'}
+[12.068481] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:227:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[12.069183] (car_control) StderrLine: {'line': b'  227 |             if (\x1b[01;31m\x1b[Kmode\x1b[m\x1b[K==0)\n'}
+[12.069614] (car_control) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[12.069962] (car_control) StderrLine: {'line': b'      |                 \x1b[32m\x1b[KNode\x1b[m\x1b[K\n'}
+[12.078337] (-) TimerEvent: {}
+[12.106383] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:233:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KarrivedAtCurrentPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.107263] (car_control) StderrLine: {'line': b'  233 |                 if (!\x1b[01;31m\x1b[KarrivedAtCurrentPoint\x1b[m\x1b[K){\n'}
+[12.107776] (car_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.137926] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:58:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentLatitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.138754] (car_control) StderrLine: {'line': b'  235 |                     arrivedAtCurrentPoint = straightLine(\x1b[01;31m\x1b[KcurrentLatitude\x1b[m\x1b[K, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.139198] (car_control) StderrLine: {'line': b'      |                                                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.170410] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentLongitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.171043] (car_control) StderrLine: {'line': b'  235 |                     arrivedAtCurrentPoint = straightLine(currentLatitude, \x1b[01;31m\x1b[KcurrentLongitude\x1b[m\x1b[K, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.171472] (car_control) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.178520] (-) TimerEvent: {}
+[12.195980] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:94:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcoordinates\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.196621] (car_control) StderrLine: {'line': b'  235 |                     arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (\x1b[01;31m\x1b[Kcoordinates\x1b[m\x1b[K[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.197136] (car_control) StderrLine: {'line': b'      |                                                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.221830] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:106:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.222477] (car_control) StderrLine: {'line': b'  235 |                     arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[\x1b[01;31m\x1b[KcurrentPoint\x1b[m\x1b[K])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.222915] (car_control) StderrLine: {'line': b'      |                                                                                                          \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.254382] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:157:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentDirection\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.255035] (car_control) StderrLine: {'line': b'  235 |                 arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], \x1b[01;31m\x1b[KcurrentDirection\x1b[m\x1b[K, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.255479] (car_control) StderrLine: {'line': b'      |                                                                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.255813] (car_control) StderrLine: {'line': b'\n'}
+[12.278710] (-) TimerEvent: {}
+[12.287497] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:175:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedThrottle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.288159] (car_control) StderrLine: {'line': b'  235 | rivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, \x1b[01;31m\x1b[KrequestedThrottle\x1b[m\x1b[K, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.288607] (car_control) StderrLine: {'line': b'      |                                                                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.289028] (car_control) StderrLine: {'line': b'\n'}
+[12.323202] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:235:203:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedSteerAngle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.323731] (car_control) StderrLine: {'line': b'  235 | htLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, \x1b[01;31m\x1b[KrequestedSteerAngle\x1b[m\x1b[K, this->get_logger());\n'}
+[12.324233] (car_control) StderrLine: {'line': b'      |                                                                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.324597] (car_control) StderrLine: {'line': b'\n'}
+[12.362986] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:243:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KdeparturePointReached\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.363524] (car_control) StderrLine: {'line': b'  243 |                     if (!\x1b[01;31m\x1b[KdeparturePointReached\x1b[m\x1b[K){\n'}
+[12.363865] (car_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.378865] (-) TimerEvent: {}
+[12.402290] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[12.402959] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[12.403374] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[12.403712] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[12.404018] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[12.404363] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[12.404713] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[12.405167] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[12.405530] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[12.405880] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[12.406270] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[12.406695] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[12.407073] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:244:101:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KpathToDeparturePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.407463] (car_control) StderrLine: {'line': b'  244 |                         RCLCPP_INFO(this->get_logger(), "En d\xc3\xa9pla\xc3\xa7ement vers le departurepoint %c", \x1b[01;31m\x1b[KpathToDeparturePoint\x1b[m\x1b[K[pathToDeparturePoint.size()-1]);\n'}
+[12.407932] (car_control) StderrLine: {'line': b'      |                                                                                                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.433952] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentLatitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.434652] (car_control) StderrLine: {'line': b'  245 |                         arrived = straightLine(\x1b[01;31m\x1b[KcurrentLatitude\x1b[m\x1b[K, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.435096] (car_control) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.466429] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentLongitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.467082] (car_control) StderrLine: {'line': b'  245 |                         arrived = straightLine(currentLatitude, \x1b[01;31m\x1b[KcurrentLongitude\x1b[m\x1b[K, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.467525] (car_control) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.479093] (-) TimerEvent: {}
+[12.491618] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:84:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcoordinates\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.492244] (car_control) StderrLine: {'line': b'  245 |                         arrived = straightLine(currentLatitude, currentLongitude, (\x1b[01;31m\x1b[Kcoordinates\x1b[m\x1b[K[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.492903] (car_control) StderrLine: {'line': b'      |                                                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.528345] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KpathToDeparturePoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.529190] (car_control) StderrLine: {'line': b'  245 |                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[\x1b[01;31m\x1b[KpathToDeparturePoint\x1b[m\x1b[K[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.529695] (car_control) StderrLine: {'line': b'      |                                                                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.560724] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:225:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcurrentDirection\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.561392] (car_control) StderrLine: {'line': b'  245 | ongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], \x1b[01;31m\x1b[KcurrentDirection\x1b[m\x1b[K, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.561821] (car_control) StderrLine: {'line': b'      |                                                                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.562214] (car_control) StderrLine: {'line': b'\n'}
+[12.579279] (-) TimerEvent: {}
+[12.594233] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:243:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedThrottle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.594867] (car_control) StderrLine: {'line': b'  245 | ates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, \x1b[01;31m\x1b[KrequestedThrottle\x1b[m\x1b[K, reverse, requestedSteerAngle, this->get_logger());\n'}
+[12.595302] (car_control) StderrLine: {'line': b'      |                                                                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.595618] (car_control) StderrLine: {'line': b'\n'}
+[12.630303] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:245:271:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KrequestedSteerAngle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.630838] (car_control) StderrLine: {'line': b'  245 | thToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, \x1b[01;31m\x1b[KrequestedSteerAngle\x1b[m\x1b[K, this->get_logger());\n'}
+[12.631194] (car_control) StderrLine: {'line': b'      |                                                                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.631521] (car_control) StderrLine: {'line': b'\n'}
+[12.669208] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:257:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KfinalPointReached\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.669758] (car_control) StderrLine: {'line': b'  257 |                     } else if (!\x1b[01;31m\x1b[KfinalPointReached\x1b[m\x1b[K){\n'}
+[12.670102] (car_control) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.679462] (-) TimerEvent: {}
+[12.703462] (car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[12.704115] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[12.704558] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[12.704967] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[12.705345] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[12.705702] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[12.706119] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[12.706492] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[12.706841] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[12.707296] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[12.707800] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[12.708182] (car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:1\x1b[m\x1b[K:\n'}
+[12.708634] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:258:97:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KpathToFinalPoint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.709170] (car_control) StderrLine: {'line': b'  258 |                         RCLCPP_INFO(this->get_logger(), "En d\xc3\xa9pla\xc3\xa7ement vers le finalpoint %c", \x1b[01;31m\x1b[KpathToFinalPoint\x1b[m\x1b[K[pathToFinalPoint.size()-1]);\n'}
+[12.709597] (car_control) StderrLine: {'line': b'      |                                                                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.735755] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.736598] (car_control) StderrLine: {'line': b'  259 |                         \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.738303] (car_control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.739631] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[12.740616] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.742394] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.743239] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:257:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.743874] (car_control) StderrLine: {'line': b'  257 |                     } else if (!finalPointReached)\x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[12.744536] (car_control) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.745376] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[12.746222] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.747011] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.748212] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:238:24:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.748969] (car_control) StderrLine: {'line': b'  238 |                 } else \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[12.749810] (car_control) StderrLine: {'line': b'      |                        \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.750669] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[12.751327] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.751927] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.752559] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:231:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.753557] (car_control) StderrLine: {'line': b'  231 |             } else if (mode==1)\x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[12.754309] (car_control) StderrLine: {'line': b'      |                                \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.754913] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[12.755552] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.756451] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.757301] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:224:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.758126] (car_control) StderrLine: {'line': b'  224 |         \x1b[01;36m\x1b[K{\x1b[m\x1b[K //Car started\n'}
+[12.758979] (car_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.759673] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[12.760340] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.761249] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.762011] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:213:21:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.762677] (car_control) StderrLine: {'line': b'  213 |     void updateCmd()\x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[12.763465] (car_control) StderrLine: {'line': b'      |                     \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.764167] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[12.765012] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:259:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id at end of input\n'}
+[12.765828] (car_control) StderrLine: {'line': b'  259 |                         RCLCPP_INFO\x1b[01;31m\x1b[K(\x1b[m\x1b[Kthis->get_logger(), "Size de pathtofinal point %c", pathToFinalPoint.size();\n'}
+[12.766560] (car_control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.779652] (-) TimerEvent: {}
+[12.880509] (-) TimerEvent: {}
+[12.981279] (-) TimerEvent: {}
+[13.082012] (-) TimerEvent: {}
+[13.182751] (-) TimerEvent: {}
+[13.283471] (-) TimerEvent: {}
+[13.384188] (-) TimerEvent: {}
+[13.484957] (-) TimerEvent: {}
+[13.585690] (-) TimerEvent: {}
+[13.686417] (-) TimerEvent: {}
+[13.787164] (-) TimerEvent: {}
+[13.887913] (-) TimerEvent: {}
+[13.988913] (-) TimerEvent: {}
+[14.089680] (-) TimerEvent: {}
+[14.190405] (-) TimerEvent: {}
+[14.291150] (-) TimerEvent: {}
+[14.391910] (-) TimerEvent: {}
+[14.492635] (-) TimerEvent: {}
+[14.593427] (-) TimerEvent: {}
+[14.694181] (-) TimerEvent: {}
+[14.794933] (-) TimerEvent: {}
+[14.895728] (-) TimerEvent: {}
+[14.996489] (-) TimerEvent: {}
+[15.097254] (-) TimerEvent: {}
+[15.197994] (-) TimerEvent: {}
+[15.298756] (-) TimerEvent: {}
+[15.399506] (-) TimerEvent: {}
+[15.500284] (-) TimerEvent: {}
+[15.601058] (-) TimerEvent: {}
+[15.701788] (-) TimerEvent: {}
+[15.802542] (-) TimerEvent: {}
+[15.903322] (-) TimerEvent: {}
+[16.004150] (-) TimerEvent: {}
+[16.104959] (-) TimerEvent: {}
+[16.205665] (-) TimerEvent: {}
+[16.306378] (-) TimerEvent: {}
+[16.407137] (-) TimerEvent: {}
+[16.507893] (-) TimerEvent: {}
+[16.608646] (-) TimerEvent: {}
+[16.709468] (-) TimerEvent: {}
+[16.810203] (-) TimerEvent: {}
+[16.910952] (-) TimerEvent: {}
+[17.011752] (-) TimerEvent: {}
+[17.112483] (-) TimerEvent: {}
+[17.213326] (-) TimerEvent: {}
+[17.314054] (-) TimerEvent: {}
+[17.414801] (-) TimerEvent: {}
+[17.515567] (-) TimerEvent: {}
+[17.616316] (-) TimerEvent: {}
+[17.717188] (-) TimerEvent: {}
+[17.818818] (-) TimerEvent: {}
+[17.919883] (-) TimerEvent: {}
+[18.020712] (-) TimerEvent: {}
+[18.121512] (-) TimerEvent: {}
+[18.222291] (-) TimerEvent: {}
+[18.323040] (-) TimerEvent: {}
+[18.423833] (-) TimerEvent: {}
+[18.524590] (-) TimerEvent: {}
+[18.625351] (-) TimerEvent: {}
+[18.726108] (-) TimerEvent: {}
+[18.826930] (-) TimerEvent: {}
+[18.927653] (-) TimerEvent: {}
+[19.028380] (-) TimerEvent: {}
+[19.129159] (-) TimerEvent: {}
+[19.229908] (-) TimerEvent: {}
+[19.330626] (-) TimerEvent: {}
+[19.431397] (-) TimerEvent: {}
+[19.532208] (-) TimerEvent: {}
+[19.632985] (-) TimerEvent: {}
+[19.733794] (-) TimerEvent: {}
+[19.834564] (-) TimerEvent: {}
+[19.935336] (-) TimerEvent: {}
+[20.036059] (-) TimerEvent: {}
+[20.136903] (-) TimerEvent: {}
+[20.237783] (-) TimerEvent: {}
+[20.338516] (-) TimerEvent: {}
+[20.439241] (-) TimerEvent: {}
+[20.540016] (-) TimerEvent: {}
+[20.640833] (-) TimerEvent: {}
+[20.741590] (-) TimerEvent: {}
+[20.842334] (-) TimerEvent: {}
+[20.943078] (-) TimerEvent: {}
+[21.043866] (-) TimerEvent: {}
+[21.144621] (-) TimerEvent: {}
+[21.245474] (-) TimerEvent: {}
+[21.346220] (-) TimerEvent: {}
+[21.447021] (-) TimerEvent: {}
+[21.547775] (-) TimerEvent: {}
+[21.648535] (-) TimerEvent: {}
+[21.749322] (-) TimerEvent: {}
+[21.850051] (-) TimerEvent: {}
+[21.950795] (-) TimerEvent: {}
+[22.051577] (-) TimerEvent: {}
+[22.152373] (-) TimerEvent: {}
+[22.253334] (-) TimerEvent: {}
+[22.354081] (-) TimerEvent: {}
+[22.454837] (-) TimerEvent: {}
+[22.555579] (-) TimerEvent: {}
+[22.656295] (-) TimerEvent: {}
+[22.757384] (-) TimerEvent: {}
+[22.858234] (-) TimerEvent: {}
+[22.958990] (-) TimerEvent: {}
+[23.059759] (-) TimerEvent: {}
+[23.160508] (-) TimerEvent: {}
+[23.261382] (-) TimerEvent: {}
+[23.362195] (-) TimerEvent: {}
+[23.462935] (-) TimerEvent: {}
+[23.563655] (-) TimerEvent: {}
+[23.664379] (-) TimerEvent: {}
+[23.765148] (-) TimerEvent: {}
+[23.865888] (-) TimerEvent: {}
+[23.966734] (-) TimerEvent: {}
+[24.067477] (-) TimerEvent: {}
+[24.168233] (-) TimerEvent: {}
+[24.268971] (-) TimerEvent: {}
+[24.369740] (-) TimerEvent: {}
+[24.470507] (-) TimerEvent: {}
+[24.571263] (-) TimerEvent: {}
+[24.672002] (-) TimerEvent: {}
+[24.772838] (-) TimerEvent: {}
+[24.873585] (-) TimerEvent: {}
+[24.974279] (-) TimerEvent: {}
+[25.074967] (-) TimerEvent: {}
+[25.175645] (-) TimerEvent: {}
+[25.276306] (-) TimerEvent: {}
+[25.377037] (-) TimerEvent: {}
+[25.477720] (-) TimerEvent: {}
+[25.578394] (-) TimerEvent: {}
+[25.679112] (-) TimerEvent: {}
+[25.779819] (-) TimerEvent: {}
+[25.880663] (-) TimerEvent: {}
+[25.929364] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1\n'}
+[25.930207] (car_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2\n'}
+[25.931136] (car_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[25.937099] (car_control) CommandEnded: {'returncode': 2}
+[25.980938] (-) TimerEvent: {}
+[26.081615] (-) TimerEvent: {}
+[26.182315] (-) TimerEvent: {}
+[26.286057] (-) TimerEvent: {}
+[26.303889] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 2}
+[26.316250] (-) EventReactorShutdown: {}

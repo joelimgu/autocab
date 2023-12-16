@@ -62,9 +62,9 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
                 }
             }else{
                 if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
-                    requestedAngle = -1.0 * (angle/30);
+                    requestedAngle = -1.0 * (angle/40);
                 }else{
-                    requestedAngle = 1.0 * (angle/30);
+                    requestedAngle = 1.0 * (angle/40);
                 }
             }
         }
