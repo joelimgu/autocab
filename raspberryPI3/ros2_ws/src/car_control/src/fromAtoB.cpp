@@ -55,18 +55,18 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
         } else {
             reverse = false;
             if (angle > MIN_ANGLE_FOR_MAX_STEERING){
-            if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
-                requestedAngle = -1.0;
+                if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
+                    requestedAngle = -1.0;
+                }else{
+                    requestedAngle = 1.0;
+                }
             }else{
-                requestedAngle = 1.0;
+                if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
+                    requestedAngle = -1.0 * (angle/30);
+                }else{
+                    requestedAngle = 1.0 * (angle/30);
+                }
             }
-        }else{
-            if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
-                requestedAngle = -1.0 * (angle/MIN_ANGLE_FOR_MAX_STEERING);
-            }else{
-                requestedAngle = 1.0 * (angle/MIN_ANGLE_FOR_MAX_STEERING);
-            }
-        }
         }
         
         RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f et de reverse : %d", angle, reverse);
@@ -179,7 +179,7 @@ char detectClosestPoint(float currentLat, float currentLon,std::map<char, float[
     for (std::map<char, float[2]>::iterator it = pointMap.begin(); it != pointMap.end(); ++it)
     {
         float computedDistance = distance(currentPos,it->second);
-        if((minDistance = -1) || computedDistance<minDistance)
+        if((minDistance == -1) || computedDistance<minDistance)
         {
             minDistance = computedDistance;
             point = it->first;

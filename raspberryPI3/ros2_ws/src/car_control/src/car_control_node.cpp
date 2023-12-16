@@ -243,7 +243,7 @@ private:
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
-                                sleep(5); //On attend 5 secondes avant de partir
+                                //sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else if (!finalPointReached){
@@ -253,7 +253,7 @@ private:
                             pathToFinalPoint.erase(pathToFinalPoint.end()) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
-                                sleep(5); //On attend 5 secondes avant de partir
+                                //sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else {
@@ -273,6 +273,7 @@ private:
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
             steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
+            /*
             //Obstacle Detection in all modes
             if (ObstacleCmdFront(front_left, front_center, front_right) == STOP && reverse == false){
                 leftRearPwmCmd = STOP;
@@ -283,6 +284,7 @@ private:
                 leftRearPwmCmd = STOP;
                 rightRearPwmCmd = leftRearPwmCmd;
             }
+            */
         }
 
         
@@ -361,10 +363,15 @@ private:
         if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
             currentDirection[0] =  gnssData.latitude - currentLatitude ; 
             currentDirection[1] =  gnssData.longitude - currentLongitude;
+            if (reverse==true){
+                currentDirection[0]= -currentDirection[0];
+                currentDirection[1]= -currentDirection[1];
+            }
             currentLatitude = gnssData.latitude;
             currentLongitude = gnssData.longitude;
             currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
             RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
+            RCLCPP_INFO(this->get_logger(), "currentPoint = %c", currentPoint);
         }
     }
 
