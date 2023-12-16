@@ -41,12 +41,22 @@ public:
         currentDirection[0]=1;
         currentDirection[1]=1;
 
-        departurePoint = 'A';
-        finalPoint = 'A';
+        // //Vrai initialisation
+        // departurePoint = 'A';
+        // finalPoint = 'A';
+        // currentPoint = 'A' ;
+        // departurePointReached = true;
+        // finalPointReached = true;
+        // arrivedAtCurrentPoint = true;
+        // requestNumber = 0;
+
+        //initialisation pour les tests
+        departurePoint = 'B';
+        finalPoint = 'K';
         currentPoint = 'A' ;
-        departurePointReached = true;
-        finalPointReached = true;
-        arrivedAtCurrentPoint = true;
+        departurePointReached = false;
+        finalPointReached = false;
+        arrivedAtCurrentPoint = false;
         requestNumber = 0;
         
         (coordinates['A'])[0] = 43.570593;
@@ -74,7 +84,13 @@ public:
         
 
         graph.createGraph(coordinates);
-    
+
+        //tests pour prouver que le calcul de plus court chemin fonctionne
+        pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+        pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
+        RCLCPP_INFO(this->get_logger(), "pathTodeparturepoint : %c\n", pathToDeparturePoint[0]);
+        RCLCPP_INFO(this->get_logger(), "pathTofinalPoint : %c %c\n", pathToFinalPoint[0],pathToFinalPoint[1]);
+
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
 
@@ -209,16 +225,11 @@ private:
 
             //Autonomous Mode
             } else if (mode==1){
-                
-                //tests pour prouver que le calcul de plus court chemin fonctionne
-                pathToDeparturePoint = graph.shortest_path('F', 'H');
-                pathToFinalPoint = graph.shortest_path('H','C');
-                // RCLCPP_INFO(this->get_logger(), "Premier point pathTodeparturepoint : %c %c %c\n", pathToDeparturePoint[0],pathToDeparturePoint[1],pathToDeparturePoint[2]);
-                // RCLCPP_INFO(this->get_logger(), "Premier,deuxieme et troisieme point pathTofinalPoint : %c %c %c %c\n", pathToFinalPoint[0],pathToFinalPoint[1],pathToFinalPoint[2],pathToFinalPoint[3]);
 
                 if (!arrivedAtCurrentPoint){
 
                     arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    RCLCPP_INFO(this->get_logger(), "En déplaçement vers le point %c", currentPoint);
 
                 } else {
 
@@ -226,6 +237,7 @@ private:
                     //Dans chaque cas, parcours le path correspondant. Une fois arrivé à destination, enlever le premier point de la liste
                     bool arrived = false ;
                     if (!departurePointReached){
+                        RCLCPP_INFO(this->get_logger(), "En déplaçement vers le point %c", currentPoint);
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()) ;
@@ -235,6 +247,7 @@ private:
                             }
                         }
                     } else if (!finalPointReached){
+                        RCLCPP_INFO(this->get_logger(), "En déplaçement vers le point %c", currentPoint);
                         arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
                         if (arrived == true){
                             pathToFinalPoint.erase(pathToFinalPoint.end()) ;
