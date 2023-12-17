@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interfaces/msg/Serveur.msg
+// generated code does not contain a copyright notice
+
+
+module interfaces {
+  module msg {
+    struct Serveur {
+      @default (value=65)
+      uint8 departure_point;
+
+      @default (value=65)
+      uint8 final_point;
+
+      @default (value=0)
+      int8 request_number;
+    };
+  };
+};

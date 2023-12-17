@@ -125,12 +125,42 @@ CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/fromAtoB.cpp -o CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.s
 
+CMakeFiles/car_control_node.dir/src/corrector.cpp.o: CMakeFiles/car_control_node.dir/flags.make
+CMakeFiles/car_control_node.dir/src/corrector.cpp.o: /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp
+CMakeFiles/car_control_node.dir/src/corrector.cpp.o: CMakeFiles/car_control_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/car_control_node.dir/src/corrector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car_control_node.dir/src/corrector.cpp.o -MF CMakeFiles/car_control_node.dir/src/corrector.cpp.o.d -o CMakeFiles/car_control_node.dir/src/corrector.cpp.o -c /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp
+
+CMakeFiles/car_control_node.dir/src/corrector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car_control_node.dir/src/corrector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp > CMakeFiles/car_control_node.dir/src/corrector.cpp.i
+
+CMakeFiles/car_control_node.dir/src/corrector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car_control_node.dir/src/corrector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/corrector.cpp -o CMakeFiles/car_control_node.dir/src/corrector.cpp.s
+
+CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o: CMakeFiles/car_control_node.dir/flags.make
+CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o: /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp
+CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o: CMakeFiles/car_control_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o -MF CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o.d -o CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o -c /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp
+
+CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp > CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.i
+
+CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/obstacle_detection.cpp -o CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.s
+
 # Object files for target car_control_node
 car_control_node_OBJECTS = \
 "CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o" \
 "CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o" \
 "CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o" \
-"CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o"
+"CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o" \
+"CMakeFiles/car_control_node.dir/src/corrector.cpp.o" \
+"CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o"
 
 # External object files for target car_control_node
 car_control_node_EXTERNAL_OBJECTS =
@@ -139,6 +169,8 @@ car_control_node: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o
+car_control_node: CMakeFiles/car_control_node.dir/src/corrector.cpp.o
+car_control_node: CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o
 car_control_node: CMakeFiles/car_control_node.dir/build.make
 car_control_node: /opt/ros/humble/lib/librclcpp.so
 car_control_node: /home/pi/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
@@ -235,7 +267,7 @@ car_control_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 car_control_node: /opt/ros/humble/lib/librcutils.so
 car_control_node: /usr/lib/aarch64-linux-gnu/libpython3.10.so
 car_control_node: CMakeFiles/car_control_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable car_control_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable car_control_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/car_control_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
