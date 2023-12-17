@@ -49,8 +49,6 @@
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
 
-<!-- Script JS map -->
-<script src="map_define.js"></script> 
 
 
  <!-- Define image size for the website-->
@@ -254,9 +252,21 @@ crossorigin=""></script>
 </style>
 
 <style>
-    #map { height: 600px;
-           }
+   #map-container {
+        position: relative;
+        max-width: 800px; /* Establece el ancho máximo deseado */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    #map {
+        height: 600px; /* Establece la altura deseada */
+        max-width: 100%; /* Establece el ancho máximo deseado */
+    }
+
  </style>
+ 
+<!-- Script JS map -->
+<script src="map_waiting.js"></script> 
 
 </head>
 
@@ -278,9 +288,10 @@ crossorigin=""></script>
     </div>
         
      <!--Map Conatiner -->
-    <div id="map"></div>
-
-   
+     <div id="map-container">
+        <!-- Contenedor del mapa -->
+        <div id="map"></div>
+    </div>
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">  
     <div class="position-relative top-50 start-100 translate-middle">

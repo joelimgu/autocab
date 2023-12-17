@@ -49,8 +49,7 @@
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
 
-<!-- Script JS map -->
-<script src="map_define_2.js"></script> 
+
 
 
  <!-- Define image size for the website-->
@@ -254,9 +253,32 @@ crossorigin=""></script>
 </style>
 
 <style>
-    #map { height: 600px;
-           }
- </style>
+#map-container {
+        position: relative;
+        max-width: 800px; /* Establece el ancho máximo deseado */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    #map {
+        height: 600px; /* Establece la altura deseada */
+        max-width: 100%; /* Establece el ancho máximo deseado */
+    }
+
+    #instruction-message {
+        position: absolute;
+        top: 50px; /* Ajusta la posición vertical según sea necesario */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Ajusta para centrar correctamente */
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        z-index: 1000; /* Asegura que el mensaje esté en la parte superior */
+    }
+</style>
+
+<!-- Script JS map -->
+<script src="map_define_2.js"></script>  
 
 </head>
 
@@ -293,16 +315,33 @@ crossorigin=""></script>
 
         
      <!--Map Conatiner -->
-    <div id="map"></div>
+     <div id="map-container">
+        <!-- Mensaje de instrucción  -->
+        <div id="instruction-message"></div> 
+        <!-- Contenedor del mapa -->
+        <div id="map"></div>
+    </div>
 
    
-
+<!--
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">  
     <div class="position-relative top-50 start-100 translate-middle">
         <a class="btn btn-outline-success btn-lg"  href="Waiting.html">Start !</a> 
     </div>
-</div>
+</div>-->
 
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+    <div class="d-flex justify-content-center">
+        <!-- Botón Start -->
+        <div class="position-relative top-50 start-100 translate-middle me-3">
+            <a id="startButton" class="btn btn-outline-success btn-lg" href="Waiting.html">Start !</a>
+        </div>
+        <!-- Botón Cancel -->
+        <div class="position-relative top-50 start-100 translate-middle">
+            <a class="btn btn-outline-danger btn-lg" href="Taxi.html">Cancel</a>
+        </div>
+    </div>
+</div>
 
 
 <footer class="container py-5">

@@ -1,8 +1,19 @@
+let chooseDestination= true;
+let personMarker = null;
+let arriveMarker = null; 
+let car = null;
+
 document.addEventListener("DOMContentLoaded", function () {
     
-    let chooseDestination= true;
-    let personMarker = null;
-    let arriveMarker = null; 
+
+
+    let selectedMarkers = {
+        destination: null,
+        startingPoint: null
+    };
+
+    document.getElementById('instruction-message').innerHTML = '<p>Please select your destination point </p>';
+
 
     let personIcon = L.icon({
         
@@ -23,6 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
         iconUrl: 'point_icone.png',
         iconSize: [40, 40],
         iconAnchor: [10, 10]
+    });
+    let carIcon = L.icon({ 
+        iconUrl: 'carIcone.jpg',
+        iconSize: [40, 40],
+        iconAnchor: [10, 10]
+
     });
 
     let points = [
@@ -53,17 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.lastPopup.close();
             }
 
-            // Abrir la nueva ventana emergente con el mensaje correspondiente
-            /*
-            const popup = L.popup()
-                .setLatLng(e.latlng)
-                .setContent(`<button onclick="alert('Latitud: ${e.latlng.lat.toFixed(6)}, Longitud: ${e.latlng.lng.toFixed(6)}')">Your Destination</button>`)
-                .openOn(map);
-
-            // Almacenar la referencia a la última ventana emergente abierta
-            window.lastPopup = popup;*/
-                      // Cerrar la ventana emergente anterior si existe
-            // Cerrar la ventana emergente anterior si existe
             if (window.lastPopup) {
                 window.lastPopup.close();
             }
@@ -76,16 +82,20 @@ document.addEventListener("DOMContentLoaded", function () {
             if (confirmed) {
                 // Acciones si se hace clic en "Sí"
                 if (chooseDestination) {
+                    document.getElementById('instruction-message').innerHTML = '<p>Please select your starting point <br> or <br> Press cancel for make another request </p>';
 
                     console.log("User destination point :", markerData);
                     chooseDestination = false;
+                    selectedMarkers.destination = markerData;
                     map.removeLayer(marker);
-                    const arriveMarker = L.marker([point.lat, point.lng], { icon: arriveIcon }).addTo(map);
+                    arriveMarker = L.marker([point.lat, point.lng], { icon: arriveIcon }).addTo(map);
 
                 } else {
                     console.log("User starting point :", markerData);
+                    selectedMarkers.startingPoint = markerData;
                     map.removeLayer(marker);
-                    const personMarker = L.marker([point.lat, point.lng], { icon: personIcon }).addTo(map);
+                    personMarker = L.marker([point.lat, point.lng], { icon: personIcon }).addTo(map);
+                    document.getElementById('instruction-message').innerHTML = '<p> Press start to continue <br> Press cancel for make another call</p>';
                 }
 
             } else {
@@ -107,4 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
         zoom: 20,
         layers: [osm, pointsGrp]
     });
+
+      // Agrega el evento de clic al botón "Start"
+    const startButton = document.getElementById('startButton');
+    startButton.addEventListener('click', function () {
+        // Guarda los marcadores en el LocalStorage
+        localStorage.setItem('selectedMarkers', JSON.stringify(selectedMarkers));
+    });
+
+
 });
