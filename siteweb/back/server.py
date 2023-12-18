@@ -55,7 +55,7 @@ async def handle_client(websocket, path):
             print(f"Client {websocket.remote_address} disconnected. Number of connected clients: {len(clients)}")
 
 async def main():
-    server = await websockets.serve(handle_client, "0.0.0.0", 5501)
+    server = await websockets.serve(handle_client, "127.0.0.1", 5501)
     print("WebSocket server listening on ws://127.0.0.1:5501")
 
     await server.wait_closed()
