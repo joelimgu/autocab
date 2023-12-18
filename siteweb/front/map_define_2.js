@@ -18,22 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let personIcon = L.icon({
         
         iconUrl: 'person_icone.png',
-        iconSize: [40, 40],
-        iconAnchor: [10, 10]
+        iconSize: [20, 20],
+        iconAnchor: [0, 20]
 
     });
     let arriveIcon = L.icon({
         
         iconUrl: 'arrive_point.png',
-        iconSize: [40, 40],
-        iconAnchor: [10, 10]
+        iconSize: [20, 20],
+        iconAnchor: [0, 20]
 
     });
 
     let pointIcon = L.icon({
         iconUrl: 'point_icone.png',
-        iconSize: [40, 40],
-        iconAnchor: [10, 10]
+        iconSize: [30, 30],
+        iconAnchor: [15, 30]
     });
     let carIcon = L.icon({ 
         iconUrl: 'carIcone.jpg',
