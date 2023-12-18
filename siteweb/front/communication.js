@@ -1,5 +1,5 @@
 // Your WebSocket client code
-const socket = new WebSocket("ws://192.168.1.1:5501");
+const socket = new WebSocket("ws://127.0.0.1:5501");
 
 // JavaScript code to handle event and toggle images
 function handleMessage(event) {
