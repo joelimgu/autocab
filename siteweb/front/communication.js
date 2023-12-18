@@ -21,7 +21,7 @@ function handleMessage(event) {
     imageElement.style.marginTop = '0px'; // Add spacing below the image
 
     // Check the message value
-    if (message === 'true') {
+    if (message === 'True') {
         // Change the image source to switch_on.png
         imageElement.src = 'switch_on1.png';
     }
@@ -45,5 +45,5 @@ socket.onerror = function (event) {
 // Call handleMessage with a predefined message when the page is ready
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming 'false' as the initial state, adjust this if needed
-    handleMessage({ data: 'false' });
+    handleMessage({ data: 'False' });
 });
