@@ -2,7 +2,7 @@ import asyncio
 import websockets
 
 async def send_message():
-    uri = "ws://10.32.129.34:5501"
+    uri = "ws://10.32.129.0:5501"
     async with websockets.connect(uri) as websocket:
         try:
             while True:
