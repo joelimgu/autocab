@@ -16,7 +16,7 @@ async def start_status_callback(msg):
     if start_status != prev_start_status:
         prev_start_status = start_status
         print(f"Received start status: {start_status}")
-        await send_message(start_status)  # Utiliser 'await' pour attendre la fin de send_message
+        send_message(start_status)  # Utiliser 'await' pour attendre la fin de send_message
 
 
 async def send_message(start_status):
