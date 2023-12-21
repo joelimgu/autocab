@@ -387,7 +387,8 @@ private:
 
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        if (mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached && (requestNumber != serveurData.request_number)){
+        is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached
+        if (is_request_fullfilled && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
             arrivedAtCurrentPoint = false;

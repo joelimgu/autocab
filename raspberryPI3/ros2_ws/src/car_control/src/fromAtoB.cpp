@@ -45,9 +45,11 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
 
         float angle = (180/M_PI) * (acos((aVector[0]*bVector[0] + aVector[1]*bVector[1])/(sqrt(pow(aVector[0], 2) + pow(aVector[1], 2)) * sqrt(pow(bVector[0], 2) + pow(bVector[1], 2)))));
         
-        if (aVector[0]*bVector[0] + aVector[1]*bVector[1] < 0){
+        bool turn_right = aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0;
+        bool wrong_orientation = aVector[0]*bVector[0] + aVector[1]*bVector[1] < 0;
+        if (wrong_orientation){
             reverse = true;
-            if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
+            if (turn_right){
                 requestedAngle = 1.0;
             }else{
                 requestedAngle = -1.0;
@@ -55,13 +57,13 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
         } else {
             reverse = false;
             if (angle > MIN_ANGLE_FOR_MAX_STEERING){
-                if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
+                if (turn_right){
                     requestedAngle = -1.0;
                 }else{
                     requestedAngle = 1.0;
                 }
             }else{
-                if (aVector[0]*bVectorOrtho[0] + aVector[1]*bVectorOrtho[1] > 0){
+                if (turn_right){
                     requestedAngle = -1.0 * (angle/40);
                 }else{
                     requestedAngle = 1.0 * (angle/40);
@@ -188,21 +190,4 @@ char detectClosestPoint(float currentLat, float currentLon,std::map<char, float[
     return point;
 }
 
-/*
-bool reachedClosestPoint (float currentLat, float currentLon, char currentPoint, map<char, float[2]> &pointMap)
-{
-    float currentPos[2];
-    currentPos[0] = currentLat;
-    currentPos[1] = currentLon;
-    float distance = sqrt(pow(EARTH_RADIUS*(M_PI/180)*(pointMap[currentPoint][0] - currentPos[0]), 2) + pow(EARTH_RADIUS*(M_PI/180)*(pointMap[currentPoint][1] - currentPos[1]), 2));
-    if(distance < MIN_DISTANCE_FOR_MAX_THROTTLE)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-*/
 
