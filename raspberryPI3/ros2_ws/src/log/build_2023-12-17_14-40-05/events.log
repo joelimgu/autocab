@@ -1,0 +1,323 @@
+[0.000000] (-) TimerEvent: {}
+[0.002388] (-) JobUnselected: {'identifier': 'can'}
+[0.003147] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.005704] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.005966] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.006462] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.006629] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.006757] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.006922] (-) JobUnselected: {'identifier': 'joystick'}
+[0.007056] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.007154] (-) JobUnselected: {'identifier': 'simulation'}
+[0.007237] (-) JobUnselected: {'identifier': 'system_check'}
+[0.007332] (car_control) JobQueued: {'identifier': 'car_control', 'dependencies': OrderedDict([('interfaces', '/home/pi/autocab/raspberryPI3/ros2_ws/src/install/interfaces')])}
+[0.007499] (car_control) JobStarted: {'identifier': 'car_control'}
+[0.098905] (-) TimerEvent: {}
+[0.177058] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'cmake'}
+[0.198131] (car_control) JobProgress: {'identifier': 'car_control', 'progress': 'build'}
+[0.202641] (car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control', '--', '-j4', '-l4'], 'cwd': '/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.115 49880 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-d6717044-05de-4442-a525-e896b59c58c9.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/pi/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-506be82d33.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.115 49880 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.206685] (-) TimerEvent: {}
+[0.307583] (-) TimerEvent: {}
+[0.408439] (-) TimerEvent: {}
+[0.509313] (-) TimerEvent: {}
+[0.610110] (-) TimerEvent: {}
+[0.710972] (-) TimerEvent: {}
+[0.812663] (-) TimerEvent: {}
+[0.914283] (-) TimerEvent: {}
+[1.015231] (-) TimerEvent: {}
+[1.116161] (-) TimerEvent: {}
+[1.206664] (car_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.216377] (-) TimerEvent: {}
+[1.317269] (-) TimerEvent: {}
+[1.418757] (-) TimerEvent: {}
+[1.521209] (-) TimerEvent: {}
+[1.622432] (-) TimerEvent: {}
+[1.724919] (-) TimerEvent: {}
+[1.826050] (-) TimerEvent: {}
+[1.929279] (-) TimerEvent: {}
+[2.031948] (-) TimerEvent: {}
+[2.133592] (-) TimerEvent: {}
+[2.236545] (-) TimerEvent: {}
+[2.337591] (-) TimerEvent: {}
+[2.352177] (car_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.438011] (-) TimerEvent: {}
+[2.538867] (-) TimerEvent: {}
+[2.639938] (-) TimerEvent: {}
+[2.712861] (car_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.740163] (-) TimerEvent: {}
+[2.759695] (car_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.840410] (-) TimerEvent: {}
+[2.856983] (car_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.940613] (-) TimerEvent: {}
+[3.009156] (car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.040795] (-) TimerEvent: {}
+[3.139132] (car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.141077] (-) TimerEvent: {}
+[3.244585] (-) TimerEvent: {}
+[3.347609] (-) TimerEvent: {}
+[3.449283] (-) TimerEvent: {}
+[3.496030] (car_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[3.511420] (car_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.549504] (-) TimerEvent: {}
+[3.650933] (-) TimerEvent: {}
+[3.751814] (-) TimerEvent: {}
+[3.853606] (-) TimerEvent: {}
+[3.955633] (-) TimerEvent: {}
+[4.057602] (-) TimerEvent: {}
+[4.158648] (-) TimerEvent: {}
+[4.259621] (-) TimerEvent: {}
+[4.360643] (-) TimerEvent: {}
+[4.462836] (-) TimerEvent: {}
+[4.564430] (-) TimerEvent: {}
+[4.573499] (car_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.664631] (-) TimerEvent: {}
+[4.766261] (-) TimerEvent: {}
+[4.868146] (-) TimerEvent: {}
+[4.970197] (-) TimerEvent: {}
+[5.071236] (-) TimerEvent: {}
+[5.174164] (-) TimerEvent: {}
+[5.275698] (-) TimerEvent: {}
+[5.347634] (car_control) StdoutLine: {'line': b'-- Found interfaces: 0.0.0 (/home/pi/ros2_ws/install/interfaces/share/interfaces/cmake)\n'}
+[5.375919] (-) TimerEvent: {}
+[5.471972] (car_control) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[5.476167] (-) TimerEvent: {}
+[5.577731] (-) TimerEvent: {}
+[5.678726] (-) TimerEvent: {}
+[5.779784] (-) TimerEvent: {}
+[5.881012] (-) TimerEvent: {}
+[5.981908] (-) TimerEvent: {}
+[6.082815] (-) TimerEvent: {}
+[6.132424] (car_control) StdoutLine: {'line': b'-- Found std_srvs: 4.2.2 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[6.183035] (-) TimerEvent: {}
+[6.243218] (car_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.283203] (-) TimerEvent: {}
+[6.385924] (-) TimerEvent: {}
+[6.487780] (-) TimerEvent: {}
+[6.589307] (-) TimerEvent: {}
+[6.690175] (-) TimerEvent: {}
+[6.788844] (car_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[6.789879] (car_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/include>\n'}
+[6.790379] (-) TimerEvent: {}
+[6.790852] (car_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[6.809818] (car_control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[6.849047] (car_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.869021] (car_control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[6.890597] (-) TimerEvent: {}
+[6.991526] (-) TimerEvent: {}
+[7.010310] (car_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[7.011101] (car_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[7.030883] (car_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.041561] (car_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.091686] (-) TimerEvent: {}
+[7.157182] (car_control) StdoutLine: {'line': b'-- Generating done\n'}
+[7.168825] (car_control) StdoutLine: {'line': b'-- Build files have been written to: /home/pi/autocab/raspberryPI3/ros2_ws/src/build/car_control\n'}
+[7.191986] (-) TimerEvent: {}
+[7.293654] (-) TimerEvent: {}
+[7.348395] (car_control) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o\x1b[0m\n'}
+[7.350721] (car_control) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/propulsionCmd.cpp.o\x1b[0m\n'}
+[7.363962] (car_control) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/steeringCmd.cpp.o\x1b[0m\n'}
+[7.382303] (car_control) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/fromAtoB.cpp.o\x1b[0m\n'}
+[7.393882] (-) TimerEvent: {}
+[7.494794] (-) TimerEvent: {}
+[7.596173] (-) TimerEvent: {}
+[7.697067] (-) TimerEvent: {}
+[7.798111] (-) TimerEvent: {}
+[7.899316] (-) TimerEvent: {}
+[8.000758] (-) TimerEvent: {}
+[8.102239] (-) TimerEvent: {}
+[8.204153] (-) TimerEvent: {}
+[8.305656] (-) TimerEvent: {}
+[8.407226] (-) TimerEvent: {}
+[8.509113] (-) TimerEvent: {}
+[8.610777] (-) TimerEvent: {}
+[8.669909] (car_control) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/corrector.cpp.o\x1b[0m\n'}
+[8.711097] (-) TimerEvent: {}
+[8.812889] (-) TimerEvent: {}
+[8.915382] (-) TimerEvent: {}
+[9.017080] (-) TimerEvent: {}
+[9.118641] (-) TimerEvent: {}
+[9.220593] (-) TimerEvent: {}
+[9.322223] (-) TimerEvent: {}
+[9.423857] (-) TimerEvent: {}
+[9.525464] (-) TimerEvent: {}
+[9.567443] (car_control) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/car_control_node.dir/src/obstacle_detection.cpp.o\x1b[0m\n'}
+[9.625789] (-) TimerEvent: {}
+[9.729294] (-) TimerEvent: {}
+[9.833449] (-) TimerEvent: {}
+[9.937392] (-) TimerEvent: {}
+[10.042151] (-) TimerEvent: {}
+[10.146608] (-) TimerEvent: {}
+[10.250743] (-) TimerEvent: {}
+[10.354450] (-) TimerEvent: {}
+[10.458827] (-) TimerEvent: {}
+[10.562945] (-) TimerEvent: {}
+[10.667137] (-) TimerEvent: {}
+[10.771975] (-) TimerEvent: {}
+[10.876063] (-) TimerEvent: {}
+[10.980154] (-) TimerEvent: {}
+[11.084541] (-) TimerEvent: {}
+[11.188798] (-) TimerEvent: {}
+[11.290962] (-) TimerEvent: {}
+[11.393372] (-) TimerEvent: {}
+[11.500163] (-) TimerEvent: {}
+[11.602394] (-) TimerEvent: {}
+[11.703879] (-) TimerEvent: {}
+[11.805416] (-) TimerEvent: {}
+[11.907020] (-) TimerEvent: {}
+[12.011711] (-) TimerEvent: {}
+[12.114269] (-) TimerEvent: {}
+[12.217377] (-) TimerEvent: {}
+[12.319841] (-) TimerEvent: {}
+[12.421289] (-) TimerEvent: {}
+[12.522792] (-) TimerEvent: {}
+[12.551805] (car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/pi/autocab/raspberryPI3/ros2_ws/src/car_control/src/car_control_node.cpp:13:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kinterfaces/msg/serveur.hpp: No such file or directory\n'}
+[12.552945] (car_control) StderrLine: {'line': b'   13 | #include \x1b[01;31m\x1b[K"interfaces/msg/serveur.hpp"\x1b[m\x1b[K\n'}
+[12.553883] (car_control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.555040] (car_control) StderrLine: {'line': b'compilation terminated.\n'}
+[12.565732] (car_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/car_control_node.dir/build.make:76: CMakeFiles/car_control_node.dir/src/car_control_node.cpp.o] Error 1\n'}
+[12.568233] (car_control) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[12.623010] (-) TimerEvent: {}
+[12.725970] (-) TimerEvent: {}
+[12.829449] (-) TimerEvent: {}
+[12.932201] (-) TimerEvent: {}
+[13.035156] (-) TimerEvent: {}
+[13.160011] (-) TimerEvent: {}
+[13.263576] (-) TimerEvent: {}
+[13.366549] (-) TimerEvent: {}
+[13.467682] (-) TimerEvent: {}
+[13.576415] (-) TimerEvent: {}
+[13.677475] (-) TimerEvent: {}
+[13.778409] (-) TimerEvent: {}
+[13.879944] (-) TimerEvent: {}
+[13.981780] (-) TimerEvent: {}
+[14.085193] (-) TimerEvent: {}
+[14.188590] (-) TimerEvent: {}
+[14.291884] (-) TimerEvent: {}
+[14.395736] (-) TimerEvent: {}
+[14.496856] (-) TimerEvent: {}
+[14.599501] (-) TimerEvent: {}
+[14.701205] (-) TimerEvent: {}
+[14.802903] (-) TimerEvent: {}
+[14.904660] (-) TimerEvent: {}
+[15.007500] (-) TimerEvent: {}
+[15.110503] (-) TimerEvent: {}
+[15.213494] (-) TimerEvent: {}
+[15.315822] (-) TimerEvent: {}
+[15.417629] (-) TimerEvent: {}
+[15.531704] (-) TimerEvent: {}
+[15.632923] (-) TimerEvent: {}
+[15.737927] (-) TimerEvent: {}
+[15.838873] (-) TimerEvent: {}
+[15.940759] (-) TimerEvent: {}
+[16.041971] (-) TimerEvent: {}
+[16.146945] (-) TimerEvent: {}
+[16.247819] (-) TimerEvent: {}
+[16.348788] (-) TimerEvent: {}
+[16.449835] (-) TimerEvent: {}
+[16.550920] (-) TimerEvent: {}
+[16.652927] (-) TimerEvent: {}
+[16.754755] (-) TimerEvent: {}
+[16.855733] (-) TimerEvent: {}
+[16.956746] (-) TimerEvent: {}
+[17.058151] (-) TimerEvent: {}
+[17.159218] (-) TimerEvent: {}
+[17.260181] (-) TimerEvent: {}
+[17.361314] (-) TimerEvent: {}
+[17.462874] (-) TimerEvent: {}
+[17.563952] (-) TimerEvent: {}
+[17.665494] (-) TimerEvent: {}
+[17.768484] (-) TimerEvent: {}
+[17.870666] (-) TimerEvent: {}
+[17.972425] (-) TimerEvent: {}
+[18.073358] (-) TimerEvent: {}
+[18.174348] (-) TimerEvent: {}
+[18.275967] (-) TimerEvent: {}
+[18.376887] (-) TimerEvent: {}
+[18.478964] (-) TimerEvent: {}
+[18.581770] (-) TimerEvent: {}
+[18.683372] (-) TimerEvent: {}
+[18.784381] (-) TimerEvent: {}
+[18.885222] (-) TimerEvent: {}
+[18.986166] (-) TimerEvent: {}
+[19.087149] (-) TimerEvent: {}
+[19.188311] (-) TimerEvent: {}
+[19.289344] (-) TimerEvent: {}
+[19.391058] (-) TimerEvent: {}
+[19.492057] (-) TimerEvent: {}
+[19.593065] (-) TimerEvent: {}
+[19.693980] (-) TimerEvent: {}
+[19.794950] (-) TimerEvent: {}
+[19.896682] (-) TimerEvent: {}
+[19.998298] (-) TimerEvent: {}
+[20.099231] (-) TimerEvent: {}
+[20.200291] (-) TimerEvent: {}
+[20.301971] (-) TimerEvent: {}
+[20.402858] (-) TimerEvent: {}
+[20.504474] (-) TimerEvent: {}
+[20.605582] (-) TimerEvent: {}
+[20.706662] (-) TimerEvent: {}
+[20.808179] (-) TimerEvent: {}
+[20.909184] (-) TimerEvent: {}
+[21.011015] (-) TimerEvent: {}
+[21.112021] (-) TimerEvent: {}
+[21.212975] (-) TimerEvent: {}
+[21.314425] (-) TimerEvent: {}
+[21.415824] (-) TimerEvent: {}
+[21.517293] (-) TimerEvent: {}
+[21.619428] (-) TimerEvent: {}
+[21.721813] (-) TimerEvent: {}
+[21.824235] (-) TimerEvent: {}
+[21.926685] (-) TimerEvent: {}
+[22.027524] (-) TimerEvent: {}
+[22.128340] (-) TimerEvent: {}
+[22.229236] (-) TimerEvent: {}
+[22.330100] (-) TimerEvent: {}
+[22.430943] (-) TimerEvent: {}
+[22.531840] (-) TimerEvent: {}
+[22.632641] (-) TimerEvent: {}
+[22.733463] (-) TimerEvent: {}
+[22.834391] (-) TimerEvent: {}
+[22.935266] (-) TimerEvent: {}
+[23.036148] (-) TimerEvent: {}
+[23.136961] (-) TimerEvent: {}
+[23.237790] (-) TimerEvent: {}
+[23.338606] (-) TimerEvent: {}
+[23.439427] (-) TimerEvent: {}
+[23.540575] (-) TimerEvent: {}
+[23.641877] (-) TimerEvent: {}
+[23.742756] (-) TimerEvent: {}
+[23.843625] (-) TimerEvent: {}
+[23.944571] (-) TimerEvent: {}
+[24.045367] (-) TimerEvent: {}
+[24.146286] (-) TimerEvent: {}
+[24.247087] (-) TimerEvent: {}
+[24.347947] (-) TimerEvent: {}
+[24.448758] (-) TimerEvent: {}
+[24.549567] (-) TimerEvent: {}
+[24.650387] (-) TimerEvent: {}
+[24.751246] (-) TimerEvent: {}
+[24.852234] (-) TimerEvent: {}
+[24.953117] (-) TimerEvent: {}
+[25.054068] (-) TimerEvent: {}
+[25.155014] (-) TimerEvent: {}
+[25.255854] (-) TimerEvent: {}
+[25.356725] (-) TimerEvent: {}
+[25.457604] (-) TimerEvent: {}
+[25.558469] (-) TimerEvent: {}
+[25.659299] (-) TimerEvent: {}
+[25.760120] (-) TimerEvent: {}
+[25.861036] (-) TimerEvent: {}
+[25.962913] (-) TimerEvent: {}
+[26.063788] (-) TimerEvent: {}
+[26.164663] (-) TimerEvent: {}
+[26.265515] (-) TimerEvent: {}
+[26.366448] (-) TimerEvent: {}
+[26.467505] (-) TimerEvent: {}
+[26.479643] (car_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/car_control_node.dir/all] Error 2\n'}
+[26.480397] (car_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[26.486635] (car_control) CommandEnded: {'returncode': 2}
+[26.567716] (-) TimerEvent: {}
+[26.668808] (-) TimerEvent: {}
+[26.770258] (-) TimerEvent: {}
+[26.814188] (car_control) JobEnded: {'identifier': 'car_control', 'rc': 2}
+[26.826036] (-) EventReactorShutdown: {}
