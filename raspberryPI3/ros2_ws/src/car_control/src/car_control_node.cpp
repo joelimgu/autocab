@@ -11,6 +11,7 @@
 #include "interfaces/msg/joystick_order.hpp"
 #include "interfaces/msg/gnss.hpp"
 #include "interfaces/msg/serveur.hpp"
+#include "interfaces/msg/toserveur.hpp"
 #include "interfaces/msg/ultrasonic.hpp"
 
 #include "std_srvs/srv/empty.hpp"
@@ -41,22 +42,22 @@ public:
         currentDirection[0]=1;
         currentDirection[1]=1;
 
-        // //Vrai initialisation
-        // departurePoint = 'A';
-        // finalPoint = 'A';
-        // currentPoint = 'A' ;
-        // departurePointReached = true;
-        // finalPointReached = true;
-        // arrivedAtCurrentPoint = true;
-        // requestNumber = 0;
-
-        //initialisation pour les tests
+        //Vrai initialisation
         departurePoint = 'A';
-        finalPoint = 'C';
-        departurePointReached = false;
-        finalPointReached = false;
-        arrivedAtCurrentPoint = false;
+        finalPoint = 'A';
+        currentPoint = 'A' ;
+        departurePointReached = true;
+        finalPointReached = true;
+        arrivedAtCurrentPoint = true;
         requestNumber = 0;
+
+        // //initialisation pour les tests
+        // departurePoint = 'A';
+        // finalPoint = 'C';
+        // departurePointReached = false;
+        // finalPointReached = false;
+        // arrivedAtCurrentPoint = false;
+        // requestNumber = 0;
         
         (coordinates['A'])[0] = 43.570593;
         (coordinates['A'])[1] = 1.466513;
@@ -84,21 +85,24 @@ public:
 
         graph.createGraph(coordinates);
 
-        //tests pour prouver que le calcul de plus court chemin fonctionne
-        pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
-        if (pathToDeparturePoint.empty()){
-            departurePointReached = true;
-        }
-        pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
-        RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
-        if (pathToFinalPoint.empty()){
-            finalPointReached = true;
-        }
+        // //tests pour prouver que le calcul de plus court chemin fonctionne
+        // pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+        // if (pathToDeparturePoint.empty()){
+        //     departurePointReached = true;
+        // }
+        // pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
+        // RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
+        // if (pathToFinalPoint.empty()){
+        //     finalPointReached = true;
+        // }
 
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
 
         publisher_steeringCalibration_ = this->create_publisher<interfaces::msg::SteeringCalibration>("steering_calibration", 10);
+
+        publisher_to_serveur_= this->create_publisher<interfaces::msg::Toserveur>("to_serveur", 10);
+
 
         
 
@@ -171,10 +175,10 @@ private:
 
             if (mode==0){
                 RCLCPP_INFO(this->get_logger(), "Switching to MANUAL Mode");
-                // requestNumber = 0 ;
-                // departurePointReached = true ;
-                // finalPointReached = true ;
-                // arrivedAtCurrentPoint = true ;
+                requestNumber = 0 ;
+                departurePointReached = true ;
+                finalPointReached = true ;
+                arrivedAtCurrentPoint = true ;
             }else if (mode==1){
                 RCLCPP_INFO(this->get_logger(), "Switching to AUTONOMOUS Mode");
             }else if (mode==2){
@@ -213,22 +217,37 @@ private:
     void updateCmd(){
 
         auto motorsOrder = interfaces::msg::MotorsOrder();
+        auto toServeur = interfaces::msg::Toserveur();
+
+        toServeur.currentLatitude = currentLatitude;
+        toServeur.currentLongitude = currentLongitude;
 
         if (!start)
         {    //Car stopped
             leftRearPwmCmd = STOP;
             rightRearPwmCmd = STOP;
             steeringPwmCmd = STOP;
+
+            toServeur.on = false;
+            toServeur.arrived = false;
+            toServeur.mode = 0;
         }
         else
         { //Car started
+
+            toServeur.on = true;
 
             //Manual Mode
             if (mode==0)
             {
 
+                toServeur.mode = 0;
+                toServeur.arrived = false;
+
             //Autonomous Mode
             } else if (mode==1){
+
+                toServeur.mode = 1;
 
                 if (!arrivedAtCurrentPoint){
 
@@ -266,6 +285,8 @@ private:
                         reverse = false ;
                     }
 
+                    toServeur.arrived = (arrivedAtCurrentPoint && departurePointReached && finalPointReached);
+
                 }
             }
 
@@ -290,6 +311,9 @@ private:
             }
             */
         }
+
+        //Send order to serveur
+        publisher_to_serveur_->publish(toServeur);
 
         
         //Send order to motors
@@ -470,6 +494,7 @@ private:
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
     rclcpp::Publisher<interfaces::msg::SteeringCalibration>::SharedPtr publisher_steeringCalibration_;
+    rclcpp::Publisher<interfaces::msg::Toserveur>::SharedPtr publisher_to_serveur_;
 
     //Subscribers
     rclcpp::Subscription<interfaces::msg::JoystickOrder>::SharedPtr subscription_joystick_order_;
