@@ -3,6 +3,43 @@ let personMarker = null;
 let arriveMarker = null; 
 let car = null;
 
+// Function to send GPS coordinates to the server
+function sendGPSPosition(lat, lng) {
+    // Server URL - Replace with your actual server endpoint
+    const serverURL = 'http://161.35.86.239/api/save-position';
+
+    // Data to be sent to the server
+    const data = {
+        latitude: lat,
+        longitude: lng
+    };
+
+    // Fetch options for the POST request
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            // You may need to include additional headers depending on your server requirements
+        },
+        body: JSON.stringify(data)
+    };
+
+    // Send the POST request to the server
+    fetch(serverURL, options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Server response:', data);
+        })
+        .catch(error => {
+            console.error('Error during GPS position upload:', error);
+        });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     
 
@@ -101,6 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 // Acciones si se hace clic en "No"
             }
+            if (confirmed && chooseDestination) {
+                sendGPSPosition(markerData.lat, markerData.lng);
+            }
+    
         });
 
         return marker;

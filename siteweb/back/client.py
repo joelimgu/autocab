@@ -2,15 +2,12 @@ import asyncio
 import websockets
 
 async def send_message():
-    uri = "ws://127.0.0.1.0:5501"
+    uri = "ws://161.35.86.239:5501"
     async with websockets.connect(uri) as websocket:
         try:
-            while True:
-                message = input("Enter your message (or type 'exit' to quit): ")
-                if message.lower() == 'exit':
-                    break
-                await websocket.send(message)
-                print(f"Sent message: {message}")
+            message = input("Enter your message: ")
+            await websocket.send(message)
+            print(f"Sent message: {message}")
 
         except websockets.exceptions.ConnectionClosedError as e:
             print(f"Connexion fermée de manière inattendue. Erreur : {e}")
@@ -18,4 +15,6 @@ async def send_message():
         except websockets.exceptions.ConnectionClosedOK:
             print("Connexion fermée par le serveur.")
 
-asyncio.run(send_message())
+if __name__ == "__main__":
+    asyncio.run(send_message())
+
