@@ -2,7 +2,7 @@ import asyncio
 import websockets
 
 async def send_message():
-    uri = "ws://161.35.86.239:5501"
+    uri = "ws://autocab.joel.rs/websocket/"
     async with websockets.connect(uri) as websocket:
         try:
             message = input("Enter your message: ")
