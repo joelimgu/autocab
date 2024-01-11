@@ -37,3 +37,6 @@
 **/log/
 **/__pycache__/
 
+# IDES
+.idea
+.vscode
