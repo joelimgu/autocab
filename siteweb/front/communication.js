@@ -1,5 +1,5 @@
 // Your WebSocket client code
-const socket = new WebSocket("ws://autocab.joel.rs:5501");
+const socket = new WebSocket("ws://autocab.joel.rs/websocket/"); // :5501");
 
 // JavaScript code to handle event and toggle images
 function handleMessage(event) {
