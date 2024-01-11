@@ -48,8 +48,8 @@ async def handle_client(websocket, path):
                         continue
     except asyncio.TimeoutError:
         print(f"Connection with {path} closed due to inactivity.")
-    except websockets.exceptions.ConnectionClosed as e:
-        print(f"Connection with {path} closed. Reason: {e}")
+    #except websockets.exceptions.ConnectionClosed as e:
+    #    print(f"Connection with {path} closed. Reason: {e}")
     except Exception as e:
         print(f"Error with {path}: {e}")
     finally:
