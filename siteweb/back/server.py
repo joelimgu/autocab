@@ -26,10 +26,9 @@ async def handle_client(websocket, path):
         while True:
             message = await asyncio.wait_for(websocket.recv(), timeout=None)
             
-            #if not message:
-             #   break
+            if not message:
+                break
             
-
             print(f"Received message from {path}: {message}")
 
             # Convertir le message en booléen et mettre à jour start_status
@@ -48,8 +47,8 @@ async def handle_client(websocket, path):
                         continue
     except asyncio.TimeoutError:
         print(f"Connection with {path} closed due to inactivity.")
-    #except websockets.exceptions.ConnectionClosed as e:
-    #    print(f"Connection with {path} closed. Reason: {e}")
+    except websockets.exceptions.ConnectionClosed as e:
+        print(f"Connection with {path} closed. Reason: {e}")
     except Exception as e:
         print(f"Error with {path}: {e}")
     finally:
