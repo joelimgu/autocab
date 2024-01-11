@@ -5,7 +5,7 @@ async def send_message():
     uri = "ws://autocab.joel.rs/websocket/"
     async with websockets.connect(uri) as websocket:
         try:
-            message = input("Enter your message: ")
+            message = "Hello server from python client !"
             await websocket.send(message)
             print(f"Sent message: {message}")
 
