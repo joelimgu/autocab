@@ -25,8 +25,10 @@ async def handle_client(websocket, path):
 
         while True:
             message = await asyncio.wait_for(websocket.recv(), timeout=None)
-            if not message:
-                break
+            
+            #if not message:
+             #   break
+            
 
             print(f"Received message from {path}: {message}")
 
