@@ -10,6 +10,7 @@ async def handle_client(websocket, path):
     # Autoriser toutes les origines (à adapter selon vos besoins)
     headers = {
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "http://autocab.joel.rs:5501",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Headers": "Origin, Content-Type, Accept",
     }
