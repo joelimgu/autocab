@@ -1,9 +1,0 @@
-[31mCMake Error at /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake:48 (message):
-  Package 'interfaces' exports the library 'interfaces__rosidl_generator_c'
-  which couldn't be found
-Call Stack (most recent call first):
-  /home/pi/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake:41 (include)
-  CMakeLists.txt:11 (find_package)
-
-[0m
-gmake: *** [Makefile:402: cmake_check_build_system] Error 1
