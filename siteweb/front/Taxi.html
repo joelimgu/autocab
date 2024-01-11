@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.72.0">
+    <title>Autocab</title>
+
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/product/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+<!-- Poppins google font-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap">
+
+
+<!-- Leaflet CSS/JS-->
+<!-- Leaflet CSS-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<!-- Leaflet JS-->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+
+
+
+
+ <!-- Define image size for the website-->
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="product.css" rel="stylesheet"> -->
+    <style>
+        .container {
+            max-width: 960px;
+        }
+
+        /*
+ * Custom translucent site header
+ */
+        
+        /* Description du header */
+        .site-header {
+            height: 50px; 
+            background-color: rgba(255, 255, 255, 0.712);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .site-header a {
+            color: #333333; /* Text color */
+            font-size: 21px; /* Font size */
+            font-weight: 700; /* Font weight */
+            font-family: 'Poppins', sans-serif; /* Font family, replace with your preferred font */
+            margin-right: 15px; /* Adjust spacing between links */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.15s ease-in-out; /* Smooth color transition on */
+        }
+
+        .site-header a:hover {
+            color: #242323; /* Change color on hover */
+        }
+
+        /*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+        .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: #f8f4f4;
+            border-radius: 21px;
+            transform: rotate(0deg);
+        }
+
+        .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: rgba(255, 255, 255, 0.904);
+            border-radius: 5px;
+        }
+
+        .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            background-color: #e5e5e5;
+        }
+
+          /*
+ * Style for title and body 
+ */
+        .display-4 {
+            font-weight: 900;
+            font-size: 5rem; /* Your desired font size */
+            color: #0d0d0e; /* Your desired text color */
+            font-family: 'Mulish', sans-serif; /* Your desired font family */
+        }
+
+        .display-5 {
+            font-weight: 700;
+            font-size: 3rem; /* Your desired font size */
+            color: #0d0d0e; /* Your desired text color */
+            font-family: 'Mulish', sans-serif; /* Your desired font family */
+        }
+
+        .lead-1 {
+            font-weight:300;
+            font-size: 2rem; /* Your desired font size */
+            color: #0d0d0e; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+        .lead-2 {
+            font-weight:300;
+            font-size: 2rem; /* Your desired font size */
+            color: #ffffff; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-3 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #095026; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-4 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #083b53; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-5 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #410558; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-6 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #be4905; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .display-7 {
+            font-weight:300;
+            font-size: 2rem; /* Your desired font size */
+            color: #095026; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+
+
+/* Style for background color how headlines */ 
+
+        .bg-light {
+            background-color: rgba(255, 255, 255, 0.952); /* Replace with the desired background color */
+            box-shadow: none !important;
+        }
+
+
+        /*
+ * Extra utilities
+ */
+
+        .flex-equal>* {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal>* {
+                flex: 1;
+            }
+        }
+    </style>
+
+<!-- Additional style for the video container -->
+<style>
+    .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title-container {
+            position: relative;
+            z-index: 1;
+        }
+</style>
+
+<style>
+#map-container {
+        position: relative;
+        max-width: 800px; /* Establece el ancho máximo deseado */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+    }
+
+    #map {
+        height: 600px; /* Establece la altura deseada */
+        max-width: 100%; /* Establece el ancho máximo deseado */
+    }
+
+    #instruction-message {
+        position: absolute;
+        top: 50px; /* Ajusta la posición vertical según sea necesario */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Ajusta para centrar correctamente */
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        z-index: 1000; /* Asegura que el mensaje esté en la parte superior */
+    }
+</style>
+
+<!-- Script JS map -->
+<script src="map_define_2.js"></script>  
+
+</head>
+
+<body>
+
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+            <a class="py-2 d-none d-md-inline-block" href="Taxi.html">Taxi</a>
+            <a class="py-2 d-none d-md-inline-block" href="Contact_us.html">Contact us</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+        </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4">Call a taxi</h1>
+            <h2 class="display-7">Drive greenly and autonomously </h2>
+        </div>
+    </div>
+    
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">How it works ?</h2>
+                    <p class="lead-1">
+                        In order to use Autocab service, you need to choose your final destination,
+                        in the map bellow and then indicate your actual postion. When you have finished 
+                        this step, press the button "Start !".
+                    </p>
+            </div>
+        </div>
+    </div>
+
+        
+     <!--Map Conatiner -->
+     <div id="map-container">
+        <!-- Mensaje de instrucción  -->
+        <div id="instruction-message"></div> 
+        <!-- Contenedor del mapa -->
+        <div id="map"></div>
+    </div>
+
+   
+<!--
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">  
+    <div class="position-relative top-50 start-100 translate-middle">
+        <a class="btn btn-outline-success btn-lg"  href="Waiting.html">Start !</a> 
+    </div>
+</div>-->
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+    <div class="d-flex justify-content-center">
+        <!-- Botón Start -->
+        <div class="position-relative top-50 start-100 translate-middle me-3">
+            <a id="startButton" class="btn btn-outline-success btn-lg" href="Waiting.html">Start !</a>
+        </div>
+        <!-- Botón Cancel -->
+        <div class="position-relative top-50 start-100 translate-middle">
+            <a class="btn btn-outline-danger btn-lg" href="Taxi.html">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Stuff to add</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Resources to add</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Resources to add</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Info to add</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>

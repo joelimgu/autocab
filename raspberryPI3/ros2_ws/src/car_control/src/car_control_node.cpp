@@ -9,6 +9,7 @@
 #include "interfaces/msg/joystick_order.hpp"
 
 #include "std_srvs/srv/empty.hpp"
+#include "std_msgs/msg/bool.hpp"
 
 #include "../include/car_control/steeringCmd.h"
 #include "../include/car_control/propulsionCmd.h"
@@ -33,6 +34,8 @@ public:
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
 
         publisher_steeringCalibration_ = this->create_publisher<interfaces::msg::SteeringCalibration>("steering_calibration", 10);
+
+        publisher_start_status_ = this->create_publisher<std_msgs::msg::Bool>("start_status", 10);
 
         
 
@@ -74,6 +77,11 @@ private:
                 RCLCPP_INFO(this->get_logger(), "START");
             else 
                 RCLCPP_INFO(this->get_logger(), "STOP");
+
+            // Publier la mise à jour de la variable "start" sur le topic "start_status"
+            auto message = std_msgs::msg::Bool();
+            message.data = start;
+            publisher_start_status_->publish(message);
         }
         
 
@@ -205,6 +213,8 @@ private:
         }
     
     }
+
+
     
     // ---- Private variables ----
 
@@ -229,6 +239,8 @@ private:
     //Publishers
     rclcpp::Publisher<interfaces::msg::MotorsOrder>::SharedPtr publisher_can_;
     rclcpp::Publisher<interfaces::msg::SteeringCalibration>::SharedPtr publisher_steeringCalibration_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr publisher_start_status_;
+
 
     //Subscribers
     rclcpp::Subscription<interfaces::msg::JoystickOrder>::SharedPtr subscription_joystick_order_;

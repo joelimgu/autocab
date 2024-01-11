@@ -1,0 +1,455 @@
+[0.000000] (-) TimerEvent: {}
+[0.005618] (-) JobUnselected: {'identifier': 'can'}
+[0.006588] (-) JobUnselected: {'identifier': 'car_control'}
+[0.007120] (-) JobUnselected: {'identifier': 'carla_msgs'}
+[0.007389] (-) JobUnselected: {'identifier': 'geicar_start'}
+[0.007658] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.008002] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.008272] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.008510] (-) JobUnselected: {'identifier': 'joystick'}
+[0.008837] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.012369] (-) JobUnselected: {'identifier': 'simulation'}
+[0.013055] (-) JobUnselected: {'identifier': 'system_check'}
+[0.013480] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.013750] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.093448] (-) TimerEvent: {}
+[0.155014] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.161973] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[0.169921] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/build/interfaces', '--', '-j4', '-l4'], 'cwd': '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.104 49792 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/estelle/autocab/raspberryPI3'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '13'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/build/interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.104 49792 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[0.203558] (-) TimerEvent: {}
+[0.311113] (-) TimerEvent: {}
+[0.412585] (-) TimerEvent: {}
+[0.515299] (-) TimerEvent: {}
+[0.616745] (-) TimerEvent: {}
+[0.718265] (-) TimerEvent: {}
+[0.759894] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c\x1b[0m\n'}
+[0.818596] (-) TimerEvent: {}
+[0.920199] (-) TimerEvent: {}
+[0.976385] (interfaces) StdoutLine: {'line': b'[  1%] Built target interfaces__cpp\n'}
+[1.021430] (-) TimerEvent: {}
+[1.127315] (-) TimerEvent: {}
+[1.154032] (interfaces) StdoutLine: {'line': b'[ 12%] Built target interfaces__rosidl_generator_c\n'}
+[1.162909] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.227637] (-) TimerEvent: {}
+[1.276972] (interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_interfaces\n'}
+[1.328041] (-) TimerEvent: {}
+[1.375031] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.425232] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.428340] (-) TimerEvent: {}
+[1.485621] (interfaces) StdoutLine: {'line': b'[ 24%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[1.528742] (-) TimerEvent: {}
+[1.630545] (-) TimerEvent: {}
+[1.664462] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.733193] (-) TimerEvent: {}
+[1.746773] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.833470] (-) TimerEvent: {}
+[1.894166] (interfaces) StdoutLine: {'line': b'[ 35%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.933898] (-) TimerEvent: {}
+[2.034327] (interfaces) StdoutLine: {'line': b'[ 47%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[2.035919] (-) TimerEvent: {}
+[2.074653] (interfaces) StdoutLine: {'line': b'[ 58%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.136359] (-) TimerEvent: {}
+[2.168736] (interfaces) StdoutLine: {'line': b'[ 70%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[2.182995] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[2.236710] (-) TimerEvent: {}
+[2.340298] (-) TimerEvent: {}
+[2.413258] (interfaces) StdoutLine: {'line': b'[ 81%] Built target interfaces__rosidl_typesupport_c\n'}
+[2.440581] (-) TimerEvent: {}
+[2.543197] (-) TimerEvent: {}
+[2.646515] (-) TimerEvent: {}
+[2.749473] (-) TimerEvent: {}
+[2.853383] (-) TimerEvent: {}
+[2.880456] (interfaces) StdoutLine: {'line': b'[ 81%] Built target interfaces\n'}
+[2.953739] (-) TimerEvent: {}
+[3.056743] (-) TimerEvent: {}
+[3.162756] (-) TimerEvent: {}
+[3.265537] (-) TimerEvent: {}
+[3.313941] (interfaces) StdoutLine: {'line': b'[ 82%] Built target interfaces__py\n'}
+[3.365891] (-) TimerEvent: {}
+[3.467345] (-) TimerEvent: {}
+[3.473160] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_py\x1b[0m\n'}
+[3.567622] (-) TimerEvent: {}
+[3.669221] (-) TimerEvent: {}
+[3.770883] (-) TimerEvent: {}
+[3.777900] (interfaces) StdoutLine: {'line': b'[ 93%] Built target interfaces__rosidl_generator_py\n'}
+[3.871158] (-) TimerEvent: {}
+[3.946689] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[3.971452] (-) TimerEvent: {}
+[4.055219] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[4.070149] (interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.071640] (-) TimerEvent: {}
+[4.160696] (interfaces) StdoutLine: {'line': b'[ 95%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.171980] (-) TimerEvent: {}
+[4.274910] (-) TimerEvent: {}
+[4.363391] (interfaces) StdoutLine: {'line': b'[ 97%] Built target interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[4.375240] (-) TimerEvent: {}
+[4.424757] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_c__pyext\n'}
+[4.475525] (-) TimerEvent: {}
+[4.577548] (-) TimerEvent: {}
+[4.680391] (-) TimerEvent: {}
+[4.783153] (-) TimerEvent: {}
+[4.885895] (-) TimerEvent: {}
+[4.988454] (-) TimerEvent: {}
+[5.091733] (-) TimerEvent: {}
+[5.194704] (-) TimerEvent: {}
+[5.297924] (-) TimerEvent: {}
+[5.400764] (-) TimerEvent: {}
+[5.502332] (-) TimerEvent: {}
+[5.604122] (-) TimerEvent: {}
+[5.705751] (-) TimerEvent: {}
+[5.807425] (-) TimerEvent: {}
+[5.909127] (-) TimerEvent: {}
+[5.967922] (interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[5.982162] (interfaces) StdoutLine: {'line': b'writing interfaces.egg-info/PKG-INFO\n'}
+[5.987550] (interfaces) StdoutLine: {'line': b'writing dependency_links to interfaces.egg-info/dependency_links.txt\n'}
+[5.993293] (interfaces) StdoutLine: {'line': b'writing top-level names to interfaces.egg-info/top_level.txt\n'}
+[6.009541] (-) TimerEvent: {}
+[6.021252] (interfaces) StdoutLine: {'line': b"reading manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[6.029571] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[6.109941] (-) TimerEvent: {}
+[6.213722] (-) TimerEvent: {}
+[6.317042] (-) TimerEvent: {}
+[6.360383] (interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_interfaces_egg\n'}
+[6.417362] (-) TimerEvent: {}
+[6.512227] (interfaces) CommandEnded: {'returncode': 0}
+[6.520203] (-) TimerEvent: {}
+[6.623056] (-) TimerEvent: {}
+[6.725779] (-) TimerEvent: {}
+[6.835997] (-) TimerEvent: {}
+[6.937806] (-) TimerEvent: {}
+[7.039678] (-) TimerEvent: {}
+[7.148760] (-) TimerEvent: {}
+[7.251404] (-) TimerEvent: {}
+[7.355531] (-) TimerEvent: {}
+[7.460507] (-) TimerEvent: {}
+[7.564736] (-) TimerEvent: {}
+[7.669199] (-) TimerEvent: {}
+[7.773575] (-) TimerEvent: {}
+[7.879872] (-) TimerEvent: {}
+[7.982154] (-) TimerEvent: {}
+[8.085339] (-) TimerEvent: {}
+[8.190174] (-) TimerEvent: {}
+[8.294020] (-) TimerEvent: {}
+[8.398570] (-) TimerEvent: {}
+[8.503219] (-) TimerEvent: {}
+[8.606076] (-) TimerEvent: {}
+[8.707807] (-) TimerEvent: {}
+[8.811137] (-) TimerEvent: {}
+[8.914766] (-) TimerEvent: {}
+[9.018857] (-) TimerEvent: {}
+[9.121031] (-) TimerEvent: {}
+[9.222455] (-) TimerEvent: {}
+[9.323927] (-) TimerEvent: {}
+[9.425401] (-) TimerEvent: {}
+[9.527606] (-) TimerEvent: {}
+[9.629008] (-) TimerEvent: {}
+[9.731845] (-) TimerEvent: {}
+[9.833434] (-) TimerEvent: {}
+[9.935168] (-) TimerEvent: {}
+[10.036702] (-) TimerEvent: {}
+[10.070892] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[10.137050] (-) TimerEvent: {}
+[10.163125] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/build/interfaces'], 'cwd': '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.1.104 49792 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/ros2_ws/install/rviz_imu_plugin/lib:/home/pi/ros2_ws/install/interfaces/lib:/home/pi/ros2_ws/install/imu_filter_madgwick/lib:/home/pi/ros2_ws/install/carla_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/estelle/autocab/raspberryPI3'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/pi/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '13'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/build/interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.104 49792 192.168.1.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/ros2_ws/install/joystick/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages:/home/pi/ros2_ws/install/carla_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/ros2_ws/install/geicar_start:/home/pi/ros2_ws/install/system_check:/home/pi/ros2_ws/install/simulation:/home/pi/ros2_ws/install/imu_tools:/home/pi/ros2_ws/install/rviz_imu_plugin:/home/pi/ros2_ws/install/joystick:/home/pi/ros2_ws/install/car_control:/home/pi/ros2_ws/install/can:/home/pi/ros2_ws/install/interfaces:/home/pi/ros2_ws/install/imu_filter_madgwick:/home/pi/ros2_ws/install/imu_complementary_filter:/home/pi/ros2_ws/install/carla_msgs:/opt/ros/humble')]), 'shell': False}
+[10.237396] (-) TimerEvent: {}
+[10.263049] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.266172] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[10.268064] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.269969] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.271942] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/system_check.h\n'}
+[10.274273] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.277519] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_order.h\n'}
+[10.279232] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/ultrasonic.h\n'}
+[10.281272] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/joystick_order.h\n'}
+[10.284497] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/steering_calibration.h\n'}
+[10.287191] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/gnss.h\n'}
+[10.291595] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.294875] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__struct.h\n'}
+[10.297152] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__functions.h\n'}
+[10.299567] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__type_support.h\n'}
+[10.301606] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__functions.c\n'}
+[10.303316] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__functions.h\n'}
+[10.305493] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__type_support.h\n'}
+[10.309917] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__functions.c\n'}
+[10.311695] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__type_support.h\n'}
+[10.312940] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__functions.c\n'}
+[10.314084] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__struct.h\n'}
+[10.344488] (-) TimerEvent: {}
+[10.345394] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__functions.c\n'}
+[10.346897] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__functions.c\n'}
+[10.348451] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__struct.h\n'}
+[10.349646] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__struct.h\n'}
+[10.367481] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__functions.h\n'}
+[10.372270] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__functions.h\n'}
+[10.376780] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__type_support.h\n'}
+[10.388437] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__functions.c\n'}
+[10.389746] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__functions.c\n'}
+[10.390868] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__functions.h\n'}
+[10.391966] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__type_support.h\n'}
+[10.393313] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__functions.c\n'}
+[10.404306] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__functions.h\n'}
+[10.405839] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__functions.h\n'}
+[10.407370] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__struct.h\n'}
+[10.408925] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__type_support.h\n'}
+[10.410598] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__type_support.h\n'}
+[10.415464] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__functions.h\n'}
+[10.417033] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__struct.h\n'}
+[10.428486] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__struct.h\n'}
+[10.429937] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__type_support.h\n'}
+[10.431411] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__struct.h\n'}
+[10.432859] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/general_data.h\n'}
+[10.443748] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_feedback.h\n'}
+[10.445263] (-) TimerEvent: {}
+[10.447721] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/library_path.sh\n'}
+[10.449243] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/library_path.dsv\n'}
+[10.450675] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_c.so\n'}
+[10.452139] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.453288] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.464113] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.465181] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.466289] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_fastrtps_c.h\n'}
+[10.468047] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_fastrtps_c.h\n'}
+[10.469047] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_fastrtps_c.h\n'}
+[10.470058] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_fastrtps_c.h\n'}
+[10.471640] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_fastrtps_c.h\n'}
+[10.481372] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_fastrtps_c.h\n'}
+[10.485382] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_fastrtps_c.h\n'}
+[10.486582] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_fastrtps_c.h\n'}
+[10.488126] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[10.489582] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.491029] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.503745] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_order.hpp\n'}
+[10.504905] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/gnss.hpp\n'}
+[10.506017] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/motors_feedback.hpp\n'}
+[10.507458] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/ultrasonic.hpp\n'}
+[10.508594] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/steering_calibration.hpp\n'}
+[10.509541] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.510554] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__builder.hpp\n'}
+[10.512075] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__traits.hpp\n'}
+[10.513178] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__struct.hpp\n'}
+[10.522280] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__traits.hpp\n'}
+[10.523605] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__struct.hpp\n'}
+[10.535091] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__builder.hpp\n'}
+[10.536669] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__struct.hpp\n'}
+[10.538039] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__builder.hpp\n'}
+[10.539374] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__struct.hpp\n'}
+[10.540488] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__traits.hpp\n'}
+[10.541506] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__struct.hpp\n'}
+[10.542843] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__builder.hpp\n'}
+[10.544973] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__builder.hpp\n'}
+[10.546268] (-) TimerEvent: {}
+[10.547544] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__traits.hpp\n'}
+[10.548982] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__builder.hpp\n'}
+[10.551030] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__struct.hpp\n'}
+[10.552093] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__traits.hpp\n'}
+[10.552997] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__struct.hpp\n'}
+[10.556345] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__traits.hpp\n'}
+[10.557519] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__traits.hpp\n'}
+[10.558589] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__builder.hpp\n'}
+[10.559791] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__builder.hpp\n'}
+[10.566291] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__struct.hpp\n'}
+[10.570256] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__traits.hpp\n'}
+[10.573653] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/joystick_order.hpp\n'}
+[10.579087] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/system_check.hpp\n'}
+[10.583925] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/general_data.hpp\n'}
+[10.585146] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.587983] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.589071] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.593925] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.595459] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/dds_fastrtps\n'}
+[10.602862] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.604011] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.605562] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.611920] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.613224] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.616066] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.620900] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.624108] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.628429] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.631185] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.632778] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.634072] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.635334] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.636460] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_introspection_c.h\n'}
+[10.638372] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__type_support.c\n'}
+[10.639564] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__type_support.c\n'}
+[10.640552] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__type_support.c\n'}
+[10.641628] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_introspection_c.h\n'}
+[10.642909] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__type_support.c\n'}
+[10.644221] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__type_support.c\n'}
+[10.645201] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__type_support.c\n'}
+[10.646267] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_introspection_c.h\n'}
+[10.647430] (-) TimerEvent: {}
+[10.649762] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_introspection_c.h\n'}
+[10.651216] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_introspection_c.h\n'}
+[10.652680] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__type_support.c\n'}
+[10.654091] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__type_support.c\n'}
+[10.655682] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_introspection_c.h\n'}
+[10.656845] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_introspection_c.h\n'}
+[10.658009] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_introspection_c.h\n'}
+[10.659290] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[10.660439] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[10.661558] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces\n'}
+[10.662883] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg\n'}
+[10.664168] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail\n'}
+[10.665363] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.666511] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__type_support.cpp\n'}
+[10.668126] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/general_data__type_support.cpp\n'}
+[10.669339] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.670727] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__type_support.cpp\n'}
+[10.671957] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.673622] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.675051] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/joystick_order__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.676347] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/ultrasonic__type_support.cpp\n'}
+[10.677489] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__type_support.cpp\n'}
+[10.678589] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_order__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.680066] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/motors_feedback__type_support.cpp\n'}
+[10.681219] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/gnss__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.682380] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/system_check__type_support.cpp\n'}
+[10.684143] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__type_support.cpp\n'}
+[10.685306] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/include/interfaces/interfaces/msg/detail/steering_calibration__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.686467] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[10.688480] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[10.689521] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/pythonpath.sh\n'}
+[10.690481] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/pythonpath.dsv\n'}
+[10.691667] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info\n'}
+[10.692673] (interfaces) StdoutLine: {'line': b'-- Installing: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[10.694149] (interfaces) StdoutLine: {'line': b'-- Installing: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[10.695431] (interfaces) StdoutLine: {'line': b'-- Installing: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[10.696602] (interfaces) StdoutLine: {'line': b'-- Installing: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[10.697582] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces\n'}
+[10.698791] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[10.700092] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.701144] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/libinterfaces__rosidl_generator_py.so\n'}
+[10.702122] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.703160] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py\n'}
+[10.704199] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.705706] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.707206] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg\n'}
+[10.708408] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_joystick_order.py\n'}
+[10.709458] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_system_check_s.c\n'}
+[10.710592] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_joystick_order_s.c\n'}
+[10.712128] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_steering_calibration.py\n'}
+[10.713359] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_ultrasonic.py\n'}
+[10.714497] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_feedback_s.c\n'}
+[10.715850] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/__init__.py\n'}
+[10.716841] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_general_data.py\n'}
+[10.717802] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_general_data_s.c\n'}
+[10.719170] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_gnss.py\n'}
+[10.720516] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_order_s.c\n'}
+[10.721702] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_steering_calibration_s.c\n'}
+[10.722856] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_gnss_s.c\n'}
+[10.724070] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_system_check.py\n'}
+[10.725170] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_order.py\n'}
+[10.726224] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_motors_feedback.py\n'}
+[10.727430] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg/_ultrasonic_s.c\n'}
+[10.728566] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[10.747777] (-) TimerEvent: {}
+[10.850731] (-) TimerEvent: {}
+[10.953422] (-) TimerEvent: {}
+[11.056401] (-) TimerEvent: {}
+[11.084659] (interfaces) StdoutLine: {'line': b"Listing '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces'...\n"}
+[11.086976] (interfaces) StdoutLine: {'line': b"Listing '/home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/msg'...\n"}
+[11.137123] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.145020] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.152052] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[11.156719] (-) TimerEvent: {}
+[11.164565] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/lib/libinterfaces__rosidl_generator_py.so\n'}
+[11.170951] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/JoystickOrder.idl\n'}
+[11.174559] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsOrder.idl\n'}
+[11.177962] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsFeedback.idl\n'}
+[11.181453] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/GeneralData.idl\n'}
+[11.185092] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SteeringCalibration.idl\n'}
+[11.188653] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Ultrasonic.idl\n'}
+[11.192096] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Gnss.idl\n'}
+[11.195613] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SystemCheck.idl\n'}
+[11.198979] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/JoystickOrder.msg\n'}
+[11.202527] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsOrder.msg\n'}
+[11.205978] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/MotorsFeedback.msg\n'}
+[11.209442] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/GeneralData.msg\n'}
+[11.212621] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SteeringCalibration.msg\n'}
+[11.215032] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Ultrasonic.msg\n'}
+[11.218513] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/Gnss.msg\n'}
+[11.222124] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/msg/SystemCheck.msg\n'}
+[11.225722] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[11.229437] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[11.232957] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/ament_prefix_path.sh\n'}
+[11.236567] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[11.240266] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/path.sh\n'}
+[11.244101] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/environment/path.dsv\n'}
+[11.248480] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.bash\n'}
+[11.251900] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.sh\n'}
+[11.255524] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.zsh\n'}
+[11.256889] (-) TimerEvent: {}
+[11.260766] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/local_setup.dsv\n'}
+[11.262546] (interfaces) StdoutLine: {'line': b'-- Installing: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.dsv\n'}
+[11.280544] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/ament_index/resource_index/packages/interfaces\n'}
+[11.283127] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake\n'}
+[11.284918] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.288422] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.290527] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.294683] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake\n'}
+[11.300230] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.301596] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.311754] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.312757] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.314095] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[11.315515] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.316722] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.317818] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.323516] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[11.324961] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.328418] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake\n'}
+[11.330121] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.331506] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[11.337866] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.341540] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.343266] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.345421] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.351138] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.359728] (-) TimerEvent: {}
+[11.361210] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.362545] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[11.363935] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[11.365224] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/pi/estelle/autocab/raspberryPI3/ros2_ws/install/interfaces/share/interfaces/package.xml\n'}
+[11.373946] (interfaces) CommandEnded: {'returncode': 0}
+[11.460066] (-) TimerEvent: {}
+[11.566661] (-) TimerEvent: {}
+[11.679020] (-) TimerEvent: {}
+[11.781458] (-) TimerEvent: {}
+[11.883197] (-) TimerEvent: {}
+[11.986317] (-) TimerEvent: {}
+[12.089528] (-) TimerEvent: {}
+[12.191635] (-) TimerEvent: {}
+[12.293289] (-) TimerEvent: {}
+[12.396583] (-) TimerEvent: {}
+[12.498122] (-) TimerEvent: {}
+[12.602205] (-) TimerEvent: {}
+[12.706481] (-) TimerEvent: {}
+[12.810690] (-) TimerEvent: {}
+[12.913453] (-) TimerEvent: {}
+[13.017660] (-) TimerEvent: {}
+[13.122353] (-) TimerEvent: {}
+[13.226182] (-) TimerEvent: {}
+[13.330389] (-) TimerEvent: {}
+[13.434580] (-) TimerEvent: {}
+[13.539350] (-) TimerEvent: {}
+[13.641662] (-) TimerEvent: {}
+[13.745116] (-) TimerEvent: {}
+[13.847286] (-) TimerEvent: {}
+[13.949451] (-) TimerEvent: {}
+[14.052077] (-) TimerEvent: {}
+[14.153605] (-) TimerEvent: {}
+[14.256822] (-) TimerEvent: {}
+[14.358382] (-) TimerEvent: {}
+[14.459872] (-) TimerEvent: {}
+[14.561299] (-) TimerEvent: {}
+[14.663987] (-) TimerEvent: {}
+[14.766130] (-) TimerEvent: {}
+[14.868286] (-) TimerEvent: {}
+[14.970697] (-) TimerEvent: {}
+[15.072912] (-) TimerEvent: {}
+[15.175345] (-) TimerEvent: {}
+[15.282826] (-) TimerEvent: {}
+[15.389396] (-) TimerEvent: {}
+[15.399035] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[15.406914] (-) EventReactorShutdown: {}
