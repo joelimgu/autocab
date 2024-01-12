@@ -16,6 +16,9 @@ add_executable(car_control_node
   src/car_control_node.cpp
   src/steeringCmd.cpp
   src/propulsionCmd.cpp
+  src/fromAtoB.cpp
+  src/corrector.cpp
+  src/obstacle_detection.cpp
 )
 
 

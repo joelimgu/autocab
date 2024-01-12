@@ -164,7 +164,7 @@ private:
         if (axisLS_X > DEADZONE_LS_X_LEFT && axisLS_X < DEADZONE_LS_X_RIGHT){     //asymmetric deadzone (hardware : joystick LS)
             requestedAngle = CENTER;
         } else {
-            requestedAngle = axisLS_X;    
+            requestedAngle = axisLS_X;
         }
 
         

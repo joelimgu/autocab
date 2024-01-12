@@ -5,9 +5,11 @@
 #include <string.h>  
 
 
-#define PERIOD_UPDATE_CMD 1ms //Period to update proupulsion and steering command in [ms]
+#define PERIOD_UPDATE_CMD 10ms //Period to update proupulsion and steering command in [ms]
 
 #define STOP 50 //PWM value to stop motors
+
+#define MIN_UPDATE_COORDINATES 0.000002 //Minimum distance to update coordinates in [deg]
 
 
 

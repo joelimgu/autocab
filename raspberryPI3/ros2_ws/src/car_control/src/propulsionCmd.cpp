@@ -7,7 +7,7 @@
 * The joystick sends throttle order, which is directly transformed into PWM. The PWMs are equal for both motors in Manual Mode
 * 
 */
-int * manualPropulsionCmd(float requestedThrottle, bool reverse, uint8_t& leftRearPwmCmd, uint8_t& rightRearPwmCmd){
+int * manualPropulsionCmd(float requestedThrottle, bool reverse, float& leftRearPwmCmd, float& rightRearPwmCmd){
 
     if (reverse){
         leftRearPwmCmd = 50 - 50*requestedThrottle;    //requestedThrottle : [0 ; 1] => PWM : [50 -> 0] (reverse)

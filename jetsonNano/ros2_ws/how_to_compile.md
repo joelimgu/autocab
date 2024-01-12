@@ -1,4 +1,4 @@
-# This file describes the main steps to compile the ros2_ws on the Jetson
+# This file describes the main steps to compile the ros2_ws on the Jetson 
 
 1. Go into the docker container ros-humble 
 ```sh
