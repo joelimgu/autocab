@@ -1,3 +1,4 @@
+
 // Your WebSocket client code
 const socket = new WebSocket("ws://autocab.joel.rs/websocket/");
 
@@ -6,8 +7,9 @@ function handleMessage(event) {
     // Log the received message
     console.log("Received message:", event.data);
 
-    // Get the message container element
+    // Get the message container elements
     var messageContainer = document.getElementById('message-container');
+    var messageContainerWait = document.getElementById('message-container-wait');
 
     // Parse the message from the event data
     var message = event.data;
@@ -37,7 +39,6 @@ function handleMessage(event) {
         // If not allowed, disable the button and show a message
         var startButton = document.getElementById('startButton');
         startButton.disabled = true;
-        messageContainer.innerHTML = "Please wait, others are already in the queue.";
     }
 
     // Clear the message container and append the image
@@ -56,8 +57,10 @@ socket.onerror = function (event) {
     console.error("WebSocket error:", event);
 };
 
+
 // Call handleMessage with a predefined message when the page is ready
 document.addEventListener('DOMContentLoaded', function () {
-    // Assuming 'false' as the initial state, adjust this if needed
+    // Assuming 'False' as the initial state, adjust this if needed
     handleMessage({ data: 'False' });
 });
+
