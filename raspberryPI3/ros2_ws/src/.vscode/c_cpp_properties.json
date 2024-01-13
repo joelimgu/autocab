@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/humble/include/**",
+        "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/can/include/**",
+        "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/car_control/include/**",
+        "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_complementary_filter/include/**",
+        "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/imu_tools/imu_filter_madgwick/include/**",
+        "/home/lilultime/Autocab/autocab/raspberryPI3/ros2_ws/src/system_check/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
