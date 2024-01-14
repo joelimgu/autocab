@@ -9,7 +9,7 @@ using namespace std ;
 
 
 /*
-Cette fonction nous sert de test pour déplacer la voiture d'un point A (le point actuel) à un point B (le point de destination)
+Cette fonction nous sert de test pour déplacer la voiture d'un point A (le point actuel) à un point B (le point de destination). Elle prend en cmpte le fait de faire un demi-tour.
 */
 
 bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger){
@@ -35,7 +35,7 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
 
     }else{
 
-        //Cette section permet de déterminer si la voiture doit aller à droite ou gauche
+        //Cette section permet de déterminer si la voiture doit aller à droite ou gauche, avancer ou reculer
 
         bVector[0] = bLatitude - aLatitude ;
         bVector[1] = bLongitude - aLongitude ;

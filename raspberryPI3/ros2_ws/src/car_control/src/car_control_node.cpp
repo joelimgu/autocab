@@ -216,6 +216,9 @@ private:
     */
     void updateCmd(){
 
+        bool reverseAsChanged;
+        bool previousReverse = reverse;
+
         auto motorsOrder = interfaces::msg::MotorsOrder();
         auto toServeur = interfaces::msg::Toserveur();
 
@@ -290,6 +293,11 @@ private:
                 }
             }
 
+            reverseAsChanged = (previousReverse != reverse);
+            if (reverseAsChanged){
+                requestedThrottle = 0;
+            }
+
             /* Left wheel error and PWM */
             correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
             /* Right wheel error and PWM */
@@ -323,6 +331,16 @@ private:
 
 
         publisher_can_->publish(motorsOrder);
+
+        if (reverseAsChanged){
+            RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
+            sleep(3);
+        
+            /* //si ca marche pas :
+            time_t t0 = time(NULL);
+            while(static_cast<unsigned>(time(NULL)-t0) < 3); */
+        }
+
     }
 
 
