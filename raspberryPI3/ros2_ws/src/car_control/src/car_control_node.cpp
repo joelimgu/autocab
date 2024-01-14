@@ -219,8 +219,8 @@ private:
         auto motorsOrder = interfaces::msg::MotorsOrder();
         auto toServeur = interfaces::msg::Toserveur();
 
-        toServeur.currentLatitude = currentLatitude;
-        toServeur.currentLongitude = currentLongitude;
+        toServeur.current_latitude = currentLatitude;
+        toServeur.current_longitude = currentLongitude;
 
         if (!start)
         {    //Car stopped
@@ -408,10 +408,9 @@ private:
     * This function is called when a message is published on the "/serveur_data" topic
     * 
     */
-
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached
+        auto is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached;
         if (is_request_fullfilled && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;

@@ -3,7 +3,7 @@ import rclpy
 from std_msgs.msg import Bool
 import asyncio
 import websockets
-from interfaces.msg import toserveur
+from interfaces.msg import Toserveur
 
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
@@ -34,13 +34,29 @@ async def send_message(start_status):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
+
+async def to_server(msg):
+    uri = "ws://127.0.0.1:5501"
+    try:
+        async with websockets.connect(uri) as websocket:
+            message = msg
+            await websocket.send(message)
+            print(f"Sent message: {message}")
+    except websockets.exceptions.ConnectionClosedError as e:
+        print(f"Connexion fermée de manière inattendue. Erreur : {e}")
+    except websockets.exceptions.ConnectionClosedOK:
+        print("Connexion fermée par le serveur.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
 async def main():
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
-    node.create_subscription(Toserveur)
+    node.create_subscription(Toserveur, 'to_serveur',to_server, 10)
+
     print("Waiting for messages. Press Ctrl+C to exit.")
     
     try:
