@@ -158,12 +158,14 @@ document.addEventListener("DOMContentLoaded", function () {
         zoom: 20,
         layers: [osm, pointsGrp]
     });
-
       // Agrega el evento de clic al botón "Start"
     const startButton = document.getElementById('startButton');
     startButton.addEventListener('click', function () {
-        // Guarda los marcadores en el LocalStorage
+        console.log("Start button clicked");
+	// Guarda los marcadores en el LocalStorage
         localStorage.setItem('selectedMarkers', JSON.stringify(selectedMarkers));
+	socket.send("start-pressed");
+        //socket.send("true");
     });
 
 
