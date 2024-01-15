@@ -20,7 +20,7 @@ async def start_status_callback(msg):
 
 
 async def send_message(start_status):
-    uri = "ws://127.0.0.1:5501"
+    uri = "ws://autocab.joel.rs/websocket/"
     try:
         async with websockets.connect(uri) as websocket:
             message = str(start_status)
