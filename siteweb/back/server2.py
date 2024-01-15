@@ -1,9 +1,12 @@
 import asyncio
 import websockets
+import subprocess
 
+# WebSocket server variables
 start_pressed = False
 clients = set()
 
+# WebSocket server handling
 async def handle_client(websocket, path):
     global start_pressed
     try:
@@ -18,7 +21,12 @@ async def handle_client(websocket, path):
 
             print(f"Received message from {path}: {message}")
 
-            if message == "start-pressed":
+            if message.startswith("GPS-coordinates:"):
+                # Extract and print GPS coordinates
+                coordinates = message.split(":")[1].split(",")
+                lat, lng = map(float, coordinates)
+                print(f"Received GPS coordinates: Lat={lat}, Lng={lng}")
+            elif message == "start-pressed":
                 # Check if the client is the first one to press "Start"
                 if not start_pressed:
                     start_pressed = True
@@ -44,10 +52,14 @@ async def handle_client(websocket, path):
             print(f"Client {websocket.remote_address} disconnected. Number of connected clients: {len(clients)}")
 
 async def main():
-    server = await websockets.serve(handle_client, "autocab.joel.rs", 5501)
+    # Start the WebSocket server
+    websocket_server = await websockets.serve(handle_client, "autocab.joel.rs", 5501)
     print("WebSocket server listening on ws://autocab.joel.rs:5501")
 
-    await server.wait_closed()
+    # Wait for the WebSocket server to finish
+    await websocket_server.wait_closed()
 
+# Run the main function
 if __name__ == "__main__":
     asyncio.run(main())
+
