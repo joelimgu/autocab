@@ -1,47 +1,28 @@
-let chooseDestination= true;
-let personMarker = null;
-let arriveMarker = null; 
-let car = null;
 
-// Function to send GPS coordinates to the server
-function sendGPSPosition(lat, lng) {
-    // Server URL - Replace with your actual server endpoint
-    const serverURL = 'http://161.35.86.239/api/save-position';
-
-    // Data to be sent to the server
-    const data = {
-        latitude: lat,
-        longitude: lng
-    };
-
-    // Fetch options for the POST request
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            // You may need to include additional headers depending on your server requirements
-        },
-        body: JSON.stringify(data)
-    };
-
-    // Send the POST request to the server
-    fetch(serverURL, options)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Server response:', data);
-        })
-        .catch(error => {
-            console.error('Error during GPS position upload:', error);
-        });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+    let chooseDestination = true;
+    let personMarker = null;
+    let arriveMarker = null;
+    let car = null;
+
+   function sendGPSPosition(selectedMarkers) {
+    console.log('Sending GPS coordinates and selectedMarkers:', selectedMarkers);
+
+    // Extract destination and startingPoint from selectedMarkers
+    const { destination, startingPoint } = selectedMarkers;
+
+    // Create a message with the "GPS-coordinates:" prefix and include selectedMarkers
+    const message = `GPS-coordinates:${destination.lat}:${destination.lng}:${startingPoint.lat}:${startingPoint.lng}`;
+
+    // Send the message through the WebSocket connection
+    if (socket.readyState === WebSocket.OPEN) {
+        socket.send(message);
+        console.log('GPS coordinates and selectedMarkers sent successfully.');
+    } else {
+        console.error('WebSocket connection not open. Unable to send GPS coordinates and selectedMarkers.');
+    }
+  }
 
 
     let selectedMarkers = {
@@ -126,6 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     selectedMarkers.destination = markerData;
                     map.removeLayer(marker);
                     arriveMarker = L.marker([point.lat, point.lng], { icon: arriveIcon }).addTo(map);
+                    console.log("Dans la condition confirmed et choose_destination true ", confirmed);
+                    console.log("la condition destination choisie et choose_destiantiontrue :", chooseDestination);
 
                 } else {
                     console.log("User starting point :", markerData);
@@ -133,13 +116,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     map.removeLayer(marker);
                     personMarker = L.marker([point.lat, point.lng], { icon: personIcon }).addTo(map);
                     document.getElementById('instruction-message').innerHTML = '<p> Press start to continue <br> Press cancel for make another call</p>';
+                   console.log("Dans la condition confirmed et ", confirmed);
+                   console.log("la condition destination choisie :", chooseDestination);
+
                 }
 
             } else {
                 // Acciones si se hace clic en "No"
-            }
-            if (confirmed && chooseDestination) {
-                sendGPSPosition(markerData.lat, markerData.lng);
             }
     
         });
@@ -158,15 +141,19 @@ document.addEventListener("DOMContentLoaded", function () {
         zoom: 20,
         layers: [osm, pointsGrp]
     });
-      // Agrega el evento de clic al botón "Start"
+
+    // Agrega el evento de clic al botón "Start"
     const startButton = document.getElementById('startButton');
     startButton.addEventListener('click', function () {
         console.log("Start button clicked");
-	// Guarda los marcadores en el LocalStorage
+        // Guarda los marcadores en el LocalStorage
         localStorage.setItem('selectedMarkers', JSON.stringify(selectedMarkers));
-	socket.send("start-pressed");
-        //socket.send("true");
+        socket.send("start-pressed");
+       
+
+       // Send the selectedMarkers to the server
+       sendGPSPosition(selectedMarkers);
+       //socket.send("true");
     });
-
-
 });
+    
