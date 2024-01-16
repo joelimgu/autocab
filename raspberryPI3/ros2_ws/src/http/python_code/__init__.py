@@ -9,7 +9,7 @@ from interfaces.msg import Toserveur
 
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
-
+node = None
 
 async def start_status_callback(msg):
     global start_status, prev_start_status
@@ -27,11 +27,17 @@ async def start_status_callback(msg):
 
 
 async def send_message(msg):
+    global node
+    if node is None:
+        print("Node not initialized")
+        return None
+
     uri = "ws://127.0.0.1:5501"
     try:
         async with websockets.connect(uri) as websocket:
             message = str(msg)
             await websocket.send(message)
+            node.get_logger().info('This is an information message')
             print(f"Sent message: {message}")
     except websockets.exceptions.ConnectionClosedError as e:
         print(f"Connexion fermée de manière inattendue. Erreur : {e}")
@@ -50,6 +56,7 @@ async def to_serveur_callback(msg):
 
 
 async def main():
+    global node
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
 
