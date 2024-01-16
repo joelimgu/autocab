@@ -103,7 +103,9 @@ private:
     * 
     */
     void motorsFeedbackCallback(const interfaces::msg::MotorsFeedback & motorsFeedback){
+        past_steeringAngle = currentAngle;
         currentAngle = motorsFeedback.steering_angle;
+        
     }
 
 
@@ -220,6 +222,14 @@ private:
     bool reverse;
     float requestedThrottle;
     float requestedSteerAngle;
+
+    /* Odometry variables */
+
+    float past_steeringAngle;
+    float odomPosition[2];
+    float past_theta;
+    float current_theta;
+    float past_speed;
 
     //Control variables
     uint8_t leftRearPwmCmd;
