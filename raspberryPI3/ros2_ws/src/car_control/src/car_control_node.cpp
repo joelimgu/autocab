@@ -42,6 +42,9 @@ public:
         currentDirection[0]=1;
         currentDirection[1]=1;
 
+        /* Initialising the car's state for odometry, should create my own callback to initialise it */
+        initialise_position(past_position_odom,current_position_odom,past_speed_odom,current_speed_odom,past_theta_odom,current_theta_odom);
+
         //Vrai initialisation
         departurePoint = 'A';
         finalPoint = 'A';
@@ -200,6 +203,7 @@ private:
     * 
     */
     void motorsFeedbackCallback(const interfaces::msg::MotorsFeedback & motorsFeedback){
+        past_steeringAngle_odom = currentAngle;
         currentAngle = motorsFeedback.steering_angle;
         leftRearRPM = motorsFeedback.left_rear_speed;
         rightRearRPM = motorsFeedback.right_rear_speed;
@@ -297,6 +301,22 @@ private:
 
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
             steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+
+            /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
+
+            estimate_pos(0.01,
+                    float L,
+                    float wheel_radius,
+                    past_steeringAngle_odom,
+                    past_theta_odom,
+                    current_theta_odom,
+                    past_speed_odom,
+                    current_speed_odom,
+                    left_rear_RPM,
+                    rightRearRPM,
+                    past_position_odom, 
+                    current_position_odom)
+            printf("Odometry positions : X = %f Y = %f", current_position_odom[0],current_position_odom[1])
 
             /*
             //Obstacle Detection in all modes
@@ -449,6 +469,15 @@ private:
     float right_current_pwm_error = 0;
     float left_past_pwm_error = 0;
     float left_current_pwm_error = 0;
+
+    /* Odometry variables */
+    float past_steeringAngle_odom;
+    float past_position_odom[2] 
+    float current_position_odom[2];
+    float past_theta_odom;
+    float current_theta_odom;
+    float past_speed_odom;
+    float current_speed_odom;
 
     //Manual Mode variables (with joystick control)
     bool reverse;
