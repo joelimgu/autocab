@@ -43,21 +43,21 @@ public:
         currentDirection[1]=1;
 
         //Vrai initialisation
-        departurePoint = 'A';
-        finalPoint = 'A';
-        currentPoint = 'A' ;
-        departurePointReached = true;
-        finalPointReached = true;
-        arrivedAtCurrentPoint = true;
-        requestNumber = 0;
-
-        // //initialisation pour les tests
         // departurePoint = 'A';
-        // finalPoint = 'C';
-        // departurePointReached = false;
-        // finalPointReached = false;
-        // arrivedAtCurrentPoint = false;
+        // finalPoint = 'A';
+        // currentPoint = 'A' ;
+        // departurePointReached = true;
+        // finalPointReached = true;
+        // arrivedAtCurrentPoint = true;
         // requestNumber = 0;
+
+        //initialisation pour les tests
+        departurePoint = 'D';
+        finalPoint = 'A';
+        departurePointReached = false;
+        finalPointReached = false;
+        arrivedAtCurrentPoint = false;
+        requestNumber = 0;
         
         (coordinates['A'])[0] = 43.570593;
         (coordinates['A'])[1] = 1.466513;
@@ -85,16 +85,16 @@ public:
 
         graph.createGraph(coordinates);
 
-        // //tests pour prouver que le calcul de plus court chemin fonctionne
-        // pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
-        // if (pathToDeparturePoint.empty()){
-        //     departurePointReached = true;
-        // }
-        // pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
-        // RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
-        // if (pathToFinalPoint.empty()){
-        //     finalPointReached = true;
-        // }
+        //tests pour prouver que le calcul de plus court chemin fonctionne
+        pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+        if (pathToDeparturePoint.empty()){
+            departurePointReached = true;
+        }
+        pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
+        RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
+        if (pathToFinalPoint.empty()){
+            finalPointReached = true;
+        }
 
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -175,10 +175,10 @@ private:
 
             if (mode==0){
                 RCLCPP_INFO(this->get_logger(), "Switching to MANUAL Mode");
-                requestNumber = 0 ;
-                departurePointReached = true ;
-                finalPointReached = true ;
-                arrivedAtCurrentPoint = true ;
+                // requestNumber = 0 ;
+                // departurePointReached = true ;
+                // finalPointReached = true ;
+                // arrivedAtCurrentPoint = true ;
             }else if (mode==1){
                 RCLCPP_INFO(this->get_logger(), "Switching to AUTONOMOUS Mode");
             }else if (mode==2){
@@ -222,8 +222,8 @@ private:
         auto motorsOrder = interfaces::msg::MotorsOrder();
         auto toServeur = interfaces::msg::Toserveur();
 
-        toServeur.currentLatitude = currentLatitude;
-        toServeur.currentLongitude = currentLongitude;
+        toServeur.current_latitude = currentLatitude;
+        toServeur.current_longitude = currentLongitude;
 
         if (!start)
         {    //Car stopped
@@ -269,7 +269,6 @@ private:
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()-1) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
-                                sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else if (!finalPointReached){
@@ -279,7 +278,6 @@ private:
                             pathToFinalPoint.erase(pathToFinalPoint.end()-1) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
-                                sleep(5); //On attend 5 secondes avant de partir
                             }
                         }
                     } else {
@@ -334,7 +332,7 @@ private:
 
         if (reverseAsChanged){
             RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
-            sleep(3);
+           // sleep(3);
         
             /* //si ca marche pas :
             time_t t0 = time(NULL);
@@ -429,7 +427,7 @@ private:
 
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached
+        bool is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached;
         if (is_request_fullfilled && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
