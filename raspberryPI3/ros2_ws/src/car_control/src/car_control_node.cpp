@@ -304,19 +304,13 @@ private:
 
             /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
 
-            estimate_pos(0.01,
-                    float L,
-                    float wheel_radius,
-                    past_steeringAngle_odom,
-                    past_theta_odom,
-                    current_theta_odom,
-                    past_speed_odom,
+            estimate_pos(0.01,0.55,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speed_odom,
                     current_speed_odom,
-                    left_rear_RPM,
+                    leftRearRPM,
                     rightRearRPM,
                     past_position_odom, 
-                    current_position_odom)
-            printf("Odometry positions : X = %f Y = %f", current_position_odom[0],current_position_odom[1])
+                    current_position_odom);
+            printf("Odometry positions : X = %f Y = %f", current_position_odom[0],current_position_odom[1]);
 
             /*
             //Obstacle Detection in all modes
