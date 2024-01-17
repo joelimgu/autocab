@@ -44,7 +44,7 @@ public:
         currentDirection[1]=1;
 
         /* Initialising the car's state for odometry, should create my own callback to initialise it */
-        odom::initialise_position(past_position_odom,current_position_odom,past_speed_odom,current_speed_odom,past_theta_odom,current_theta_odom);
+        odom::initialise_position(past_reverse_odom,past_position_odom,current_position_odom,past_speeds_odom,past_theta_odom,current_theta_odom);
 
         //Vrai initialisation
         departurePoint = 'A';
@@ -304,13 +304,12 @@ private:
 
             /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
 
-            odom::estimate_pos(0.01,0.55,reverse,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speed_odom,
-                    current_speed_odom,
+            odom::estimate_pos(0.01,0.55,past_reverse_odom,reverse,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speeds_odom,
                     leftRearRPM,
                     rightRearRPM,
                     past_position_odom, 
                     current_position_odom);
-            RCLCPP_INFO(this->get_logger(), "Odometry positions : X = %f Y = %f", current_position_odom[0],current_position_odom[1]);
+            RCLCPP_INFO(this->get_logger(), "Odometry positions : X = %f Y = %f \n Current theta %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
             
 
             /*
@@ -467,13 +466,13 @@ private:
     float left_current_pwm_error = 0;
 
     /* Odometry variables */
+    float past_reverse_odom;
     float past_steeringAngle_odom;
     float past_position_odom[2];
     float current_position_odom[2];
     float past_theta_odom;
     float current_theta_odom;
-    float past_speed_odom;
-    float current_speed_odom;
+    float past_speeds_odom[2] /* Vector containing the past speeds for both right and left rear wheels */
 
     //Manual Mode variables (with joystick control)
     bool reverse;
