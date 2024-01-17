@@ -22,6 +22,7 @@
 #include "../include/car_control/car_control_node.h"
 #include "../include/car_control/fromAtoB.h"
 #include "../include/car_control/obstacle_detection.h"
+#include "../include/car_control/odometry.h"
 
 using namespace std;
 using placeholders::_1;
@@ -43,7 +44,7 @@ public:
         currentDirection[1]=1;
 
         /* Initialising the car's state for odometry, should create my own callback to initialise it */
-        initialise_position(past_position_odom,current_position_odom,past_speed_odom,current_speed_odom,past_theta_odom,current_theta_odom);
+        odom::initialise_position(past_position_odom,current_position_odom,past_speed_odom,current_speed_odom,past_theta_odom,current_theta_odom);
 
         //Vrai initialisation
         departurePoint = 'A';
@@ -120,10 +121,10 @@ public:
 
         subscription_gnss_data_ = this->create_subscription<interfaces::msg::Gnss>(
         "gnss_data", 10, std::bind(&car_control::gnssDataCallback, this, _1));
-
+        /*
         subscription_serveur_data_ = this->create_subscription<interfaces::msg::Serveur>(
         "serveur_data", 10, std::bind(&car_control::serveurDataCallback, this, _1));
-        
+        */
         subscription_us_data = this->create_subscription<interfaces::msg::Ultrasonic>(
         "us_data", 10, std::bind(&car_control::usDataCallback, this, _1));
 
@@ -219,12 +220,11 @@ private:
     * - currentAngle [from motors feedback]
     */
     void updateCmd(){
-
         auto motorsOrder = interfaces::msg::MotorsOrder();
         auto toServeur = interfaces::msg::Toserveur();
 
-        toServeur.currentLatitude = currentLatitude;
-        toServeur.currentLongitude = currentLongitude;
+        toServeur.current_latitude = currentLatitude;
+        toServeur.current_longitude = currentLongitude;
 
         if (!start)
         {    //Car stopped
@@ -304,13 +304,14 @@ private:
 
             /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
 
-            estimate_pos(0.01,0.55,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speed_odom,
+            odom::estimate_pos(0.01,0.55,reverse,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speed_odom,
                     current_speed_odom,
                     leftRearRPM,
                     rightRearRPM,
                     past_position_odom, 
                     current_position_odom);
-            printf("Odometry positions : X = %f Y = %f", current_position_odom[0],current_position_odom[1]);
+            RCLCPP_INFO(this->get_logger(), "Odometry positions : X = %f Y = %f", current_position_odom[0],current_position_odom[1]);
+            
 
             /*
             //Obstacle Detection in all modes
@@ -412,7 +413,7 @@ private:
             currentLatitude = gnssData.latitude;
             currentLongitude = gnssData.longitude;
             currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
-            RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
+            RCLCPP_INFO(this->get_logger(), "Data GPS SHutUppdated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
             RCLCPP_INFO(this->get_logger(), "currentPoint = %c", currentPoint);
         }
     }
@@ -422,10 +423,10 @@ private:
     * This function is called when a message is published on the "/serveur_data" topic
     * 
     */
-
+    /*
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached
+        is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached 
         if (is_request_fullfilled && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
@@ -445,6 +446,7 @@ private:
         }
         
     }
+    */
     
 
 
@@ -466,7 +468,7 @@ private:
 
     /* Odometry variables */
     float past_steeringAngle_odom;
-    float past_position_odom[2] 
+    float past_position_odom[2];
     float current_position_odom[2];
     float past_theta_odom;
     float current_theta_odom;

@@ -19,6 +19,7 @@ add_executable(car_control_node
   src/fromAtoB.cpp
   src/corrector.cpp
   src/obstacle_detection.cpp
+  src/odometry.cpp
 )
 
 

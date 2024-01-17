@@ -8,8 +8,9 @@ namespace odom
     int initialise_position(float past_position[2],float current_position[2],float &past_speed,float &current_speed,
                     float &past_theta,
                     float &current_theta);
-    int odom::estimate_pos(float delta_t,
+    int estimate_pos(float delta_t,
                     float L,
+                    bool reverse,
                     float wheel_radius,
                     float &past_steeringAngle,
                     float &past_theta,
