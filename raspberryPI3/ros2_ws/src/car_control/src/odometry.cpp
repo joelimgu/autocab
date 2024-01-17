@@ -36,7 +36,6 @@ int odom::estimate_pos(float delta_t,
     float theta_dot;
     int i;
 
-    /* The car is reversing if reverse is true */
     if (past_steeringAngle < 0) 
     {
         i = 0;
