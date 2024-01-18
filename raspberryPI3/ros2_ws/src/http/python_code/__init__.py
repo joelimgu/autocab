@@ -1,3 +1,5 @@
+import json
+
 import rclpy
 import rclpy
 from std_msgs.msg import Bool
@@ -9,24 +11,35 @@ start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 uri = "ws://127.0.0.1:5501"
 ws_manager = None
+node = None
 
 async def start_status_callback(msg):
     global start_status, prev_start_status
     start_status = msg.data
-    
-     # Vérifier si start_status a changé
+
+    # Vérifier si start_status a changé
     if start_status != prev_start_status:
         prev_start_status = start_status
         print(f"Received start status: {start_status}")
-        await send_message(start_status)  # Utiliser 'await' pour attendre la fin de send_message
+        dict = {
+            "type": "status",
+            "data": msg
+        }
+        await send_message(dict)  # Utiliser 'await' pour attendre la fin de send_message
 
 
-async def send_message(start_status):
-    global uri
+async def send_message(msg):
+    global node
+    if node is None:
+        print("Node not initialized")
+        return None
+
+    uri = "ws://127.0.0.1:5501"
     try:
         async with websockets.connect(uri) as websocket:
-            message = str(start_status)
+            message = str(msg)
             await websocket.send(message)
+            node.get_logger().info('This is an information message')
             print(f"Sent message: {message}")
     except websockets.exceptions.ConnectionClosedError as e:
         print(f"Connexion fermée de manière inattendue. Erreur : {e}")
@@ -36,31 +49,26 @@ async def send_message(start_status):
         print(f"An unexpected error occurred: {e}")
 
 
-async def to_server(msg):
-    try:
-        async with websockets.connect(uri) as websocket:
-            message = msg
-            await websocket.send(message)
-            print(f"Sent message: {message}")
-    except websockets.exceptions.ConnectionClosedError as e:
-        print(f"Connexion fermée de manière inattendue. Erreur : {e}")
-    except websockets.exceptions.ConnectionClosedOK:
-        print("Connexion fermée par le serveur.")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+async def to_serveur_callback(msg):
+    dict = {
+        "type": "toServeur",
+        "data": msg
+    }
+    await send_message(json.dump(dict))
+
 
 async def main():
-    global ws_manager
+    global node, ws_manager
     rclpy.init()
-    node = rclpy.create_node('http')
+    node = rclpy.create_node('start_status_subscriber')
     ws_manager = WebSocketManager()
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
-    node.create_subscription(Toserveur, 'to_serveur', to_server, 10)
+    node.create_subscription(Toserveur, 'to_serveur', to_serveur_callback, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
-    
+
     try:
         while rclpy.ok():
             rclpy.spin_once(node)
