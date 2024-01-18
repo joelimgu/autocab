@@ -7,7 +7,8 @@ from interfaces.msg import Toserveur
 
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
-
+uri = "ws://127.0.0.1:5501"
+ws_manager = None
 
 async def start_status_callback(msg):
     global start_status, prev_start_status
@@ -21,7 +22,7 @@ async def start_status_callback(msg):
 
 
 async def send_message(start_status):
-    uri = "ws://127.0.0.1:5501"
+    global uri
     try:
         async with websockets.connect(uri) as websocket:
             message = str(start_status)
@@ -36,7 +37,6 @@ async def send_message(start_status):
 
 
 async def to_server(msg):
-    uri = "ws://127.0.0.1:5501"
     try:
         async with websockets.connect(uri) as websocket:
             message = msg
@@ -50,12 +50,14 @@ async def to_server(msg):
         print(f"An unexpected error occurred: {e}")
 
 async def main():
+    global ws_manager
     rclpy.init()
-    node = rclpy.create_node('start_status_subscriber')
+    node = rclpy.create_node('http')
+    ws_manager = WebSocketManager()
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
     subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
-    node.create_subscription(Toserveur, 'to_serveur',to_server, 10)
+    node.create_subscription(Toserveur, 'to_serveur', to_server, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
     
@@ -69,6 +71,43 @@ async def main():
         # Arrêtez correctement le nœud
         node.destroy_node()
         rclpy.shutdown()
+
+
+# thanks to https://stackoverflow.com/questions/71871037/python-async-callback-receiver-for-websocket
+class WebSocketManager:
+    def __init__(self):
+        self.websocket = None
+        self.messages: list[str] = []
+        asyncio.run(self.start())
+
+    async def start(self):
+        connexion = asyncio.create_task(self.connexion())
+        sender = asyncio.create_task(self.sed_message())
+        await asyncio.gather(connexion, sender)
+
+    async def connexion(self):
+        async for websocket in websockets.connect(uri):
+            try:
+                self.websocket = websocket
+                async for message in websocket:
+                    print("recv websocket: ", message)
+            except websockets.ConnectionClosed:
+                self.websocket = None
+                continue
+
+    async def sed_message(self):
+        if self.websocket is None:
+            await asyncio.sleep(2)
+        try:
+            for message in self.messages:
+                await self.websocket.send(message)
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+        await asyncio.sleep(0.1)
+
+
+
+
 
 if __name__ == '__main__':
     asyncio.run(main())
