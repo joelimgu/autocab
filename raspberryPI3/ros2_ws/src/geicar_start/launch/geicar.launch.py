@@ -54,7 +54,7 @@ def generate_launch_description():
 
     server_node = Node(
         package="http",
-        executable="__init__",
+        executable="__init__.py",
         emulate_tty=True
     )
 
