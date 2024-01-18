@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-int odom::initialise_position(float past_reverse,float past_position[2],float current_position[2],float past_speeds[2],
+int odom::initialise_position(bool &past_reverse,float past_position[2],float current_position[2],float past_speeds[2],
                     float &past_theta,
                     float &current_theta) /* MISRA-C suggests using [2]*/
 {
@@ -20,7 +20,7 @@ int odom::initialise_position(float past_reverse,float past_position[2],float cu
 
 int odom::estimate_pos(float delta_t,
                     float L,
-                    bool past_reverse,
+                    bool &past_reverse,
                     bool reverse,
                     float wheel_radius,
                     float &past_steeringAngle,
@@ -34,7 +34,8 @@ int odom::estimate_pos(float delta_t,
 {
     float x_dot, y_dot;
     float theta_dot;
-    int i;
+    int i = 0;
+    float angle_coeff = -(41/0.97);
 
     if (past_steeringAngle < 0) 
     {
@@ -48,7 +49,7 @@ int odom::estimate_pos(float delta_t,
     /* Empêcher des enregistrements de valeurs sporadiques !!! Un filtre ? Augmenter la fréquence de mise à jour ? */
 
     /* Calculating theta_dot and speeds */
-    theta_dot = past_speeds[i]/(L/std::tan(past_steeringAngle)); //The choice of the wheel that should be used is parametrized by i
+    theta_dot = past_speeds[i]*std::tan(past_steeringAngle*(angle_coeff)*(M_PI*2/360))/L; //The choice of the wheel that should be used is parametrized by i
     current_theta = past_theta + theta_dot * delta_t;
     x_dot = past_speeds[i] * (-std::sin(past_theta)); // the speed can be either negative or positive, and either right or left wheel speed
     y_dot = past_speeds[i] * std::cos(past_theta);
@@ -64,7 +65,7 @@ int odom::estimate_pos(float delta_t,
     past_reverse = reverse;
     
     /* Updating speed values for both right and left rear wheels */
-    if (past_reverse)
+    if (reverse)
     {
         past_speeds[0] = -(wheel_radius/30)*M_PI*right_rear_RPM;
         past_speeds[1] = -(wheel_radius/30)*M_PI*left_rear_RPM;

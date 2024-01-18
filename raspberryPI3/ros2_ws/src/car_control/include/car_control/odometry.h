@@ -5,12 +5,13 @@
 namespace odom 
 {
     /* Created a vector containing positional data in meters for x axis and y axis */
-    int odom::initialise_position(float past_reverse,float past_position[2],float current_position[2],float past_speeds[2],
+    int initialise_position(bool &past_reverse,float past_position[2],float current_position[2],float past_speeds[2],
                     float &past_theta,
                     float &current_theta);
-    int odom::estimate_pos(float delta_t,
+
+    int estimate_pos(float delta_t,
                     float L,
-                    bool past_reverse,
+                    bool &past_reverse,
                     bool reverse,
                     float wheel_radius,
                     float &past_steeringAngle,
