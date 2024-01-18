@@ -13,6 +13,7 @@ uri = "ws://127.0.0.1:5501"
 ws_manager = None
 node = None
 
+
 async def start_status_callback(msg):
     global start_status, prev_start_status
     start_status = msg.data
@@ -29,24 +30,24 @@ async def start_status_callback(msg):
 
 
 async def send_message(msg):
-    global node
+    global node, ws_manager
     if node is None:
         print("Node not initialized")
         return None
-
-    uri = "ws://127.0.0.1:5501"
-    try:
-        async with websockets.connect(uri) as websocket:
-            message = str(msg)
-            await websocket.send(message)
-            node.get_logger().info('This is an information message')
-            print(f"Sent message: {message}")
-    except websockets.exceptions.ConnectionClosedError as e:
-        print(f"Connexion fermée de manière inattendue. Erreur : {e}")
-    except websockets.exceptions.ConnectionClosedOK:
-        print("Connexion fermée par le serveur.")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+    ws_manager.messages.append(msg)
+    # uri = "ws://127.0.0.1:5501"
+    # try:
+    #     async with websockets.connect(uri) as websocket:
+    #         message = str(msg)
+    #         await websocket.send(message)
+    #         node.get_logger().info('This is an information message')
+    #         print(f"Sent message: {message}")
+    # except websockets.exceptions.ConnectionClosedError as e:
+    #     print(f"Connexion fermée de manière inattendue. Erreur : {e}")
+    # except websockets.exceptions.ConnectionClosedOK:
+    #     print("Connexion fermée par le serveur.")
+    # except Exception as e:
+    #     print(f"An unexpected error occurred: {e}")
 
 
 async def to_serveur_callback(msg):
@@ -64,7 +65,7 @@ async def main():
     ws_manager = WebSocketManager()
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
-    subscriber = node.create_subscription(Bool, 'start_status', start_status_callback, 10)
+    node.create_subscription(Bool, 'start_status', start_status_callback, 10)
     node.create_subscription(Toserveur, 'to_serveur', to_serveur_callback, 10)
 
     print("Waiting for messages. Press Ctrl+C to exit.")
@@ -90,31 +91,31 @@ class WebSocketManager:
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
-        sender = asyncio.create_task(self.sed_message())
+        sender = asyncio.create_task(self.send_message())
         await asyncio.gather(connexion, sender)
 
     async def connexion(self):
+        global node
         async for websocket in websockets.connect(uri):
             try:
                 self.websocket = websocket
                 async for message in websocket:
                     print("recv websocket: ", message)
+                    node.get_logger().info(f'recv websocket: ${message}')
             except websockets.ConnectionClosed:
                 self.websocket = None
                 continue
 
-    async def sed_message(self):
-        if self.websocket is None:
-            await asyncio.sleep(2)
-        try:
-            for message in self.messages:
-                await self.websocket.send(message)
-        except Exception as e:
-            print(f"An unexpected error occurred: {e}")
-        await asyncio.sleep(0.1)
-
-
-
+    async def send_message(self):
+        while True:
+            if self.websocket is None:
+                await asyncio.sleep(2)
+            try:
+                for message in self.messages:
+                    await self.websocket.send(message)
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
+            await asyncio.sleep(0.1)
 
 
 if __name__ == '__main__':
