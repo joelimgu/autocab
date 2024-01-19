@@ -9,6 +9,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(interfaces REQUIRED)
 
+include_directories(include)
+
 ament_export_dependencies(rosidl_default_runtime)
 
 ament_python_install_package(${PROJECT_NAME} PACKAGE_DIR python_code)
