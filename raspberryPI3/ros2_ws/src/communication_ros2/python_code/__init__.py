@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import threading
 import time
 import rclpy
 import rclpy
@@ -44,15 +45,27 @@ def send_message(msg):
     if ws_manager is None:
         node.get_logger().error('unable to send message websocket manager not initialized')
         return None
+    node.get_logger().info(f'sending message: {msg}')
     ws_manager.messages.append(msg)
 
 
 def to_serveur_callback(msg):
     dict = {
         "type": "toServeur",
-        "data": msg
+        "data": {
+            "current_latitude": msg.current_latitude,
+            "current_longitude": msg.current_longitude,
+            "mode": msg.mode,
+            "arrived": msg.arrived,
+            "on": msg.on
+        }
     }
     send_message(json.dumps(dict))
+
+
+def init_manager():
+    global ws_manager
+    ws_manager = WebSocketManager()
 
 
 def main():
@@ -60,7 +73,8 @@ def main():
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
     node.get_logger().info('websocket node started')
-    ws_manager = WebSocketManager()
+    # ws_manager = WebSocketManager()
+    threading.Thread(target=init_manager).start()
     node.get_logger().info('websocket manager started')
 
     # Crée un objet Subscriber pour le topic "start_status" avec le type de message Bool
@@ -82,10 +96,13 @@ def main():
 
 # thanks to https://stackoverflow.com/questions/71871037/python-async-callback-receiver-for-websocket
 class WebSocketManager:
+
     def __init__(self):
+        global ws_manager
         self.websocket = None
         self.messages: list[str] = []
-        asyncio.get_event_loop().run_until_complete(self.start())
+        ws_manager = self
+        asyncio.run(self.start())
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
@@ -120,4 +137,4 @@ class WebSocketManager:
 
 
 if __name__ == '__main__':
-   main()
+    main()
