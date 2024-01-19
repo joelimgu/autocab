@@ -23,9 +23,7 @@
 #include "../include/car_control/fromAtoB.h"
 #include "../include/car_control/obstacle_detection.h"
 #include "../include/car_control/odometry.h"
-
-
-#define PI 3.1415926535897932384626433832795    
+    
 using namespace std;
 using placeholders::_1;
 
@@ -214,7 +212,28 @@ private:
         rightRearRPM = motorsFeedback.right_rear_speed;
         leaftNticks= motorsFeedback.left_rear_odometry;
         rightNticks= motorsFeedback.right_rear_odometry;
+    }
 
+
+    void UpdateOdometrie()
+    {
+        float Rdistance,Ldistance, Center;
+        Rdistance = M_PI * D * (rightNticks/36.0);
+        Ldistance = M_PI * D * (leaftNticks/36.0);
+        Center= (Rdistance + Ldistance)/2;
+        /*f (reverse)
+        {
+            Xpos = Xpos - Center*std::cos(phi);
+            Ypos = Ypos - Center*std::sin(phi);
+        }
+        else
+        {*/
+            Xpos = Xpos + Center*std::cos(phi);
+            Ypos = Ypos + Center*std::sin(phi);
+        //}
+        phi = phi + (Rdistance-Ldistance)/longueur;
+        RCLCPP_INFO(this->get_logger(), "Rdistance et Ldistance : R = %f L = %f \n", Rdistance ,Ldistance);
+        phi = std::atan2(sin(phi),cos(phi));
     }
 
 
@@ -300,17 +319,6 @@ private:
 
                 }
             }
-
-    void UpdateOdometrie(){
-        Rdistance= phi * D * (rightNticks/(double)36);
-        Ldistance= phi * D * (leaftNticks/(double)36);
-        Center= (Rdistance + Ldistance)/2;
-        Xpos = Xpos + Center*cos(phi);
-        Ypos = Ypos + Center*sin(phi);
-        phi = phi + (Rdistance-Ldistance)/longitud;
-        phi = atan2(sin(phi),cos(phi));
- 
-    }
 
             /* Left wheel error and PWM */
             correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
@@ -473,10 +481,7 @@ private:
     */
     
 
-
-    // ---- Private variables ----
-
-    //General variables
+float Rdistance = 0.1;
     bool start;
     int mode;    //0 : Manual    1 : Auto    2 : Calibration
 
@@ -499,11 +504,12 @@ private:
     float current_position_odom[2];
     float past_theta_odom;
     float current_theta_odom;
-    float past_speeds_odom[2] /* Vector containing the past speeds for both right and left rear wheels */
+    float past_speeds_odom[2]; /* Vector containing the past speeds for both right and left rear wheels */
     
     /* Odometry variables 2*/
-    float phi=0:
-    float D=0.03;
+    float phi = 0.0;
+    float D = 0.20;
+    float longueur = 0.45;
     float leaftNticks;
     float rightNticks;
     float Xpos=0;
