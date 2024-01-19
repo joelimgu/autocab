@@ -24,5 +24,4 @@ namespace odom
     /* Je dois changer le passage d'argument pour qu'il soit moins encombrant */
 }
 
-
 #endif
