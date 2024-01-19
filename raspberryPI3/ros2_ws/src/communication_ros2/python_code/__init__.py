@@ -28,7 +28,7 @@ async def start_status_callback(msg):
             "type": "status",
             "data": msg
         }
-        await send_message(dict)  # Utiliser 'await' pour attendre la fin de send_message
+        await send_message(json.dumps(dict))  # Utiliser 'await' pour attendre la fin de send_message
 
 
 async def send_message(msg):
@@ -57,7 +57,7 @@ async def to_serveur_callback(msg):
         "type": "toServeur",
         "data": msg
     }
-    await send_message(json.dump(dict))
+    await send_message(json.dumps(dict))
 
 
 async def main():
@@ -115,6 +115,8 @@ class WebSocketManager:
             try:
                 for message in self.messages:
                     await self.websocket.send(message)
+                    self.websocket.pop(0)
+
             except Exception as e:
                 print(f"An unexpected error occurred: {e}")
             await asyncio.sleep(0.1)
