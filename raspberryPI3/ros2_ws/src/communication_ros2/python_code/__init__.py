@@ -26,7 +26,13 @@ async def start_status_callback(msg):
         print(f"Received start status: {start_status}")
         dict = {
             "type": "status",
-            "data": msg
+            "data": {
+                "current_latitude": msg.current_latitude,
+                "current_longitude": msg.current_longitude,
+                "mode": msg.mode,
+                "arrived": msg.arrived,
+                "on": msg.on
+            }
         }
         await send_message(json.dumps(dict))  # Utiliser 'await' pour attendre la fin de send_message
 
