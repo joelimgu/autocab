@@ -4,17 +4,19 @@ import json
 import threading
 import time
 import rclpy
-import rclpy
 from std_msgs.msg import Bool
 import asyncio
 import websockets
 from interfaces.msg import Toserveur
 
+
+from interfaces.msg import Serveur
+
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 uri = "ws://localhost:5001"
-ws_manager = None
-node = None
+ws_manager: 'WebSocketManager' | None = None
+node: rclpy.node.Node | None = None
 
 
 def start_status_callback(msg):
@@ -102,7 +104,21 @@ class WebSocketManager:
         self.websocket = None
         self.messages: list[str] = []
         ws_manager = self
+        self.server_pub = node.create_publisher(Serveur, "serveur_data", 10)
         asyncio.run(self.start())
+
+    def route_to_ros(self, msg):
+        global node
+        if node is None:
+            return None
+        try:
+            msg = json.loads(msg)
+            if msg["type"] == "objective":
+                msg["data"]["departure_point"] = ord(msg["data"]["departure_point"])
+                msg["data"]["final_point"] = ord(msg["data"]["final_point"])
+                self.server_pub.publish(Serveur(**msg["data"]))
+        except json.decoder.JSONDecodeError:
+            return
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
@@ -118,6 +134,7 @@ class WebSocketManager:
                 self.websocket = websocket
                 async for message in websocket:
                     node.get_logger().info(f'recv websocket: ${message}')
+                    self.route_to_ros(message)
             except websockets.ConnectionClosed:
                 self.websocket = None
                 continue
