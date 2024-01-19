@@ -11,7 +11,7 @@ from interfaces.msg import Toserveur
 
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
-uri = "ws://localhost:5501"
+uri = "ws://localhost:5001"
 ws_manager = None
 node = None
 
@@ -40,22 +40,11 @@ def start_status_callback(msg):
 def send_message(msg):
     global node, ws_manager
     if node is None:
-        print("Node not initialized")
+        return None
+    if ws_manager is None:
+        node.get_logger().error('unable to send message websocket manager not initialized')
         return None
     ws_manager.messages.append(msg)
-    # uri = "ws://127.0.0.1:5501"
-    # try:
-    #     async with websockets.connect(uri) as websocket:
-    #         message = str(msg)
-    #         await websocket.send(message)
-    #         node.get_logger().info('This is an information message')
-    #         print(f"Sent message: {message}")
-    # except websockets.exceptions.ConnectionClosedError as e:
-    #     print(f"Connexion fermée de manière inattendue. Erreur : {e}")
-    # except websockets.exceptions.ConnectionClosedOK:
-    #     print("Connexion fermée par le serveur.")
-    # except Exception as e:
-    #     print(f"An unexpected error occurred: {e}")
 
 
 def to_serveur_callback(msg):
@@ -66,7 +55,7 @@ def to_serveur_callback(msg):
     send_message(json.dumps(dict))
 
 
-async def main():
+def main():
     global node, ws_manager
     rclpy.init()
     node = rclpy.create_node('start_status_subscriber')
@@ -78,13 +67,11 @@ async def main():
     node.create_subscription(Bool, 'start_status', start_status_callback, 10)
     node.create_subscription(Toserveur, 'to_serveur', to_serveur_callback, 10)
 
-    print("Waiting for messages. Press Ctrl+C to exit.")
-
     try:
         while rclpy.ok():
             rclpy.spin_once(node)
-            # time.sleep(0.1)
-            await asyncio.sleep(0.1)  # Add a small sleep to release control to the event loop
+            time.sleep(0.1)
+            # await asyncio.sleep(0.1)  # Add a small sleep to release control to the event loop
     except KeyboardInterrupt:
         pass
     finally:
@@ -98,12 +85,12 @@ class WebSocketManager:
     def __init__(self):
         self.websocket = None
         self.messages: list[str] = []
-        self.start()
+        asyncio.get_event_loop().run_until_complete(self.start())
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
         sender = asyncio.create_task(self.send_message())
-        # await asyncio.gather(connexion, sender)
+        await asyncio.gather(connexion, sender)
 
     async def connexion(self):
         global node
@@ -113,7 +100,6 @@ class WebSocketManager:
             try:
                 self.websocket = websocket
                 async for message in websocket:
-                    print("recv websocket: ", message)
                     node.get_logger().info(f'recv websocket: ${message}')
             except websockets.ConnectionClosed:
                 self.websocket = None
@@ -134,4 +120,4 @@ class WebSocketManager:
 
 
 if __name__ == '__main__':
-    asyncio.run(main())
+   main()
