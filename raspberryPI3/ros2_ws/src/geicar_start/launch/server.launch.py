@@ -7,7 +7,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     http_node = Node(
-        package="http",
+        package="communication_ros2",
         executable="__init__.py",
         emulate_tty=True
     )

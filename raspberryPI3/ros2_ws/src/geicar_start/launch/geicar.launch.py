@@ -53,7 +53,7 @@ def generate_launch_description():
     )
 
     server_node = Node(
-        package="http",
+        package="communication_ros2",
         executable="__init__.py",
         emulate_tty=True
     )
