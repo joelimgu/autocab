@@ -24,6 +24,8 @@
 #include "../include/car_control/obstacle_detection.h"
 #include "../include/car_control/odometry.h"
 
+
+#define PI 3.1415926535897932384626433832795    
 using namespace std;
 using placeholders::_1;
 
@@ -137,6 +139,8 @@ public:
 
         
         RCLCPP_INFO(this->get_logger(), "car_control_node READY");
+
+
     }
 
     /* Update data from us_data [callback function]  :
@@ -208,6 +212,9 @@ private:
         currentAngle = motorsFeedback.steering_angle;
         leftRearRPM = motorsFeedback.left_rear_speed;
         rightRearRPM = motorsFeedback.right_rear_speed;
+        leaftNticks= motorsFeedback.left_rear_odometry;
+        rightNticks= motorsFeedback.right_rear_odometry;
+
     }
 
 
@@ -294,6 +301,17 @@ private:
                 }
             }
 
+    void UpdateOdometrie(){
+        Rdistance= phi * D * (rightNticks/(double)36);
+        Ldistance= phi * D * (leaftNticks/(double)36);
+        Center= (Rdistance + Ldistance)/2;
+        Xpos = Xpos + Center*cos(phi);
+        Ypos = Ypos + Center*sin(phi);
+        phi = phi + (Rdistance-Ldistance)/longitud;
+        phi = atan2(sin(phi),cos(phi));
+ 
+    }
+
             /* Left wheel error and PWM */
             correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
             /* Right wheel error and PWM */
@@ -311,6 +329,11 @@ private:
                     current_position_odom);
             RCLCPP_INFO(this->get_logger(), "Odometry positions : X = %f Y = %f \n Current theta %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
             
+
+            UpdateOdometrie();
+            RCLCPP_INFO(this->get_logger(), "Odometry positions 2 : X = %f Y = %f \n Current theta %f \n", Xpos ,Ypos, phi);
+
+
 
             /*
             //Obstacle Detection in all modes
@@ -459,6 +482,8 @@ private:
     //Motors feedback variables
     float currentAngle;
 
+
+
     /* Automatic control mode variables */
     float right_past_pwm_error = 0;
     float right_current_pwm_error = 0;
@@ -473,6 +498,13 @@ private:
     float past_theta_odom;
     float current_theta_odom;
     float past_speeds_odom[2] /* Vector containing the past speeds for both right and left rear wheels */
+    /* Odometry variables 2*/
+    float phi=0:
+    float D=0.03;
+    float leaftNticks;
+    float rightNticks;
+    float Xpos=0;
+    float Ypos=0;
 
     //Manual Mode variables (with joystick control)
     bool reverse;
