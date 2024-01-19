@@ -499,8 +499,8 @@ private:
     float current_position_odom[2];
     float past_theta_odom;
     float current_theta_odom;
-<<<<<<< HEAD
     float past_speeds_odom[2] /* Vector containing the past speeds for both right and left rear wheels */
+    
     /* Odometry variables 2*/
     float phi=0:
     float D=0.03;
@@ -508,9 +508,6 @@ private:
     float rightNticks;
     float Xpos=0;
     float Ypos=0;
-=======
-    float past_speeds_odom[2]; /* Vector containing the past speeds for both right and left rear wheels */
->>>>>>> b28fae1d0b90514c4816c448d822468d426f2f8c
 
     //Manual Mode variables (with joystick control)
     bool reverse;
