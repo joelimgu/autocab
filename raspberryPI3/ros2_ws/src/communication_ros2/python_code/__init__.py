@@ -89,7 +89,7 @@ class WebSocketManager:
     def __init__(self):
         self.websocket = None
         self.messages: list[str] = []
-        asyncio.run(self.start())
+        self.start()
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
