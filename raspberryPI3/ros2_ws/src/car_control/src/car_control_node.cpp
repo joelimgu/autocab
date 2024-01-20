@@ -210,29 +210,35 @@ private:
         currentAngle = motorsFeedback.steering_angle;
         leftRearRPM = motorsFeedback.left_rear_speed;
         rightRearRPM = motorsFeedback.right_rear_speed;
-        leaftNticks= motorsFeedback.left_rear_odometry;
+        leftNticks= motorsFeedback.left_rear_odometry;
         rightNticks= motorsFeedback.right_rear_odometry;
     }
 
 
     void UpdateOdometrie()
     {
-        float Rdistance,Ldistance, Center;
-        Rdistance = M_PI * D * (rightNticks/36.0);
-        Ldistance = M_PI * D * (leaftNticks/36.0);
-        Center= (Rdistance + Ldistance)/2;
-        /*f (reverse)
+        float sl,sr, sc;
+        sr = M_PI * D * (rightNticks/360.0);
+        totalTicks += rightNticks;
+        RCLCPP_INFO(this->get_logger(), "Total ticks: %f \n", totalTicks);
+        sl = M_PI * D * (leftNticks/360.0);
+        sc = (sl + sr)/2;
+        //RCLCPP_INFO(this->get_logger(), "Odometry debug : sr = %f sl = %f \n Current theta %f \n", sr ,sl, std::cos(phi));
+        float delta_phi = (sr-sl)/longueur;
+        float delta_x = sc*std::cos(phi + delta_phi/2);
+        float delta_y = sc*std::sin(phi + delta_phi/2);
+        if (reverse)
         {
-            Xpos = Xpos - Center*std::cos(phi);
-            Ypos = Ypos - Center*std::sin(phi);
+            Xpos = Xpos - delta_x;
+            Ypos = Ypos - delta_y;
+            phi = phi - delta_phi;
         }
         else
-        {*/
-            Xpos = Xpos + Center*std::cos(phi);
-            Ypos = Ypos + Center*std::sin(phi);
-        //}
-        phi = phi + (Rdistance-Ldistance)/longueur;
-        RCLCPP_INFO(this->get_logger(), "Rdistance et Ldistance : R = %f L = %f \n", Rdistance ,Ldistance);
+        {
+            Xpos = Xpos + delta_x;
+            Ypos = Ypos + delta_y;
+            phi = phi + delta_phi;
+        }
         phi = std::atan2(sin(phi),cos(phi));
     }
 
@@ -510,10 +516,11 @@ float Rdistance = 0.1;
     float phi = 0.0;
     float D = 0.20;
     float longueur = 0.45;
-    float leaftNticks;
+    float leftNticks;
     float rightNticks;
     float Xpos=0;
     float Ypos=0;
+    float totalTicks = 0;
 
     //Manual Mode variables (with joystick control)
     bool reverse;
