@@ -85,7 +85,7 @@ public:
 
         graph.createGraph(coordinates);
 
-        //tests pour prouver que le calcul de plus court chemin fonctionne
+        //pour les tests
         pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
         if (pathToDeparturePoint.empty()){
             departurePointReached = true;
@@ -218,6 +218,7 @@ private:
 
         bool reverseAsChanged;
         bool previousReverse = reverse;
+        bool needToWait = false;
 
         auto motorsOrder = interfaces::msg::MotorsOrder();
         auto toServeur = interfaces::msg::Toserveur();
@@ -269,6 +270,7 @@ private:
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()-1) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
+                                needToWait = true;
                             }
                         }
                     } else if (!finalPointReached){
@@ -278,6 +280,7 @@ private:
                             pathToFinalPoint.erase(pathToFinalPoint.end()-1) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
+                                needToWait = true;
                             }
                         }
                     } else {
@@ -292,7 +295,7 @@ private:
             }
 
             reverseAsChanged = (previousReverse != reverse);
-            if (reverseAsChanged){
+            if (reverseAsChanged || needToWait){
                 requestedThrottle = 0;
             }
 
@@ -330,13 +333,9 @@ private:
 
         publisher_can_->publish(motorsOrder);
 
-        if (reverseAsChanged){
+        if (reverseAsChanged || needToWait){
             RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
             sleep(3);
-        
-            /* //si ca marche pas :
-            time_t t0 = time(NULL);
-            while(static_cast<unsigned>(time(NULL)-t0) < 3); */
         }
 
     }
