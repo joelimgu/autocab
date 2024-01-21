@@ -15,8 +15,8 @@ from interfaces.msg import Serveur
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 uri = "ws://localhost:5001"
-ws_manager: 'WebSocketManager' | None = None
-node: rclpy.node.Node | None = None
+ws_manager: 'WebSocketManager'= None
+node = None
 
 
 def start_status_callback(msg):
