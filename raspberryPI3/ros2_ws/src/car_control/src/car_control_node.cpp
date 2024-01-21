@@ -54,6 +54,7 @@ public:
         //initialisation pour les tests
         departurePoint = 'D';
         finalPoint = 'A';
+        currentPoint = 'D' ;
         departurePointReached = false;
         finalPointReached = false;
         arrivedAtCurrentPoint = false;
