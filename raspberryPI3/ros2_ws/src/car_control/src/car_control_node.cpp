@@ -58,6 +58,7 @@ public:
         //initialisation pour les tests
         departurePoint = 'B';
         finalPoint = 'A';
+        currentPoint = 'A';
         departurePointReached = false;
         finalPointReached = false;
         arrivedAtCurrentPoint = false;
@@ -91,6 +92,7 @@ public:
 
         //pour les tests
         pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+        RCLCPP_INFO(this->get_logger(), "pathtodeparturepoint : %c, %c", pathToDeparturePoint[0], pathToDeparturePoint[1]);
         if (pathToDeparturePoint.empty()){
             departurePointReached = true;
         }
@@ -220,7 +222,6 @@ private:
         float sl,sr, sc;
         sr = M_PI * D * (rightNticks/360.0);
         totalTicks += rightNticks;
-        RCLCPP_INFO(this->get_logger(), "Total ticks: %f \n", totalTicks);
         sl = M_PI * D * (leftNticks/360.0);
         sc = (sl + sr)/2;
         //RCLCPP_INFO(this->get_logger(), "Odometry debug : sr = %f sl = %f \n Current theta %f \n", sr ,sl, std::cos(phi));
@@ -259,11 +260,12 @@ private:
                 past_position_odom,
                 current_position_odom);
         
+        RCLCPP_INFO(this->get_logger(), "past_theta_odom = %f, reverse = %d, past_speeds_odom[0] = %f, past_speeds_odom[1] = %f, filtered_rightRearRPM = %f", past_theta_odom, reverse, past_speeds_odom[0], past_speeds_odom[1], filtered_rightRearRPM);
         /* Estimation de la position avec les encodeurs */
         UpdateOdometrie();
 
-        RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
-        RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
+        //RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
+        //RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
 
         
         float rotation_angle = -56.0 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
@@ -289,6 +291,7 @@ private:
             currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
             RCLCPP_INFO(this->get_logger(), "Data odometry Updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
             RCLCPP_INFO(this->get_logger(), "currentPoint = %c", currentPoint);
+            RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
         }
 
     }
@@ -382,12 +385,15 @@ private:
                     toServeur.arrived = (arrivedAtCurrentPoint && departurePointReached && finalPointReached);
 
                 }
+
             }
 
-            reverseAsChanged = (previousReverse != reverse);
+             reverseAsChanged = (previousReverse != reverse);
             if (reverseAsChanged || needToWait){
                 requestedThrottle = 0;
             }
+
+
 
             /* Left wheel error and PWM */
             correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,40);
@@ -494,19 +500,7 @@ private:
 
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData)
     {
-        if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
-            currentDirection[0] =  gnssData.latitude - currentLatitude ; 
-            currentDirection[1] =  gnssData.longitude - currentLongitude;
-            if (reverse==true){
-                currentDirection[0]= -currentDirection[0];
-                currentDirection[1]= -currentDirection[1];
-            }
-            currentLatitude = gnssData.latitude;
-            currentLongitude = gnssData.longitude;
-            currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
-            RCLCPP_INFO(this->get_logger(), "Data GPS SHutUppdated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
-            RCLCPP_INFO(this->get_logger(), "currentPoint = %c", currentPoint);
-        }
+        
     }
 
     /* Update departurePoint and finalPoint from serveur_data [callback function]  :
