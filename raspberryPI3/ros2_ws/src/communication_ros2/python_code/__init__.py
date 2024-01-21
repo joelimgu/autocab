@@ -15,7 +15,7 @@ from interfaces.msg import Serveur
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 uri = "ws://localhost:5001"
-ws_manager: 'WebSocketManager'= None
+ws_manager: 'WebSocketManager' = None
 node = None
 
 
@@ -103,6 +103,8 @@ class WebSocketManager:
         global ws_manager
         self.websocket = None
         self.messages: list[str] = []
+        self.order: Serveur = None
+        self.request_number = 1
         ws_manager = self
         self.server_pub = node.create_publisher(Serveur, "serveur_data", 10)
         asyncio.run(self.start())
@@ -116,14 +118,32 @@ class WebSocketManager:
             if msg["type"] == "objective":
                 msg["data"]["departure_point"] = ord(msg["data"]["departure_point"])
                 msg["data"]["final_point"] = ord(msg["data"]["final_point"])
-                self.server_pub.publish(Serveur(**msg["data"]))
+                #self.order = Serveur(**msg["data"])
+                new_order = Serveur(**msg["data"])
+                new_order.request_number = self.request_number
+                if new_order == self.order:
+                    return
+                self.request_number += 1
+                self.order = new_order
+                #self.server_pub.publish(Serveur(**msg["data"]))
         except json.decoder.JSONDecodeError:
             return
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
         sender = asyncio.create_task(self.send_message())
-        await asyncio.gather(connexion, sender)
+        loop = asyncio.create_task(self.send_route_loop())
+        await asyncio.gather(connexion, sender, loop)
+
+    async def send_route_loop(self):
+        global node
+        while True:
+            await asyncio.sleep(0.5)
+            if node is None:
+                continue
+            if self.order is None:
+                continue
+            self.server_pub.publish(self.order)
 
     async def connexion(self):
         global node
