@@ -56,7 +56,7 @@ public:
         // requestNumber = 0;
 
         //initialisation pour les tests
-        departurePoint = 'D';
+        departurePoint = 'B';
         finalPoint = 'A';
         departurePointReached = false;
         finalPointReached = false;
