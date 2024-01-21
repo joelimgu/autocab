@@ -23,6 +23,13 @@ namespace odom
                     float past_position[2], 
                     float current_position[2]);
     /* Je dois changer le passage d'argument pour qu'il soit moins encombrant */
+
+    void lowPassFilter(float tau, float T, float &past_input, float &current_input, float &past_output, float &current_output);
+
+    /* To convert local data to latitude and longitude (Our UTM zone is 31 T)*/
+    int zone_number_to_central_longitude(int zone_number);
+    double mod_angle(double value);
+    void to_latlon(double easting,double northing,int zone_number,char zone_letter,bool northern,double latlon_tab[2]);
 }
 
 

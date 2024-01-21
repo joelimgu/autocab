@@ -77,3 +77,106 @@ int odom::estimate_pos(float delta_t,
     }
     return 0;
 }
+
+/* Used to filter speed values from motors_feedback */
+void odom::lowPassFilter(float tau, float T, float &past_input, float &current_input, float &past_output, float &current_output)
+{
+    current_output = (current_input * T + past_input * T + (2*tau -T)*past_output) * (1/(T + 2 * tau));
+    past_output = current_output;
+    past_input = current_input;
+}
+
+/* Essential variables to convert coordinates */
+
+double K0 = 0.9996;
+double E = 0.00669438;
+double E2 = E * E;
+double E3 = E2 * E;
+double E_P2 = E / (1.0 - E);
+double SQRT_E = std::sqrt(1 - E);
+double _E = (1 - SQRT_E) / (1 + SQRT_E);
+double _E2 = _E * _E;
+double _E3 = _E2 * _E;
+double _E4 = _E3 * _E;
+double _E5 = _E4 * _E;
+double M1 = (1 - E / 4 - 3 * E2 / 64 - 5 * E3 / 256);
+double M2 = (3 * E / 8 + 3 * E2 / 32 + 45 * E3 / 1024);
+double M3 = (15 * E2 / 256 + 45 * E3 / 1024);
+double M4 = (35 * E3 / 3072);
+double P2 = (3. / 2 * _E - 27. / 32 * _E3 + 269. / 512 * _E5);
+double P3 = (21. / 16 * _E2 - 55. / 32 * _E4);
+double P4 = (151. / 96 * _E3 - 417. / 128 * _E5);
+double P5 = (1097. / 512 * _E4);
+double R = 6378137.0;
+
+int odom::zone_number_to_central_longitude(int zone_number)
+{
+    return ((zone_number - 1) * 6 - 180 + 3);
+}
+
+double odom::mod_angle(double value)
+{
+    /* Returns angle in radians to be between -pi and pi */
+    return fmod((value + M_PI),(2 * M_PI)) - M_PI;
+}
+
+void odom::to_latlon(double easting,double northing,int zone_number,char zone_letter,bool northern,double latlon_tab[2])
+{   
+    northern = (zone_letter >= 'N');
+
+    double x = easting - 500000;
+    double y = northing;
+
+    if (!northern)
+    {
+        y -= 10000000;
+    }
+
+    double m = y / K0;
+    double mu = m / (R * M1);
+
+    double p_rad = (mu +
+             P2 * std::sin(2 * mu) +
+             P3 * std::sin(4 * mu) +
+             P4 * std::sin(6 * mu) +
+             P5 * std::sin(8 * mu));
+
+    double p_sin = std::sin(p_rad);
+    double p_sin2 = p_sin * p_sin;
+
+    double p_cos = std::cos(p_rad);
+
+    double p_tan = p_sin / p_cos;
+    double p_tan2 = p_tan * p_tan;
+    double p_tan4 = p_tan2 * p_tan2;
+    
+    double ep_sin = 1 - E * p_sin2;
+    double ep_sin_sqrt = std::sqrt(1 - E * p_sin2);
+
+    double n = R / ep_sin_sqrt;
+    double r = (1 - E) / ep_sin;
+
+    double c = E_P2 * p_cos*p_cos;
+    double c2 = c * c;
+
+    double d = x / (n * K0);
+    double d2 = d * d;
+    double d3 = d2 * d;
+    double d4 = d3 * d;
+    double d5 = d4 * d;
+    double d6 = d5 * d;
+
+    double latitude = (p_rad - (p_tan / r) *
+                (d2 / 2 -
+                 d4 / 24 * (5 + 3 * p_tan2 + 10 * c - 4 * c2 - 9 * E_P2)) +
+                 d6 / 720 * (61 + 90 * p_tan2 + 298 * c + 45 * p_tan4 - 252 * E_P2 - 3 * c2));
+
+    double longitude = (d -
+                 d3 / 6 * (1 + 2 * p_tan2 + c) +
+                 d5 / 120 * (5 - 2 * c + 28 * p_tan2 - 3 * c2 + 8 * E_P2 + 24 * p_tan4)) / p_cos;
+
+    longitude = mod_angle(longitude + (M_PI/180)*(zone_number_to_central_longitude(zone_number)));
+
+    latlon_tab[0] = (180/M_PI)*latitude;
+    latlon_tab[1] = (180/M_PI)*longitude;
+}

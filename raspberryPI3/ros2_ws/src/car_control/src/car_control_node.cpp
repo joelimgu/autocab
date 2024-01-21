@@ -239,7 +239,6 @@ private:
             Ypos = Ypos + delta_y;
             phi = phi + delta_phi;
         }
-        phi = std::atan2(sin(phi),cos(phi));
     }
 
 
@@ -325,30 +324,48 @@ private:
 
                 }
             }
-
+            
+            /* Régulation de la vitesse pour éviter des accelerations de dingue */
             /* Left wheel error and PWM */
-            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
+            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,10);
             /* Right wheel error and PWM */
-            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
+            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,10);
 
+            /* Dans le cas ou l'on est en Manual mode */
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
             steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
-            RCLCPP_INFO(this->get_logger(), "Steering angle in degrees = %f \n", past_steeringAngle_odom*(-41/0.97));
             /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
 
+            /* Filtre sur les valeurs de vitesse, qui peuvent atteindre des pics */
+            odom::lowPassFilter(0.6, 0.01, p_in1, leftRearRPM, p_out1, filtered_leftRearRPM);
+            odom::lowPassFilter(0.6, 0.01, p_in2, rightRearRPM, p_out2, filtered_rightRearRPM);
+
+            /* Estimation de la position par rapport au point de départ de la voiture qui doit impérativement être le point A */
             odom::estimate_pos(0.01,0.55,past_reverse_odom,reverse,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speeds_odom,
-                    leftRearRPM,
-                    rightRearRPM,
-                    past_position_odom, 
+                    filtered_leftRearRPM,
+                    filtered_rightRearRPM,
+                    past_position_odom,
                     current_position_odom);
             
-            RCLCPP_INFO(this->get_logger(), "Odometry positions : X = %f Y = %f \n Current theta %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
-            
-
+            /* Estimation de la position avec les encodeurs */
             UpdateOdometrie();
-            RCLCPP_INFO(this->get_logger(), "Odometry positions 2 : X = %f Y = %f \n Current theta %f \n", Xpos ,Ypos, phi);
 
+            RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
+            RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
+
+            
+            float rotation_angle = -56.0 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
+            rotated_local_x = current_position_odom[0]*std::cos(rotation_angle) - current_position_odom[1]*std::sin(rotation_angle);
+            rotated_local_y = current_position_odom[0]*std::sin(rotation_angle) + current_position_odom[1]*std::cos(rotation_angle);
+            currentEasting = initialEasting + rotated_local_x;
+            currentNorthing = initialNorthing + rotated_local_y;
+
+            /* Convert easting and northing to latitude and longitude */
+
+            odom::to_latlon(currentEasting,currentNorthing,31,'T',true,odom_latlon);
+
+            /* Diagnostics : Recuperer toutes les données pertinentes pour les analyser par la suite */
 
 
             /*
@@ -521,6 +538,25 @@ float Rdistance = 0.1;
     float Xpos=0;
     float Ypos=0;
     float totalTicks = 0;
+    /* Filter variables */
+    //LeftRearRPM
+    float p_in1 = 0.0;
+    float p_out1 = 0.0;
+    float filtered_leftRearRPM = 0.0;
+    //RightRearRPM
+    float p_in2 = 0.0;
+    float p_out2 = 0.0;
+    float filtered_rightRearRPM = 0.0;
+
+    /* Odometry latitude and longitude */
+    /* easting and northing of point A */
+    double initialEasting = 376170.0437643519; 
+    double initialNorthing = 4825323.655219596;
+    double currentEasting = 0.0;
+    double currentNorthing = 0.0;
+    double rotated_local_x = 0.0;
+    double rotated_local_y = 0.0;
+    double odom_latlon[2] = {0.0};
 
     //Manual Mode variables (with joystick control)
     bool reverse;
