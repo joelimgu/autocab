@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.72.0">
+    <title>Autocab</title>
+
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/product/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+<!-- Poppins google font-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap">
+
+
+    <!-- Désactiver la demande d'icône favicon -->
+    <link rel="icon" type="image/x-icon" href="data:;base64,iVBORw0KGgo=">
+
+    <!-- Include JS file for communication-->
+    <script src="communication.js"></script> 
+
+
+ <!-- Define image size for the website-->
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="product.css" rel="stylesheet"> -->
+    <style>
+        .container {
+            max-width: 960px;
+        }
+
+        /*
+ * Custom translucent site header
+ */
+        
+        /* Description du header */
+        .site-header {
+            height: 50px; 
+            background-color: rgba(255, 255, 255, 0.712);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .site-header a {
+            color: #333333; /* Text color */
+            font-size: 21px; /* Font size */
+            font-weight: 700; /* Font weight */
+            font-family: 'Poppins', sans-serif; /* Font family, replace with your preferred font */
+            margin-right: 15px; /* Adjust spacing between links */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.15s ease-in-out; /* Smooth color transition on */
+        }
+
+        .site-header a:hover {
+            color: #242323; /* Change color on hover */
+        }
+
+        /*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+        .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: #f8f4f4;
+            border-radius: 21px;
+            transform: rotate(0deg);
+        }
+
+        .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: rgba(255, 255, 255, 0.904);
+            border-radius: 5px;
+        }
+
+        .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            background-color: #e5e5e5;
+        }
+
+          /*
+ * Style for title and body 
+ */
+        .display-4 {
+            font-weight: 900;
+            font-size: 5rem; /* Your desired font size */
+            color: #0d0d0e; /* Your desired text color */
+            font-family: 'Mulish', sans-serif; /* Your desired font family */
+        }
+
+        .display-5 {
+            font-weight: 700;
+            font-size: 3rem; /* Your desired font size */
+            color: #0d0d0e; /* Your desired text color */
+            font-family: 'Mulish', sans-serif; /* Your desired font family */
+        }
+
+        .lead-1 {
+            font-weight:300;
+            font-size: 2rem; /* Your desired font size */
+            color: #0d0d0e; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+        .lead-2 {
+            font-weight:300;
+            font-size: 2rem; /* Your desired font size */
+            color: #ffffff; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-3 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #095026; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-4 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #083b53; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-5 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #410558; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .lead-6 {
+            font-weight:700;
+            font-size: 2rem; /* Your desired font size */
+            color: #be4905; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+        .display-7 {
+            font-weight:300;
+            font-size: 2rem; /* Your desired font size */
+            color: #095026; /* Your desired text color */
+            font-family: 'Nunito Sans', sans-serif; /* Your desired font family */
+        }
+
+
+
+/* Style for background color how headlines */ 
+
+        .bg-light {
+            background-color: rgba(255, 255, 255, 0.952); /* Replace with the desired background color */
+            box-shadow: none !important;
+        }
+
+
+        /*
+ * Extra utilities
+ */
+
+        .flex-equal>* {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal>* {
+                flex: 1;
+            }
+        }
+    </style>
+
+<!-- Additional style for the video container -->
+<style>
+    .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title-container {
+            position: relative;
+            z-index: 1;
+        }
+</style>
+
+<style>
+    #message-container {
+        font-family: 'Poppins', sans-serif; /* Choose your desired font family */
+        color: #333; /* Choose your desired text color */
+        font-size: 16px; /* Choose your desired font size */
+        margin-top: 10px; /* Add spacing at the top of the container */
+    }
+
+    .true-message {
+        font-weight: bold;
+        color: #00cc00; /* Custom color for true messages */
+    }
+
+    .false-message {
+        font-weight: bold;
+        color: #ff0000; /* Custom color for false messages */
+    }
+
+    .image-container img {
+        width: 40px; /* Set the width of the image */
+        height: auto; /* Maintain the aspect ratio */
+        margin-top: 0px; /* Add spacing below the image */
+    }
+</style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="Taxi.html">Taxi</a>
+            <a class="navbar-brand" href="Contact_us.html">Contact us</a>
+            <!-- Message from server -->
+            <div id="message-container"></div>
+        </div>
+    </nav>     
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4">Autocab</h1>
+            <h2 class="display-7">Drive greenly and autonomously </h2>
+            <a class="btn btn-outline-secondary" href="Taxi.html">Call a taxi</a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Title "Safer street" and its content -->
+    <div class="title-container">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Safer street</h2>
+                <p class="lead-1">Autonomous</p>
+            </div>
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="Video_site_web.mp4" type="video/mp4"> <!-- Replace with the actual path to your video -->
+                </video>
+            </div>
+            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 350px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Less congestion and pollution</h2>
+                <p class="lead-3">Sustainable</p>
+            </div>
+                <p class="lead-1">
+                    This project stands out for its combination of cutting-edge technology, connectivity and shared mobility.
+                    The aim of our project is to develop an autonomous electric cab that offers an innovative and sustainable service.
+                    </p>
+        </div>
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Safer street</h2>
+                <p class="lead-4">Autonomous</p>
+            </div>
+                <p class="lead-1">
+                    ​​From a forward-looking perspective, the potential benefits of the project 
+                    will be reduced transport costs, improved road safety and reduced dependence on private vehicles.
+                    To happen, regulations and infrastuctures are needed. 
+                    </p>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Innovative technology</h2>
+                <p class="lead-5">Futuristic</p>
+            </div>
+                <p class="lead-1">
+                    This project stands out for its combination of cutting-edge technology, 
+                    connectivity and shared mobility. The autonomous cab is equipped with 
+                    advanced sensors, navigation and communication systems.
+                    </p>
+        </div>
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Dreamy experience</h2>
+                <p class="lead-6">Visionary</p>
+            </div>
+                <p class="lead-1">
+                The AutoCab project is a visionary initiative that promises to reinvent the way we get around town. 
+                By combining autonomous technology, sustainability and connectivity, it paves the way for a better future.
+            </p>
+        </div>
+    </div>
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Stuff to add</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Resources to add</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Resources to add</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Info to add</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

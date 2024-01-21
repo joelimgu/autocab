@@ -22,7 +22,8 @@
 #include "../include/car_control/car_control_node.h"
 #include "../include/car_control/fromAtoB.h"
 #include "../include/car_control/obstacle_detection.h"
-
+#include "../include/car_control/odometry.h"
+    
 using namespace std;
 using placeholders::_1;
 
@@ -41,6 +42,9 @@ public:
         currentLongitude = 0;
         currentDirection[0]=1;
         currentDirection[1]=1;
+
+        /* Initialising the car's state for odometry, should create my own callback to initialise it */
+        odom::initialise_position(past_reverse_odom,past_position_odom,current_position_odom,past_speeds_odom,past_theta_odom,current_theta_odom);
 
         //Vrai initialisation
         // departurePoint = 'A';
@@ -117,10 +121,10 @@ public:
 
         subscription_gnss_data_ = this->create_subscription<interfaces::msg::Gnss>(
         "gnss_data", 10, std::bind(&car_control::gnssDataCallback, this, _1));
-
+        /*
         subscription_serveur_data_ = this->create_subscription<interfaces::msg::Serveur>(
         "serveur_data", 10, std::bind(&car_control::serveurDataCallback, this, _1));
-        
+        */
         subscription_us_data = this->create_subscription<interfaces::msg::Ultrasonic>(
         "us_data", 10, std::bind(&car_control::usDataCallback, this, _1));
 
@@ -133,6 +137,8 @@ public:
 
         
         RCLCPP_INFO(this->get_logger(), "car_control_node READY");
+
+
     }
 
     /* Update data from us_data [callback function]  :
@@ -200,9 +206,39 @@ private:
     * 
     */
     void motorsFeedbackCallback(const interfaces::msg::MotorsFeedback & motorsFeedback){
+        past_steeringAngle_odom = currentAngle;
         currentAngle = motorsFeedback.steering_angle;
         leftRearRPM = motorsFeedback.left_rear_speed;
         rightRearRPM = motorsFeedback.right_rear_speed;
+        leftNticks= motorsFeedback.left_rear_odometry;
+        rightNticks= motorsFeedback.right_rear_odometry;
+    }
+
+
+    void UpdateOdometrie()
+    {
+        float sl,sr, sc;
+        sr = M_PI * D * (rightNticks/360.0);
+        totalTicks += rightNticks;
+        RCLCPP_INFO(this->get_logger(), "Total ticks: %f \n", totalTicks);
+        sl = M_PI * D * (leftNticks/360.0);
+        sc = (sl + sr)/2;
+        //RCLCPP_INFO(this->get_logger(), "Odometry debug : sr = %f sl = %f \n Current theta %f \n", sr ,sl, std::cos(phi));
+        float delta_phi = (sr-sl)/longueur;
+        float delta_x = sc*std::cos(phi + delta_phi/2);
+        float delta_y = sc*std::sin(phi + delta_phi/2);
+        if (reverse)
+        {
+            Xpos = Xpos - delta_x;
+            Ypos = Ypos - delta_y;
+            phi = phi - delta_phi;
+        }
+        else
+        {
+            Xpos = Xpos + delta_x;
+            Ypos = Ypos + delta_y;
+            phi = phi + delta_phi;
+        }
     }
 
 
@@ -300,12 +336,46 @@ private:
             }
 
             /* Left wheel error and PWM */
-            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,0);
+            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,10);
             /* Right wheel error and PWM */
-            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
+            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,10);
 
+            /* Dans le cas ou l'on est en Manual mode */
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
             steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
+
+            /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
+
+            /* Filtre sur les valeurs de vitesse, qui peuvent atteindre des pics */
+            odom::lowPassFilter(0.6, 0.01, p_in1, leftRearRPM, p_out1, filtered_leftRearRPM);
+            odom::lowPassFilter(0.6, 0.01, p_in2, rightRearRPM, p_out2, filtered_rightRearRPM);
+
+            /* Estimation de la position par rapport au point de départ de la voiture qui doit impérativement être le point A */
+            odom::estimate_pos(0.01,0.55,past_reverse_odom,reverse,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speeds_odom,
+                    filtered_leftRearRPM,
+                    filtered_rightRearRPM,
+                    past_position_odom,
+                    current_position_odom);
+            
+            /* Estimation de la position avec les encodeurs */
+            UpdateOdometrie();
+
+            RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
+            RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
+
+            
+            float rotation_angle = -56.0 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
+            rotated_local_x = current_position_odom[0]*std::cos(rotation_angle) - current_position_odom[1]*std::sin(rotation_angle);
+            rotated_local_y = current_position_odom[0]*std::sin(rotation_angle) + current_position_odom[1]*std::cos(rotation_angle);
+            currentEasting = initialEasting + rotated_local_x;
+            currentNorthing = initialNorthing + rotated_local_y;
+
+            /* Convert easting and northing to latitude and longitude */
+
+            odom::to_latlon(currentEasting,currentNorthing,31,'T',true,odom_latlon);
+
+            /* Diagnostics : Recuperer toutes les données pertinentes pour les analyser par la suite */
+
 
             /*
             //Obstacle Detection in all modes
@@ -413,7 +483,7 @@ private:
             currentLatitude = gnssData.latitude;
             currentLongitude = gnssData.longitude;
             currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
-            RCLCPP_INFO(this->get_logger(), "Data GPS updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
+            RCLCPP_INFO(this->get_logger(), "Data GPS SHutUppdated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
             RCLCPP_INFO(this->get_logger(), "currentPoint = %c", currentPoint);
         }
     }
@@ -426,7 +496,7 @@ private:
 
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        bool is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached;
+        bool is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached; 
         if (is_request_fullfilled && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
@@ -459,11 +529,51 @@ private:
     //Motors feedback variables
     float currentAngle;
 
+
+
     /* Automatic control mode variables */
     float right_past_pwm_error = 0;
     float right_current_pwm_error = 0;
     float left_past_pwm_error = 0;
     float left_current_pwm_error = 0;
+
+    /* Odometry variables */
+    bool past_reverse_odom;
+    float past_steeringAngle_odom;
+    float past_position_odom[2];
+    float current_position_odom[2];
+    float past_theta_odom;
+    float current_theta_odom;
+    float past_speeds_odom[2]; /* Vector containing the past speeds for both right and left rear wheels */
+    
+    /* Odometry variables 2*/
+    float phi = 0.0;
+    float D = 0.20;
+    float longueur = 0.45;
+    float leftNticks;
+    float rightNticks;
+    float Xpos=0;
+    float Ypos=0;
+    float totalTicks = 0;
+    /* Filter variables */
+    //LeftRearRPM
+    float p_in1 = 0.0;
+    float p_out1 = 0.0;
+    float filtered_leftRearRPM = 0.0;
+    //RightRearRPM
+    float p_in2 = 0.0;
+    float p_out2 = 0.0;
+    float filtered_rightRearRPM = 0.0;
+
+    /* Odometry latitude and longitude */
+    /* easting and northing of point A */
+    double initialEasting = 376170.0437643519; 
+    double initialNorthing = 4825323.655219596;
+    double currentEasting = 0.0;
+    double currentNorthing = 0.0;
+    double rotated_local_x = 0.0;
+    double rotated_local_y = 0.0;
+    double odom_latlon[2] = {0.0};
 
     //Manual Mode variables (with joystick control)
     bool reverse;
