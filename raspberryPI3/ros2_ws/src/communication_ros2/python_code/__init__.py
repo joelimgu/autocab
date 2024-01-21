@@ -9,14 +9,13 @@ import asyncio
 import websockets
 from interfaces.msg import Toserveur
 
-
 from interfaces.msg import Serveur
 
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
 uri = "ws://localhost:5001"
-ws_manager: 'WebSocketManager' | None = None
-node: rclpy.node.Node | None = None
+ws_manager: 'WebSocketManager' = None
+node = None
 
 
 def start_status_callback(msg):
@@ -52,7 +51,9 @@ def send_message(msg):
 
 
 def to_serveur_callback(msg):
-    dict = {
+    global ws_manager
+    ws_manager.arrived = msg.arrived
+    d = {
         "type": "toServeur",
         "data": {
             "current_latitude": msg.current_latitude,
@@ -62,7 +63,7 @@ def to_serveur_callback(msg):
             "on": msg.on
         }
     }
-    send_message(json.dumps(dict))
+    send_message(json.dumps(d))
 
 
 def init_manager():
@@ -103,27 +104,48 @@ class WebSocketManager:
         global ws_manager
         self.websocket = None
         self.messages: list[str] = []
+        self.arrived: bool = False
+        self.order: Serveur = None
+        self.request_number: int = 0
         ws_manager = self
         self.server_pub = node.create_publisher(Serveur, "serveur_data", 10)
         asyncio.run(self.start())
 
-    def route_to_ros(self, msg):
+    def on_objective_received(self, msg: Serveur):
+        if not self.arrived:
+            return
+        if self.order == msg:
+            return
+        self.request_number += 1
+        msg.request_number = self.request_number
+        self.order = msg
+
+    async def send_route_loop(self):
         global node
-        if node is None:
-            return None
+        while True:
+            if node is None:
+                continue
+            if self.order is None:
+                continue
+            self.server_pub.publish(self.order)
+            await asyncio.sleep(0.5)
+
+    def route_to_ros(self, msg):
+
         try:
             msg = json.loads(msg)
             if msg["type"] == "objective":
                 msg["data"]["departure_point"] = ord(msg["data"]["departure_point"])
                 msg["data"]["final_point"] = ord(msg["data"]["final_point"])
-                self.server_pub.publish(Serveur(**msg["data"]))
+                self.on_objective_received(Serveur(**msg["data"]))
         except json.decoder.JSONDecodeError:
             return
 
     async def start(self):
         connexion = asyncio.create_task(self.connexion())
         sender = asyncio.create_task(self.send_message())
-        await asyncio.gather(connexion, sender)
+        ros_loop = asyncio.create_task(self.send_route_loop())
+        await asyncio.gather(connexion, sender, ros_loop)
 
     async def connexion(self):
         global node
@@ -140,15 +162,21 @@ class WebSocketManager:
                 continue
 
     async def send_message(self):
+        global node
+        node.get_logger().info(f'send message thread')
+
         while True:
             if self.websocket is None:
-                await asyncio.sleep(2)
+                node.get_logger().info(f'awaiting for connexion')
+                await asyncio.sleep(0.5)
             try:
                 for message in self.messages:
+                    node.get_logger().info(f'send websocket: ${message}')
                     await self.websocket.send(message)
                     self.websocket.pop(0)
 
             except Exception as e:
+                node.get_logger().error(f'An unexpected error occurred: {e}')
                 print(f"An unexpected error occurred: {e}")
             await asyncio.sleep(0.1)
 
