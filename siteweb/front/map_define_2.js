@@ -6,14 +6,24 @@ document.addEventListener("DOMContentLoaded", function () {
     let arriveMarker = null;
     let car = null;
 
-   function sendGPSPosition(selectedMarkers) {
+  function sendGPSPosition(selectedMarkers) {
     console.log('Sending GPS coordinates and selectedMarkers:', selectedMarkers);
 
     // Extract destination and startingPoint from selectedMarkers
     const { destination, startingPoint } = selectedMarkers;
 
-    // Create a message with the "GPS-coordinates:" prefix and include selectedMarkers
-    const message = `GPS-coordinates:${destination.lat}:${destination.lng}:${startingPoint.lat}:${startingPoint.lng}`;
+    // Create the data object with the required structure
+    const dataObject = {
+        departure_point: `${startingPoint.name}`,
+        final_point: `${destination.name}`,
+        request_number: 0
+    };
+
+    // Create the message with the "type" and "data" properties
+    const message = JSON.stringify({
+        type: 'objective',
+        data: dataObject
+    });
 
     // Send the message through the WebSocket connection
     if (socket.readyState === WebSocket.OPEN) {
@@ -22,13 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error('WebSocket connection not open. Unable to send GPS coordinates and selectedMarkers.');
     }
-  }
+ }
 
 
     let selectedMarkers = {
         destination: null,
         startingPoint: null
     };
+
+
 
     document.getElementById('instruction-message').innerHTML = '<p>Please select your destination point </p>';
 
