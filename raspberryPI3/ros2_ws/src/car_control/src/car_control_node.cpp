@@ -121,10 +121,10 @@ public:
 
         subscription_gnss_data_ = this->create_subscription<interfaces::msg::Gnss>(
         "gnss_data", 10, std::bind(&car_control::gnssDataCallback, this, _1));
-        /*
+        
         subscription_serveur_data_ = this->create_subscription<interfaces::msg::Serveur>(
         "serveur_data", 10, std::bind(&car_control::serveurDataCallback, this, _1));
-        */
+        
         subscription_us_data = this->create_subscription<interfaces::msg::Ultrasonic>(
         "us_data", 10, std::bind(&car_control::usDataCallback, this, _1));
 
@@ -336,9 +336,9 @@ private:
             }
 
             /* Left wheel error and PWM */
-            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,10);
+            correctWheelSpeed(leftRearPwmCmd,left_past_pwm_error,left_current_pwm_error,leftRearRPM,40);
             /* Right wheel error and PWM */
-            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,10);
+            correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,40);
 
             /* Dans le cas ou l'on est en Manual mode */
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
@@ -528,8 +528,6 @@ private:
     
     //Motors feedback variables
     float currentAngle;
-
-
 
     /* Automatic control mode variables */
     float right_past_pwm_error = 0;
