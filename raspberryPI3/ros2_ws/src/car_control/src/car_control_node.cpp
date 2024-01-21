@@ -264,9 +264,13 @@ private:
         /* Estimation de la position avec les encodeurs */
         UpdateOdometrie();
 
-        //RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
-        //RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
+        RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
+        RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
 
+        float Xsans = current_position_odom[0];
+        float Ysans = current_position_odom[1];
+        current_position_odom[0]=Ysans;
+        current_position_odom[1]=-Xsans;
         
         float rotation_angle = -56.0 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
         rotated_local_x = current_position_odom[0]*std::cos(rotation_angle) - current_position_odom[1]*std::sin(rotation_angle);
@@ -291,7 +295,6 @@ private:
             currentPoint = detectClosestPoint(currentLatitude, currentLongitude, coordinates);
             RCLCPP_INFO(this->get_logger(), "Data odometry Updated, currentDirection = [%f, %f]", currentDirection[0], currentDirection[1]);
             RCLCPP_INFO(this->get_logger(), "currentPoint = %c", currentPoint);
-            RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
         }
 
     }
