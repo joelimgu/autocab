@@ -260,19 +260,18 @@ private:
                 past_position_odom,
                 current_position_odom);
         
-        RCLCPP_INFO(this->get_logger(), "past_theta_odom = %f, reverse = %d, past_speeds_odom[0] = %f, past_speeds_odom[1] = %f, filtered_rightRearRPM = %f", past_theta_odom, reverse, past_speeds_odom[0], past_speeds_odom[1], filtered_rightRearRPM);
+        //RCLCPP_INFO(this->get_logger(), "past_theta_odom = %f, reverse = %d, past_speeds_odom[0] = %f, past_speeds_odom[1] = %f, filtered_rightRearRPM = %f", past_theta_odom, reverse, past_speeds_odom[0], past_speeds_odom[1], filtered_rightRearRPM);
         /* Estimation de la position avec les encodeurs */
         UpdateOdometrie();
 
         RCLCPP_INFO(this->get_logger(), "Odometry positions sans encodeurs : X = %f Y = %f \n angle absolu sans encodeurs : %f \n", current_position_odom[0],current_position_odom[1],current_theta_odom);
         RCLCPP_INFO(this->get_logger(), "Odometry positions encodeurs : X = %f Y = %f \n angle absolu avec encodeurs : %f \n", Xpos ,Ypos, phi);
 
-        float Xsans = current_position_odom[0];
-        float Ysans = current_position_odom[1];
-        current_position_odom[0]=Ysans;
-        current_position_odom[1]=-Xsans;
         
-        float rotation_angle = -56.0 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
+        current_position_odom[0]=-Ypos;
+        current_position_odom[1]=Xpos;
+        
+        float rotation_angle = -56 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
         rotated_local_x = current_position_odom[0]*std::cos(rotation_angle) - current_position_odom[1]*std::sin(rotation_angle);
         rotated_local_y = current_position_odom[0]*std::sin(rotation_angle) + current_position_odom[1]*std::cos(rotation_angle);
         currentEasting = initialEasting + rotated_local_x;
@@ -284,6 +283,7 @@ private:
 
         /* Diagnostics : Recuperer toutes les données pertinentes pour les analyser par la suite */
         if ((abs(currentLatitude-odom_latlon[0]) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-odom_latlon[1]) >= MIN_UPDATE_COORDINATES)){
+            RCLCPP_INFO(this->get_logger(), "Latitude : %f ,Longitude : %f" ,odom_latlon[0], odom_latlon[1]);
             currentDirection[0] =  odom_latlon[0] - currentLatitude ; 
             currentDirection[1] =  odom_latlon[1] - currentLongitude;
             if (reverse==true){
@@ -310,7 +310,6 @@ private:
     */
     void updateCmd(){
 
-        UpdatePosition();
 
         bool reverseAsChanged;
         bool previousReverse = reverse;
@@ -336,6 +335,7 @@ private:
         { //Car started
 
             toServeur.on = true;
+            UpdatePosition();
 
             //Manual Mode
             if (mode==0)

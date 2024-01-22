@@ -70,7 +70,7 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
             }
         }
         
-        //RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f et de reverse : %d", angle, reverse);
+        RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f et de reverse : %d", angle, reverse);
 
         arrived = false;
 
