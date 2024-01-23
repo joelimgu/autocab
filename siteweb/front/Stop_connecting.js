@@ -34,6 +34,8 @@ function handleMessage(event) {
     if (message.type === 'status' && message.data.status) {
         // Change the image source to switch_on.png
         imageElement.src = 'switch_on1.png';
+    } else if (message.type === 'toServeur') {
+        console.log("serveur_feedback recieved")
     }
 
     // Add logic to check the server message before allowing redirection
