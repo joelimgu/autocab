@@ -29,11 +29,7 @@ def start_status_callback(msg):
         dict = {
             "type": "status",
             "data": {
-                "current_latitude": msg.current_latitude,
-                "current_longitude": msg.current_longitude,
-                "mode": msg.mode,
-                "arrived": msg.arrived,
-                "on": msg.on
+                "status": msg
             }
         }
         send_message(json.dumps(dict))  # Utiliser 'await' pour attendre la fin de send_message
