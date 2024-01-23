@@ -52,7 +52,7 @@ def generate_launch_description():
         emulate_tty=True
     )
 
-    server_node = Node(
+    communication_node = Node(
         package="communication_ros2",
         executable="__init__.py",
         emulate_tty=True
@@ -65,6 +65,6 @@ def generate_launch_description():
     ld.add_action(car_control_node)
     ld.add_action(imu_filter_madgwick_node)
     ld.add_action(system_check_node)
-    ld.add_action(server_node)
+    ld.add_action(communication_node)
 
     return ld

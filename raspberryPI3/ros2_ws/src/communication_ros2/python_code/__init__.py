@@ -14,7 +14,7 @@ from interfaces.msg import Serveur
 
 start_status = False
 prev_start_status = None  # Variable pour stocker la valeur précédente de start_status
-uri = "ws://autocab.joel.rs:5501"
+uri = "ws://autocab.joel.rs/websocket/"
 ws_manager: 'WebSocketManager' = None
 node = None
 
