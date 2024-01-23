@@ -281,6 +281,22 @@ private:
 
         odom::to_latlon(currentEasting,currentNorthing,31,'T',true,odom_latlon);
 
+        /* //Mathias solution
+        float rotation_angle = 62.896 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
+        rotated_local_x = Xpos*std::cos(rotation_angle) - Ypos*std::sin(rotation_angle);
+        rotated_local_y = Xpos*std::sin(rotation_angle) + Ypos*std::cos(rotation_angle);
+
+        //solution 1
+        currentEasting = initialEasting + rotated_local_x;
+        currentNorthing = initialNorthing + rotated_local_y;
+        // Convert easting and northing to latitude and longitude
+        odom::to_latlon(currentEasting,currentNorthing,31,'T',true,odom_latlon);
+
+        //solution 2
+        odom_latlon[0]=43.570593 + (360.0/2*M_PI)*atan(rotated_local_x/EARTH_RADIUS);
+        odom_latlon[1]=1.466513 + (360.0/2*M_PI)*atan(rotated_local_y/EARTH_RADIUS);
+        */
+
         /* Diagnostics : Recuperer toutes les données pertinentes pour les analyser par la suite */
         if ((abs(currentLatitude-odom_latlon[0]) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-odom_latlon[1]) >= MIN_UPDATE_COORDINATES)){
             RCLCPP_INFO(this->get_logger(), "Latitude : %f ,Longitude : %f" ,odom_latlon[0], odom_latlon[1]);

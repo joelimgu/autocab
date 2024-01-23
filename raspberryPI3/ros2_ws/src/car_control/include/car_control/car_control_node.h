@@ -11,6 +11,8 @@
 
 #define MIN_UPDATE_COORDINATES 0.000002 //Minimum distance to update coordinates in [deg]
 
+#define EARTH_RADIUS 6367444.65 //Earth radius in [m]
+
 
 
 #endif /*__ car_control_node_H */
