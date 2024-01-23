@@ -1,13 +1,18 @@
 // Your WebSocket client code
-const socket = new WebSocket("ws://161.35.86.239:5501");
+const socket = new WebSocket("ws://autocab.joel.rs/websocket/");
 
 // JavaScript code to handle event and toggle images
 function handleMessage(event) {
     // Get the message container element
     var messageContainer = document.getElementById('message-container');
-
     // Parse the message from the event data
-    var message = event.data;
+
+    let message
+    try {
+        message = JSON.parse(event.data);
+    } catch (e) {
+        console.error('could\'t parse message as JSON: ' + event.data + e)
+    }
 
     // Create an image element
     var imageElement = document.createElement('img');
@@ -21,10 +26,13 @@ function handleMessage(event) {
     imageElement.style.marginTop = '0px'; // Add spacing below the image
 
     // Check the message value
-    if (message === 'True') {
+    if (message.type === 'status' && message.data.status) {
         // Change the image source to switch_on.png
         imageElement.src = 'switch_on1.png';
+    } else if (message.type === 'toServeur') {
+        console.log("serveur_feedback recieved")
     }
+
 
     // Clear the message container and append the image
     messageContainer.innerHTML = '';
@@ -45,5 +53,10 @@ socket.onerror = function (event) {
 // Call handleMessage with a predefined message when the page is ready
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming 'false' as the initial state, adjust this if needed
-    handleMessage({ data: 'False' });
+    handleMessage({data:JSON.stringify({
+        type: "status",
+        data: {
+            "status": false
+        }
+    })});
 });

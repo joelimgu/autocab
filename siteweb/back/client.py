@@ -2,12 +2,13 @@ import asyncio
 import websockets
 
 async def send_message():
-    uri = "ws://161.35.86.239:5501"
+    uri = "ws://autocab.joel.rs/websocket/"
     async with websockets.connect(uri) as websocket:
         try:
-            message = input("Enter your message: ")
-            await websocket.send(message)
-            print(f"Sent message: {message}")
+            while True:
+                message = input("Enter your message : ")
+                await websocket.send(message)
+                print(f"Sent message: {message}")
 
         except websockets.exceptions.ConnectionClosedError as e:
             print(f"Connexion fermée de manière inattendue. Erreur : {e}")
