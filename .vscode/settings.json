@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "files.associations": {
+        "cmath": "cpp",
+        "complex": "cpp"
+    }
 }
