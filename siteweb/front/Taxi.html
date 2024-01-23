@@ -275,6 +275,8 @@ crossorigin=""></script>
         text-align: center;
         z-index: 1000; /* Asegura que el mensaje esté en la parte superior */
     }
+
+
 </style>
 
 <!-- Script JS map -->
@@ -291,6 +293,8 @@ crossorigin=""></script>
             <a class="navbar-brand" href="index.html">Home</a>
             <a class="navbar-brand" href="Taxi.html">Taxi</a>
             <a class="navbar-brand" href="Contact_us.html">Contact us</a>
+   		<!-- Message from server -->
+            <div id="message-container"></div>
         </div>
     </nav>    
 
@@ -298,9 +302,11 @@ crossorigin=""></script>
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4">Call a taxi</h1>
             <h2 class="display-7">Drive greenly and autonomously </h2>
+            <div id="message-container-wait"></div>
         </div>
     </div>
-    
+
+
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
@@ -330,12 +336,12 @@ crossorigin=""></script>
         <a class="btn btn-outline-success btn-lg"  href="Waiting.html">Start !</a> 
     </div>
 </div>-->
-
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
     <div class="d-flex justify-content-center">
+
         <!-- Botón Start -->
         <div class="position-relative top-50 start-100 translate-middle me-3">
-            <a id="startButton" class="btn btn-outline-success btn-lg" onclick="startProcess()">Start !</a>
+	    <a id="startButton" class="btn btn-outline-success btn-lg" href="#" >Start !</a>
         </div>        
         <!-- Botón Cancel -->
         <div class="position-relative top-50 start-100 translate-middle">

@@ -1,12 +1,15 @@
 import asyncio
 import websockets
 
-start_status = False  # Variable pour stocker la dernière valeur reçue
+# WebSocket server variables
+start_pressed = False
+start_status = False
+clients = set()
 
-
+# WebSocket server handling
 async def handle_client(websocket, path):
-    global start_status
-    
+    global start_pressed, start_status
+
     # Autoriser toutes les origines (à adapter selon vos besoins)
     headers = {
         "Access-Control-Allow-Origin": "*",
@@ -24,27 +27,38 @@ async def handle_client(websocket, path):
         print(f"Client {websocket.remote_address} connected. Number of connected clients: {len(clients)}")
 
         while True:
-            message = await asyncio.wait_for(websocket.recv(), timeout=None)
-            
+            message = await websocket.recv()
+
             if not message:
                 break
-            
+
             print(f"Received message from {path}: {message}")
 
-            # Convertir le message en booléen et mettre à jour start_status
-            start_status = message.lower() == "true"
+            if message.startswith("GPS-coordinates:"):
+                # Extract and print GPS coordinates
+                coordinates = message.split(":")[1].split(",")
+                lat, lng = map(float, coordinates)
+                print(f"Received GPS coordinates: Lat={lat}, Lng={lng}")
+            elif message == "start-pressed":
+                # Check if the client is the first one to press "Start"
+                if not start_pressed:
+                    start_pressed = True
+                    await websocket.send("allow-redirection")
+                else:
+                    # Send "Please wait" to clients who are not the first one to press "Start"
+                    await websocket.send("Please wait")
+            else:
+                # Convert the message to a boolean and update start_status
+                start_status = message.lower() == "true"
 
-            # Mettre à jour la variable start_status avec la dernière valeur reçue
-            start_status = message
-
-            # Broadcast the message to all connected clients
-            for other_client in clients:
-                if other_client != websocket:
-                    try:
-                        await other_client.send(message)
-                        print(f"Sent message to {other_client.remote_address}: {message}")
-                    except websockets.exceptions.ConnectionClosedError:
-                        continue
+                # Broadcast the message to all connected clients
+                for other_client in clients:
+                    if other_client != websocket:
+                        try:
+                            await other_client.send(message)
+                            print(f"Sent message to {other_client.remote_address}: {message}")
+                        except websockets.exceptions.ConnectionClosedError:
+                            continue
     except asyncio.TimeoutError:
         print(f"Connection with {path} closed due to inactivity.")
     except websockets.exceptions.ConnectionClosed as e:
@@ -57,11 +71,13 @@ async def handle_client(websocket, path):
             print(f"Client {websocket.remote_address} disconnected. Number of connected clients: {len(clients)}")
 
 async def main():
+    # Start the WebSocket server
     server = await websockets.serve(handle_client, "autocab.joel.rs", 5501)
     print("WebSocket server listening on ws://autocab.joel.rs:5501")
 
+    # Wait for the WebSocket server to finish
     await server.wait_closed()
 
+# Run the main function
 if __name__ == "__main__":
-    clients = set()
     asyncio.run(main())
