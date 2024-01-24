@@ -42,23 +42,23 @@ public:
         currentDirection[0]=1;
         currentDirection[1]=1;
 
-        //Vrai initialisation
-        // departurePoint = 'A';
-        // finalPoint = 'A';
-        // currentPoint = 'A' ;
-        // departurePointReached = true;
-        // finalPointReached = true;
-        // arrivedAtCurrentPoint = true;
-        // requestNumber = 0;
+        // Vrai initialisation
+        departurePoint = 'A';
+        finalPoint = 'A';
+        currentPoint = 'A' ;
+        departurePointReached = true;
+        finalPointReached = true;
+        arrivedAtCurrentPoint = true;
+        requestNumber = 0;
 
         //initialisation pour les tests
-        departurePoint = 'D';
-        finalPoint = 'A';
-        currentPoint = 'D' ;
-        departurePointReached = false;
-        finalPointReached = false;
-        arrivedAtCurrentPoint = false;
-        requestNumber = 0;
+//        departurePoint = 'D';
+//        finalPoint = 'A';
+//        currentPoint = 'D' ;
+//        departurePointReached = false;
+//        finalPointReached = false;
+//        arrivedAtCurrentPoint = false;
+//        requestNumber = 0;
         
         (coordinates['A'])[0] = 43.570593;
         (coordinates['A'])[1] = 1.466513;
@@ -87,15 +87,15 @@ public:
         graph.createGraph(coordinates);
 
         //pour les tests
-        pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
-        if (pathToDeparturePoint.empty()){
-            departurePointReached = true;
-        }
-        pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
-        RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
-        if (pathToFinalPoint.empty()){
-            finalPointReached = true;
-        }
+//        pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+//        if (pathToDeparturePoint.empty()){
+//            departurePointReached = true;
+//        }
+//        pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
+//        RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
+//        if (pathToFinalPoint.empty()){
+//            finalPointReached = true;
+//        }
 
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
