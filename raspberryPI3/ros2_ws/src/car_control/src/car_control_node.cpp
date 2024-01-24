@@ -42,7 +42,7 @@ public:
         currentDirection[0]=1;
         currentDirection[1]=1;
 
-        //Vrai initialisation
+        // Vrai initialisation
         departurePoint = 'A';
         finalPoint = 'A';
         currentPoint = 'A' ;
@@ -51,13 +51,14 @@ public:
         arrivedAtCurrentPoint = true;
         requestNumber = 0;
 
-        // //initialisation pour les tests
-        // departurePoint = 'A';
-        // finalPoint = 'C';
-        // departurePointReached = false;
-        // finalPointReached = false;
-        // arrivedAtCurrentPoint = false;
-        // requestNumber = 0;
+        //initialisation pour les tests
+//        departurePoint = 'D';
+//        finalPoint = 'A';
+//        currentPoint = 'D' ;
+//        departurePointReached = false;
+//        finalPointReached = false;
+//        arrivedAtCurrentPoint = false;
+//        requestNumber = 0;
         
         (coordinates['A'])[0] = 43.570593;
         (coordinates['A'])[1] = 1.466513;
@@ -85,16 +86,16 @@ public:
 
         graph.createGraph(coordinates);
 
-        // //tests pour prouver que le calcul de plus court chemin fonctionne
-        // pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
-        // if (pathToDeparturePoint.empty()){
-        //     departurePointReached = true;
-        // }
-        // pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
-        // RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
-        // if (pathToFinalPoint.empty()){
-        //     finalPointReached = true;
-        // }
+        //pour les tests
+//        pathToDeparturePoint = graph.shortest_path(currentPoint, departurePoint);
+//        if (pathToDeparturePoint.empty()){
+//            departurePointReached = true;
+//        }
+//        pathToFinalPoint = graph.shortest_path(departurePoint, finalPoint);
+//        RCLCPP_INFO(this->get_logger(), "pathtofinalpoint : %c, %c", pathToFinalPoint[0], pathToFinalPoint[1]);
+//        if (pathToFinalPoint.empty()){
+//            finalPointReached = true;
+//        }
 
 
         publisher_can_= this->create_publisher<interfaces::msg::MotorsOrder>("motors_order", 10);
@@ -216,6 +217,10 @@ private:
     */
     void updateCmd(){
 
+        bool reverseAsChanged;
+        bool previousReverse = reverse;
+        bool needToWait = false;
+
         auto motorsOrder = interfaces::msg::MotorsOrder();
         auto toServeur = interfaces::msg::Toserveur();
 
@@ -266,7 +271,7 @@ private:
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()-1) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
-                                sleep(5); //On attend 5 secondes avant de partir
+                                needToWait = true;
                             }
                         }
                     } else if (!finalPointReached){
@@ -276,7 +281,7 @@ private:
                             pathToFinalPoint.erase(pathToFinalPoint.end()-1) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
-                                sleep(5); //On attend 5 secondes avant de partir
+                                needToWait = true;
                             }
                         }
                     } else {
@@ -288,6 +293,11 @@ private:
                     toServeur.arrived = (arrivedAtCurrentPoint && departurePointReached && finalPointReached);
 
                 }
+            }
+
+            reverseAsChanged = (previousReverse != reverse);
+            if (reverseAsChanged || needToWait){
+                requestedThrottle = 0;
             }
 
             /* Left wheel error and PWM */
@@ -323,6 +333,12 @@ private:
 
 
         publisher_can_->publish(motorsOrder);
+
+        if (reverseAsChanged || needToWait){
+            RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
+            sleep(3);
+        }
+
     }
 
 
@@ -408,9 +424,10 @@ private:
     * This function is called when a message is published on the "/serveur_data" topic
     * 
     */
+
     void serveurDataCallback(const interfaces::msg::Serveur & serveurData)
     {
-        auto is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached;
+        bool is_request_fullfilled = mode==1 && arrivedAtCurrentPoint && departurePointReached && finalPointReached;
         if (is_request_fullfilled && (requestNumber != serveurData.request_number)){
             departurePointReached = false;
             finalPointReached = false;
