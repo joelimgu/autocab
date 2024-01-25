@@ -32,7 +32,9 @@ async def handle_client(websocket, path):
                     await websocket.send(json.dumps(d))
                 else:
                     # Send "Please wait" to clients who are not the first one to press "Start"
-                    await websocket.send("Please wait")
+                    d = {}
+                    d["type"] = "wait"
+                    await websocket.send(json.dumps(d))
             else:
                 # Broadcast the message to all connected clients
                 for other_client in clients:
