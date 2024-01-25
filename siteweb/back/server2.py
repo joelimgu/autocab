@@ -1,6 +1,7 @@
 import asyncio
 import websockets
 import subprocess
+import json 
 
 # WebSocket server variables
 start_pressed = False
@@ -18,19 +19,17 @@ async def handle_client(websocket, path):
 
             if not message:
                 break
+            message = json.loads(message)
 
             print(f"Received message from {path}: {message}")
-
-            if message.startswith("GPS-coordinates:"):
-                # Extract and print GPS coordinates
-                coordinates = message.split(":")[1].split(",")
-                lat, lng = map(float, coordinates)
-                print(f"Received GPS coordinates: Lat={lat}, Lng={lng}")
-            elif message == "start-pressed":
+            
+            if message["type"] == "start-pressed":
                 # Check if the client is the first one to press "Start"
                 if not start_pressed:
                     start_pressed = True
-                    await websocket.send("allow-redirection")
+                    d = {}
+                    d["type"] = "allow-redirection"
+                    await websocket.send(json.dumps(d))
                 else:
                     # Send "Please wait" to clients who are not the first one to press "Start"
                     await websocket.send("Please wait")
@@ -39,7 +38,7 @@ async def handle_client(websocket, path):
                 for other_client in clients:
                     if other_client != websocket:
                         try:
-                            await other_client.send(message)
+                            await other_client.send(json.dumps(message))
                         except websockets.exceptions.ConnectionClosedError:
                             continue
     except websockets.exceptions.ConnectionClosed as e:
