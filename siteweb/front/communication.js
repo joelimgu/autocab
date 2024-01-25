@@ -6,6 +6,7 @@ function handleMessage(event) {
     // Get the message container element
     var messageContainer = document.getElementById('message-container');
     // Parse the message from the event data
+    console.log("Received message:", event.data);
 
     let message
     try {
