@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Start button clicked");
         // Guarda los marcadores en el LocalStorage
         localStorage.setItem('selectedMarkers', JSON.stringify(selectedMarkers));
-        socket.send("start-pressed");
+        socket.send(JSON.stringify({type:"start-pressed"}))
        
 
        // Send the selectedMarkers to the server

@@ -39,7 +39,7 @@ function handleMessage(event) {
     }
 
     // Add logic to check the server message before allowing redirection
-    if (message === 'allow-redirection') {
+    if (message.type === 'allow-redirection') {
         // Redirect the user to Waiting.html
         window.location.href = "Waiting.html";
     } else {
