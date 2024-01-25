@@ -308,7 +308,7 @@ private:
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
             steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
-            /*
+            
             //Obstacle Detection in all modes
             if (ObstacleCmdFront(front_left, front_center, front_right) == STOP && reverse == false){
                 leftRearPwmCmd = STOP;
@@ -319,7 +319,7 @@ private:
                 leftRearPwmCmd = STOP;
                 rightRearPwmCmd = leftRearPwmCmd;
             }
-            */
+            
         }
 
         //Send order to serveur
@@ -335,7 +335,7 @@ private:
         publisher_can_->publish(motorsOrder);
 
         if (reverseAsChanged || needToWait){
-            RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
+            RCLCPP_INFO(this->get_logger(), "Reverse changed to %d or needToWait = %d, waiting for 3sec", reverse, needToWait);
             sleep(3);
         }
 
