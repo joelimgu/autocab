@@ -42,7 +42,8 @@ function handleMessage(event) {
     if (message.type === 'allow-redirection') {
         // Redirect the user to Waiting.html
         window.location.href = "Waiting.html";
-    } else {
+    } else if (message.type === 'wait') {
+        alert("Tha car is already serving another client, please wait")
         // If not allowed, disable the button and show a message
         var startButton = document.getElementById('startButton');
         startButton.disabled = true;
