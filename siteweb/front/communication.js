@@ -1,10 +1,10 @@
-// Your WebSocket client code
-const socket = new WebSocket("ws://autocab.joel.rs/websocket/");
 
-// JavaScript code to handle event and toggle images
+
+let socket = new WebSocket("ws://autocab.joel.rs/websocket/");
+
 function handleMessage(event) {
     // Get the message container element
-    var messageContainer = document.getElementById('message-container');
+    let messageContainer = document.getElementById('message-container');
     // Parse the message from the event data
     console.log("Received message:", event.data);
 
@@ -40,24 +40,45 @@ function handleMessage(event) {
     messageContainer.appendChild(imageElement);
 }
 
+function startWS() {
+
+// Your WebSocket client code
+    socket = new WebSocket("ws://autocab.joel.rs/websocket/");
+
+// JavaScript code to handle event and toggle images
+
+
 // Set up WebSocket event listener for message handling
-socket.onmessage = handleMessage;
+    socket.onmessage = handleMessage;
 
-socket.onclose = function (event) {
-    console.log("WebSocket connection closed.");
-};
+    socket.onopen = (_e) => {
+        console.log("ws connection opened")
+    }
 
-socket.onerror = function (event) {
-    console.error("WebSocket error:", event);
-};
+    socket.onclose = function (event) {
+        console.log("WebSocket connection closed.");
+        setTimeout(() => {
+            console.log("reconnecting")
+            startWS()
+        }, 200)
+    };
+
+    socket.onerror = function (event) {
+        console.error("WebSocket error:", event);
+    };
+}
 
 // Call handleMessage with a predefined message when the page is ready
 document.addEventListener('DOMContentLoaded', function () {
     // Assuming 'false' as the initial state, adjust this if needed
-    handleMessage({data:JSON.stringify({
-        type: "status",
-        data: {
-            "status": false
-        }
-    })});
+    handleMessage({
+        data: JSON.stringify({
+            type: "status",
+            data: {
+                "status": false
+            }
+        })
+    });
 });
+
+startWS()

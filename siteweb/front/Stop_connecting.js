@@ -1,8 +1,6 @@
 
-// Your WebSocket client code
-const socket = new WebSocket("ws://autocab.joel.rs/websocket/");
+let socket = new WebSocket("ws://autocab.joel.rs/websocket/");
 
-// JavaScript code to handle event and toggle images
 function handleMessage(event) {
     // Log the received message
     console.log("Received message:", event.data);
@@ -56,17 +54,29 @@ function handleMessage(event) {
     messageContainer.appendChild(imageElement);
 }
 
+function startWS() {
+    // Your WebSocket client code
+    socket = new WebSocket("ws://autocab.joel.rs/websocket/");
+
+// JavaScript code to handle event and toggle images
+
 // Set up WebSocket event listener for message handling
-socket.onmessage = handleMessage;
+    socket.onmessage = handleMessage;
+    socket.onopen = (_e) => {
+        console.log("ws connection opened")
+    }
+    socket.onclose = function (event) {
+        console.log("WebSocket connection closed.");
+        setTimeout(() => {
+            console.log("reconnecting")
+            startWS()
+        }, 200)
+    };
 
-socket.onclose = function (event) {
-    console.log("WebSocket connection closed.");
-};
-
-socket.onerror = function (event) {
-    console.error("WebSocket error:", event);
-};
-
+    socket.onerror = function (event) {
+        console.error("WebSocket error:", event);
+    };
+}
 
 // Call handleMessage with a predefined message when the page is ready
 document.addEventListener('DOMContentLoaded', function () {
@@ -78,4 +88,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })});
 });
-
+startWS()
