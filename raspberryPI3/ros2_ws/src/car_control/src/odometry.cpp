@@ -36,8 +36,9 @@ int odom::estimate_pos(float delta_t,
     float theta_dot;
     int i = 0;
     float angle_coeff = -(41/0.97);
+    past_steeringAngle = past_steeringAngle*(M_PI*2/360)*angle_coeff;
 
-    if (past_steeringAngle < 0) 
+    if (past_steeringAngle <= 0) 
     {
         i = 0;
     }
@@ -49,7 +50,7 @@ int odom::estimate_pos(float delta_t,
     /* Empêcher des enregistrements de valeurs sporadiques !!! Un filtre ? Augmenter la fréquence de mise à jour ? */
 
     /* Calculating theta_dot and speeds */
-    theta_dot = past_speeds[i]*std::tan(past_steeringAngle*(angle_coeff)*(M_PI*2/360))/L; //The choice of the wheel that should be used is parametrized by i
+    theta_dot = past_speeds[i]*std::tan(past_steeringAngle)/L; //The choice of the wheel that should be used is parametrized by i
     current_theta = past_theta + theta_dot * delta_t;
     x_dot = past_speeds[i] * (-std::sin(past_theta)); // the speed can be either negative or positive, and either right or left wheel speed
     y_dot = past_speeds[i] * std::cos(past_theta);

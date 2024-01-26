@@ -240,6 +240,7 @@ private:
             Ypos = Ypos + delta_y;
             phi = phi + delta_phi;
         }
+        // y_dot = x_dot* tan(theta)
     }
 
 
@@ -250,13 +251,13 @@ private:
         /* Calculating future position with current values using odometry , using wheel radius R and distance between front and rear of the car */
 
         /* Filtre sur les valeurs de vitesse, qui peuvent atteindre des pics */
-        odom::lowPassFilter(0.6, 0.01, p_in1, leftRearRPM, p_out1, filtered_leftRearRPM);
-        odom::lowPassFilter(0.6, 0.01, p_in2, rightRearRPM, p_out2, filtered_rightRearRPM);
+        //odom::lowPassFilter(0.6, 0.01, p_in1, leftRearRPM, p_out1, filtered_leftRearRPM);
+        //odom::lowPassFilter(0.6, 0.01, p_in2, rightRearRPM, p_out2, filtered_rightRearRPM);
 
         /* Estimation de la position par rapport au point de départ de la voiture qui doit impérativement être le point A */
         odom::estimate_pos(0.01,0.55,past_reverse_odom,reverse,0.1,past_steeringAngle_odom,past_theta_odom,current_theta_odom,past_speeds_odom,
-                filtered_leftRearRPM,
-                filtered_rightRearRPM,
+                leftRearRPM,
+                rightRearRPM,
                 past_position_odom,
                 current_position_odom);
         
@@ -270,32 +271,17 @@ private:
         
         current_position_odom[0]=-Ypos;
         current_position_odom[1]=Xpos;
-        
-        float rotation_angle = -56 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
-        rotated_local_x = current_position_odom[0]*std::cos(rotation_angle) - current_position_odom[1]*std::sin(rotation_angle);
-        rotated_local_y = current_position_odom[0]*std::sin(rotation_angle) + current_position_odom[1]*std::cos(rotation_angle);
-        currentEasting = initialEasting + rotated_local_x;
-        currentNorthing = initialNorthing + rotated_local_y;
 
-        /* Convert easting and northing to latitude and longitude */
-
-        odom::to_latlon(currentEasting,currentNorthing,31,'T',true,odom_latlon);
-
-        /* //Mathias solution
-        float rotation_angle = 62.896 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
+        float rotation_angle = -56.5 * (2*M_PI/360.0); //Angle to rotate local frame to fit easting northing frame, in radians
         rotated_local_x = Xpos*std::cos(rotation_angle) - Ypos*std::sin(rotation_angle);
         rotated_local_y = Xpos*std::sin(rotation_angle) + Ypos*std::cos(rotation_angle);
-
-        //solution 1
         currentEasting = initialEasting + rotated_local_x;
         currentNorthing = initialNorthing + rotated_local_y;
+        
+
         // Convert easting and northing to latitude and longitude
         odom::to_latlon(currentEasting,currentNorthing,31,'T',true,odom_latlon);
-
-        //solution 2
-        odom_latlon[0]=43.570593 + (360.0/2*M_PI)*atan(rotated_local_x/EARTH_RADIUS);
-        odom_latlon[1]=1.466513 + (360.0/2*M_PI)*atan(rotated_local_y/EARTH_RADIUS);
-        */
+        
 
         /* Diagnostics : Recuperer toutes les données pertinentes pour les analyser par la suite */
         if ((abs(currentLatitude-odom_latlon[0]) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-odom_latlon[1]) >= MIN_UPDATE_COORDINATES)){
