@@ -26,7 +26,7 @@ using namespace std;
 Cette fonction nous sert de test pour déplacer la voiture d'un point A (le point actuel) à un point B (le point de destination)
 Pour l'instant, ce point B est fixé à la main dans le code 
 */
-bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger);
+bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger,uint8_t& steeringPwmCmd,float& traj_past_angle_error,float& traj_current_angle_error);
 
 /* Fonction qui permet de trouver le point le plus proche qui est accessible en ligne droite */
 char detectClosestPoint(float currentLat, float currentLon, std::map<char, float[2]> &pointMap);
