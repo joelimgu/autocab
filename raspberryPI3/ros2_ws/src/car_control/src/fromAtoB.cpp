@@ -55,7 +55,7 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
             }
         } else {
             reverse = false;
-            correctTrajAngle(steeringPwmCmd,traj_past_angle_error,traj_current_angle_error,requestedAngle);
+            correctTrajAngle(steeringPwmCmd,traj_past_angle_error,traj_current_angle_error,angle);
         }
         
         RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f et de reverse : %d", angle, reverse);
