@@ -54,7 +54,7 @@ public:
         //initialisation pour les tests
         departurePoint = 'D';
         finalPoint = 'A';
-        currentPoint = 'D' ;
+        currentPoint = 'A' ;
         departurePointReached = false;
         finalPointReached = false;
         arrivedAtCurrentPoint = false;
@@ -313,11 +313,14 @@ private:
             if (ObstacleCmdFront(front_left, front_center, front_right) == STOP && reverse == false){
                 leftRearPwmCmd = STOP;
                 rightRearPwmCmd = leftRearPwmCmd;
+                RCLCPP_INFO(this->get_logger(), "Obstacle detected in front, stopping the car");
             }
 
             if (ObstacleCmdRear(rear_left, rear_center, rear_right) == STOP && reverse == true){
                 leftRearPwmCmd = STOP;
                 rightRearPwmCmd = leftRearPwmCmd;
+                RCLCPP_INFO(this->get_logger(), "Obstacle detected in rear, stopping the car");
+            }
             }
             
         }
