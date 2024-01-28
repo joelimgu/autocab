@@ -26,6 +26,7 @@ int correctTrajAngle(float& steeringPwmCmd, float& past_angle_error,float& curre
     smallPwmCmd = steeringPwmCmd - 50;
     currentAngleError = trajAngleError(0,currentAngle); /* Multiply this by a coefficient to get the usual steeringPWM, though usually the steering works with All or Nothing control, desired angle is 0 */
     piCorrector(0.12,1.22,0.001,smallPwmCmd,past_angle_error,current_angle_error);
+    steeringPwmCmd = smallPwmCmd + 50;
     return 0;
 }
 
