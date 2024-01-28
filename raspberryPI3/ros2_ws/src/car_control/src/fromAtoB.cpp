@@ -14,7 +14,7 @@ Cette fonction nous sert de test pour déplacer la voiture d'un point A (le poin
 */
 
 //bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger){
-bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger,uint8_t& steeringPwmCmd,float& traj_past_angle_error,float& traj_current_angle_error){
+bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger,float& steeringPwmCmd,float& traj_past_angle_error,float& traj_current_angle_error){
 
 
     bool arrived;
@@ -84,7 +84,7 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
                 oriented_angle = angle;
             }
             correctTrajAngle(steeringPwmCmd,traj_past_angle_error,traj_current_angle_error,oriented_angle);
-            requestedAngle = (50 - steeringPwmCmd)/50;
+            requestedAngle = (50 - steeringPwmCmd)/50; /* Attention aux problèmes de type */
         }
         
         RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f et de reverse : %d", angle, reverse);

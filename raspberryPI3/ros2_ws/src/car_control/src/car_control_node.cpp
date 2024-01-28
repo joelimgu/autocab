@@ -488,7 +488,7 @@ private:
     float smallLeftRearPwmCmd = 0.0;
     float leftRearRPM;
     float rightRearRPM;
-    uint8_t steeringPwmCmd;
+    float steeringPwmCmd;
 
     //gnss data variables
     float currentLatitude;
