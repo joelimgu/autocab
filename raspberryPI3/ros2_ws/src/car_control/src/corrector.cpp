@@ -19,12 +19,12 @@ float trajAngleError(float desiredAngle,float measuredAngle)
     float error = (desiredAngle - measuredAngle);
     return error;
 }
-int correctTrajAngle(float& steeringPwmCmd, float& past_angle_error,float& current_angle_error,float& steeringAngle)
+int correctTrajAngle(float& steeringPwmCmd, float& past_angle_error,float& current_angle_error,float& currentAngle)
 {
     /* No need for the same if condition with reverse since the output goes from negative to positive this time */
     float smallPwmCmd;
     smallPwmCmd = steeringPwmCmd - 50;
-    currentAngleError = trajAngleError(0,steeringAngle); /* Multiply this by a coefficient to get the usual steeringPWM, though usually the steering works with All or Nothing control, desired angle is 0 */
+    currentAngleError = trajAngleError(0,currentAngle); /* Multiply this by a coefficient to get the usual steeringPWM, though usually the steering works with All or Nothing control, desired angle is 0 */
     piCorrector(0.12,1.22,0.001,smallPwmCmd,past_angle_error,current_angle_error);
     return 0;
 }
