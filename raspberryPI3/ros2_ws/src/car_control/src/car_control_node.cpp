@@ -41,6 +41,7 @@ public:
         currentLongitude = 0;
         currentDirection[0]=1;
         currentDirection[1]=1;
+        stopUpdating = 0;
 
         // Vrai initialisation
         departurePoint = 'A';
@@ -336,7 +337,9 @@ private:
 
         if (reverseAsChanged || needToWait){
             RCLCPP_INFO(this->get_logger(), "Reverse changed to %d, waiting for 3sec", reverse);
+            stopUpdating = 1;
             sleep(3);
+            stopUpdating = 0;
         }
 
     }
@@ -404,7 +407,7 @@ private:
 
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData)
     {
-        if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
+        if (((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)) && not(stopUpdating)){
             currentDirection[0] =  gnssData.latitude - currentLatitude ; 
             currentDirection[1] =  gnssData.longitude - currentLongitude;
             if (reverse==true){
@@ -497,6 +500,7 @@ private:
     vector<char> pathToFinalPoint;    
     char currentPoint;
     bool arrivedAtCurrentPoint;
+    bool stopUpdating;
     
     //us data variables
     int16_t front_left;
