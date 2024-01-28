@@ -41,6 +41,7 @@ public:
         currentLongitude = 0;
         currentDirection[0]=1;
         currentDirection[1]=1;
+        stopUpdating = 0;
 
         //Vrai initialisation
         // departurePoint = 'A';
@@ -256,8 +257,8 @@ private:
 
                 if (!arrivedAtCurrentPoint){
 
-                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                    //arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
+                    //arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
                     RCLCPP_INFO(this->get_logger(), "En déplaçement vers le currentpoint %c", currentPoint);
 
                 } else {
@@ -267,24 +268,24 @@ private:
                     bool arrived = false ;
                     if (!departurePointReached){
                         RCLCPP_INFO(this->get_logger(), "En déplaçement vers le departurepoint %c", pathToDeparturePoint[pathToDeparturePoint.size()-1]);
-                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                        //arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
+                        //arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
                         if (arrived == true){
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()-1) ;
                             if (pathToDeparturePoint.empty()){
                                 departurePointReached = true;
-                                needToWait = true;
+                                //needToWait = true;
                             }
                         }
                     } else if (!finalPointReached){
                         RCLCPP_INFO(this->get_logger(), "En déplaçement vers le finalpoint %c", pathToFinalPoint[pathToFinalPoint.size()-1]);
-                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
-                        //arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
+                        //arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
                         if (arrived == true){
                             pathToFinalPoint.erase(pathToFinalPoint.end()-1) ;
                             if (pathToFinalPoint.empty()){
                                 finalPointReached = true;
-                                needToWait = true;
+                                //needToWait = true;
                             }
                         }
                     } else {
@@ -309,6 +310,7 @@ private:
             correctWheelSpeed(rightRearPwmCmd,right_past_pwm_error,right_current_pwm_error,rightRearRPM,0);
 
             manualPropulsionCmd(requestedThrottle, reverse, leftRearPwmCmd,rightRearPwmCmd);
+            RCLCPP_INFO(this->get_logger(), "SteerCommand before %d :",steeringPwmCmd);
             steeringCmd(requestedSteerAngle,currentAngle, steeringPwmCmd);
 
             
@@ -324,7 +326,6 @@ private:
                 rightRearPwmCmd = leftRearPwmCmd;
                 RCLCPP_INFO(this->get_logger(), "Obstacle detected in rear, stopping the car");
             }
-            }
             
         }
 
@@ -335,6 +336,7 @@ private:
         //Send order to motors
         motorsOrder.left_rear_pwm = leftRearPwmCmd;
         motorsOrder.right_rear_pwm = rightRearPwmCmd;
+        RCLCPP_INFO(this->get_logger(), "SteerCommand after %d:",steeringPwmCmd);
         motorsOrder.steering_pwm = steeringPwmCmd;
 
 
@@ -342,7 +344,9 @@ private:
 
         if (reverseAsChanged || needToWait){
             RCLCPP_INFO(this->get_logger(), "Reverse changed to %d or needToWait = %d, waiting for 3sec", reverse, needToWait);
+            stopUpdating = 1;
             sleep(3);
+            stopUpdating = 0;
         }
 
     }
@@ -410,7 +414,7 @@ private:
 
     void gnssDataCallback(const interfaces::msg::Gnss & gnssData)
     {
-        if ((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)){
+        if (((abs(currentLatitude-gnssData.latitude) >= MIN_UPDATE_COORDINATES) || (abs(currentLongitude-gnssData.longitude) >= MIN_UPDATE_COORDINATES)) && not(stopUpdating)){
             currentDirection[0] =  gnssData.latitude - currentLatitude ; 
             currentDirection[1] =  gnssData.longitude - currentLongitude;
             if (reverse==true){
@@ -492,8 +496,8 @@ private:
     float currentDirection[2];
 
     //Trajectory Control
-    //float traj_past_angle_error = 0.0;
-    //float traj_current_angle_error = 0.0;
+    float traj_past_angle_error = 0.0;
+    float traj_current_angle_error = 0.0;
 
     //trajectory variables
     char departurePoint;
@@ -507,6 +511,7 @@ private:
     vector<char> pathToFinalPoint;    
     char currentPoint;
     bool arrivedAtCurrentPoint;
+    bool stopUpdating;
     
     //us data variables
     int16_t front_left;

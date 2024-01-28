@@ -14,30 +14,30 @@ float pwmError(float desiredRPM,float measuredRPM,float maxRPM)
     return error;
 }
 
-// float trajAngleError(float desiredAngle,float measuredAngle)
-// {
-//     float error = (desiredAngle - measuredAngle);
-//     return error;
-// }
-// int correctTrajAngle(float& steeringPwmCmd, float& past_angle_error,float& current_angle_error,float& currentAngle)
-// {
-//     /* No need for the same if condition with reverse since the output goes from negative to positive this time */
-//     float smallPwmCmd;
-//     smallPwmCmd = steeringPwmCmd - 50;
-//     current_angle_error = trajAngleError(0,currentAngle); /* Multiply this by a coefficient to get the usual steeringPWM, though usually the steering works with All or Nothing control, desired angle is 0 */
-//     piCorrector(0.12,1.22,0.001,smallPwmCmd,past_angle_error,current_angle_error);
-//     steeringPwmCmd = smallPwmCmd + 50;
-//     if (steeringPwmCmd > 100)
-//     {
-//         /* Capping the PWM command to 100 */
-//         steeringPwmCmd = 100;
-//     }
-//     else if (steeringPwmCmd < 0)
-//     {
-//         steeringPwmCmd = 0;
-//     }
-//     return 0;
-// }
+float trajAngleError(float desiredAngle,float measuredAngle)
+{
+    float error = (desiredAngle - measuredAngle);
+    return error;
+}
+int correctTrajAngle(uint8_t& steeringPwmCmd, float& past_angle_error,float& current_angle_error,float& currentAngle)
+{
+    /* No need for the same if condition with reverse since the output goes from negative to positive this time */
+    float smallPwmCmd;
+    smallPwmCmd = steeringPwmCmd - 50;
+    current_angle_error = trajAngleError(0,currentAngle); /* Multiply this by a coefficient to get the usual steeringPWM, though usually the steering works with All or Nothing control, desired angle is 0 */
+    piCorrector(1000,2,0.01,smallPwmCmd,past_angle_error,current_angle_error);
+    steeringPwmCmd = smallPwmCmd + 50;
+    if (steeringPwmCmd > 100)
+    {
+        /* Capping the PWM command to 100 */
+        steeringPwmCmd = 100;
+    }
+    else if (steeringPwmCmd < 0)
+    {
+        steeringPwmCmd = 0;
+    }
+    return 0;
+}
 
 /* reverse = 1 when we want the wheel to reverse, otherwise reverse = 0*/
 int correctWheelSpeed(float& PwmCmd, float& past_pwm_error,float& current_pwm_error,float& wheelRPM,bool reverse)

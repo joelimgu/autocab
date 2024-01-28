@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <unordered_map>
+#include "../include/car_control/corrector.h"
 
 
 
@@ -12,8 +13,8 @@ using namespace std ;
 Cette fonction nous sert de test pour déplacer la voiture d'un point A (le point actuel) à un point B (le point de destination). Elle prend en cmpte le fait de faire un demi-tour.
 */
 
-bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger){
-//bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger,uint8_t& steeringPwmCmd,float& traj_past_angle_error,float& traj_current_angle_error){
+//bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger){
+bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLongitude, float aVector[2], float& requestedThrottle, bool& reverse, float& requestedAngle, rclcpp::Logger logger,uint8_t& steeringPwmCmd,float& traj_past_angle_error,float& traj_current_angle_error){
 
 
     bool arrived;
@@ -55,38 +56,39 @@ bool straightLine(float aLatitude, float aLongitude, float bLatitude, float bLon
             }else{
                 requestedAngle = -1.0;
             }
-        } else {
-            reverse = false;
-            if (angle > MIN_ANGLE_FOR_MAX_STEERING){
-                if (turn_right){
-                    requestedAngle = -1.0;
-                }else{
-                    requestedAngle = 1.0;
-                }
-            }else{
-                if (turn_right){
-                    requestedAngle = -1.0 * (angle/40);
-                }else{
-                    requestedAngle = 1.0 * (angle/40);
-                }
-            }
-        }
         // } else {
         //     reverse = false;
-        //     float oriented_angle;
-        //     if (turn_right)
-        //     {
-        //         oriented_angle = -angle;
+        //     if (angle > MIN_ANGLE_FOR_MAX_STEERING){
+        //         if (turn_right){
+        //             requestedAngle = -1.0;
+        //         }else{
+        //             requestedAngle = 1.0;
+        //         }
+        //     }else{
+        //         if (turn_right){
+        //             requestedAngle = -1.0 * (angle/40);
+        //         }else{
+        //             requestedAngle = 1.0 * (angle/40);
+        //         }
         //     }
-        //     else
-        //     {
-        //         oriented_angle = angle;
-        //     }
-        //     correctTrajAngle(steeringPwmCmd,traj_past_angle_error,traj_current_angle_error,oriented_angle);
-        //     requestedAngle = (50 - steeringPwmCmd)/50
         // }
+        } else {
+            reverse = false;
+            float oriented_angle;
+            if (turn_right)
+            {
+                oriented_angle = -angle;
+            }
+            else
+            {
+                oriented_angle = angle;
+            }
+            correctTrajAngle(steeringPwmCmd,traj_past_angle_error,traj_current_angle_error,oriented_angle);
+            requestedAngle = (50 - steeringPwmCmd)/50;
+        }
         
         RCLCPP_INFO(logger, "Valeur de l'angle entre les vecteurs : %f et de reverse : %d", angle, reverse);
+        RCLCPP_INFO(logger, "Valeur de traj_past_error : %f traj current error : %f, requested %f",traj_past_angle_error ,traj_current_angle_error,requestedAngle);
 
         arrived = false;
 
