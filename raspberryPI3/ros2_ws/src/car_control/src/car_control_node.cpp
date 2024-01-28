@@ -353,7 +353,7 @@ private:
 
                 if (!arrivedAtCurrentPoint){
 
-                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                    arrivedAtCurrentPoint = straightLine(currentLatitude, currentLongitude, (coordinates[currentPoint])[0], (coordinates[currentPoint])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
                     RCLCPP_INFO(this->get_logger(), "En déplaçement vers le currentpoint %c", currentPoint);
 
                 } else {
@@ -363,7 +363,7 @@ private:
                     bool arrived = false ;
                     if (!departurePointReached){
                         RCLCPP_INFO(this->get_logger(), "En déplaçement vers le departurepoint %c", pathToDeparturePoint[pathToDeparturePoint.size()-1]);
-                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[0], (coordinates[pathToDeparturePoint[pathToDeparturePoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
                         if (arrived == true){
                             pathToDeparturePoint.erase(pathToDeparturePoint.end()-1) ;
                             if (pathToDeparturePoint.empty()){
@@ -373,7 +373,7 @@ private:
                         }
                     } else if (!finalPointReached){
                         RCLCPP_INFO(this->get_logger(), "En déplaçement vers le finalpoint %c", pathToFinalPoint[pathToFinalPoint.size()-1]);
-                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger());
+                        arrived = straightLine(currentLatitude, currentLongitude, (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[0], (coordinates[pathToFinalPoint[pathToFinalPoint.size()-1]])[1], currentDirection, requestedThrottle, reverse, requestedSteerAngle, this->get_logger(),steeringPwmCmd,traj_past_angle_error,traj_current_angle_error);
                         if (arrived == true){
                             pathToFinalPoint.erase(pathToFinalPoint.end()-1) ;
                             if (pathToFinalPoint.empty()){
@@ -606,6 +606,10 @@ private:
     float leftRearRPM;
     float rightRearRPM;
     uint8_t steeringPwmCmd;
+
+    //Trajectory Control
+    float traj_past_angle_error = 0.0;
+    float traj_current_angle_error = 0.0;
 
     //gnss data variables
     float currentLatitude;
