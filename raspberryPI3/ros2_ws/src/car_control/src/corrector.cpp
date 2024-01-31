@@ -14,6 +14,27 @@ float pwmError(float desiredRPM,float measuredRPM,float maxRPM)
     return error;
 }
 
+float trajAngleError(float desiredAngle,float measuredAngle)
+{
+    float error = (desiredAngle - measuredAngle);
+    return error;
+}
+int correctTrajAngle(float& requestedAngle,float& past_angle_error,float& current_angle_error,float currentAngle)
+{
+    /* No need for the same if condition with reverse since the output goes from negative to positive this time */
+    current_angle_error = trajAngleError(0,currentAngle); /* Multiply this by a coefficient to get the usual steeringPWM, though usually the steering works with All or Nothing control, desired angle is 0 */
+    piCorrector(0.01,6,0.01,requestedAngle,past_angle_error,current_angle_error);
+    if (requestedAngle > 1.0)
+    {
+        requestedAngle = 1.0;
+    }
+    else if (requestedAngle < -1.0)
+    {
+        requestedAngle = -1.0;
+    }
+    return 0;
+}
+
 /* reverse = 1 when we want the wheel to reverse, otherwise reverse = 0*/
 int correctWheelSpeed(float& PwmCmd, float& past_pwm_error,float& current_pwm_error,float& wheelRPM,bool reverse)
 {

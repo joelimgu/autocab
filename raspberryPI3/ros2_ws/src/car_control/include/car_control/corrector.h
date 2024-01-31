@@ -9,6 +9,10 @@ int piCorrector(float kp,float ki,float Te,float& smallPwmCmd,float& past_pwm_er
 
 float pwmError(float desiredRPM,float measuredRPM,float maxRPM);
 
+float trajAngleError(float desiredAngle,float measuredAngle);
+
+int correctTrajAngle(float& requestedAngle,float& past_angle_error,float& current_angle_error,float currentAngle);
+
 int correctWheelSpeed(float& PwmCmd, float& past_pwm_error,float& current_pwm_error,float& wheelRPM,bool reverse);
 
 #endif
