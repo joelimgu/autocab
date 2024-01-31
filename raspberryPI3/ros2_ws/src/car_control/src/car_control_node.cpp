@@ -607,6 +607,10 @@ private:
     float rightRearRPM;
     uint8_t steeringPwmCmd;
 
+    //Trajectory Control
+    float traj_past_angle_error = 0.0;
+    float traj_current_angle_error = 0.0;
+
     //gnss data variables
     float currentLatitude;
     float currentLongitude;
